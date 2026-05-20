@@ -6,6 +6,7 @@ import typer
 from aniwa.core.profiler import profile_dataframe
 from aniwa.io.readers import read_dataset
 from aniwa.reports.console import render_console_report
+from aniwa.reports.csv_summary_report import render_csv_summary_report
 from aniwa.reports.html_report import render_html_report
 from aniwa.reports.json_report import render_json_report
 from aniwa.reports.excel_report import render_excel_report
@@ -21,7 +22,7 @@ class ReportFormat(str, Enum):
     html = "html"
     excel = "excel"
     markdown = "markdown"
-
+    csv = "csv"
 
 class ProfileMode(str, Enum):
     fast = "fast"
@@ -140,3 +141,10 @@ def profile(
             typer.echo(f"Markdown report written to {output}")
         else:
             typer.echo(markdown_output)
+    
+    if report == ReportFormat.csv:
+        if output is None:
+            output = "summary.csv"
+        render_csv_summary_report(dataset_profile, output)
+        typer.echo(f"CSV report written to {output}")
+        return
