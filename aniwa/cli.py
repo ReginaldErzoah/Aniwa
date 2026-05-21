@@ -12,6 +12,7 @@ from aniwa.reports.json_report import render_json_report
 from aniwa.reports.excel_report import render_excel_report
 from aniwa.reports.markdown_report import render_markdown_report
 from aniwa.models.enums import ReportSection
+from aniwa.reports.pdf_report import render_pdf
 
 app = typer.Typer(help="Aniwa — Universal dataset profiling and intelligence.")
 
@@ -23,6 +24,7 @@ class ReportFormat(str, Enum):
     excel = "excel"
     markdown = "markdown"
     csv = "csv"
+    pdf = "pdf"
 
 class ProfileMode(str, Enum):
     fast = "fast"
@@ -147,4 +149,10 @@ def profile(
             output = "summary.csv"
         render_csv_summary_report(dataset_profile, output)
         typer.echo(f"CSV report written to {output}")
+        return
+    if report == ReportFormat.pdf:
+        if output is None:
+            output = "aniwa_report.pdf"
+
+        render_pdf(render_html_report(dataset_profile), output)
         return
