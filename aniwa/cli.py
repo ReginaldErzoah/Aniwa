@@ -353,64 +353,64 @@ def profile(
     """
     Profile a dataset.
     """
-    # active_config = load_active_config(config_file)
+    active_config = load_active_config(config_file)
 
-    # resolved_report = resolve_report_format(
-    #     report if report is not None else active_config.get("report")
-    # )
+    resolved_report = resolve_report_format(
+        report if report is not None else active_config.get("report")
+    )
 
-    # resolved_mode = resolve_profile_mode(
-    #     mode if mode is not None else active_config.get("mode")
-    # )
+    resolved_mode = resolve_profile_mode(
+        mode if mode is not None else active_config.get("mode")
+    )
 
-    # resolved_template = (
-    #     template
-    #     if template is not None
-    #     else active_config.get("template", "default")
-    # )
+    resolved_template = (
+        template
+        if template is not None
+        else active_config.get("template", "default")
+    )
 
-    # resolved_output = (
-    #     output
-    #     if output is not None
-    #     else active_config.get("output")
-    # )
+    resolved_output = (
+        output
+        if output is not None
+        else active_config.get("output")
+    )
 
-    # resolved_output_dir = (
-    #     output_dir
-    #     if output_dir is not None
-    #     else active_config.get("output_dir")
-    # )
+    resolved_output_dir = (
+        output_dir
+        if output_dir is not None
+        else active_config.get("output_dir")
+    )
 
-    # resolved_include = (
-    #     include
-    #     if include is not None
-    #     else active_config.get("include")
-    # )
+    resolved_include = (
+        include
+        if include is not None
+        else active_config.get("include")
+    )
 
-    # resolved_exclude = (
-    #     exclude
-    #     if exclude is not None
-    #     else active_config.get("exclude")
-    # )
+    resolved_exclude = (
+        exclude
+        if exclude is not None
+        else active_config.get("exclude")
+    )
 
-    # if include is not None:
-    #     resolved_exclude = None
+    if include is not None:
+        resolved_exclude = None
 
-    # if exclude is not None:
-    #     resolved_include = None
+    if exclude is not None:
+        resolved_include = None
 
-    # sections = resolve_sections(
-    #     resolved_include,
-    #     resolved_exclude,
-    # )
+    sections = resolve_sections(
+        resolved_include,
+        resolved_exclude,
+    )
 
-    # final_output = resolve_output_path(
-    #     output=resolved_output,
-    #     output_dir=resolved_output_dir,
-    #     report=resolved_report,
-    # )
+    final_output = resolve_output_path(
+        output=resolved_output,
+        output_dir=resolved_output_dir,
+        report=resolved_report,
+    )
 
-    # ensure_output_parent(final_output)
+    ensure_output_parent(final_output)
     TOTAL_STEPS = 5
 
     with Progress(  
@@ -472,7 +472,6 @@ def profile(
         time.sleep(0.5)
         if resolved_report == ReportFormat.console:
             render_console_report(dataset_profile)
-            return
 
         if resolved_report == ReportFormat.json:
             json_output = render_json_report(dataset_profile, final_output)
@@ -513,7 +512,6 @@ def profile(
             except ValueError as exc:
                 raise typer.BadParameter(str(exc)) from exc
 
-            progress.console.print(f"PDF report written to {final_output}")
-        progress.update(track_bar, advance=1)
-        progress.console.print(f"[green][SUCCESS] All steps completed!")
+            progress.console.print(f"PDF report written to {output}")
+        progress.update(track_bar, advance=1, description=f"[green][SUCCESS] All steps completed!")
         return
