@@ -20,6 +20,7 @@ from aniwa.reports.html_report import render_html_report
 from aniwa.reports.json_report import render_json_report
 from aniwa.reports.markdown_report import render_markdown_report
 from aniwa.reports.pdf_report import render_pdf_report
+from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn, TaskProgressColumn
 
 
 app = typer.Typer(help="Aniwa - Universal dataset profiling and intelligence.")
@@ -352,144 +353,167 @@ def profile(
     """
     Profile a dataset.
     """
-    active_config = load_active_config(config_file)
+    # active_config = load_active_config(config_file)
 
-    resolved_report = resolve_report_format(
-        report if report is not None else active_config.get("report")
-    )
+    # resolved_report = resolve_report_format(
+    #     report if report is not None else active_config.get("report")
+    # )
 
-    resolved_mode = resolve_profile_mode(
-        mode if mode is not None else active_config.get("mode")
-    )
+    # resolved_mode = resolve_profile_mode(
+    #     mode if mode is not None else active_config.get("mode")
+    # )
 
-    resolved_template = (
-        template
-        if template is not None
-        else active_config.get("template", "default")
-    )
+    # resolved_template = (
+    #     template
+    #     if template is not None
+    #     else active_config.get("template", "default")
+    # )
 
-    resolved_output = (
-        output
-        if output is not None
-        else active_config.get("output")
-    )
+    # resolved_output = (
+    #     output
+    #     if output is not None
+    #     else active_config.get("output")
+    # )
 
-    resolved_output_dir = (
-        output_dir
-        if output_dir is not None
-        else active_config.get("output_dir")
-    )
+    # resolved_output_dir = (
+    #     output_dir
+    #     if output_dir is not None
+    #     else active_config.get("output_dir")
+    # )
 
-    resolved_include = (
-        include
-        if include is not None
-        else active_config.get("include")
-    )
+    # resolved_include = (
+    #     include
+    #     if include is not None
+    #     else active_config.get("include")
+    # )
 
-    resolved_exclude = (
-        exclude
-        if exclude is not None
-        else active_config.get("exclude")
-    )
+    # resolved_exclude = (
+    #     exclude
+    #     if exclude is not None
+    #     else active_config.get("exclude")
+    # )
 
-    if include is not None:
-        resolved_exclude = None
+    # if include is not None:
+    #     resolved_exclude = None
 
-    if exclude is not None:
-        resolved_include = None
+    # if exclude is not None:
+    #     resolved_include = None
 
-    sections = resolve_sections(
-        resolved_include,
-        resolved_exclude,
-    )
+    # sections = resolve_sections(
+    #     resolved_include,
+    #     resolved_exclude,
+    # )
 
-    final_output = resolve_output_path(
-        output=resolved_output,
-        output_dir=resolved_output_dir,
-        report=resolved_report,
-    )
+    # final_output = resolve_output_path(
+    #     output=resolved_output,
+    #     output_dir=resolved_output_dir,
+    #     report=resolved_report,
+    # )
 
-    ensure_output_parent(final_output)
+    # ensure_output_parent(final_output)
+    TOTAL_STEPS = 5
 
-    dataset_path = Path(path)
+    with Progress(  
+        SpinnerColumn(),
+        TextColumn("[progress.description]{task.description}"),
+        BarColumn(),
+        TaskProgressColumn(),
+    ) as progress:
+        progress.live.capture_stdout = True
 
-    if not dataset_path.exists():
-        raise typer.BadParameter(f"File does not exist: {path}")
+        track_bar = progress.add_task(description="Profiling dataset...", total=TOTAL_STEPS)
 
-    start_time = time.perf_counter()
+        progress.update(track_bar, description=f"[yellow]Step 1/{TOTAL_STEPS}: Resolving sections...")
+        time.sleep(0.5)
+        sections = resolve_sections(include, exclude)
+        progress.update(track_bar, advance=1)
 
-    df = read_dataset(path)
+        progress.update(track_bar, description=f"[yellow]Step 2/{TOTAL_STEPS}: Resolving output path...")
+        time.sleep(0.5)
+        output = resolve_output_path(output, output_dir, report)
 
+        dataset_path = Path(path)
+
+        if not dataset_path.exists():
+            raise typer.BadParameter(f"File does not exist: {path}")
+
+        progress.update(track_bar, advance=1)
+        start_time = time.perf_counter()
+        progress.update(track_bar, description=f"[yellow]Step 3/{TOTAL_STEPS}: Reading dataset...")
+        time.sleep(0.5)
+        df = read_dataset(path)
+    
     dataset_profile = profile_dataframe(
-        df,
-        mode=resolved_mode.value,
-        sections=sections,
-    )
+            df,
+            mode=resolved_mode.value,
+            sections=sections,
+        )
+        progress.update(track_bar, advance=1)
+        duration_seconds = time.perf_counter() - start_time
 
-    duration_seconds = time.perf_counter() - start_time
-
-    dataset_profile.metadata = build_profile_metadata(
-        dataset_path=dataset_path,
-        path=path,
-        mode=resolved_mode,
-        report=resolved_report,
-        output=final_output if resolved_output else None,
+        progress.update(track_bar, description=f"[yellow]Step 4/{TOTAL_STEPS}: Building metadata...")
+        time.sleep(0.5)
+        dataset_profile.metadata = build_profile_metadata(
+            dataset_path=dataset_path,
+            path=path,
+            mode=resolved_mode,
+            report=resolved_report,
+            output=final_output if resolved_output else None,
         output_dir=resolved_output_dir,
-        template=resolved_template,
-        sections=sections,
-        include=resolved_include,
-        exclude=resolved_exclude,
-        duration_seconds=duration_seconds,
-        config_file=config_file,
+            template=resolved_template,
+            sections=sections,
+            include=resolved_include,
+            exclude=resolved_exclude,
+            duration_seconds=duration_seconds,
+            config_file=config_file,
     )
+        progress.update(track_bar, advance=1)
+        progress.update(track_bar, description=f"[yellow]Step 5/{TOTAL_STEPS}: Generating report...")
+        time.sleep(0.5)
+        if resolved_report == ReportFormat.console:
+            render_console_report(dataset_profile)
+            return
 
-    if resolved_report == ReportFormat.console:
-        render_console_report(dataset_profile)
-        return
+        if resolved_report == ReportFormat.json:
+            json_output = render_json_report(dataset_profile, final_output)
 
-    if resolved_report == ReportFormat.json:
-        json_output = render_json_report(dataset_profile, final_output)
+            if final_output:
+                progress.console.print(f"JSON report written to {final_output}")
+            else:
+                progress.console.print(json_output)
 
-        if final_output:
-            typer.echo(f"JSON report written to {final_output}")
-        else:
-            typer.echo(json_output)
+        if resolved_report == ReportFormat.html:
+            try:
+                render_html_report(dataset_profile, final_output, template=resolved_template)
+            except ValueError as exc:
+                raise typer.BadParameter(str(exc)) from exc
 
-        return
+            progress.console.print(f"HTML report written to {final_output}")
 
-    if resolved_report == ReportFormat.html:
-        try:
-            render_html_report(dataset_profile, final_output, template=resolved_template)
-        except ValueError as exc:
-            raise typer.BadParameter(str(exc)) from exc
+        if resolved_report == ReportFormat.excel:
+            try:
+                render_excel_report(dataset_profile, final_output)
+            except ValueError as exc:
+                raise typer.BadParameter(str(exc)) from exc
 
-        typer.echo(f"HTML report written to {final_output}")
-        return
+            progress.console.print(f"Excel report written to {final_output}")
 
-    if resolved_report == ReportFormat.excel:
-        try:
-            render_excel_report(dataset_profile, final_output)
-        except ValueError as exc:
-            raise typer.BadParameter(str(exc)) from exc
+        if resolved_report == ReportFormat.markdown:
+            markdown_output = render_markdown_report(dataset_profile, final_output)
 
-        typer.echo(f"Excel report written to {final_output}")
-        return
+            if final_output:
+                progress.console.print(f"Markdown report written to {final_output}")
+            else:
+                progress.console.print(markdown_output)
 
-    if resolved_report == ReportFormat.markdown:
-        markdown_output = render_markdown_report(dataset_profile, final_output)
 
-        if final_output:
-            typer.echo(f"Markdown report written to {final_output}")
-        else:
-            typer.echo(markdown_output)
+        if resolved_report == ReportFormat.pdf:
+            try:
+                render_pdf_report(dataset_profile, final_output, template=resolved_template)
+            except ValueError as exc:
+                raise typer.BadParameter(str(exc)) from exc
 
-        return
-
-    if resolved_report == ReportFormat.pdf:
-        try:
-            render_pdf_report(dataset_profile, final_output, template=resolved_template)
-        except ValueError as exc:
-            raise typer.BadParameter(str(exc)) from exc
-
-        typer.echo(f"PDF report written to {final_output}")
+            progress.console.print(f"PDF report written to {final_output}")
+        progress.update(track_bar, advance=1)
+        progress.console.print(f"[green][SUCCESS] All steps completed!")
         return
