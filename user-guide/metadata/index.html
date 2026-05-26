@@ -1,0 +1,1787 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Universal dataset profiling and intelligence tool.">
+      
+      
+        <meta name="author" content="Reginald Erzoah">
+      
+      
+        <link rel="canonical" href="https://reginalderzoah.github.io/Aniwa/user-guide/metadata/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Metadata - Aniwa</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#metadata" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Aniwa" class="md-header__button md-logo" aria-label="Aniwa" data-md-component="logo">
+      
+  <img src="../../assets/aniwa-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Aniwa
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Metadata
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="amber"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ReginaldErzoah/Aniwa" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ReginaldErzoah/Aniwa
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Aniwa" class="md-nav__button md-logo" aria-label="Aniwa" data-md-component="logo">
+      
+  <img src="../../assets/aniwa-logo.png" alt="logo">
+
+    </a>
+    Aniwa
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ReginaldErzoah/Aniwa" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ReginaldErzoah/Aniwa
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../philosophy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Philosophy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quickstart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/usage.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Developer Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer-guide/architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer-guide/profiling-engine.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Profiling Engine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer-guide/file-readers.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    File Readers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer-guide/reporting-system.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reporting System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer-guide/template-engine.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Template Engine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer-guide/adding-file-readers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding File Readers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer-guide/adding-report-formats/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding Report Formats
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer-guide/adding-report-templates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding Report Templates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer-guide/adding-insights/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding Insights
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer-guide/local-development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Local Development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer-guide/testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer-guide/code-style/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code Style
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer-guide/dependency-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dependency Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer-guide/release-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release Process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Release Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release-notes/v0.1.0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    v0.1.0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release-notes/v0.1.1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    v0.1.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release-notes/v0.1.2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    v0.1.2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="metadata">Metadata<a class="headerlink" href="#metadata" title="Permanent link">&para;</a></h1>
+<p>Aniwa generates profiling metadata alongside every dataset profile.</p>
+<p>Metadata provides contextual information about:</p>
+<ul>
+<li>the profiling environment</li>
+<li>dataset source</li>
+<li>runtime details</li>
+<li>report generation settings</li>
+<li>reproducibility information</li>
+</ul>
+<p>Metadata is critical for:</p>
+<ul>
+<li>governance</li>
+<li>debugging</li>
+<li>audits</li>
+<li>reproducibility</li>
+<li>CI/CD workflows</li>
+<li>observability</li>
+</ul>
+<hr />
+<h1 id="why-metadata-matters">Why Metadata Matters<a class="headerlink" href="#why-metadata-matters" title="Permanent link">&para;</a></h1>
+<p>Without metadata, reports lose context.</p>
+<p>Users need to know:</p>
+<ul>
+<li>when a report was generated</li>
+<li>which version created it</li>
+<li>which dataset was profiled</li>
+<li>what profiling settings were used</li>
+<li>how long profiling took</li>
+</ul>
+<p>Metadata transforms reports into reproducible profiling artifacts.</p>
+<hr />
+<h1 id="metadata-architecture">Metadata Architecture<a class="headerlink" href="#metadata-architecture" title="Permanent link">&para;</a></h1>
+<p>Metadata is represented internally using the <code>ProfileMetadata</code> model.</p>
+<p>Location:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>aniwa/models/profile.py
+</code></pre></div>
+<hr />
+<h1 id="metadata-generation-flow">Metadata Generation Flow<a class="headerlink" href="#metadata-generation-flow" title="Permanent link">&para;</a></h1>
+<p>Internal flow:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>CLI
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>→ build_profile_metadata()
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>→ DatasetProfile.metadata
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>→ report rendering
+</code></pre></div>
+<hr />
+<h1 id="metadata-collection">Metadata Collection<a class="headerlink" href="#metadata-collection" title="Permanent link">&para;</a></h1>
+<p>Aniwa collects metadata automatically during profiling.</p>
+<p>This requires no additional user configuration.</p>
+<hr />
+<h1 id="current-metadata-fields">Current Metadata Fields<a class="headerlink" href="#current-metadata-fields" title="Permanent link">&para;</a></h1>
+<p>Aniwa currently tracks:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>generated_at</td>
+<td>profiling timestamp</td>
+</tr>
+<tr>
+<td>aniwa_version</td>
+<td>installed Aniwa version</td>
+</tr>
+<tr>
+<td>python_version</td>
+<td>Python runtime version</td>
+</tr>
+<tr>
+<td>operating_system</td>
+<td>host operating system</td>
+</tr>
+<tr>
+<td>polars_version</td>
+<td>installed Polars version</td>
+</tr>
+<tr>
+<td>dataset_path</td>
+<td>source dataset path</td>
+</tr>
+<tr>
+<td>dataset_file_type</td>
+<td>detected dataset format</td>
+</tr>
+<tr>
+<td>dataset_size</td>
+<td>dataset file size</td>
+</tr>
+<tr>
+<td>profiling_mode</td>
+<td>fast or deep</td>
+</tr>
+<tr>
+<td>report_format</td>
+<td>selected report type</td>
+</tr>
+<tr>
+<td>report_template</td>
+<td>active template</td>
+</tr>
+<tr>
+<td>included_sections</td>
+<td>enabled report sections</td>
+</tr>
+<tr>
+<td>excluded_sections</td>
+<td>excluded report sections</td>
+</tr>
+<tr>
+<td>profiling_duration</td>
+<td>execution duration</td>
+</tr>
+<tr>
+<td>command_used</td>
+<td>reconstructed CLI command</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="generated-timestamp">Generated Timestamp<a class="headerlink" href="#generated-timestamp" title="Permanent link">&para;</a></h1>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2026-05-26 07:12:53 UTC
+</code></pre></div>
+<p>Purpose:</p>
+<ul>
+<li>reproducibility</li>
+<li>auditing</li>
+<li>historical tracking</li>
+<li>governance logging</li>
+</ul>
+<hr />
+<h1 id="aniwa-version">Aniwa Version<a class="headerlink" href="#aniwa-version" title="Permanent link">&para;</a></h1>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>0.1.1
+</code></pre></div>
+<p>Purpose:</p>
+<ul>
+<li>debugging</li>
+<li>compatibility tracking</li>
+<li>migration analysis</li>
+</ul>
+<hr />
+<h1 id="python-version">Python Version<a class="headerlink" href="#python-version" title="Permanent link">&para;</a></h1>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>3.14.4
+</code></pre></div>
+<p>Purpose:</p>
+<ul>
+<li>runtime debugging</li>
+<li>dependency compatibility</li>
+<li>environment diagnostics</li>
+</ul>
+<hr />
+<h1 id="operating-system">Operating System<a class="headerlink" href="#operating-system" title="Permanent link">&para;</a></h1>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Windows 11
+</code></pre></div>
+<p>Purpose:</p>
+<ul>
+<li>platform diagnostics</li>
+<li>issue reproduction</li>
+<li>compatibility validation</li>
+</ul>
+<hr />
+<h1 id="polars-version">Polars Version<a class="headerlink" href="#polars-version" title="Permanent link">&para;</a></h1>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>1.40.1
+</code></pre></div>
+<p>Purpose:</p>
+<ul>
+<li>dataframe compatibility</li>
+<li>backend diagnostics</li>
+<li>profiling reproducibility</li>
+</ul>
+<hr />
+<h1 id="dataset-path">Dataset Path<a class="headerlink" href="#dataset-path" title="Permanent link">&para;</a></h1>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>examples/customers.csv
+</code></pre></div>
+<p>Purpose:</p>
+<ul>
+<li>source traceability</li>
+<li>debugging</li>
+<li>workflow reproducibility</li>
+</ul>
+<hr />
+<h1 id="dataset-file-type">Dataset File Type<a class="headerlink" href="#dataset-file-type" title="Permanent link">&para;</a></h1>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>CSV
+</code></pre></div>
+<p>Purpose:</p>
+<ul>
+<li>parser tracking</li>
+<li>ingestion validation</li>
+<li>workflow diagnostics</li>
+</ul>
+<hr />
+<h1 id="dataset-size">Dataset Size<a class="headerlink" href="#dataset-size" title="Permanent link">&para;</a></h1>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>197 B
+</code></pre></div>
+<p>Purpose:</p>
+<ul>
+<li>performance analysis</li>
+<li>runtime interpretation</li>
+<li>scaling diagnostics</li>
+</ul>
+<hr />
+<h1 id="profiling-mode">Profiling Mode<a class="headerlink" href="#profiling-mode" title="Permanent link">&para;</a></h1>
+<p>Possible values:</p>
+<ul>
+<li>fast</li>
+<li>deep</li>
+</ul>
+<p>Purpose:</p>
+<ul>
+<li>explain profiling depth</li>
+<li>interpret report completeness</li>
+<li>understand runtime tradeoffs</li>
+</ul>
+<hr />
+<h1 id="report-format">Report Format<a class="headerlink" href="#report-format" title="Permanent link">&para;</a></h1>
+<p>Possible values:</p>
+<ul>
+<li>console</li>
+<li>json</li>
+<li>html</li>
+<li>markdown</li>
+<li>excel</li>
+<li>pdf</li>
+</ul>
+<p>Purpose:</p>
+<ul>
+<li>rendering diagnostics</li>
+<li>artifact identification</li>
+</ul>
+<hr />
+<h1 id="report-template">Report Template<a class="headerlink" href="#report-template" title="Permanent link">&para;</a></h1>
+<p>Examples:</p>
+<ul>
+<li>default</li>
+<li>clean</li>
+<li>compact</li>
+<li>enterprise</li>
+<li>dark</li>
+</ul>
+<p>Purpose:</p>
+<ul>
+<li>styling reproducibility</li>
+<li>branding consistency</li>
+</ul>
+<hr />
+<h1 id="included-sections">Included Sections<a class="headerlink" href="#included-sections" title="Permanent link">&para;</a></h1>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>summary, schema, statistics
+</code></pre></div>
+<p>Purpose:</p>
+<ul>
+<li>report interpretation</li>
+<li>modular profiling diagnostics</li>
+</ul>
+<hr />
+<h1 id="excluded-sections">Excluded Sections<a class="headerlink" href="#excluded-sections" title="Permanent link">&para;</a></h1>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>charts
+</code></pre></div>
+<p>Purpose:</p>
+<ul>
+<li>explain missing report sections</li>
+<li>optimize debugging</li>
+</ul>
+<hr />
+<h1 id="profiling-duration">Profiling Duration<a class="headerlink" href="#profiling-duration" title="Permanent link">&para;</a></h1>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>0.07s
+</code></pre></div>
+<p>Purpose:</p>
+<ul>
+<li>performance benchmarking</li>
+<li>scaling diagnostics</li>
+<li>optimization analysis</li>
+</ul>
+<hr />
+<h1 id="command-used">Command Used<a class="headerlink" href="#command-used" title="Permanent link">&para;</a></h1>
+<p>Aniwa reconstructs the profiling command automatically.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>aniwa dataset.csv --report html --template dark
+</code></pre></div>
+<p>Purpose:</p>
+<ul>
+<li>reproducibility</li>
+<li>auditing</li>
+<li>workflow recreation</li>
+</ul>
+<hr />
+<h1 id="metadata-rendering">Metadata Rendering<a class="headerlink" href="#metadata-rendering" title="Permanent link">&para;</a></h1>
+<p>Metadata appears in:</p>
+<ul>
+<li>console reports</li>
+<li>HTML reports</li>
+<li>PDF reports</li>
+<li>JSON reports</li>
+<li>markdown reports</li>
+</ul>
+<hr />
+<h1 id="metadata-in-console-reports">Metadata in Console Reports<a class="headerlink" href="#metadata-in-console-reports" title="Permanent link">&para;</a></h1>
+<p>Console reports display metadata using Rich tables.</p>
+<p>Benefits:</p>
+<ul>
+<li>readability</li>
+<li>structured formatting</li>
+<li>developer-friendly diagnostics</li>
+</ul>
+<hr />
+<h1 id="metadata-in-html-reports">Metadata in HTML Reports<a class="headerlink" href="#metadata-in-html-reports" title="Permanent link">&para;</a></h1>
+<p>HTML reports render metadata using structured tables.</p>
+<p>Benefits:</p>
+<ul>
+<li>visual clarity</li>
+<li>governance presentation</li>
+<li>exportability</li>
+</ul>
+<hr />
+<h1 id="metadata-in-json-reports">Metadata in JSON Reports<a class="headerlink" href="#metadata-in-json-reports" title="Permanent link">&para;</a></h1>
+<p>JSON reports serialize metadata directly.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="p">{</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">  </span><span class="nt">&quot;metadata&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">    </span><span class="nt">&quot;aniwa_version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0.1.1&quot;</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="p">}</span>
+</code></pre></div>
+<p>Benefits:</p>
+<ul>
+<li>machine readability</li>
+<li>automation support</li>
+<li>API integrations</li>
+</ul>
+<hr />
+<h1 id="metadata-in-markdown-reports">Metadata in Markdown Reports<a class="headerlink" href="#metadata-in-markdown-reports" title="Permanent link">&para;</a></h1>
+<p>Markdown reports render metadata as tables.</p>
+<p>Benefits:</p>
+<ul>
+<li>GitHub compatibility</li>
+<li>documentation workflows</li>
+<li>issue tracking</li>
+</ul>
+<hr />
+<h1 id="metadata-validation">Metadata Validation<a class="headerlink" href="#metadata-validation" title="Permanent link">&para;</a></h1>
+<p>Metadata is generated internally and validated through typed models.</p>
+<p>Benefits:</p>
+<ul>
+<li>consistency</li>
+<li>type safety</li>
+<li>serialization reliability</li>
+</ul>
+<hr />
+<h1 id="internal-metadata-builder">Internal Metadata Builder<a class="headerlink" href="#internal-metadata-builder" title="Permanent link">&para;</a></h1>
+<p>Primary metadata builder:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">build_profile_metadata</span><span class="p">()</span>
+</code></pre></div>
+<p>Responsibilities:</p>
+<ul>
+<li>collect runtime information</li>
+<li>normalize metadata</li>
+<li>format outputs</li>
+<li>attach profile context</li>
+</ul>
+<hr />
+<h1 id="metadata-design-philosophy">Metadata Design Philosophy<a class="headerlink" href="#metadata-design-philosophy" title="Permanent link">&para;</a></h1>
+<p>Aniwa metadata is designed to be:</p>
+<ul>
+<li>reproducible</li>
+<li>structured</li>
+<li>human-readable</li>
+<li>machine-readable</li>
+<li>extensible</li>
+</ul>
+<hr />
+<h1 id="governance-importance">Governance Importance<a class="headerlink" href="#governance-importance" title="Permanent link">&para;</a></h1>
+<p>Metadata is critical for governance workflows.</p>
+<p>It supports:</p>
+<ul>
+<li>auditability</li>
+<li>traceability</li>
+<li>compliance</li>
+<li>validation</li>
+</ul>
+<hr />
+<h1 id="cicd-use-cases">CI/CD Use Cases<a class="headerlink" href="#cicd-use-cases" title="Permanent link">&para;</a></h1>
+<p>Metadata enables CI/CD systems to track:</p>
+<ul>
+<li>profiling duration</li>
+<li>profiling configuration</li>
+<li>environment details</li>
+<li>report provenance</li>
+</ul>
+<hr />
+<h1 id="observability-vision">Observability Vision<a class="headerlink" href="#observability-vision" title="Permanent link">&para;</a></h1>
+<p>Long-term metadata goals include:</p>
+<ul>
+<li>profiling telemetry</li>
+<li>execution metrics</li>
+<li>lineage tracking</li>
+<li>profiling history</li>
+<li>observability integrations</li>
+</ul>
+<hr />
+<h1 id="future-metadata-fields">Future Metadata Fields<a class="headerlink" href="#future-metadata-fields" title="Permanent link">&para;</a></h1>
+<p>Planned future metadata may include:</p>
+<ul>
+<li>git commit hashes</li>
+<li>environment names</li>
+<li>cloud provider info</li>
+<li>pipeline IDs</li>
+<li>lineage references</li>
+<li>validation results</li>
+<li>profiling snapshots</li>
+</ul>
+<hr />
+<h1 id="future-profiling-provenance">Future Profiling Provenance<a class="headerlink" href="#future-profiling-provenance" title="Permanent link">&para;</a></h1>
+<p>Future provenance systems may track:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>dataset
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>→ transformations
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>→ profiling runs
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>→ validations
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>→ downstream systems
+</code></pre></div>
+<hr />
+<h1 id="metadata-and-scalability">Metadata and Scalability<a class="headerlink" href="#metadata-and-scalability" title="Permanent link">&para;</a></h1>
+<p>Metadata becomes increasingly important at scale.</p>
+<p>Large organizations require:</p>
+<ul>
+<li>reproducibility</li>
+<li>historical tracking</li>
+<li>governance visibility</li>
+<li>debugging traceability</li>
+</ul>
+<hr />
+<h1 id="enterprise-metadata-vision">Enterprise Metadata Vision<a class="headerlink" href="#enterprise-metadata-vision" title="Permanent link">&para;</a></h1>
+<p>Future enterprise metadata may include:</p>
+<ul>
+<li>ownership</li>
+<li>business domains</li>
+<li>governance tags</li>
+<li>sensitivity classifications</li>
+<li>data contracts</li>
+</ul>
+<hr />
+<h1 id="security-considerations">Security Considerations<a class="headerlink" href="#security-considerations" title="Permanent link">&para;</a></h1>
+<p>Metadata may expose:</p>
+<ul>
+<li>file paths</li>
+<li>environment details</li>
+<li>runtime systems</li>
+</ul>
+<p>Future versions may support:</p>
+<ul>
+<li>metadata redaction</li>
+<li>secure exports</li>
+<li>environment masking</li>
+</ul>
+<hr />
+<h1 id="future-compliance-integrations">Future Compliance Integrations<a class="headerlink" href="#future-compliance-integrations" title="Permanent link">&para;</a></h1>
+<p>Potential future integrations:</p>
+<ul>
+<li>SOC2</li>
+<li>HIPAA</li>
+<li>GDPR</li>
+<li>ISO compliance</li>
+<li>governance auditing</li>
+</ul>
+<hr />
+<h1 id="metadata-performance">Metadata Performance<a class="headerlink" href="#metadata-performance" title="Permanent link">&para;</a></h1>
+<p>Metadata generation is lightweight.</p>
+<p>Current overhead is minimal compared to:</p>
+<ul>
+<li>dataframe loading</li>
+<li>statistical analysis</li>
+<li>chart rendering</li>
+</ul>
+<hr />
+<h1 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h1>
+<hr />
+<h2 id="preserve-metadata">Preserve Metadata<a class="headerlink" href="#preserve-metadata" title="Permanent link">&para;</a></h2>
+<p>Do not strip metadata from reports unnecessarily.</p>
+<hr />
+<h2 id="track-versions">Track Versions<a class="headerlink" href="#track-versions" title="Permanent link">&para;</a></h2>
+<p>Always record profiling tool versions.</p>
+<hr />
+<h2 id="keep-reports-reproducible">Keep Reports Reproducible<a class="headerlink" href="#keep-reports-reproducible" title="Permanent link">&para;</a></h2>
+<p>Metadata enables future debugging and auditing.</p>
+<hr />
+<h1 id="common-mistakes">Common Mistakes<a class="headerlink" href="#common-mistakes" title="Permanent link">&para;</a></h1>
+<hr />
+<h2 id="ignoring-profiling-mode">Ignoring Profiling Mode<a class="headerlink" href="#ignoring-profiling-mode" title="Permanent link">&para;</a></h2>
+<p>Fast and deep modes produce different profiling depth.</p>
+<p>Metadata helps explain this.</p>
+<hr />
+<h2 id="removing-command-context">Removing Command Context<a class="headerlink" href="#removing-command-context" title="Permanent link">&para;</a></h2>
+<p>The <code>command_used</code> field is extremely valuable for reproducibility.</p>
+<hr />
+<h1 id="long-term-vision">Long-Term Vision<a class="headerlink" href="#long-term-vision" title="Permanent link">&para;</a></h1>
+<p>Metadata is foundational to Aniwa's evolution into:</p>
+<ul>
+<li>a profiling platform</li>
+<li>a governance platform</li>
+<li>an observability system</li>
+<li>a data intelligence ecosystem</li>
+</ul>
+<hr />
+<h1 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h1>
+<p>Aniwa metadata provides:</p>
+<ul>
+<li>reproducibility</li>
+<li>observability</li>
+<li>governance support</li>
+<li>runtime diagnostics</li>
+<li>profiling traceability</li>
+</ul>
+<p>It transforms reports from simple outputs into durable profiling artifacts.</p>
+<hr />
+<h1 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h1>
+<p>Continue with:</p>
+<ul>
+<li>configuration.md</li>
+<li>profiling-modes.md</li>
+<li>output-formats.md</li>
+<li>architecture-overview.md</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "navigation.instant", "navigation.tracking", "search.highlight", "search.suggest", "search.share", "content.code.copy", "content.code.annotate", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

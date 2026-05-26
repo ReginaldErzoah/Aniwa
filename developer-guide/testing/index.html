@@ -1,0 +1,2017 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Universal dataset profiling and intelligence tool.">
+      
+      
+        <meta name="author" content="Reginald Erzoah">
+      
+      
+        <link rel="canonical" href="https://reginalderzoah.github.io/Aniwa/developer-guide/testing/">
+      
+      
+        <link rel="prev" href="../local-development/">
+      
+      
+        <link rel="next" href="../code-style/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Testing - Aniwa</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#testing-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Aniwa" class="md-header__button md-logo" aria-label="Aniwa" data-md-component="logo">
+      
+  <img src="../../assets/aniwa-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Aniwa
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Testing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="amber"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ReginaldErzoah/Aniwa" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ReginaldErzoah/Aniwa
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Aniwa" class="md-nav__button md-logo" aria-label="Aniwa" data-md-component="logo">
+      
+  <img src="../../assets/aniwa-logo.png" alt="logo">
+
+    </a>
+    Aniwa
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ReginaldErzoah/Aniwa" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ReginaldErzoah/Aniwa
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../philosophy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Philosophy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quickstart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/usage.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Developer Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../profiling-engine.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Profiling Engine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../file-readers.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    File Readers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reporting-system.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reporting System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../template-engine.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Template Engine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adding-file-readers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding File Readers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adding-report-formats/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding Report Formats
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adding-report-templates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding Report Templates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adding-insights/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding Insights
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../local-development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Local Development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../code-style/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code Style
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dependency-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dependency Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release Process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Release Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release-notes/v0.1.0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    v0.1.0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release-notes/v0.1.1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    v0.1.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release-notes/v0.1.2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    v0.1.2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="testing-guide">Testing Guide<a class="headerlink" href="#testing-guide" title="Permanent link">&para;</a></h1>
+<p>This document explains the testing philosophy, architecture, workflows, strategies, and long-term validation systems used in Aniwa.</p>
+<p>Testing is one of the most important engineering systems in the project because it ensures:</p>
+<ul>
+<li>reliability</li>
+<li>stability</li>
+<li>scalability</li>
+<li>contributor confidence</li>
+<li>release quality</li>
+</ul>
+<p>Aniwa treats testing as:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>core infrastructure
+</code></pre></div>
+<p>not an optional development step.</p>
+<hr />
+<h1 id="purpose-of-testing">Purpose of Testing<a class="headerlink" href="#purpose-of-testing" title="Permanent link">&para;</a></h1>
+<p>Testing ensures that:</p>
+<ul>
+<li>features work correctly</li>
+<li>regressions are prevented</li>
+<li>releases remain stable</li>
+<li>contributors can collaborate safely</li>
+</ul>
+<hr />
+<h1 id="testing-philosophy">Testing Philosophy<a class="headerlink" href="#testing-philosophy" title="Permanent link">&para;</a></h1>
+<p>Aniwa testing prioritizes:</p>
+<table>
+<thead>
+<tr>
+<th>Principle</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>correctness</td>
+<td>features behave properly</td>
+</tr>
+<tr>
+<td>reproducibility</td>
+<td>predictable outcomes</td>
+</tr>
+<tr>
+<td>maintainability</td>
+<td>sustainable engineering</td>
+</tr>
+<tr>
+<td>scalability</td>
+<td>long-term project growth</td>
+</tr>
+<tr>
+<td>confidence</td>
+<td>safer contributions</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="core-philosophy">Core Philosophy<a class="headerlink" href="#core-philosophy" title="Permanent link">&para;</a></h1>
+<p>Aniwa aims for:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>high-confidence engineering
+</code></pre></div>
+<p>through:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>predictable automated validation
+</code></pre></div>
+<hr />
+<h1 id="why-testing-matters">Why Testing Matters<a class="headerlink" href="#why-testing-matters" title="Permanent link">&para;</a></h1>
+<p>Without testing:</p>
+<ul>
+<li>regressions increase</li>
+<li>contributors break existing systems</li>
+<li>releases become unstable</li>
+<li>debugging becomes expensive</li>
+</ul>
+<hr />
+<h1 id="current-testing-framework">Current Testing Framework<a class="headerlink" href="#current-testing-framework" title="Permanent link">&para;</a></h1>
+<p>Aniwa currently uses:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>pytest
+</code></pre></div>
+<hr />
+<h1 id="why-pytest-was-chosen">Why pytest Was Chosen<a class="headerlink" href="#why-pytest-was-chosen" title="Permanent link">&para;</a></h1>
+<p>pytest provides:</p>
+<ul>
+<li>clean syntax</li>
+<li>strong ecosystem</li>
+<li>scalability</li>
+<li>excellent developer experience</li>
+</ul>
+<hr />
+<h1 id="test-directory-structure">Test Directory Structure<a class="headerlink" href="#test-directory-structure" title="Permanent link">&para;</a></h1>
+<p>Tests are stored in:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>tests/
+</code></pre></div>
+<hr />
+<h1 id="example-test-structure">Example Test Structure<a class="headerlink" href="#example-test-structure" title="Permanent link">&para;</a></h1>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>tests/
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>├── test_cli.py
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>├── test_readers.py
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>├── test_reports.py
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>├── test_config.py
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>├── test_insights.py
+</code></pre></div>
+<hr />
+<h1 id="test-organization-philosophy">Test Organization Philosophy<a class="headerlink" href="#test-organization-philosophy" title="Permanent link">&para;</a></h1>
+<p>Tests should mirror:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>the architecture of the project
+</code></pre></div>
+<hr />
+<h1 id="why-mirrored-structures-matter">Why Mirrored Structures Matter<a class="headerlink" href="#why-mirrored-structures-matter" title="Permanent link">&para;</a></h1>
+<p>Mirrored structures improve:</p>
+<ul>
+<li>discoverability</li>
+<li>maintainability</li>
+<li>contributor onboarding</li>
+</ul>
+<hr />
+<h1 id="core-testing-categories">Core Testing Categories<a class="headerlink" href="#core-testing-categories" title="Permanent link">&para;</a></h1>
+<p>Aniwa currently focuses on several testing layers.</p>
+<hr />
+<h1 id="unit-tests">Unit Tests<a class="headerlink" href="#unit-tests" title="Permanent link">&para;</a></h1>
+<p>Unit tests validate:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>individual functions and modules
+</code></pre></div>
+<hr />
+<h1 id="integration-tests">Integration Tests<a class="headerlink" href="#integration-tests" title="Permanent link">&para;</a></h1>
+<p>Integration tests validate:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>systems working together
+</code></pre></div>
+<hr />
+<h1 id="cli-tests">CLI Tests<a class="headerlink" href="#cli-tests" title="Permanent link">&para;</a></h1>
+<p>CLI tests validate:</p>
+<ul>
+<li>commands</li>
+<li>options</li>
+<li>argument handling</li>
+<li>UX behavior</li>
+</ul>
+<hr />
+<h1 id="reader-tests">Reader Tests<a class="headerlink" href="#reader-tests" title="Permanent link">&para;</a></h1>
+<p>Reader tests validate:</p>
+<ul>
+<li>dataset loading</li>
+<li>supported formats</li>
+<li>malformed files</li>
+</ul>
+<hr />
+<h1 id="report-tests">Report Tests<a class="headerlink" href="#report-tests" title="Permanent link">&para;</a></h1>
+<p>Report tests validate:</p>
+<ul>
+<li>rendering</li>
+<li>export generation</li>
+<li>output structure</li>
+</ul>
+<hr />
+<h1 id="config-tests">Config Tests<a class="headerlink" href="#config-tests" title="Permanent link">&para;</a></h1>
+<p>Config tests validate:</p>
+<ul>
+<li>YAML loading</li>
+<li>TOML loading</li>
+<li>JSON loading</li>
+<li>override priority</li>
+</ul>
+<hr />
+<h1 id="insight-tests">Insight Tests<a class="headerlink" href="#insight-tests" title="Permanent link">&para;</a></h1>
+<p>Insight tests validate:</p>
+<ul>
+<li>rule triggering</li>
+<li>severity correctness</li>
+<li>false positives</li>
+</ul>
+<hr />
+<h1 id="metadata-tests">Metadata Tests<a class="headerlink" href="#metadata-tests" title="Permanent link">&para;</a></h1>
+<p>Metadata tests validate:</p>
+<ul>
+<li>runtime tracking</li>
+<li>report metadata</li>
+<li>command reconstruction</li>
+</ul>
+<hr />
+<h1 id="current-testing-flow">Current Testing Flow<a class="headerlink" href="#current-testing-flow" title="Permanent link">&para;</a></h1>
+<p>Typical development flow:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>implement
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>→ test
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>→ validate
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>→ refactor
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>→ release
+</code></pre></div>
+<hr />
+<h1 id="running-tests">Running Tests<a class="headerlink" href="#running-tests" title="Permanent link">&para;</a></h1>
+<p>Run all tests using:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>pytest
+</code></pre></div>
+<hr />
+<h1 id="running-verbose-tests">Running Verbose Tests<a class="headerlink" href="#running-verbose-tests" title="Permanent link">&para;</a></h1>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>pytest<span class="w"> </span>-v
+</code></pre></div>
+<hr />
+<h1 id="running-specific-tests">Running Specific Tests<a class="headerlink" href="#running-specific-tests" title="Permanent link">&para;</a></h1>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>pytest<span class="w"> </span>tests/test_cli.py
+</code></pre></div>
+<hr />
+<h1 id="running-individual-test-functions">Running Individual Test Functions<a class="headerlink" href="#running-individual-test-functions" title="Permanent link">&para;</a></h1>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>pytest<span class="w"> </span>tests/test_cli.py::test_help
+</code></pre></div>
+<hr />
+<h1 id="why-granular-testing-matters">Why Granular Testing Matters<a class="headerlink" href="#why-granular-testing-matters" title="Permanent link">&para;</a></h1>
+<p>Granular testing improves:</p>
+<ul>
+<li>debugging speed</li>
+<li>iteration speed</li>
+<li>contributor productivity</li>
+</ul>
+<hr />
+<h1 id="testing-philosophy_1">Testing Philosophy<a class="headerlink" href="#testing-philosophy_1" title="Permanent link">&para;</a></h1>
+<p>Tests should be:</p>
+<table>
+<thead>
+<tr>
+<th>Principle</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>isolated</td>
+<td>independent</td>
+</tr>
+<tr>
+<td>deterministic</td>
+<td>repeatable</td>
+</tr>
+<tr>
+<td>readable</td>
+<td>understandable</td>
+</tr>
+<tr>
+<td>maintainable</td>
+<td>sustainable</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="deterministic-testing">Deterministic Testing<a class="headerlink" href="#deterministic-testing" title="Permanent link">&para;</a></h1>
+<p>Tests should always produce:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>predictable outcomes
+</code></pre></div>
+<hr />
+<h1 id="why-determinism-matters">Why Determinism Matters<a class="headerlink" href="#why-determinism-matters" title="Permanent link">&para;</a></h1>
+<p>Non-deterministic tests create:</p>
+<ul>
+<li>flaky CI</li>
+<li>contributor confusion</li>
+<li>unreliable validation</li>
+</ul>
+<hr />
+<h1 id="good-test-naming">Good Test Naming<a class="headerlink" href="#good-test-naming" title="Permanent link">&para;</a></h1>
+<p>Good test names explain behavior.</p>
+<hr />
+<h1 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h1>
+<p>Examples:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">test_read_csv</span><span class="p">()</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="n">test_invalid_config</span><span class="p">()</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="n">test_render_html_report</span><span class="p">()</span>
+</code></pre></div>
+<hr />
+<h1 id="bad-test-names">Bad Test Names<a class="headerlink" href="#bad-test-names" title="Permanent link">&para;</a></h1>
+<p>Avoid vague names like:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">test_stuff</span><span class="p">()</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="n">test_feature</span><span class="p">()</span>
+</code></pre></div>
+<hr />
+<h1 id="test-function-philosophy">Test Function Philosophy<a class="headerlink" href="#test-function-philosophy" title="Permanent link">&para;</a></h1>
+<p>Each test should validate:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>one clear behavior
+</code></pre></div>
+<hr />
+<h1 id="why-small-tests-matter">Why Small Tests Matter<a class="headerlink" href="#why-small-tests-matter" title="Permanent link">&para;</a></h1>
+<p>Small tests improve:</p>
+<ul>
+<li>readability</li>
+<li>debugging</li>
+<li>maintainability</li>
+</ul>
+<hr />
+<h1 id="assertion-philosophy">Assertion Philosophy<a class="headerlink" href="#assertion-philosophy" title="Permanent link">&para;</a></h1>
+<p>Assertions should remain:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>explicit and readable
+</code></pre></div>
+<hr />
+<h1 id="good-assertion-example">Good Assertion Example<a class="headerlink" href="#good-assertion-example" title="Permanent link">&para;</a></h1>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">assert</span> <span class="n">df</span><span class="o">.</span><span class="n">height</span> <span class="o">==</span> <span class="mi">5</span>
+</code></pre></div>
+<hr />
+<h1 id="avoid-weak-assertions">Avoid Weak Assertions<a class="headerlink" href="#avoid-weak-assertions" title="Permanent link">&para;</a></h1>
+<p>Avoid:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">assert</span> <span class="n">result</span>
+</code></pre></div>
+<p>when more specific validation is possible.</p>
+<hr />
+<h1 id="edge-case-philosophy">Edge Case Philosophy<a class="headerlink" href="#edge-case-philosophy" title="Permanent link">&para;</a></h1>
+<p>Always test:</p>
+<ul>
+<li>invalid inputs</li>
+<li>empty datasets</li>
+<li>malformed files</li>
+<li>extreme values</li>
+</ul>
+<hr />
+<h1 id="why-edge-cases-matter">Why Edge Cases Matter<a class="headerlink" href="#why-edge-cases-matter" title="Permanent link">&para;</a></h1>
+<p>Most real-world failures happen at:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>system boundaries
+</code></pre></div>
+<hr />
+<h1 id="example-edge-cases">Example Edge Cases<a class="headerlink" href="#example-edge-cases" title="Permanent link">&para;</a></h1>
+<p>Examples:</p>
+<table>
+<thead>
+<tr>
+<th>Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>empty CSV</td>
+</tr>
+<tr>
+<td>corrupted JSON</td>
+</tr>
+<tr>
+<td>unsupported extension</td>
+</tr>
+<tr>
+<td>invalid config values</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="reader-testing-philosophy">Reader Testing Philosophy<a class="headerlink" href="#reader-testing-philosophy" title="Permanent link">&para;</a></h1>
+<p>Readers should validate:</p>
+<ul>
+<li>correct parsing</li>
+<li>format handling</li>
+<li>conversion to Polars</li>
+</ul>
+<hr />
+<h1 id="example-reader-test">Example Reader Test<a class="headerlink" href="#example-reader-test" title="Permanent link">&para;</a></h1>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">test_read_csv</span><span class="p">():</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>    <span class="n">df</span> <span class="o">=</span> <span class="n">read_dataset</span><span class="p">(</span><span class="s2">&quot;examples/customers.csv&quot;</span><span class="p">)</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>    <span class="k">assert</span> <span class="n">df</span><span class="o">.</span><span class="n">height</span> <span class="o">&gt;</span> <span class="mi">0</span>
+</code></pre></div>
+<hr />
+<h1 id="config-testing-philosophy">Config Testing Philosophy<a class="headerlink" href="#config-testing-philosophy" title="Permanent link">&para;</a></h1>
+<p>Config systems must validate:</p>
+<ul>
+<li>loading</li>
+<li>precedence</li>
+<li>invalid values</li>
+<li>graceful failure</li>
+</ul>
+<hr />
+<h1 id="config-priority-testing">Config Priority Testing<a class="headerlink" href="#config-priority-testing" title="Permanent link">&para;</a></h1>
+<p>Verify:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>CLI &gt; config &gt; defaults
+</code></pre></div>
+<hr />
+<h1 id="example-config-test">Example Config Test<a class="headerlink" href="#example-config-test" title="Permanent link">&para;</a></h1>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">test_cli_overrides_config</span><span class="p">():</span>
+</code></pre></div>
+<hr />
+<h1 id="report-testing-philosophy">Report Testing Philosophy<a class="headerlink" href="#report-testing-philosophy" title="Permanent link">&para;</a></h1>
+<p>Reports should validate:</p>
+<ul>
+<li>rendering success</li>
+<li>file creation</li>
+<li>structure correctness</li>
+</ul>
+<hr />
+<h1 id="example-report-test">Example Report Test<a class="headerlink" href="#example-report-test" title="Permanent link">&para;</a></h1>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">test_render_json_report</span><span class="p">():</span>
+</code></pre></div>
+<hr />
+<h1 id="html-report-validation">HTML Report Validation<a class="headerlink" href="#html-report-validation" title="Permanent link">&para;</a></h1>
+<p>HTML reports should validate:</p>
+<ul>
+<li>rendering</li>
+<li>templates</li>
+<li>chart injection</li>
+</ul>
+<hr />
+<h1 id="pdf-report-validation">PDF Report Validation<a class="headerlink" href="#pdf-report-validation" title="Permanent link">&para;</a></h1>
+<p>PDF systems should validate:</p>
+<ul>
+<li>successful generation</li>
+<li>layout correctness</li>
+<li>export integrity</li>
+</ul>
+<hr />
+<h1 id="markdown-report-validation">Markdown Report Validation<a class="headerlink" href="#markdown-report-validation" title="Permanent link">&para;</a></h1>
+<p>Markdown reports should validate:</p>
+<ul>
+<li>formatting</li>
+<li>readability</li>
+<li>structure</li>
+</ul>
+<hr />
+<h1 id="cli-testing-philosophy">CLI Testing Philosophy<a class="headerlink" href="#cli-testing-philosophy" title="Permanent link">&para;</a></h1>
+<p>CLI tests should validate:</p>
+<ul>
+<li>help output</li>
+<li>options</li>
+<li>invalid arguments</li>
+<li>execution flow</li>
+</ul>
+<hr />
+<h1 id="example-cli-test">Example CLI Test<a class="headerlink" href="#example-cli-test" title="Permanent link">&para;</a></h1>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">test_help</span><span class="p">():</span>
+</code></pre></div>
+<hr />
+<h1 id="metadata-testing-philosophy">Metadata Testing Philosophy<a class="headerlink" href="#metadata-testing-philosophy" title="Permanent link">&para;</a></h1>
+<p>Metadata systems should validate:</p>
+<ul>
+<li>generated timestamps</li>
+<li>version info</li>
+<li>execution metadata</li>
+</ul>
+<hr />
+<h1 id="template-testing-philosophy">Template Testing Philosophy<a class="headerlink" href="#template-testing-philosophy" title="Permanent link">&para;</a></h1>
+<p>Templates should validate:</p>
+<ul>
+<li>rendering</li>
+<li>responsiveness</li>
+<li>empty states</li>
+</ul>
+<hr />
+<h1 id="insight-testing-philosophy">Insight Testing Philosophy<a class="headerlink" href="#insight-testing-philosophy" title="Permanent link">&para;</a></h1>
+<p>Insight systems should validate:</p>
+<ul>
+<li>proper triggering</li>
+<li>severity assignment</li>
+<li>noise reduction</li>
+</ul>
+<hr />
+<h1 id="false-positive-philosophy">False Positive Philosophy<a class="headerlink" href="#false-positive-philosophy" title="Permanent link">&para;</a></h1>
+<p>Insight systems should avoid:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>excessive unnecessary warnings
+</code></pre></div>
+<hr />
+<h1 id="performance-testing-philosophy">Performance Testing Philosophy<a class="headerlink" href="#performance-testing-philosophy" title="Permanent link">&para;</a></h1>
+<p>Performance systems should eventually validate:</p>
+<ul>
+<li>execution speed</li>
+<li>memory usage</li>
+<li>scalability</li>
+</ul>
+<hr />
+<h1 id="why-performance-testing-matters">Why Performance Testing Matters<a class="headerlink" href="#why-performance-testing-matters" title="Permanent link">&para;</a></h1>
+<p>Aniwa is designed for:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>large-scale data profiling
+</code></pre></div>
+<hr />
+<h1 id="future-performance-benchmarks">Future Performance Benchmarks<a class="headerlink" href="#future-performance-benchmarks" title="Permanent link">&para;</a></h1>
+<p>Future benchmarks may track:</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>runtime</td>
+</tr>
+<tr>
+<td>memory usage</td>
+</tr>
+<tr>
+<td>large dataset handling</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="future-scalability-tests">Future Scalability Tests<a class="headerlink" href="#future-scalability-tests" title="Permanent link">&para;</a></h1>
+<p>Potential future tests:</p>
+<ul>
+<li>distributed execution</li>
+<li>chunked processing</li>
+<li>parallel profiling</li>
+</ul>
+<hr />
+<h1 id="mocking-philosophy">Mocking Philosophy<a class="headerlink" href="#mocking-philosophy" title="Permanent link">&para;</a></h1>
+<p>Mocking should be used:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>carefully and minimally
+</code></pre></div>
+<hr />
+<h1 id="why-excessive-mocking-is-dangerous">Why Excessive Mocking Is Dangerous<a class="headerlink" href="#why-excessive-mocking-is-dangerous" title="Permanent link">&para;</a></h1>
+<p>Too much mocking can hide:</p>
+<ul>
+<li>real integration failures</li>
+<li>architectural problems</li>
+</ul>
+<hr />
+<h1 id="integration-testing-philosophy">Integration Testing Philosophy<a class="headerlink" href="#integration-testing-philosophy" title="Permanent link">&para;</a></h1>
+<p>Integration tests ensure:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>subsystems work together correctly
+</code></pre></div>
+<hr />
+<h1 id="example-integration-flow">Example Integration Flow<a class="headerlink" href="#example-integration-flow" title="Permanent link">&para;</a></h1>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>reader
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>→ profiler
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>→ report
+</code></pre></div>
+<hr />
+<h1 id="manual-testing-philosophy">Manual Testing Philosophy<a class="headerlink" href="#manual-testing-philosophy" title="Permanent link">&para;</a></h1>
+<p>Some features still require:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>human validation
+</code></pre></div>
+<hr />
+<h1 id="examples_1">Examples<a class="headerlink" href="#examples_1" title="Permanent link">&para;</a></h1>
+<p>Examples:</p>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>visual reports</td>
+</tr>
+<tr>
+<td>PDF layouts</td>
+</tr>
+<tr>
+<td>CLI UX</td>
+</tr>
+<tr>
+<td>chart rendering</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="recommended-manual-checks">Recommended Manual Checks<a class="headerlink" href="#recommended-manual-checks" title="Permanent link">&para;</a></h1>
+<p>Before releases:</p>
+<ul>
+<li>inspect HTML reports</li>
+<li>verify PDFs</li>
+<li>test configs manually</li>
+<li>validate examples</li>
+</ul>
+<hr />
+<h1 id="example-manual-validation">Example Manual Validation<a class="headerlink" href="#example-manual-validation" title="Permanent link">&para;</a></h1>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>aniwa<span class="w"> </span>examples/customers.csv<span class="w"> </span>--report<span class="w"> </span>html
+</code></pre></div>
+<hr />
+<h1 id="continuous-integration-vision">Continuous Integration Vision<a class="headerlink" href="#continuous-integration-vision" title="Permanent link">&para;</a></h1>
+<p>Future systems may automate:</p>
+<ul>
+<li>testing</li>
+<li>formatting</li>
+<li>linting</li>
+<li>release validation</li>
+</ul>
+<hr />
+<h1 id="potential-future-tooling">Potential Future Tooling<a class="headerlink" href="#potential-future-tooling" title="Permanent link">&para;</a></h1>
+<p>Potential future systems:</p>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GitHub Actions</td>
+</tr>
+<tr>
+<td>CI pipelines</td>
+</tr>
+<tr>
+<td>automated release testing</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="future-coverage-systems">Future Coverage Systems<a class="headerlink" href="#future-coverage-systems" title="Permanent link">&para;</a></h1>
+<p>Future systems may include:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>coverage tracking
+</code></pre></div>
+<hr />
+<h1 id="why-coverage-matters">Why Coverage Matters<a class="headerlink" href="#why-coverage-matters" title="Permanent link">&para;</a></h1>
+<p>Coverage helps identify:</p>
+<ul>
+<li>untested systems</li>
+<li>weak validation areas</li>
+</ul>
+<hr />
+<h1 id="recommended-future-tools">Recommended Future Tools<a class="headerlink" href="#recommended-future-tools" title="Permanent link">&para;</a></h1>
+<p>Potential tools:</p>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>coverage.py</td>
+</tr>
+<tr>
+<td>pytest-cov</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="failure-philosophy">Failure Philosophy<a class="headerlink" href="#failure-philosophy" title="Permanent link">&para;</a></h1>
+<p>When tests fail:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>investigate first, patch second
+</code></pre></div>
+<hr />
+<h1 id="debugging-workflow">Debugging Workflow<a class="headerlink" href="#debugging-workflow" title="Permanent link">&para;</a></h1>
+<p>Recommended process:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>reproduce
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>→ isolate
+<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a>→ inspect
+<a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a>→ fix
+<a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a>→ retest
+</code></pre></div>
+<hr />
+<h1 id="avoid-test-suppression">Avoid Test Suppression<a class="headerlink" href="#avoid-test-suppression" title="Permanent link">&para;</a></h1>
+<p>Never ignore failing tests without understanding:</p>
+<ul>
+<li>root cause</li>
+<li>architectural impact</li>
+</ul>
+<hr />
+<h1 id="regression-philosophy">Regression Philosophy<a class="headerlink" href="#regression-philosophy" title="Permanent link">&para;</a></h1>
+<p>Every major bug should eventually receive:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>a regression test
+</code></pre></div>
+<hr />
+<h1 id="why-regression-tests-matter">Why Regression Tests Matter<a class="headerlink" href="#why-regression-tests-matter" title="Permanent link">&para;</a></h1>
+<p>Regression tests prevent:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>old bugs from returning
+</code></pre></div>
+<hr />
+<h1 id="contributor-testing-expectations">Contributor Testing Expectations<a class="headerlink" href="#contributor-testing-expectations" title="Permanent link">&para;</a></h1>
+<p>Contributors should:</p>
+<ul>
+<li>add tests for new features</li>
+<li>update broken tests</li>
+<li>validate edge cases</li>
+</ul>
+<hr />
+<h1 id="pull-request-requirements">Pull Request Requirements<a class="headerlink" href="#pull-request-requirements" title="Permanent link">&para;</a></h1>
+<p>Good PRs should include:</p>
+<ul>
+<li>tests</li>
+<li>validation</li>
+<li>documentation updates</li>
+</ul>
+<hr />
+<h1 id="testing-anti-patterns">Testing Anti-Patterns<a class="headerlink" href="#testing-anti-patterns" title="Permanent link">&para;</a></h1>
+<p>Avoid:</p>
+<table>
+<thead>
+<tr>
+<th>Anti-Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>flaky tests</td>
+</tr>
+<tr>
+<td>vague assertions</td>
+</tr>
+<tr>
+<td>giant test functions</td>
+</tr>
+<tr>
+<td>silent failures</td>
+</tr>
+<tr>
+<td>skipped edge cases</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="long-term-testing-vision">Long-Term Testing Vision<a class="headerlink" href="#long-term-testing-vision" title="Permanent link">&para;</a></h1>
+<p>Aniwa’s testing infrastructure is evolving toward:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>enterprise-grade validation systems
+</code></pre></div>
+<hr />
+<h1 id="future-enterprise-testing">Future Enterprise Testing<a class="headerlink" href="#future-enterprise-testing" title="Permanent link">&para;</a></h1>
+<p>Potential future capabilities:</p>
+<table>
+<thead>
+<tr>
+<th>Capability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>distributed testing</td>
+</tr>
+<tr>
+<td>benchmark automation</td>
+</tr>
+<tr>
+<td>security testing</td>
+</tr>
+<tr>
+<td>cloud validation</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="strategic-importance">Strategic Importance<a class="headerlink" href="#strategic-importance" title="Permanent link">&para;</a></h1>
+<p>Testing is not merely:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>a development task
+</code></pre></div>
+<p>It is:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>a foundational engineering system
+</code></pre></div>
+<p>that protects the long-term quality of the project.</p>
+<hr />
+<h1 id="final-philosophy">Final Philosophy<a class="headerlink" href="#final-philosophy" title="Permanent link">&para;</a></h1>
+<p>Testing exists to ensure that:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>Aniwa remains reliable, scalable, maintainable, and trustworthy as it evolves
+</code></pre></div>
+<hr />
+<h1 id="related-documentation">Related Documentation<a class="headerlink" href="#related-documentation" title="Permanent link">&para;</a></h1>
+<p>Continue with:</p>
+<ul>
+<li>developer-guide/local-development.md</li>
+<li>developer-guide/code-style.md</li>
+<li>architecture/system-design.md</li>
+<li>CONTRIBUTING.md</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "navigation.instant", "navigation.tracking", "search.highlight", "search.suggest", "search.share", "content.code.copy", "content.code.annotate", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

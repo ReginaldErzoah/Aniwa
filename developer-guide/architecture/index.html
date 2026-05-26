@@ -1,0 +1,2145 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Universal dataset profiling and intelligence tool.">
+      
+      
+        <meta name="author" content="Reginald Erzoah">
+      
+      
+        <link rel="canonical" href="https://reginalderzoah.github.io/Aniwa/developer-guide/architecture/">
+      
+      
+        <link rel="prev" href="../../getting-started/examples/">
+      
+      
+        <link rel="next" href="../adding-file-readers/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Architecture - Aniwa</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#architecture" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Aniwa" class="md-header__button md-logo" aria-label="Aniwa" data-md-component="logo">
+      
+  <img src="../../assets/aniwa-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Aniwa
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Architecture
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="amber"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ReginaldErzoah/Aniwa" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ReginaldErzoah/Aniwa
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Aniwa" class="md-nav__button md-logo" aria-label="Aniwa" data-md-component="logo">
+      
+  <img src="../../assets/aniwa-logo.png" alt="logo">
+
+    </a>
+    Aniwa
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ReginaldErzoah/Aniwa" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ReginaldErzoah/Aniwa
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../philosophy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Philosophy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quickstart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/usage.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Developer Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../profiling-engine.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Profiling Engine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../file-readers.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    File Readers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reporting-system.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reporting System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../template-engine.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Template Engine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adding-file-readers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding File Readers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adding-report-formats/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding Report Formats
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adding-report-templates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding Report Templates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adding-insights/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding Insights
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../local-development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Local Development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../code-style/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code Style
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dependency-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dependency Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release Process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Release Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release-notes/v0.1.0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    v0.1.0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release-notes/v0.1.1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    v0.1.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release-notes/v0.1.2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    v0.1.2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h1>
+<p>This document explains the architecture of Aniwa, including:</p>
+<ul>
+<li>system structure</li>
+<li>execution flow</li>
+<li>core modules</li>
+<li>profiling pipeline</li>
+<li>reporting systems</li>
+<li>scalability strategy</li>
+<li>future architectural direction</li>
+</ul>
+<p>Aniwa is designed as:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>modular universal data profiling infrastructure
+</code></pre></div>
+<p>not merely:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>a CLI utility
+</code></pre></div>
+<hr />
+<h1 id="purpose-of-the-architecture">Purpose of the Architecture<a class="headerlink" href="#purpose-of-the-architecture" title="Permanent link">&para;</a></h1>
+<p>The architecture exists to ensure:</p>
+<ul>
+<li>scalability</li>
+<li>maintainability</li>
+<li>extensibility</li>
+<li>performance</li>
+<li>contributor friendliness</li>
+</ul>
+<hr />
+<h1 id="architectural-philosophy">Architectural Philosophy<a class="headerlink" href="#architectural-philosophy" title="Permanent link">&para;</a></h1>
+<p>Aniwa architecture is built around several principles:</p>
+<table>
+<thead>
+<tr>
+<th>Principle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>modular</td>
+</tr>
+<tr>
+<td>scalable</td>
+</tr>
+<tr>
+<td>developer-first</td>
+</tr>
+<tr>
+<td>extensible</td>
+</tr>
+<tr>
+<td>automation-friendly</td>
+</tr>
+<tr>
+<td>maintainable</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="core-philosophy">Core Philosophy<a class="headerlink" href="#core-philosophy" title="Permanent link">&para;</a></h1>
+<p>Aniwa is designed around:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>separation of concerns
+</code></pre></div>
+<p>This means each system should own:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>one primary responsibility
+</code></pre></div>
+<hr />
+<h1 id="high-level-architecture">High-Level Architecture<a class="headerlink" href="#high-level-architecture" title="Permanent link">&para;</a></h1>
+<p>Aniwa currently consists of several major layers:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>CLI
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>→ Configuration
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>→ Readers
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>→ Profiling Engine
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>→ Models
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>→ Reports
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>→ Templates
+</code></pre></div>
+<hr />
+<h1 id="high-level-execution-flow">High-Level Execution Flow<a class="headerlink" href="#high-level-execution-flow" title="Permanent link">&para;</a></h1>
+<p>The current execution pipeline:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>User Command
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>→ CLI Parsing
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>→ Config Resolution
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>→ Dataset Reading
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>→ Profiling Engine
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>→ Insight Generation
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>→ Report Rendering
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>→ Output Export
+</code></pre></div>
+<hr />
+<h1 id="current-project-structure">Current Project Structure<a class="headerlink" href="#current-project-structure" title="Permanent link">&para;</a></h1>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Aniwa/
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>│
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>├── aniwa/
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>│   ├── cli.py
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>│   │
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>│   ├── config/
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>│   │
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>│   ├── core/
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>│   │
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>│   ├── io/
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>│   │
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>│   ├── models/
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>│   │
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>│   ├── reports/
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>│   │
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>│   ├── templates/
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>│   │
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>│   └── utils/
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>│
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>├── docs/
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>├── tests/
+<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>├── examples/
+<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>│
+<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>├── README.md
+<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>├── pyproject.toml
+<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a>└── requirements.txt
+</code></pre></div>
+<hr />
+<h1 id="why-the-structure-matters">Why the Structure Matters<a class="headerlink" href="#why-the-structure-matters" title="Permanent link">&para;</a></h1>
+<p>This structure enables:</p>
+<ul>
+<li>isolated systems</li>
+<li>easier testing</li>
+<li>contributor scalability</li>
+<li>architectural clarity</li>
+</ul>
+<hr />
+<h1 id="cli-layer">CLI Layer<a class="headerlink" href="#cli-layer" title="Permanent link">&para;</a></h1>
+<p>Primary file:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>aniwa/cli.py
+</code></pre></div>
+<hr />
+<h1 id="responsibilities-of-the-cli">Responsibilities of the CLI<a class="headerlink" href="#responsibilities-of-the-cli" title="Permanent link">&para;</a></h1>
+<p>The CLI layer handles:</p>
+<ul>
+<li>argument parsing</li>
+<li>command orchestration</li>
+<li>config loading</li>
+<li>report routing</li>
+<li>execution flow</li>
+</ul>
+<hr />
+<h1 id="why-the-cli-exists">Why the CLI Exists<a class="headerlink" href="#why-the-cli-exists" title="Permanent link">&para;</a></h1>
+<p>The CLI acts as:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>the orchestration layer
+</code></pre></div>
+<p>for the entire system.</p>
+<hr />
+<h1 id="current-cli-responsibilities">Current CLI Responsibilities<a class="headerlink" href="#current-cli-responsibilities" title="Permanent link">&para;</a></h1>
+<p>The CLI currently controls:</p>
+<table>
+<thead>
+<tr>
+<th>Responsibility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>input parsing</td>
+</tr>
+<tr>
+<td>config resolution</td>
+</tr>
+<tr>
+<td>report selection</td>
+</tr>
+<tr>
+<td>profiling mode</td>
+</tr>
+<tr>
+<td>section filtering</td>
+</tr>
+<tr>
+<td>metadata generation</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="configuration-layer">Configuration Layer<a class="headerlink" href="#configuration-layer" title="Permanent link">&para;</a></h1>
+<p>Primary area:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>aniwa/config/
+</code></pre></div>
+<hr />
+<h1 id="responsibilities-of-the-config-system">Responsibilities of the Config System<a class="headerlink" href="#responsibilities-of-the-config-system" title="Permanent link">&para;</a></h1>
+<p>The configuration system handles:</p>
+<ul>
+<li>YAML configs</li>
+<li>TOML configs</li>
+<li>JSON configs</li>
+<li>config flattening</li>
+<li>validation</li>
+<li>precedence resolution</li>
+</ul>
+<hr />
+<h1 id="config-priority-order">Config Priority Order<a class="headerlink" href="#config-priority-order" title="Permanent link">&para;</a></h1>
+<p>Aniwa follows:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>CLI &gt; config file &gt; defaults
+</code></pre></div>
+<hr />
+<h1 id="why-this-matters">Why This Matters<a class="headerlink" href="#why-this-matters" title="Permanent link">&para;</a></h1>
+<p>This provides:</p>
+<ul>
+<li>reproducibility</li>
+<li>flexibility</li>
+<li>automation compatibility</li>
+</ul>
+<hr />
+<h1 id="automatic-config-discovery">Automatic Config Discovery<a class="headerlink" href="#automatic-config-discovery" title="Permanent link">&para;</a></h1>
+<p>Aniwa automatically searches for:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>aniwa.yaml
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>aniwa.yml
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>aniwa.toml
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>aniwa.json
+</code></pre></div>
+<hr />
+<h1 id="reader-layer">Reader Layer<a class="headerlink" href="#reader-layer" title="Permanent link">&para;</a></h1>
+<p>Primary location:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>aniwa/io/
+</code></pre></div>
+<hr />
+<h1 id="responsibilities-of-readers">Responsibilities of Readers<a class="headerlink" href="#responsibilities-of-readers" title="Permanent link">&para;</a></h1>
+<p>Readers handle:</p>
+<ul>
+<li>dataset ingestion</li>
+<li>format detection</li>
+<li>conversion to Polars DataFrames</li>
+</ul>
+<hr />
+<h1 id="supported-formats">Supported Formats<a class="headerlink" href="#supported-formats" title="Permanent link">&para;</a></h1>
+<p>Current formats:</p>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CSV</td>
+</tr>
+<tr>
+<td>Excel</td>
+</tr>
+<tr>
+<td>JSON</td>
+</tr>
+<tr>
+<td>Parquet</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="why-readers-are-isolated">Why Readers Are Isolated<a class="headerlink" href="#why-readers-are-isolated" title="Permanent link">&para;</a></h1>
+<p>Reader isolation enables:</p>
+<ul>
+<li>easier extensibility</li>
+<li>cleaner debugging</li>
+<li>modular format support</li>
+</ul>
+<hr />
+<h1 id="reader-execution-flow">Reader Execution Flow<a class="headerlink" href="#reader-execution-flow" title="Permanent link">&para;</a></h1>
+<p>Typical reader flow:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>path
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>→ extension detection
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>→ parser selection
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>→ dataframe conversion
+</code></pre></div>
+<hr />
+<h1 id="why-polars-was-chosen">Why Polars Was Chosen<a class="headerlink" href="#why-polars-was-chosen" title="Permanent link">&para;</a></h1>
+<p>Aniwa uses:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Polars
+</code></pre></div>
+<p>because it provides:</p>
+<ul>
+<li>high performance</li>
+<li>vectorized computation</li>
+<li>modern dataframe architecture</li>
+</ul>
+<hr />
+<h1 id="core-profiling-engine">Core Profiling Engine<a class="headerlink" href="#core-profiling-engine" title="Permanent link">&para;</a></h1>
+<p>Primary location:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>aniwa/core/
+</code></pre></div>
+<hr />
+<h1 id="responsibilities-of-the-profiling-engine">Responsibilities of the Profiling Engine<a class="headerlink" href="#responsibilities-of-the-profiling-engine" title="Permanent link">&para;</a></h1>
+<p>The profiling engine handles:</p>
+<ul>
+<li>schema analysis</li>
+<li>quality analysis</li>
+<li>statistics</li>
+<li>insights</li>
+<li>metadata generation</li>
+</ul>
+<hr />
+<h1 id="why-the-profiling-engine-matters">Why the Profiling Engine Matters<a class="headerlink" href="#why-the-profiling-engine-matters" title="Permanent link">&para;</a></h1>
+<p>The profiling engine is:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>the intelligence core of Aniwa
+</code></pre></div>
+<hr />
+<h1 id="profiling-pipeline">Profiling Pipeline<a class="headerlink" href="#profiling-pipeline" title="Permanent link">&para;</a></h1>
+<p>Current profiling flow:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>dataset
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>→ schema analysis
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>→ quality analysis
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>→ statistics
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>→ insights
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>→ profile object
+</code></pre></div>
+<hr />
+<h1 id="profiling-modes">Profiling Modes<a class="headerlink" href="#profiling-modes" title="Permanent link">&para;</a></h1>
+<p>Current modes:</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fast</td>
+</tr>
+<tr>
+<td>deep</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="fast-mode">Fast Mode<a class="headerlink" href="#fast-mode" title="Permanent link">&para;</a></h1>
+<p>Fast mode prioritizes:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>lightweight rapid analysis
+</code></pre></div>
+<hr />
+<h1 id="deep-mode">Deep Mode<a class="headerlink" href="#deep-mode" title="Permanent link">&para;</a></h1>
+<p>Deep mode prioritizes:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>full dataset understanding
+</code></pre></div>
+<hr />
+<h1 id="why-multiple-modes-matter">Why Multiple Modes Matter<a class="headerlink" href="#why-multiple-modes-matter" title="Permanent link">&para;</a></h1>
+<p>Different workflows require different tradeoffs between:</p>
+<ul>
+<li>speed</li>
+<li>depth</li>
+<li>resource usage</li>
+</ul>
+<hr />
+<h1 id="insight-system">Insight System<a class="headerlink" href="#insight-system" title="Permanent link">&para;</a></h1>
+<p>The insight layer detects:</p>
+<ul>
+<li>suspicious patterns</li>
+<li>quality issues</li>
+<li>sparse columns</li>
+<li>possible PII</li>
+<li>duplicate rows</li>
+</ul>
+<hr />
+<h1 id="why-insights-matter">Why Insights Matter<a class="headerlink" href="#why-insights-matter" title="Permanent link">&para;</a></h1>
+<p>Users want:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>meaningful understanding
+</code></pre></div>
+<p>not merely:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>raw statistics
+</code></pre></div>
+<hr />
+<h1 id="models-layer">Models Layer<a class="headerlink" href="#models-layer" title="Permanent link">&para;</a></h1>
+<p>Primary location:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>aniwa/models/
+</code></pre></div>
+<hr />
+<h1 id="responsibilities-of-models">Responsibilities of Models<a class="headerlink" href="#responsibilities-of-models" title="Permanent link">&para;</a></h1>
+<p>Models provide:</p>
+<ul>
+<li>structured data representation</li>
+<li>type-safe architecture</li>
+<li>report consistency</li>
+</ul>
+<hr />
+<h1 id="why-models-matter">Why Models Matter<a class="headerlink" href="#why-models-matter" title="Permanent link">&para;</a></h1>
+<p>Models create:</p>
+<ul>
+<li>predictable data structures</li>
+<li>cleaner serialization</li>
+<li>safer extensibility</li>
+</ul>
+<hr />
+<h1 id="current-model-categories">Current Model Categories<a class="headerlink" href="#current-model-categories" title="Permanent link">&para;</a></h1>
+<p>Current models include:</p>
+<table>
+<thead>
+<tr>
+<th>Model Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>metadata</td>
+</tr>
+<tr>
+<td>schema</td>
+</tr>
+<tr>
+<td>statistics</td>
+</tr>
+<tr>
+<td>insights</td>
+</tr>
+<tr>
+<td>reports</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="reporting-layer">Reporting Layer<a class="headerlink" href="#reporting-layer" title="Permanent link">&para;</a></h1>
+<p>Primary location:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>aniwa/reports/
+</code></pre></div>
+<hr />
+<h1 id="responsibilities-of-reports">Responsibilities of Reports<a class="headerlink" href="#responsibilities-of-reports" title="Permanent link">&para;</a></h1>
+<p>The reporting system handles:</p>
+<ul>
+<li>rendering</li>
+<li>serialization</li>
+<li>export generation</li>
+</ul>
+<hr />
+<h1 id="current-report-formats">Current Report Formats<a class="headerlink" href="#current-report-formats" title="Permanent link">&para;</a></h1>
+<p>Supported formats:</p>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>console</td>
+</tr>
+<tr>
+<td>JSON</td>
+</tr>
+<tr>
+<td>HTML</td>
+</tr>
+<tr>
+<td>Markdown</td>
+</tr>
+<tr>
+<td>Excel</td>
+</tr>
+<tr>
+<td>PDF</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="why-reports-are-modular">Why Reports Are Modular<a class="headerlink" href="#why-reports-are-modular" title="Permanent link">&para;</a></h1>
+<p>Modular reports enable:</p>
+<ul>
+<li>independent extensions</li>
+<li>cleaner maintenance</li>
+<li>easier customization</li>
+</ul>
+<hr />
+<h1 id="report-rendering-flow">Report Rendering Flow<a class="headerlink" href="#report-rendering-flow" title="Permanent link">&para;</a></h1>
+<p>Current rendering flow:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>profile object
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>→ formatter
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>→ renderer
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>→ output
+</code></pre></div>
+<hr />
+<h1 id="console-reports">Console Reports<a class="headerlink" href="#console-reports" title="Permanent link">&para;</a></h1>
+<p>Console reports prioritize:</p>
+<ul>
+<li>readability</li>
+<li>developer UX</li>
+<li>terminal clarity</li>
+</ul>
+<hr />
+<h1 id="html-reports">HTML Reports<a class="headerlink" href="#html-reports" title="Permanent link">&para;</a></h1>
+<p>HTML reports prioritize:</p>
+<ul>
+<li>shareability</li>
+<li>visualization</li>
+<li>presentation</li>
+</ul>
+<hr />
+<h1 id="json-reports">JSON Reports<a class="headerlink" href="#json-reports" title="Permanent link">&para;</a></h1>
+<p>JSON reports prioritize:</p>
+<ul>
+<li>machine-readability</li>
+<li>automation</li>
+<li>integrations</li>
+</ul>
+<hr />
+<h1 id="markdown-reports">Markdown Reports<a class="headerlink" href="#markdown-reports" title="Permanent link">&para;</a></h1>
+<p>Markdown reports prioritize:</p>
+<ul>
+<li>documentation workflows</li>
+<li>GitHub compatibility</li>
+<li>portability</li>
+</ul>
+<hr />
+<h1 id="template-system">Template System<a class="headerlink" href="#template-system" title="Permanent link">&para;</a></h1>
+<p>Primary location:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>aniwa/templates/
+</code></pre></div>
+<hr />
+<h1 id="responsibilities-of-templates">Responsibilities of Templates<a class="headerlink" href="#responsibilities-of-templates" title="Permanent link">&para;</a></h1>
+<p>Templates control:</p>
+<ul>
+<li>layout</li>
+<li>styling</li>
+<li>presentation structure</li>
+</ul>
+<hr />
+<h1 id="why-templates-matter">Why Templates Matter<a class="headerlink" href="#why-templates-matter" title="Permanent link">&para;</a></h1>
+<p>Templates separate:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>presentation from logic
+</code></pre></div>
+<hr />
+<h1 id="template-philosophy">Template Philosophy<a class="headerlink" href="#template-philosophy" title="Permanent link">&para;</a></h1>
+<p>Templates should remain:</p>
+<ul>
+<li>reusable</li>
+<li>isolated</li>
+<li>customizable</li>
+</ul>
+<hr />
+<h1 id="utility-layer">Utility Layer<a class="headerlink" href="#utility-layer" title="Permanent link">&para;</a></h1>
+<p>Primary location:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>aniwa/utils/
+</code></pre></div>
+<hr />
+<h1 id="responsibilities-of-utilities">Responsibilities of Utilities<a class="headerlink" href="#responsibilities-of-utilities" title="Permanent link">&para;</a></h1>
+<p>Utilities contain:</p>
+<ul>
+<li>helper functions</li>
+<li>reusable shared logic</li>
+<li>formatting systems</li>
+</ul>
+<hr />
+<h1 id="why-utilities-exist">Why Utilities Exist<a class="headerlink" href="#why-utilities-exist" title="Permanent link">&para;</a></h1>
+<p>Utilities reduce:</p>
+<ul>
+<li>duplication</li>
+<li>tightly coupled code</li>
+<li>architectural clutter</li>
+</ul>
+<hr />
+<h1 id="metadata-system">Metadata System<a class="headerlink" href="#metadata-system" title="Permanent link">&para;</a></h1>
+<p>Aniwa automatically generates metadata including:</p>
+<table>
+<thead>
+<tr>
+<th>Metadata</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>runtime</td>
+</tr>
+<tr>
+<td>dataset size</td>
+</tr>
+<tr>
+<td>file type</td>
+</tr>
+<tr>
+<td>version</td>
+</tr>
+<tr>
+<td>execution command</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="why-metadata-matters">Why Metadata Matters<a class="headerlink" href="#why-metadata-matters" title="Permanent link">&para;</a></h1>
+<p>Metadata improves:</p>
+<ul>
+<li>reproducibility</li>
+<li>debugging</li>
+<li>governance</li>
+<li>auditing</li>
+</ul>
+<hr />
+<h1 id="section-based-architecture">Section-Based Architecture<a class="headerlink" href="#section-based-architecture" title="Permanent link">&para;</a></h1>
+<p>Aniwa supports selective report sections.</p>
+<hr />
+<h1 id="current-sections">Current Sections<a class="headerlink" href="#current-sections" title="Permanent link">&para;</a></h1>
+<p>Current sections include:</p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>summary</td>
+</tr>
+<tr>
+<td>schema</td>
+</tr>
+<tr>
+<td>quality</td>
+</tr>
+<tr>
+<td>statistics</td>
+</tr>
+<tr>
+<td>insights</td>
+</tr>
+<tr>
+<td>charts</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="why-section-modularity-matters">Why Section Modularity Matters<a class="headerlink" href="#why-section-modularity-matters" title="Permanent link">&para;</a></h1>
+<p>This enables:</p>
+<ul>
+<li>smaller reports</li>
+<li>customizable workflows</li>
+<li>automation flexibility</li>
+</ul>
+<hr />
+<h1 id="error-handling-philosophy">Error Handling Philosophy<a class="headerlink" href="#error-handling-philosophy" title="Permanent link">&para;</a></h1>
+<p>Aniwa prioritizes:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>clear actionable errors
+</code></pre></div>
+<hr />
+<h1 id="good-error-example">Good Error Example<a class="headerlink" href="#good-error-example" title="Permanent link">&para;</a></h1>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>Invalid report format: yaml
+</code></pre></div>
+<hr />
+<h1 id="bad-error-example">Bad Error Example<a class="headerlink" href="#bad-error-example" title="Permanent link">&para;</a></h1>
+<p>Avoid:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>Unhandled exception occurred
+</code></pre></div>
+<hr />
+<h1 id="scalability-philosophy">Scalability Philosophy<a class="headerlink" href="#scalability-philosophy" title="Permanent link">&para;</a></h1>
+<p>Aniwa is designed with:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>future scalability in mind
+</code></pre></div>
+<hr />
+<h1 id="why-scalability-matters">Why Scalability Matters<a class="headerlink" href="#why-scalability-matters" title="Permanent link">&para;</a></h1>
+<p>The architecture should eventually support:</p>
+<ul>
+<li>massive datasets</li>
+<li>distributed systems</li>
+<li>cloud infrastructure</li>
+<li>enterprise workflows</li>
+</ul>
+<hr />
+<h1 id="current-scalability-strategies">Current Scalability Strategies<a class="headerlink" href="#current-scalability-strategies" title="Permanent link">&para;</a></h1>
+<p>Current scalability considerations:</p>
+<table>
+<thead>
+<tr>
+<th>Strategy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>modular systems</td>
+</tr>
+<tr>
+<td>isolated readers</td>
+</tr>
+<tr>
+<td>layered architecture</td>
+</tr>
+<tr>
+<td>reusable models</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="future-scalability-directions">Future Scalability Directions<a class="headerlink" href="#future-scalability-directions" title="Permanent link">&para;</a></h1>
+<p>Potential future systems:</p>
+<table>
+<thead>
+<tr>
+<th>Future System</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>chunked processing</td>
+</tr>
+<tr>
+<td>streaming profiling</td>
+</tr>
+<tr>
+<td>distributed execution</td>
+</tr>
+<tr>
+<td>async pipelines</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="future-connectivity-vision">Future Connectivity Vision<a class="headerlink" href="#future-connectivity-vision" title="Permanent link">&para;</a></h1>
+<p>Aniwa aims to support:</p>
+<table>
+<thead>
+<tr>
+<th>System</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PostgreSQL</td>
+</tr>
+<tr>
+<td>MySQL</td>
+</tr>
+<tr>
+<td>DuckDB</td>
+</tr>
+<tr>
+<td>BigQuery</td>
+</tr>
+<tr>
+<td>Snowflake</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="why-universal-connectivity-matters">Why Universal Connectivity Matters<a class="headerlink" href="#why-universal-connectivity-matters" title="Permanent link">&para;</a></h1>
+<p>Modern data ecosystems are:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>distributed and fragmented
+</code></pre></div>
+<hr />
+<h1 id="future-plugin-architecture">Future Plugin Architecture<a class="headerlink" href="#future-plugin-architecture" title="Permanent link">&para;</a></h1>
+<p>Potential future plugin systems:</p>
+<table>
+<thead>
+<tr>
+<th>Plugin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>readers</td>
+</tr>
+<tr>
+<td>reports</td>
+</tr>
+<tr>
+<td>governance</td>
+</tr>
+<tr>
+<td>AI modules</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="why-plugins-matter">Why Plugins Matter<a class="headerlink" href="#why-plugins-matter" title="Permanent link">&para;</a></h1>
+<p>Plugins allow:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>ecosystem scalability through community extension
+</code></pre></div>
+<hr />
+<h1 id="future-ai-architecture">Future AI Architecture<a class="headerlink" href="#future-ai-architecture" title="Permanent link">&para;</a></h1>
+<p>Future AI systems may support:</p>
+<ul>
+<li>semantic understanding</li>
+<li>anomaly explanation</li>
+<li>dataset summarization</li>
+<li>intelligent recommendations</li>
+</ul>
+<hr />
+<h1 id="future-governance-systems">Future Governance Systems<a class="headerlink" href="#future-governance-systems" title="Permanent link">&para;</a></h1>
+<p>Potential governance layers:</p>
+<ul>
+<li>PII detection</li>
+<li>trust scoring</li>
+<li>lineage tracking</li>
+<li>compliance validation</li>
+</ul>
+<hr />
+<h1 id="cloud-architecture-vision">Cloud Architecture Vision<a class="headerlink" href="#cloud-architecture-vision" title="Permanent link">&para;</a></h1>
+<p>Future cloud systems may include:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>web UI
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>→ APIs
+<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>→ profiling services
+<a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a>→ metadata storage
+</code></pre></div>
+<hr />
+<h1 id="distributed-systems-vision">Distributed Systems Vision<a class="headerlink" href="#distributed-systems-vision" title="Permanent link">&para;</a></h1>
+<p>Long-term systems may evolve toward:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>distributed profiling infrastructure
+</code></pre></div>
+<hr />
+<h1 id="why-distributed-systems-matter">Why Distributed Systems Matter<a class="headerlink" href="#why-distributed-systems-matter" title="Permanent link">&para;</a></h1>
+<p>Distributed systems enable:</p>
+<ul>
+<li>massive scale</li>
+<li>enterprise workloads</li>
+<li>parallel computation</li>
+</ul>
+<hr />
+<h1 id="long-term-architecture-philosophy">Long-Term Architecture Philosophy<a class="headerlink" href="#long-term-architecture-philosophy" title="Permanent link">&para;</a></h1>
+<p>Aniwa architecture is designed with:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>10–20+ year evolution in mind
+</code></pre></div>
+<hr />
+<h1 id="why-long-term-thinking-matters">Why Long-Term Thinking Matters<a class="headerlink" href="#why-long-term-thinking-matters" title="Permanent link">&para;</a></h1>
+<p>Strong foundations reduce:</p>
+<ul>
+<li>rewrites</li>
+<li>technical debt</li>
+<li>architectural fragmentation</li>
+</ul>
+<hr />
+<h1 id="architectural-anti-patterns">Architectural Anti-Patterns<a class="headerlink" href="#architectural-anti-patterns" title="Permanent link">&para;</a></h1>
+<p>Avoid:</p>
+<table>
+<thead>
+<tr>
+<th>Anti-Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tightly coupled systems</td>
+</tr>
+<tr>
+<td>duplicated logic</td>
+</tr>
+<tr>
+<td>monolithic reports</td>
+</tr>
+<tr>
+<td>hidden side effects</td>
+</tr>
+<tr>
+<td>unclear execution flow</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="contributor-architecture-philosophy">Contributor Architecture Philosophy<a class="headerlink" href="#contributor-architecture-philosophy" title="Permanent link">&para;</a></h1>
+<p>Contributors should prioritize:</p>
+<ul>
+<li>modularity</li>
+<li>maintainability</li>
+<li>readability</li>
+<li>scalability</li>
+</ul>
+<hr />
+<h1 id="why-contributor-alignment-matters">Why Contributor Alignment Matters<a class="headerlink" href="#why-contributor-alignment-matters" title="Permanent link">&para;</a></h1>
+<p>Consistent architecture improves:</p>
+<ul>
+<li>ecosystem health</li>
+<li>contributor onboarding</li>
+<li>long-term maintainability</li>
+</ul>
+<hr />
+<h1 id="strategic-importance">Strategic Importance<a class="headerlink" href="#strategic-importance" title="Permanent link">&para;</a></h1>
+<p>Aniwa architecture exists to ensure that:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>the platform can evolve from a profiling CLI into universal data intelligence infrastructure
+</code></pre></div>
+<hr />
+<h1 id="final-philosophy">Final Philosophy<a class="headerlink" href="#final-philosophy" title="Permanent link">&para;</a></h1>
+<p>Aniwa architecture is designed to remain:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>modular, scalable, intelligent, extensible, and sustainable over decades of ecosystem growth
+</code></pre></div>
+<hr />
+<h1 id="related-documentation">Related Documentation<a class="headerlink" href="#related-documentation" title="Permanent link">&para;</a></h1>
+<p>Continue with:</p>
+<ul>
+<li>developer-guide/profiling-engine.md</li>
+<li>developer-guide/reporting-system.md</li>
+<li>roadmap.md</li>
+<li>philosophy.md</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "navigation.instant", "navigation.tracking", "search.highlight", "search.suggest", "search.share", "content.code.copy", "content.code.annotate", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

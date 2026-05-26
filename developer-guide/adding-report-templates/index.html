@@ -1,0 +1,2041 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Universal dataset profiling and intelligence tool.">
+      
+      
+        <meta name="author" content="Reginald Erzoah">
+      
+      
+        <link rel="canonical" href="https://reginalderzoah.github.io/Aniwa/developer-guide/adding-report-templates/">
+      
+      
+        <link rel="prev" href="../adding-report-formats/">
+      
+      
+        <link rel="next" href="../adding-insights/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Adding Report Templates - Aniwa</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#adding-report-templates" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Aniwa" class="md-header__button md-logo" aria-label="Aniwa" data-md-component="logo">
+      
+  <img src="../../assets/aniwa-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Aniwa
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Adding Report Templates
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="amber"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ReginaldErzoah/Aniwa" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ReginaldErzoah/Aniwa
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Aniwa" class="md-nav__button md-logo" aria-label="Aniwa" data-md-component="logo">
+      
+  <img src="../../assets/aniwa-logo.png" alt="logo">
+
+    </a>
+    Aniwa
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ReginaldErzoah/Aniwa" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ReginaldErzoah/Aniwa
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../philosophy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Philosophy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quickstart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/usage.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Developer Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../profiling-engine.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Profiling Engine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../file-readers.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    File Readers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reporting-system.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reporting System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../template-engine.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Template Engine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adding-file-readers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding File Readers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adding-report-formats/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding Report Formats
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding Report Templates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adding-insights/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding Insights
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../local-development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Local Development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../code-style/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code Style
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dependency-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dependency Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release Process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Release Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release-notes/v0.1.0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    v0.1.0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release-notes/v0.1.1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    v0.1.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release-notes/v0.1.2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    v0.1.2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="adding-report-templates">Adding Report Templates<a class="headerlink" href="#adding-report-templates" title="Permanent link">&para;</a></h1>
+<p>This guide explains how to create, structure, extend, and maintain report templates in Aniwa.</p>
+<p>Templates are one of the most important parts of Aniwa’s reporting system because they control:</p>
+<ul>
+<li>layout</li>
+<li>styling</li>
+<li>visual hierarchy</li>
+<li>presentation quality</li>
+<li>report usability</li>
+</ul>
+<p>Templates transform:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>structured profiling intelligence
+</code></pre></div>
+<p>into:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>beautiful, understandable visual reports
+</code></pre></div>
+<hr />
+<h1 id="purpose-of-templates">Purpose of Templates<a class="headerlink" href="#purpose-of-templates" title="Permanent link">&para;</a></h1>
+<p>Templates separate:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>presentation
+</code></pre></div>
+<p>from:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>business logic
+</code></pre></div>
+<hr />
+<h1 id="why-templates-matter">Why Templates Matter<a class="headerlink" href="#why-templates-matter" title="Permanent link">&para;</a></h1>
+<p>Without templates:</p>
+<ul>
+<li>renderers become difficult to maintain</li>
+<li>styling becomes inconsistent</li>
+<li>customization becomes fragile</li>
+<li>visual scalability becomes difficult</li>
+</ul>
+<hr />
+<h1 id="template-philosophy">Template Philosophy<a class="headerlink" href="#template-philosophy" title="Permanent link">&para;</a></h1>
+<p>Aniwa templates are designed to be:</p>
+<table>
+<thead>
+<tr>
+<th>Principle</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>modular</td>
+<td>reusable layouts</td>
+</tr>
+<tr>
+<td>maintainable</td>
+<td>isolated presentation</td>
+</tr>
+<tr>
+<td>extensible</td>
+<td>future themes</td>
+</tr>
+<tr>
+<td>responsive</td>
+<td>multi-device support</td>
+</tr>
+<tr>
+<td>beautiful</td>
+<td>professional UX</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="template-engine-overview">Template Engine Overview<a class="headerlink" href="#template-engine-overview" title="Permanent link">&para;</a></h1>
+<p>Current rendering flow:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>DatasetProfile
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>→ renderer
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>→ Jinja2 template
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>→ HTML output
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>→ final report
+</code></pre></div>
+<hr />
+<h1 id="current-template-engine">Current Template Engine<a class="headerlink" href="#current-template-engine" title="Permanent link">&para;</a></h1>
+<p>Aniwa currently uses:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Jinja2
+</code></pre></div>
+<hr />
+<h1 id="why-jinja2-was-chosen">Why Jinja2 Was Chosen<a class="headerlink" href="#why-jinja2-was-chosen" title="Permanent link">&para;</a></h1>
+<p>Jinja2 provides:</p>
+<ul>
+<li>clean syntax</li>
+<li>reusable templates</li>
+<li>conditionals</li>
+<li>loops</li>
+<li>template inheritance</li>
+<li>strong Python integration</li>
+</ul>
+<hr />
+<h1 id="current-template-location">Current Template Location<a class="headerlink" href="#current-template-location" title="Permanent link">&para;</a></h1>
+<p>Templates are typically stored in:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>aniwa/templates/
+</code></pre></div>
+<hr />
+<h1 id="example-template-structure">Example Template Structure<a class="headerlink" href="#example-template-structure" title="Permanent link">&para;</a></h1>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>aniwa/templates/
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>├── default.html
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>├── clean.html
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>├── compact.html
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>├── dark.html
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>├── enterprise.html
+</code></pre></div>
+<hr />
+<h1 id="current-template-types">Current Template Types<a class="headerlink" href="#current-template-types" title="Permanent link">&para;</a></h1>
+<p>Aniwa currently supports:</p>
+<table>
+<thead>
+<tr>
+<th>Template</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>default</td>
+</tr>
+<tr>
+<td>clean</td>
+</tr>
+<tr>
+<td>compact</td>
+</tr>
+<tr>
+<td>dark</td>
+</tr>
+<tr>
+<td>enterprise</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="why-multiple-templates-matter">Why Multiple Templates Matter<a class="headerlink" href="#why-multiple-templates-matter" title="Permanent link">&para;</a></h1>
+<p>Different users prefer different report styles.</p>
+<p>Examples:</p>
+<table>
+<thead>
+<tr>
+<th>User</th>
+<th>Preferred Style</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>developers</td>
+<td>compact</td>
+</tr>
+<tr>
+<td>executives</td>
+<td>enterprise</td>
+</tr>
+<tr>
+<td>dashboards</td>
+<td>dark</td>
+</tr>
+<tr>
+<td>documentation</td>
+<td>clean</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="template-responsibilities">Template Responsibilities<a class="headerlink" href="#template-responsibilities" title="Permanent link">&para;</a></h1>
+<p>Templates should handle:</p>
+<ul>
+<li>layout</li>
+<li>styling</li>
+<li>spacing</li>
+<li>rendering organization</li>
+<li>conditional display</li>
+</ul>
+<hr />
+<h1 id="templates-should-not-handle">Templates Should NOT Handle<a class="headerlink" href="#templates-should-not-handle" title="Permanent link">&para;</a></h1>
+<p>Templates should NOT contain:</p>
+<ul>
+<li>profiling logic</li>
+<li>dataframe computation</li>
+<li>business rules</li>
+<li>dataset analysis</li>
+</ul>
+<hr />
+<h1 id="why-logic-separation-matters">Why Logic Separation Matters<a class="headerlink" href="#why-logic-separation-matters" title="Permanent link">&para;</a></h1>
+<p>Separation improves:</p>
+<ul>
+<li>maintainability</li>
+<li>readability</li>
+<li>scalability</li>
+<li>contributor onboarding</li>
+</ul>
+<hr />
+<h1 id="template-data-source">Template Data Source<a class="headerlink" href="#template-data-source" title="Permanent link">&para;</a></h1>
+<p>Templates consume:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">DatasetProfile</span>
+</code></pre></div>
+<hr />
+<h1 id="typical-template-context">Typical Template Context<a class="headerlink" href="#typical-template-context" title="Permanent link">&para;</a></h1>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">profile</span><span class="o">.</span><span class="n">summary</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">profile</span><span class="o">.</span><span class="n">columns</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">profile</span><span class="o">.</span><span class="n">insights</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="n">profile</span><span class="o">.</span><span class="n">metadata</span>
+</code></pre></div>
+<hr />
+<h1 id="step-by-step-guide">Step-by-Step Guide<a class="headerlink" href="#step-by-step-guide" title="Permanent link">&para;</a></h1>
+<hr />
+<h1 id="step-1-create-the-template-file">Step 1 — Create the Template File<a class="headerlink" href="#step-1-create-the-template-file" title="Permanent link">&para;</a></h1>
+<p>Add a new template inside:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>aniwa/templates/
+</code></pre></div>
+<hr />
+<h1 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h1>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>aniwa/templates/minimal.html
+</code></pre></div>
+<hr />
+<h1 id="step-2-start-with-standard-html-structure">Step 2 — Start With Standard HTML Structure<a class="headerlink" href="#step-2-start-with-standard-html-structure" title="Permanent link">&para;</a></h1>
+<p>Basic example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr />
+<h1 id="step-3-add-jinja2-variables">Step 3 — Add Jinja2 Variables<a class="headerlink" href="#step-3-add-jinja2-variables" title="Permanent link">&para;</a></h1>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>{{ profile.summary.rows }}
+</code></pre></div>
+<hr />
+<h1 id="step-4-add-conditional-rendering">Step 4 — Add Conditional Rendering<a class="headerlink" href="#step-4-add-conditional-rendering" title="Permanent link">&para;</a></h1>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>{% if profile.insights %}
+</code></pre></div>
+<hr />
+<h1 id="why-conditional-rendering-matters">Why Conditional Rendering Matters<a class="headerlink" href="#why-conditional-rendering-matters" title="Permanent link">&para;</a></h1>
+<p>This prevents:</p>
+<ul>
+<li>empty sections</li>
+<li>broken layouts</li>
+<li>visual clutter</li>
+</ul>
+<hr />
+<h1 id="step-5-organize-sections-clearly">Step 5 — Organize Sections Clearly<a class="headerlink" href="#step-5-organize-sections-clearly" title="Permanent link">&para;</a></h1>
+<p>Recommended sections:</p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>header</td>
+</tr>
+<tr>
+<td>metadata</td>
+</tr>
+<tr>
+<td>summary</td>
+</tr>
+<tr>
+<td>schema</td>
+</tr>
+<tr>
+<td>statistics</td>
+</tr>
+<tr>
+<td>insights</td>
+</tr>
+<tr>
+<td>charts</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="step-6-add-styling">Step 6 — Add Styling<a class="headerlink" href="#step-6-add-styling" title="Permanent link">&para;</a></h1>
+<p>Templates may include:</p>
+<ul>
+<li>inline CSS</li>
+<li>linked stylesheets</li>
+<li>reusable utility classes</li>
+</ul>
+<hr />
+<h1 id="current-styling-philosophy">Current Styling Philosophy<a class="headerlink" href="#current-styling-philosophy" title="Permanent link">&para;</a></h1>
+<p>Aniwa styling should feel:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>modern, clean, and professional
+</code></pre></div>
+<hr />
+<h1 id="design-priorities">Design Priorities<a class="headerlink" href="#design-priorities" title="Permanent link">&para;</a></h1>
+<p>Templates should prioritize:</p>
+<ul>
+<li>readability</li>
+<li>spacing</li>
+<li>information hierarchy</li>
+<li>accessibility</li>
+</ul>
+<hr />
+<h1 id="typography-philosophy">Typography Philosophy<a class="headerlink" href="#typography-philosophy" title="Permanent link">&para;</a></h1>
+<p>Typography should remain:</p>
+<ul>
+<li>clean</li>
+<li>minimal</li>
+<li>readable</li>
+</ul>
+<hr />
+<h1 id="recommended-font-styles">Recommended Font Styles<a class="headerlink" href="#recommended-font-styles" title="Permanent link">&para;</a></h1>
+<p>Good font categories:</p>
+<table>
+<thead>
+<tr>
+<th>Style</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sans-serif</td>
+</tr>
+<tr>
+<td>developer-friendly</td>
+</tr>
+<tr>
+<td>modern UI fonts</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="color-philosophy">Color Philosophy<a class="headerlink" href="#color-philosophy" title="Permanent link">&para;</a></h1>
+<p>Templates should maintain:</p>
+<ul>
+<li>strong contrast</li>
+<li>visual consistency</li>
+<li>restrained palettes</li>
+</ul>
+<hr />
+<h1 id="layout-philosophy">Layout Philosophy<a class="headerlink" href="#layout-philosophy" title="Permanent link">&para;</a></h1>
+<p>Layouts should remain:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>structured and uncluttered
+</code></pre></div>
+<hr />
+<h1 id="responsive-design-philosophy">Responsive Design Philosophy<a class="headerlink" href="#responsive-design-philosophy" title="Permanent link">&para;</a></h1>
+<p>Reports should work across:</p>
+<ul>
+<li>desktops</li>
+<li>tablets</li>
+<li>mobile devices</li>
+</ul>
+<hr />
+<h1 id="why-responsiveness-matters">Why Responsiveness Matters<a class="headerlink" href="#why-responsiveness-matters" title="Permanent link">&para;</a></h1>
+<p>Reports are often:</p>
+<ul>
+<li>shared</li>
+<li>viewed remotely</li>
+<li>embedded into workflows</li>
+</ul>
+<hr />
+<h1 id="current-responsive-strategies">Current Responsive Strategies<a class="headerlink" href="#current-responsive-strategies" title="Permanent link">&para;</a></h1>
+<p>Typical techniques:</p>
+<ul>
+<li>CSS grids</li>
+<li>media queries</li>
+<li>flexible containers</li>
+</ul>
+<hr />
+<h1 id="chart-integration">Chart Integration<a class="headerlink" href="#chart-integration" title="Permanent link">&para;</a></h1>
+<p>Templates may include charts.</p>
+<hr />
+<h1 id="current-chart-engine">Current Chart Engine<a class="headerlink" href="#current-chart-engine" title="Permanent link">&para;</a></h1>
+<p>Aniwa currently uses:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>Chart.js
+</code></pre></div>
+<hr />
+<h1 id="why-charts-matter">Why Charts Matter<a class="headerlink" href="#why-charts-matter" title="Permanent link">&para;</a></h1>
+<p>Charts improve:</p>
+<ul>
+<li>readability</li>
+<li>executive communication</li>
+<li>insight discovery</li>
+</ul>
+<hr />
+<h1 id="current-chart-types">Current Chart Types<a class="headerlink" href="#current-chart-types" title="Permanent link">&para;</a></h1>
+<p>Typical charts:</p>
+<table>
+<thead>
+<tr>
+<th>Chart</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>null percentages</td>
+</tr>
+<tr>
+<td>unique values</td>
+</tr>
+<tr>
+<td>duplicate overview</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="chart-rendering-flow">Chart Rendering Flow<a class="headerlink" href="#chart-rendering-flow" title="Permanent link">&para;</a></h1>
+<p>Typical flow:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>DatasetProfile
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>→ JSON serialization
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>→ Chart.js
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>→ visualization
+</code></pre></div>
+<hr />
+<h1 id="metadata-rendering">Metadata Rendering<a class="headerlink" href="#metadata-rendering" title="Permanent link">&para;</a></h1>
+<p>Templates should render metadata such as:</p>
+<ul>
+<li>profiling mode</li>
+<li>dataset path</li>
+<li>generated time</li>
+<li>Aniwa version</li>
+</ul>
+<hr />
+<h1 id="why-metadata-matters">Why Metadata Matters<a class="headerlink" href="#why-metadata-matters" title="Permanent link">&para;</a></h1>
+<p>Metadata improves:</p>
+<ul>
+<li>reproducibility</li>
+<li>governance</li>
+<li>debugging</li>
+</ul>
+<hr />
+<h1 id="example-metadata-block">Example Metadata Block<a class="headerlink" href="#example-metadata-block" title="Permanent link">&para;</a></h1>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>{{ profile.metadata.generated_at }}
+</code></pre></div>
+<hr />
+<h1 id="empty-state-philosophy">Empty State Philosophy<a class="headerlink" href="#empty-state-philosophy" title="Permanent link">&para;</a></h1>
+<p>Templates should gracefully handle:</p>
+<ul>
+<li>missing sections</li>
+<li>empty datasets</li>
+<li>absent insights</li>
+</ul>
+<hr />
+<h1 id="example-empty-state">Example Empty State<a class="headerlink" href="#example-empty-state" title="Permanent link">&para;</a></h1>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>No insights detected.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+<hr />
+<h1 id="template-naming-philosophy">Template Naming Philosophy<a class="headerlink" href="#template-naming-philosophy" title="Permanent link">&para;</a></h1>
+<p>Template names should remain:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>clear and descriptive
+</code></pre></div>
+<hr />
+<h1 id="good-template-names">Good Template Names<a class="headerlink" href="#good-template-names" title="Permanent link">&para;</a></h1>
+<p>Examples:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clean</td>
+</tr>
+<tr>
+<td>dark</td>
+</tr>
+<tr>
+<td>enterprise</td>
+</tr>
+<tr>
+<td>compact</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="bad-template-names">Bad Template Names<a class="headerlink" href="#bad-template-names" title="Permanent link">&para;</a></h1>
+<p>Avoid vague names like:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>template2
+</code></pre></div>
+<hr />
+<h1 id="template-scalability-philosophy">Template Scalability Philosophy<a class="headerlink" href="#template-scalability-philosophy" title="Permanent link">&para;</a></h1>
+<p>Templates should remain:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>modular and extensible
+</code></pre></div>
+<hr />
+<h1 id="why-scalability-matters">Why Scalability Matters<a class="headerlink" href="#why-scalability-matters" title="Permanent link">&para;</a></h1>
+<p>Report systems grow significantly over time.</p>
+<hr />
+<h1 id="future-template-inheritance">Future Template Inheritance<a class="headerlink" href="#future-template-inheritance" title="Permanent link">&para;</a></h1>
+<p>Future systems may use:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>base templates
+</code></pre></div>
+<hr />
+<h1 id="example-future-structure">Example Future Structure<a class="headerlink" href="#example-future-structure" title="Permanent link">&para;</a></h1>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>base.html
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>↓
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>enterprise.html
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>↓
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>dark.html
+</code></pre></div>
+<hr />
+<h1 id="why-template-inheritance-matters">Why Template Inheritance Matters<a class="headerlink" href="#why-template-inheritance-matters" title="Permanent link">&para;</a></h1>
+<p>Inheritance improves:</p>
+<ul>
+<li>reuse</li>
+<li>consistency</li>
+<li>maintainability</li>
+</ul>
+<hr />
+<h1 id="future-component-systems">Future Component Systems<a class="headerlink" href="#future-component-systems" title="Permanent link">&para;</a></h1>
+<p>Future templates may evolve into:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>component-based architectures
+</code></pre></div>
+<hr />
+<h1 id="potential-future-components">Potential Future Components<a class="headerlink" href="#potential-future-components" title="Permanent link">&para;</a></h1>
+<p>Possible reusable components:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>summary cards</td>
+</tr>
+<tr>
+<td>schema tables</td>
+</tr>
+<tr>
+<td>metadata panels</td>
+</tr>
+<tr>
+<td>chart blocks</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="future-dashboard-templates">Future Dashboard Templates<a class="headerlink" href="#future-dashboard-templates" title="Permanent link">&para;</a></h1>
+<p>Potential future systems:</p>
+<ul>
+<li>interactive dashboards</li>
+<li>live profiling UIs</li>
+<li>observability interfaces</li>
+</ul>
+<hr />
+<h1 id="future-theme-systems">Future Theme Systems<a class="headerlink" href="#future-theme-systems" title="Permanent link">&para;</a></h1>
+<p>Potential future features:</p>
+<ul>
+<li>custom themes</li>
+<li>organization branding</li>
+<li>dark/light switching</li>
+</ul>
+<hr />
+<h1 id="enterprise-branding-vision">Enterprise Branding Vision<a class="headerlink" href="#enterprise-branding-vision" title="Permanent link">&para;</a></h1>
+<p>Future enterprise systems may support:</p>
+<ul>
+<li>company logos</li>
+<li>brand palettes</li>
+<li>white-label reports</li>
+</ul>
+<hr />
+<h1 id="future-interactive-systems">Future Interactive Systems<a class="headerlink" href="#future-interactive-systems" title="Permanent link">&para;</a></h1>
+<p>Potential future capabilities:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>collapsible sections</td>
+</tr>
+<tr>
+<td>dynamic filtering</td>
+</tr>
+<tr>
+<td>searchable tables</td>
+</tr>
+<tr>
+<td>interactive charts</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="accessibility-philosophy">Accessibility Philosophy<a class="headerlink" href="#accessibility-philosophy" title="Permanent link">&para;</a></h1>
+<p>Templates should remain accessible.</p>
+<hr />
+<h1 id="accessibility-goals">Accessibility Goals<a class="headerlink" href="#accessibility-goals" title="Permanent link">&para;</a></h1>
+<p>Future accessibility improvements:</p>
+<ul>
+<li>semantic HTML</li>
+<li>keyboard support</li>
+<li>contrast compliance</li>
+</ul>
+<hr />
+<h1 id="performance-philosophy">Performance Philosophy<a class="headerlink" href="#performance-philosophy" title="Permanent link">&para;</a></h1>
+<p>Templates should remain:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>fast and lightweight
+</code></pre></div>
+<hr />
+<h1 id="why-performance-matters">Why Performance Matters<a class="headerlink" href="#why-performance-matters" title="Permanent link">&para;</a></h1>
+<p>Large reports can become:</p>
+<ul>
+<li>slow to render</li>
+<li>memory-heavy</li>
+<li>browser-intensive</li>
+</ul>
+<hr />
+<h1 id="current-optimization-strategies">Current Optimization Strategies<a class="headerlink" href="#current-optimization-strategies" title="Permanent link">&para;</a></h1>
+<p>Current goals include:</p>
+<ul>
+<li>conditional rendering</li>
+<li>lightweight layouts</li>
+<li>reusable structures</li>
+</ul>
+<hr />
+<h1 id="future-optimization-areas">Future Optimization Areas<a class="headerlink" href="#future-optimization-areas" title="Permanent link">&para;</a></h1>
+<p>Potential improvements:</p>
+<table>
+<thead>
+<tr>
+<th>Optimization</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lazy loading</td>
+</tr>
+<tr>
+<td>virtualized tables</td>
+</tr>
+<tr>
+<td>deferred chart rendering</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="security-philosophy">Security Philosophy<a class="headerlink" href="#security-philosophy" title="Permanent link">&para;</a></h1>
+<p>Templates should avoid:</p>
+<ul>
+<li>unsafe rendering</li>
+<li>arbitrary execution</li>
+<li>untrusted injection</li>
+</ul>
+<hr />
+<h1 id="safe-rendering-practices">Safe Rendering Practices<a class="headerlink" href="#safe-rendering-practices" title="Permanent link">&para;</a></h1>
+<p>Prefer:</p>
+<ul>
+<li>escaped rendering</li>
+<li>sanitized inputs</li>
+<li>controlled rendering paths</li>
+</ul>
+<hr />
+<h1 id="testing-philosophy">Testing Philosophy<a class="headerlink" href="#testing-philosophy" title="Permanent link">&para;</a></h1>
+<p>Templates should be tested independently.</p>
+<hr />
+<h1 id="recommended-template-tests">Recommended Template Tests<a class="headerlink" href="#recommended-template-tests" title="Permanent link">&para;</a></h1>
+<p>Tests should validate:</p>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rendering success</td>
+</tr>
+<tr>
+<td>responsive layout</td>
+</tr>
+<tr>
+<td>chart rendering</td>
+</tr>
+<tr>
+<td>empty states</td>
+</tr>
+<tr>
+<td>metadata rendering</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="example-template-test">Example Template Test<a class="headerlink" href="#example-template-test" title="Permanent link">&para;</a></h1>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">test_template_renders</span><span class="p">():</span>
+</code></pre></div>
+<hr />
+<h1 id="template-anti-patterns">Template Anti-Patterns<a class="headerlink" href="#template-anti-patterns" title="Permanent link">&para;</a></h1>
+<p>Avoid:</p>
+<table>
+<thead>
+<tr>
+<th>Anti-Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>business logic in templates</td>
+</tr>
+<tr>
+<td>excessive inline scripting</td>
+</tr>
+<tr>
+<td>cluttered layouts</td>
+</tr>
+<tr>
+<td>duplicated structures</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="contributor-best-practices">Contributor Best Practices<a class="headerlink" href="#contributor-best-practices" title="Permanent link">&para;</a></h1>
+<p>Contributors should prioritize:</p>
+<ul>
+<li>readability</li>
+<li>consistency</li>
+<li>maintainability</li>
+<li>responsiveness</li>
+</ul>
+<hr />
+<h1 id="pull-request-checklist">Pull Request Checklist<a class="headerlink" href="#pull-request-checklist" title="Permanent link">&para;</a></h1>
+<p>Before submitting:</p>
+<ul>
+<li>template renders correctly</li>
+<li>responsive design works</li>
+<li>charts render properly</li>
+<li>tests pass</li>
+<li>documentation updated</li>
+</ul>
+<hr />
+<h1 id="future-plugin-template-vision">Future Plugin Template Vision<a class="headerlink" href="#future-plugin-template-vision" title="Permanent link">&para;</a></h1>
+<p>Future systems may support:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>third-party template plugins
+</code></pre></div>
+<hr />
+<h1 id="example-future-plugin-flow">Example Future Plugin Flow<a class="headerlink" href="#example-future-plugin-flow" title="Permanent link">&para;</a></h1>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>plugin
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>→ custom template
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>→ renderer
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>→ report
+</code></pre></div>
+<hr />
+<h1 id="long-term-vision">Long-Term Vision<a class="headerlink" href="#long-term-vision" title="Permanent link">&para;</a></h1>
+<p>Aniwa’s template system is evolving toward:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>a universal data presentation framework
+</code></pre></div>
+<hr />
+<h1 id="strategic-importance">Strategic Importance<a class="headerlink" href="#strategic-importance" title="Permanent link">&para;</a></h1>
+<p>Templates are not merely:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>visual decoration
+</code></pre></div>
+<p>They are:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>the communication layer between data intelligence and humans
+</code></pre></div>
+<hr />
+<h1 id="final-philosophy">Final Philosophy<a class="headerlink" href="#final-philosophy" title="Permanent link">&para;</a></h1>
+<p>The template system exists to ensure that:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>dataset intelligence becomes visually understandable, elegant, and actionable
+</code></pre></div>
+<hr />
+<h1 id="related-documentation">Related Documentation<a class="headerlink" href="#related-documentation" title="Permanent link">&para;</a></h1>
+<p>Continue with:</p>
+<ul>
+<li>architecture/template-engine.md</li>
+<li>architecture/reporting-system.md</li>
+<li>api/reports.md</li>
+<li>developer-guide/adding-report-formats.md</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "navigation.instant", "navigation.tracking", "search.highlight", "search.suggest", "search.share", "content.code.copy", "content.code.annotate", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
