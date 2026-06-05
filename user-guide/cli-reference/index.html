@@ -1170,6 +1170,1027 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Syntax
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Commands
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#primary-profiling-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Primary Profiling Command
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-presets-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List Presets Command
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#help-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Help Command
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#required-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required Arguments
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Required Arguments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PATH
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cli-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CLI Options
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CLI Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-preset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        --preset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        --report
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        --output
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-output-dir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        --output-dir
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        --mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-include" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        --include
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-exclude" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        --exclude
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        --template
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-verbosity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        --verbosity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        --config
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complete Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Complete Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-profiling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Profiling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using Presets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JSON Report
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTML Report
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdf-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PDF Report
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fast-profiling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fast Profiling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-profiling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Profiling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#include-specific-sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Include Specific Sections
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exclude-specific-sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exclude Specific Sections
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verbosity-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verbosity Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output Directory
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-config-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Config File
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combining-multiple-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combining Multiple Options
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#report-sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Report Sections
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#report-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Report Templates
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Report Templates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        default
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clean" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        clean
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compact" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        compact
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enterprise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        enterprise
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dark
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#profiling-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Profiling Modes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Profiling Modes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fast-mode-mode-fast" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fast mode (--mode fast)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-mode-mode-deep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        deep mode (--mode deep)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verbosity-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verbosity Levels
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Verbosity Levels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quiet-verbosity-quiet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        quiet (--verbosity quiet)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normal-verbosity-normal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        normal (--verbosity normal)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verbose-verbosity-verbose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        verbose (--verbosity verbose)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debug-verbosity-debug" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        debug (--verbosity debug)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration Discovery
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration Discovery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-configuration-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Configuration File
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cli-override-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CLI Override Rules
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CLI Override Rules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#priority-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Priority Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Error Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#invalid-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Invalid Section
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invalid-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Invalid Mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invalid-preset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Invalid Preset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invalid-verbosity-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Invalid Verbosity Level
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#missing-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Missing File
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conflicting-output-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conflicting Output Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conflicting-section-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conflicting Section Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#internal-cli-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Internal CLI Architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-usage-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended Usage Patterns
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recommended Usage Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-data-exploration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Data Exploration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daily-analysis-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Daily Analysis Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#professional-reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Professional Reporting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audit-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Audit &amp; Compliance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cicd-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CI/CD Automation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-investigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Investigation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bug Reporting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#team-standardization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Team Standardization
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Reference Card
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-beginners" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For Beginners
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-daily-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For Daily Use
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-cicd-pipelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For CI/CD Pipelines
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-data-governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For Data Governance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-performance-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For Performance Optimization
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-cli-roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Future CLI Roadmap
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Future CLI Roadmap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v02x-intelligence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v0.2.x - Intelligence
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v03x-universal-connectivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v0.3.x - Universal Connectivity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v04x-extensibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v0.4.x - Extensibility
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v05x-ai-intelligence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v0.5.x - AI Intelligence
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v06-governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v0.6+ - Governance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environment Variables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exit-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exit Codes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1191,344 +2212,660 @@
 <h1 id="cli-reference">CLI Reference<a class="headerlink" href="#cli-reference" title="Permanent link">&para;</a></h1>
 <p>This document provides the complete command-line interface reference for Aniwa.</p>
 <hr />
-<h1 id="basic-syntax">Basic Syntax<a class="headerlink" href="#basic-syntax" title="Permanent link">&para;</a></h1>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>aniwa<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>PATH
+<h2 id="basic-syntax">Basic Syntax<a class="headerlink" href="#basic-syntax" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>aniwa<span class="w"> </span>profile<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>PATH
 </code></pre></div>
 <p>Example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>aniwa<span class="w"> </span>examples/customers.csv
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>examples/customers.csv
+</code></pre></div>
+<p><strong>Note:</strong> Aniwa requires the <code>profile</code> command before the dataset path. This allows for future commands like <code>aniwa compare</code>, <code>aniwa validate</code>, etc.</p>
+<hr />
+<h2 id="core-commands">Core Commands<a class="headerlink" href="#core-commands" title="Permanent link">&para;</a></h2>
+<h3 id="primary-profiling-command">Primary Profiling Command<a class="headerlink" href="#primary-profiling-command" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>aniwa<span class="w"> </span>profile<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>PATH
+</code></pre></div>
+<p>Profile a dataset and generate reports.</p>
+<h3 id="list-presets-command">List Presets Command<a class="headerlink" href="#list-presets-command" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>aniwa<span class="w"> </span>list-presets
+</code></pre></div>
+<p>Display all available profiling presets with descriptions.</p>
+<h3 id="help-command">Help Command<a class="headerlink" href="#help-command" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>aniwa<span class="w"> </span>--help
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>--help
 </code></pre></div>
 <hr />
-<h1 id="core-command">Core Command<a class="headerlink" href="#core-command" title="Permanent link">&para;</a></h1>
-<p>Aniwa currently exposes a primary profiling command:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>aniwa<span class="w"> </span>profile
-</code></pre></div>
-<p>However, the CLI is designed so users can simply run:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>aniwa<span class="w"> </span>dataset.csv
-</code></pre></div>
-<hr />
-<h1 id="required-arguments">Required Arguments<a class="headerlink" href="#required-arguments" title="Permanent link">&para;</a></h1>
-<hr />
-<h2 id="path">PATH<a class="headerlink" href="#path" title="Permanent link">&para;</a></h2>
+<h2 id="required-arguments">Required Arguments<a class="headerlink" href="#required-arguments" title="Permanent link">&para;</a></h2>
+<h3 id="path">PATH<a class="headerlink" href="#path" title="Permanent link">&para;</a></h3>
 <p>Path to dataset file.</p>
 <p>Example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>aniwa<span class="w"> </span>examples/customers.csv
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>examples/customers.csv
 </code></pre></div>
 <p>Supported file types:</p>
 <ul>
-<li>CSV</li>
-<li>Excel</li>
-<li>JSON</li>
-<li>Parquet</li>
+<li>CSV (.csv)</li>
+<li>Excel (.xlsx, .xls)</li>
+<li>JSON (.json)</li>
+<li>Parquet (.parquet)</li>
 </ul>
 <hr />
-<h1 id="cli-options">CLI Options<a class="headerlink" href="#cli-options" title="Permanent link">&para;</a></h1>
+<h2 id="cli-options">CLI Options<a class="headerlink" href="#cli-options" title="Permanent link">&para;</a></h2>
+<h3 id="-preset">--preset<a class="headerlink" href="#-preset" title="Permanent link">&para;</a></h3>
+<p>Use a predefined profiling preset.</p>
+<p><strong>Short form:</strong> <code>-p</code></p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>dataset.csv<span class="w"> </span>--preset<span class="w"> </span>quick
+</code></pre></div></p>
+<p><strong>Supported presets:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Preset</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>quick</td>
+<td>Fast lightweight profiling for quick data inspection</td>
+</tr>
+<tr>
+<td>standard</td>
+<td>Balanced default profiling with statistics and insights</td>
+</tr>
+<tr>
+<td>audit</td>
+<td>Comprehensive profiling for validation and audit workflows</td>
+</tr>
+<tr>
+<td>enterprise</td>
+<td>Professional branded reporting for stakeholders</td>
+</tr>
+</tbody>
+</table>
+<p><strong>What presets configure:</strong>
+- profiling mode
+- report format
+- report template
+- included/excluded sections
+- verbosity level</p>
 <hr />
-<h2 id="-report">--report<a class="headerlink" href="#-report" title="Permanent link">&para;</a></h2>
+<h3 id="-report">--report<a class="headerlink" href="#-report" title="Permanent link">&para;</a></h3>
 <p>Specify report format.</p>
-<p>Short form:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>-r
-</code></pre></div>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>aniwa<span class="w"> </span>dataset.csv<span class="w"> </span>--report<span class="w"> </span>html
-</code></pre></div>
-<p>Supported values:</p>
-<ul>
-<li>console</li>
-<li>json</li>
-<li>html</li>
-<li>excel</li>
-<li>markdown</li>
-<li>pdf</li>
-</ul>
+<p><strong>Short form:</strong> <code>-r</code></p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>dataset.csv<span class="w"> </span>--report<span class="w"> </span>html
+</code></pre></div></p>
+<p><strong>Supported values:</strong>
+- console
+- json
+- html
+- excel
+- markdown
+- pdf</p>
 <hr />
-<h2 id="-output">--output<a class="headerlink" href="#-output" title="Permanent link">&para;</a></h2>
+<h3 id="-output">--output<a class="headerlink" href="#-output" title="Permanent link">&para;</a></h3>
 <p>Specify explicit output filename.</p>
-<p>Short form:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>-o
-</code></pre></div>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>aniwa<span class="w"> </span>dataset.csv<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span>--report<span class="w"> </span>html<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">  </span>--output<span class="w"> </span>profile.html
-</code></pre></div>
+<p><strong>Short form:</strong> <code>-o</code></p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>dataset.csv<span class="w"> </span>--report<span class="w"> </span>html<span class="w"> </span>--output<span class="w"> </span>profile.html
+</code></pre></div></p>
 <hr />
-<h2 id="-output-dir">--output-dir<a class="headerlink" href="#-output-dir" title="Permanent link">&para;</a></h2>
+<h3 id="-output-dir">--output-dir<a class="headerlink" href="#-output-dir" title="Permanent link">&para;</a></h3>
 <p>Generate reports into a directory.</p>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>aniwa<span class="w"> </span>dataset.csv<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span>--report<span class="w"> </span>pdf<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">  </span>--output-dir<span class="w"> </span>reports/
-</code></pre></div>
-<p>Aniwa automatically:</p>
-<ul>
-<li>creates directories</li>
-<li>generates filenames</li>
-<li>applies extensions</li>
-</ul>
-<p>Generated example:</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>dataset.csv<span class="w"> </span>--report<span class="w"> </span>pdf<span class="w"> </span>--output-dir<span class="w"> </span>reports/
+</code></pre></div></p>
+<p>Aniwa automatically:
+- creates directories
+- generates filenames
+- applies extensions</p>
+<p><strong>Generated example:</strong>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>reports/aniwa_report.pdf
-</code></pre></div>
+</code></pre></div></p>
 <hr />
-<h2 id="-mode">--mode<a class="headerlink" href="#-mode" title="Permanent link">&para;</a></h2>
+<h3 id="-mode">--mode<a class="headerlink" href="#-mode" title="Permanent link">&para;</a></h3>
 <p>Specify profiling mode.</p>
-<p>Short form:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>-m
-</code></pre></div>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>aniwa<span class="w"> </span>dataset.csv<span class="w"> </span>--mode<span class="w"> </span>fast
-</code></pre></div>
-<p>Supported values:</p>
-<ul>
-<li>fast</li>
-<li>deep</li>
-</ul>
+<p><strong>Short form:</strong> <code>-m</code></p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>dataset.csv<span class="w"> </span>--mode<span class="w"> </span>fast
+</code></pre></div></p>
+<p><strong>Supported values:</strong>
+- fast
+- deep</p>
 <hr />
-<h2 id="-include">--include<a class="headerlink" href="#-include" title="Permanent link">&para;</a></h2>
+<h3 id="-include">--include<a class="headerlink" href="#-include" title="Permanent link">&para;</a></h3>
 <p>Include specific report sections.</p>
-<p>Short form:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>-i
-</code></pre></div>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>aniwa<span class="w"> </span>dataset.csv<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">  </span>--include<span class="w"> </span>summary,statistics
-</code></pre></div>
+<p><strong>Short form:</strong> <code>-i</code></p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>dataset.csv<span class="w"> </span>--include<span class="w"> </span>summary,statistics
+</code></pre></div></p>
 <hr />
-<h2 id="-exclude">--exclude<a class="headerlink" href="#-exclude" title="Permanent link">&para;</a></h2>
+<h3 id="-exclude">--exclude<a class="headerlink" href="#-exclude" title="Permanent link">&para;</a></h3>
 <p>Exclude report sections.</p>
-<p>Short form:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>-e
-</code></pre></div>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>aniwa<span class="w"> </span>dataset.csv<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">  </span>--exclude<span class="w"> </span>charts
-</code></pre></div>
+<p><strong>Short form:</strong> <code>-e</code></p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>dataset.csv<span class="w"> </span>--exclude<span class="w"> </span>charts
+</code></pre></div></p>
 <hr />
-<h2 id="-template">--template<a class="headerlink" href="#-template" title="Permanent link">&para;</a></h2>
+<h3 id="-template">--template<a class="headerlink" href="#-template" title="Permanent link">&para;</a></h3>
 <p>Specify report template.</p>
-<p>Short form:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>-t
-</code></pre></div>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>aniwa<span class="w"> </span>dataset.csv<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">  </span>--report<span class="w"> </span>html<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">  </span>--template<span class="w"> </span>dark
-</code></pre></div>
-<p>Supported templates:</p>
-<ul>
-<li>default</li>
-<li>clean</li>
-<li>compact</li>
-<li>enterprise</li>
-<li>dark</li>
-</ul>
+<p><strong>Short form:</strong> <code>-t</code></p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>dataset.csv<span class="w"> </span>--report<span class="w"> </span>html<span class="w"> </span>--template<span class="w"> </span>dark
+</code></pre></div></p>
+<p><strong>Supported templates:</strong>
+- default - Balanced modern design
+- clean - Minimal lightweight appearance
+- compact - Dense information-focused layout
+- enterprise - Professional executive-style reporting
+- dark - Dark-mode optimized reporting</p>
 <hr />
-<h2 id="-config">--config<a class="headerlink" href="#-config" title="Permanent link">&para;</a></h2>
+<h3 id="-verbosity">--verbosity<a class="headerlink" href="#-verbosity" title="Permanent link">&para;</a></h3>
+<p>Control output detail level.</p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>dataset.csv<span class="w"> </span>--verbosity<span class="w"> </span>verbose
+</code></pre></div></p>
+<p><strong>Supported levels:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Description</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>quiet</td>
+<td>Only errors and final status</td>
+<td>CI/CD pipelines, automation</td>
+</tr>
+<tr>
+<td>normal</td>
+<td>Standard output (default)</td>
+<td>Everyday use</td>
+</tr>
+<tr>
+<td>verbose</td>
+<td>Detailed progress and timing</td>
+<td>Understanding operations</td>
+</tr>
+<tr>
+<td>debug</td>
+<td>Full diagnostic output</td>
+<td>Development, troubleshooting</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="-config">--config<a class="headerlink" href="#-config" title="Permanent link">&para;</a></h3>
 <p>Specify custom configuration file.</p>
-<p>Short form:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>-c
+<p><strong>Short form:</strong> <code>-c</code></p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>dataset.csv<span class="w"> </span>--config<span class="w"> </span>examples/config_sample.yaml
+</code></pre></div></p>
+<hr />
+<h2 id="complete-examples">Complete Examples<a class="headerlink" href="#complete-examples" title="Permanent link">&para;</a></h2>
+<h3 id="basic-profiling">Basic Profiling<a class="headerlink" href="#basic-profiling" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>examples/customers.csv
 </code></pre></div>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>aniwa<span class="w"> </span>dataset.csv<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">  </span>--config<span class="w"> </span>examples/config_sample.yaml
+<h3 id="using-presets">Using Presets<a class="headerlink" href="#using-presets" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c1"># Quick inspection</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>examples/customers.csv<span class="w"> </span>--preset<span class="w"> </span>quick
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="c1"># Standard analysis</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>examples/customers.csv<span class="w"> </span>--preset<span class="w"> </span>standard
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="c1"># Audit preparation</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>examples/customers.csv<span class="w"> </span>--preset<span class="w"> </span>audit
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a><span class="c1"># Enterprise report</span>
+<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>examples/customers.csv<span class="w"> </span>--preset<span class="w"> </span>enterprise
 </code></pre></div>
-<hr />
-<h1 id="complete-examples">Complete Examples<a class="headerlink" href="#complete-examples" title="Permanent link">&para;</a></h1>
-<hr />
-<h2 id="console-profiling">Console Profiling<a class="headerlink" href="#console-profiling" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>aniwa<span class="w"> </span>examples/customers.csv
+<h3 id="json-report">JSON Report<a class="headerlink" href="#json-report" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>examples/customers.csv<span class="w"> </span>--report<span class="w"> </span>json<span class="w"> </span>--output<span class="w"> </span>profile.json
 </code></pre></div>
-<hr />
-<h2 id="json-report">JSON Report<a class="headerlink" href="#json-report" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>aniwa<span class="w"> </span>examples/customers.csv<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">  </span>--report<span class="w"> </span>json<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">  </span>--output<span class="w"> </span>profile.json
+<h3 id="html-report">HTML Report<a class="headerlink" href="#html-report" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>examples/customers.csv<span class="w"> </span>--report<span class="w"> </span>html<span class="w"> </span>--template<span class="w"> </span>dark<span class="w"> </span>--output<span class="w"> </span>profile.html
 </code></pre></div>
-<hr />
-<h2 id="html-report">HTML Report<a class="headerlink" href="#html-report" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>aniwa<span class="w"> </span>examples/customers.csv<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">  </span>--report<span class="w"> </span>html<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">  </span>--template<span class="w"> </span>dark<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="w">  </span>--output<span class="w"> </span>profile.html
+<h3 id="pdf-report">PDF Report<a class="headerlink" href="#pdf-report" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>examples/customers.csv<span class="w"> </span>--report<span class="w"> </span>pdf<span class="w"> </span>--template<span class="w"> </span>enterprise
 </code></pre></div>
-<hr />
-<h2 id="pdf-report">PDF Report<a class="headerlink" href="#pdf-report" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>aniwa<span class="w"> </span>examples/customers.csv<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w">  </span>--report<span class="w"> </span>pdf<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="w">  </span>--template<span class="w"> </span>enterprise
+<h3 id="fast-profiling">Fast Profiling<a class="headerlink" href="#fast-profiling" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>examples/customers.csv<span class="w"> </span>--mode<span class="w"> </span>fast
 </code></pre></div>
-<hr />
-<h2 id="fast-profiling">Fast Profiling<a class="headerlink" href="#fast-profiling" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>aniwa<span class="w"> </span>examples/customers.csv<span class="w"> </span>--mode<span class="w"> </span>fast
+<h3 id="deep-profiling">Deep Profiling<a class="headerlink" href="#deep-profiling" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>examples/customers.csv<span class="w"> </span>--mode<span class="w"> </span>deep
 </code></pre></div>
-<hr />
-<h2 id="deep-profiling">Deep Profiling<a class="headerlink" href="#deep-profiling" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>aniwa<span class="w"> </span>examples/customers.csv<span class="w"> </span>--mode<span class="w"> </span>deep
+<h3 id="include-specific-sections">Include Specific Sections<a class="headerlink" href="#include-specific-sections" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>examples/customers.csv<span class="w"> </span>--include<span class="w"> </span>summary,insights
 </code></pre></div>
-<hr />
-<h2 id="include-sections">Include Sections<a class="headerlink" href="#include-sections" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>aniwa<span class="w"> </span>examples/customers.csv<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="w">  </span>--include<span class="w"> </span>summary,insights
+<h3 id="exclude-specific-sections">Exclude Specific Sections<a class="headerlink" href="#exclude-specific-sections" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>examples/customers.csv<span class="w"> </span>--exclude<span class="w"> </span>statistics
 </code></pre></div>
-<hr />
-<h2 id="exclude-sections">Exclude Sections<a class="headerlink" href="#exclude-sections" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>aniwa<span class="w"> </span>examples/customers.csv<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="w">  </span>--exclude<span class="w"> </span>statistics
+<h3 id="verbosity-examples">Verbosity Examples<a class="headerlink" href="#verbosity-examples" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="c1"># Quiet mode for CI/CD</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>dataset.csv<span class="w"> </span>--verbosity<span class="w"> </span>quiet
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="c1"># Normal mode (default)</span>
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>dataset.csv
+<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>
+<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a><span class="c1"># Verbose mode with detailed progress</span>
+<a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>dataset.csv<span class="w"> </span>--verbosity<span class="w"> </span>verbose
+<a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a>
+<a id="__codelineno-26-10" name="__codelineno-26-10" href="#__codelineno-26-10"></a><span class="c1"># Debug mode for troubleshooting</span>
+<a id="__codelineno-26-11" name="__codelineno-26-11" href="#__codelineno-26-11"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>dataset.csv<span class="w"> </span>--verbosity<span class="w"> </span>debug
 </code></pre></div>
-<hr />
-<h2 id="output-directory">Output Directory<a class="headerlink" href="#output-directory" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>aniwa<span class="w"> </span>examples/customers.csv<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="w">  </span>--report<span class="w"> </span>html<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="w">  </span>--output-dir<span class="w"> </span>reports/
+<h3 id="output-directory">Output Directory<a class="headerlink" href="#output-directory" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>examples/customers.csv<span class="w"> </span>--report<span class="w"> </span>html<span class="w"> </span>--output-dir<span class="w"> </span>reports/
 </code></pre></div>
-<hr />
-<h2 id="custom-config">Custom Config<a class="headerlink" href="#custom-config" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>aniwa<span class="w"> </span>examples/customers.csv<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="w">  </span>--config<span class="w"> </span>configs/team.yaml
+<h3 id="custom-config-file">Custom Config File<a class="headerlink" href="#custom-config-file" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>examples/customers.csv<span class="w"> </span>--config<span class="w"> </span>configs/team.yaml
 </code></pre></div>
-<hr />
-<h1 id="report-sections">Report Sections<a class="headerlink" href="#report-sections" title="Permanent link">&para;</a></h1>
-<p>Supported sections:</p>
-<ul>
-<li>summary</li>
-<li>schema</li>
-<li>quality</li>
-<li>statistics</li>
-<li>insights</li>
-<li>charts</li>
-</ul>
-<hr />
-<h1 id="report-templates">Report Templates<a class="headerlink" href="#report-templates" title="Permanent link">&para;</a></h1>
-<hr />
-<h2 id="default">default<a class="headerlink" href="#default" title="Permanent link">&para;</a></h2>
-<p>Balanced modern design.</p>
-<hr />
-<h2 id="clean">clean<a class="headerlink" href="#clean" title="Permanent link">&para;</a></h2>
-<p>Minimal lightweight appearance.</p>
-<hr />
-<h2 id="compact">compact<a class="headerlink" href="#compact" title="Permanent link">&para;</a></h2>
-<p>Dense information-focused layout.</p>
-<hr />
-<h2 id="enterprise">enterprise<a class="headerlink" href="#enterprise" title="Permanent link">&para;</a></h2>
-<p>Professional executive-style reporting.</p>
-<hr />
-<h2 id="dark">dark<a class="headerlink" href="#dark" title="Permanent link">&para;</a></h2>
-<p>Dark-mode optimized reporting.</p>
-<hr />
-<h1 id="profiling-modes">Profiling Modes<a class="headerlink" href="#profiling-modes" title="Permanent link">&para;</a></h1>
-<hr />
-<h2 id="fast">fast<a class="headerlink" href="#fast" title="Permanent link">&para;</a></h2>
-<p>Optimized for:</p>
-<ul>
-<li>speed</li>
-<li>large datasets</li>
-<li>lightweight inspection</li>
-</ul>
-<hr />
-<h2 id="deep">deep<a class="headerlink" href="#deep" title="Permanent link">&para;</a></h2>
-<p>Optimized for:</p>
-<ul>
-<li>completeness</li>
-<li>audits</li>
-<li>intelligent analysis</li>
-</ul>
-<hr />
-<h1 id="configuration-discovery">Configuration Discovery<a class="headerlink" href="#configuration-discovery" title="Permanent link">&para;</a></h1>
-<p>Aniwa automatically searches for:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>aniwa.yaml
-<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>aniwa.yml
-<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>aniwa.toml
-<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>aniwa.json
-</code></pre></div>
-<p>in the current working directory.</p>
-<hr />
-<h1 id="cli-override-rules">CLI Override Rules<a class="headerlink" href="#cli-override-rules" title="Permanent link">&para;</a></h1>
-<p>Priority order:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>CLI arguments &gt; Config file &gt; Defaults
+<h3 id="combining-multiple-options">Combining Multiple Options<a class="headerlink" href="#combining-multiple-options" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="c1"># Preset with overrides</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>dataset.csv<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="w">    </span>--preset<span class="w"> </span>enterprise<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="w">    </span>--mode<span class="w"> </span>fast<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a><span class="w">    </span>--output-dir<span class="w"> </span>reports/<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a><span class="w">    </span>--verbosity<span class="w"> </span>verbose
+<a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a>
+<a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a><span class="c1"># Full custom configuration</span>
+<a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>dataset.csv<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-29-10" name="__codelineno-29-10" href="#__codelineno-29-10"></a><span class="w">    </span>--mode<span class="w"> </span>deep<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-29-11" name="__codelineno-29-11" href="#__codelineno-29-11"></a><span class="w">    </span>--report<span class="w"> </span>html<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-29-12" name="__codelineno-29-12" href="#__codelineno-29-12"></a><span class="w">    </span>--template<span class="w"> </span>dark<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-29-13" name="__codelineno-29-13" href="#__codelineno-29-13"></a><span class="w">    </span>--include<span class="w"> </span>summary,statistics,insights<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-29-14" name="__codelineno-29-14" href="#__codelineno-29-14"></a><span class="w">    </span>--output-dir<span class="w"> </span>./profiles<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-29-15" name="__codelineno-29-15" href="#__codelineno-29-15"></a><span class="w">    </span>--verbosity<span class="w"> </span>verbose
+<a id="__codelineno-29-16" name="__codelineno-29-16" href="#__codelineno-29-16"></a>
+<a id="__codelineno-29-17" name="__codelineno-29-17" href="#__codelineno-29-17"></a><span class="c1"># Audit with custom output</span>
+<a id="__codelineno-29-18" name="__codelineno-29-18" href="#__codelineno-29-18"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>dataset.csv<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-29-19" name="__codelineno-29-19" href="#__codelineno-29-19"></a><span class="w">    </span>--preset<span class="w"> </span>audit<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-29-20" name="__codelineno-29-20" href="#__codelineno-29-20"></a><span class="w">    </span>--output-dir<span class="w"> </span>audits/<span class="k">$(</span>date<span class="w"> </span>+%Y%m%d<span class="k">)</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-29-21" name="__codelineno-29-21" href="#__codelineno-29-21"></a><span class="w">    </span>--verbosity<span class="w"> </span>debug<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w"> </span>audit.log
 </code></pre></div>
 <hr />
-<h1 id="error-examples">Error Examples<a class="headerlink" href="#error-examples" title="Permanent link">&para;</a></h1>
+<h2 id="report-sections">Report Sections<a class="headerlink" href="#report-sections" title="Permanent link">&para;</a></h2>
+<p>Supported sections that can be included or excluded:</p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>summary</td>
+<td>Dataset overview (rows, columns, size)</td>
+</tr>
+<tr>
+<td>schema</td>
+<td>Column names, types, and properties</td>
+</tr>
+<tr>
+<td>quality</td>
+<td>Data quality metrics (nulls, duplicates)</td>
+</tr>
+<tr>
+<td>statistics</td>
+<td>Statistical summaries (mean, median, std)</td>
+</tr>
+<tr>
+<td>insights</td>
+<td>Intelligent data quality insights</td>
+</tr>
+<tr>
+<td>charts</td>
+<td>Visualizations and distributions</td>
+</tr>
+</tbody>
+</table>
 <hr />
-<h2 id="invalid-section">Invalid Section<a class="headerlink" href="#invalid-section" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>Invalid report section: metrics
+<h2 id="report-templates">Report Templates<a class="headerlink" href="#report-templates" title="Permanent link">&para;</a></h2>
+<h3 id="default">default<a class="headerlink" href="#default" title="Permanent link">&para;</a></h3>
+<p>Balanced modern design with clean typography and适度 visual elements.</p>
+<h3 id="clean">clean<a class="headerlink" href="#clean" title="Permanent link">&para;</a></h3>
+<p>Minimal lightweight appearance focusing on content without distraction.</p>
+<h3 id="compact">compact<a class="headerlink" href="#compact" title="Permanent link">&para;</a></h3>
+<p>Dense information-focused layout for detailed analysis with maximum data density.</p>
+<h3 id="enterprise">enterprise<a class="headerlink" href="#enterprise" title="Permanent link">&para;</a></h3>
+<p>Professional executive-style reporting with branding and stakeholder focus.</p>
+<h3 id="dark">dark<a class="headerlink" href="#dark" title="Permanent link">&para;</a></h3>
+<p>Dark-mode optimized reporting for low-light environments.</p>
+<hr />
+<h2 id="profiling-modes">Profiling Modes<a class="headerlink" href="#profiling-modes" title="Permanent link">&para;</a></h2>
+<h3 id="fast-mode-mode-fast">fast mode (<code>--mode fast</code>)<a class="headerlink" href="#fast-mode-mode-fast" title="Permanent link">&para;</a></h3>
+<p>Optimized for speed and large datasets.</p>
+<p><strong>Includes:</strong>
+- Schema detection
+- Null value analysis
+- Duplicate detection
+- Basic quality metrics</p>
+<p><strong>Excludes:</strong>
+- Statistical computations
+- Advanced insights
+- Correlation analysis
+- Chart generation</p>
+<p><strong>Best for:</strong>
+- Initial data exploration
+- CI/CD pipelines
+- Very large datasets (&gt;1M rows)
+- Quick structure validation</p>
+<h3 id="deep-mode-mode-deep">deep mode (<code>--mode deep</code>)<a class="headerlink" href="#deep-mode-mode-deep" title="Permanent link">&para;</a></h3>
+<p>Comprehensive profiling with full analysis (default).</p>
+<p><strong>Includes everything from fast mode plus:</strong>
+- Statistical summaries (min, max, mean, median, std)
+- Distribution analysis
+- Advanced insights
+- Pattern detection</p>
+<p><strong>Best for:</strong>
+- Detailed data understanding
+- Quality assessment
+- Data science preparation
+- Audit and compliance</p>
+<hr />
+<h2 id="verbosity-levels">Verbosity Levels<a class="headerlink" href="#verbosity-levels" title="Permanent link">&para;</a></h2>
+<h3 id="quiet-verbosity-quiet">quiet (<code>--verbosity quiet</code>)<a class="headerlink" href="#quiet-verbosity-quiet" title="Permanent link">&para;</a></h3>
+<p>Only show critical errors and final completion status.</p>
+<p><strong>What you see:</strong>
+- Critical errors (if any)
+- Final completion message
+- No progress indicators
+- No warnings
+- No timing information</p>
+<p><strong>Best for:</strong>
+- CI/CD pipelines
+- Automated scripts
+- Production environments
+- Batch processing</p>
+<h3 id="normal-verbosity-normal">normal (<code>--verbosity normal</code>)<a class="headerlink" href="#normal-verbosity-normal" title="Permanent link">&para;</a></h3>
+<p>Standard output with key information (default).</p>
+<p><strong>What you see:</strong>
+- High-level stage indicators (→)
+- Success confirmations (✓)
+- Data quality warnings
+- Report generation messages
+- Final summary</p>
+<p><strong>Best for:</strong>
+- Daily interactive use
+- Quick profiling tasks
+- Most common scenarios</p>
+<h3 id="verbose-verbosity-verbose">verbose (<code>--verbosity verbose</code>)<a class="headerlink" href="#verbose-verbosity-verbose" title="Permanent link">&para;</a></h3>
+<p>Detailed progress with timing information.</p>
+<p><strong>What you see:</strong>
+- Everything from normal mode plus:
+- Timing for each stage
+- Progress bars for multi-step operations
+- Per-column statistics computation
+- Timing summary table
+- Detailed completion messages</p>
+<p><strong>Best for:</strong>
+- Understanding slow operations
+- Performance investigation
+- Learning what Aniwa does
+- Debugging complex datasets</p>
+<h3 id="debug-verbosity-debug">debug (<code>--verbosity debug</code>)<a class="headerlink" href="#debug-verbosity-debug" title="Permanent link">&para;</a></h3>
+<p>Full diagnostic output for development.</p>
+<p><strong>What you see:</strong>
+- Everything from verbose mode plus:
+- Internal state and configuration
+- Data structure details
+- Decision points
+- Per-column statistics with values
+- Entry/exit of every function
+- Stack traces on errors</p>
+<p><strong>Best for:</strong>
+- Development
+- Reporting bugs
+- Understanding internal logic
+- Troubleshooting unexpected behavior</p>
+<hr />
+<h2 id="configuration-discovery">Configuration Discovery<a class="headerlink" href="#configuration-discovery" title="Permanent link">&para;</a></h2>
+<p>Aniwa automatically searches for configuration files in the current working directory:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>aniwa.yaml
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>aniwa.yml
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>aniwa.toml
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>aniwa.json
+</code></pre></div>
+<h3 id="example-configuration-file">Example Configuration File<a class="headerlink" href="#example-configuration-file" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="c1"># aniwa.yaml</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deep</span>
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="nt">report</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">html</span>
+<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a><span class="nt">template</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">enterprise</span>
+<a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a><span class="nt">verbosity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">normal</span>
+<a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a>
+<a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a><span class="nt">sections</span><span class="p">:</span>
+<a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a><span class="w">  </span><span class="nt">include</span><span class="p">:</span>
+<a id="__codelineno-31-9" name="__codelineno-31-9" href="#__codelineno-31-9"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">summary</span>
+<a id="__codelineno-31-10" name="__codelineno-31-10" href="#__codelineno-31-10"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">schema</span>
+<a id="__codelineno-31-11" name="__codelineno-31-11" href="#__codelineno-31-11"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">quality</span>
+<a id="__codelineno-31-12" name="__codelineno-31-12" href="#__codelineno-31-12"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">statistics</span>
+<a id="__codelineno-31-13" name="__codelineno-31-13" href="#__codelineno-31-13"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">insights</span>
+<a id="__codelineno-31-14" name="__codelineno-31-14" href="#__codelineno-31-14"></a>
+<a id="__codelineno-31-15" name="__codelineno-31-15" href="#__codelineno-31-15"></a><span class="nt">report</span><span class="p">:</span>
+<a id="__codelineno-31-16" name="__codelineno-31-16" href="#__codelineno-31-16"></a><span class="w">  </span><span class="nt">output_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./reports</span>
 </code></pre></div>
 <hr />
-<h2 id="invalid-mode">Invalid Mode<a class="headerlink" href="#invalid-mode" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>Invalid profiling mode: ultra
+<h2 id="cli-override-rules">CLI Override Rules<a class="headerlink" href="#cli-override-rules" title="Permanent link">&para;</a></h2>
+<p>Priority order (highest to lowest):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>CLI arguments &gt; Preset values &gt; Config file &gt; Defaults
+</code></pre></div>
+<h3 id="priority-examples">Priority Examples<a class="headerlink" href="#priority-examples" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="c1"># CLI overrides preset</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>dataset.csv<span class="w"> </span>--preset<span class="w"> </span>quick<span class="w"> </span>--mode<span class="w"> </span>deep
+<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="c1"># Result: Uses deep mode, not fast</span>
+<a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a>
+<a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a><span class="c1"># Preset overrides config file</span>
+<a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>dataset.csv<span class="w"> </span>--preset<span class="w"> </span>enterprise
+<a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a><span class="c1"># Result: Uses preset values over config.yaml settings</span>
+<a id="__codelineno-33-8" name="__codelineno-33-8" href="#__codelineno-33-8"></a>
+<a id="__codelineno-33-9" name="__codelineno-33-9" href="#__codelineno-33-9"></a><span class="c1"># CLI overrides everything</span>
+<a id="__codelineno-33-10" name="__codelineno-33-10" href="#__codelineno-33-10"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>dataset.csv<span class="w"> </span>--preset<span class="w"> </span>enterprise<span class="w"> </span>--mode<span class="w"> </span>fast<span class="w"> </span>--report<span class="w"> </span>json
+<a id="__codelineno-33-11" name="__codelineno-33-11" href="#__codelineno-33-11"></a><span class="c1"># Result: All CLI values take precedence</span>
 </code></pre></div>
 <hr />
-<h2 id="missing-file">Missing File<a class="headerlink" href="#missing-file" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>File does not exist: dataset.csv
+<h2 id="error-examples">Error Examples<a class="headerlink" href="#error-examples" title="Permanent link">&para;</a></h2>
+<h3 id="invalid-section">Invalid Section<a class="headerlink" href="#invalid-section" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>Invalid report section: metrics.
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>Valid options are: summary, schema, quality, statistics, insights, charts
+</code></pre></div>
+<h3 id="invalid-mode">Invalid Mode<a class="headerlink" href="#invalid-mode" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>Invalid profiling mode: ultra.
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>Valid options are: fast, deep
+</code></pre></div>
+<h3 id="invalid-preset">Invalid Preset<a class="headerlink" href="#invalid-preset" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>Unknown preset: &#39;mypreset&#39;. Available presets: quick, standard, audit, enterprise
+</code></pre></div>
+<h3 id="invalid-verbosity-level">Invalid Verbosity Level<a class="headerlink" href="#invalid-verbosity-level" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>Invalid verbosity level: extreme.
+<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>Valid options are: quiet, normal, verbose, debug
+</code></pre></div>
+<h3 id="missing-file">Missing File<a class="headerlink" href="#missing-file" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>File does not exist: dataset.csv
+</code></pre></div>
+<h3 id="conflicting-output-arguments">Conflicting Output Arguments<a class="headerlink" href="#conflicting-output-arguments" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>Use either --output or --output-dir, not both.
+</code></pre></div>
+<h3 id="conflicting-section-arguments">Conflicting Section Arguments<a class="headerlink" href="#conflicting-section-arguments" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>Use either --include or --exclude, not both.
 </code></pre></div>
 <hr />
-<h2 id="conflicting-output-arguments">Conflicting Output Arguments<a class="headerlink" href="#conflicting-output-arguments" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>Use either --output or --output-dir, not both.
-</code></pre></div>
-<hr />
-<h1 id="internal-cli-architecture">Internal CLI Architecture<a class="headerlink" href="#internal-cli-architecture" title="Permanent link">&para;</a></h1>
+<h2 id="internal-cli-architecture">Internal CLI Architecture<a class="headerlink" href="#internal-cli-architecture" title="Permanent link">&para;</a></h2>
 <p>Primary CLI logic exists in:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>aniwa/cli.py
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>aniwa/cli.py
+<a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>aniwa/presets.py
+<a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a>aniwa/utils/logging.py
 </code></pre></div>
-<p>Responsibilities include:</p>
+<p><strong>Responsibilities:</strong>
+- Argument parsing and validation
+- Configuration file loading
+- Preset application and resolution
+- Verbosity management
+- Execution orchestration
+- Report routing
+- Metadata generation
+- Error handling</p>
+<hr />
+<h2 id="recommended-usage-patterns">Recommended Usage Patterns<a class="headerlink" href="#recommended-usage-patterns" title="Permanent link">&para;</a></h2>
+<h3 id="quick-data-exploration">Quick Data Exploration<a class="headerlink" href="#quick-data-exploration" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>dataset.csv<span class="w"> </span>--preset<span class="w"> </span>quick
+</code></pre></div>
+<h3 id="daily-analysis-workflow">Daily Analysis Workflow<a class="headerlink" href="#daily-analysis-workflow" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>dataset.csv<span class="w"> </span>--preset<span class="w"> </span>standard
+</code></pre></div>
+<h3 id="professional-reporting">Professional Reporting<a class="headerlink" href="#professional-reporting" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>dataset.csv<span class="w"> </span>--preset<span class="w"> </span>enterprise<span class="w"> </span>--output-dir<span class="w"> </span>reports/
+</code></pre></div>
+<h3 id="audit-compliance">Audit &amp; Compliance<a class="headerlink" href="#audit-compliance" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>dataset.csv<span class="w"> </span>--preset<span class="w"> </span>audit<span class="w"> </span>--verbosity<span class="w"> </span>verbose
+</code></pre></div>
+<h3 id="cicd-automation">CI/CD Automation<a class="headerlink" href="#cicd-automation" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>dataset.csv<span class="w"> </span>--preset<span class="w"> </span>quick<span class="w"> </span>--verbosity<span class="w"> </span>quiet<span class="w"> </span>--report<span class="w"> </span>json
+</code></pre></div>
+<h3 id="custom-analysis">Custom Analysis<a class="headerlink" href="#custom-analysis" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>dataset.csv<span class="w"> </span>--mode<span class="w"> </span>deep<span class="w"> </span>--include<span class="w"> </span>statistics,insights<span class="w"> </span>--exclude<span class="w"> </span>charts
+</code></pre></div>
+<h3 id="performance-investigation">Performance Investigation<a class="headerlink" href="#performance-investigation" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>large_dataset.csv<span class="w"> </span>--mode<span class="w"> </span>deep<span class="w"> </span>--verbosity<span class="w"> </span>verbose
+</code></pre></div>
+<h3 id="bug-reporting">Bug Reporting<a class="headerlink" href="#bug-reporting" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>problem_dataset.csv<span class="w"> </span>--verbosity<span class="w"> </span>debug<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w"> </span>debug.log
+</code></pre></div>
+<h3 id="team-standardization">Team Standardization<a class="headerlink" href="#team-standardization" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>dataset.csv<span class="w"> </span>--config<span class="w"> </span>team_config.yaml
+</code></pre></div>
+<hr />
+<h2 id="quick-reference-card">Quick Reference Card<a class="headerlink" href="#quick-reference-card" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a><span class="c1"># Basic command structure</span>
+<a id="__codelineno-51-2" name="__codelineno-51-2" href="#__codelineno-51-2"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>PATH<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+<a id="__codelineno-51-3" name="__codelineno-51-3" href="#__codelineno-51-3"></a>
+<a id="__codelineno-51-4" name="__codelineno-51-4" href="#__codelineno-51-4"></a><span class="c1"># Most common commands</span>
+<a id="__codelineno-51-5" name="__codelineno-51-5" href="#__codelineno-51-5"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>dataset.csv<span class="w">                           </span><span class="c1"># Basic profiling</span>
+<a id="__codelineno-51-6" name="__codelineno-51-6" href="#__codelineno-51-6"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>dataset.csv<span class="w"> </span>--preset<span class="w"> </span>quick<span class="w">            </span><span class="c1"># Quick inspection</span>
+<a id="__codelineno-51-7" name="__codelineno-51-7" href="#__codelineno-51-7"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>dataset.csv<span class="w"> </span>--preset<span class="w"> </span>standard<span class="w">         </span><span class="c1"># Standard analysis</span>
+<a id="__codelineno-51-8" name="__codelineno-51-8" href="#__codelineno-51-8"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>dataset.csv<span class="w"> </span>--preset<span class="w"> </span>enterprise<span class="w">       </span><span class="c1"># Professional report</span>
+<a id="__codelineno-51-9" name="__codelineno-51-9" href="#__codelineno-51-9"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>dataset.csv<span class="w"> </span>--report<span class="w"> </span>html<span class="w">             </span><span class="c1"># HTML report</span>
+<a id="__codelineno-51-10" name="__codelineno-51-10" href="#__codelineno-51-10"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>dataset.csv<span class="w"> </span>--verbosity<span class="w"> </span>verbose<span class="w">       </span><span class="c1"># Detailed output</span>
+<a id="__codelineno-51-11" name="__codelineno-51-11" href="#__codelineno-51-11"></a>
+<a id="__codelineno-51-12" name="__codelineno-51-12" href="#__codelineno-51-12"></a><span class="c1"># Utility commands</span>
+<a id="__codelineno-51-13" name="__codelineno-51-13" href="#__codelineno-51-13"></a>aniwa<span class="w"> </span>list-presets<span class="w">                                   </span><span class="c1"># List available presets</span>
+<a id="__codelineno-51-14" name="__codelineno-51-14" href="#__codelineno-51-14"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>--help<span class="w">                                 </span><span class="c1"># Get help</span>
+<a id="__codelineno-51-15" name="__codelineno-51-15" href="#__codelineno-51-15"></a>aniwa<span class="w"> </span>--help<span class="w">                                         </span><span class="c1"># General help</span>
+<a id="__codelineno-51-16" name="__codelineno-51-16" href="#__codelineno-51-16"></a>
+<a id="__codelineno-51-17" name="__codelineno-51-17" href="#__codelineno-51-17"></a><span class="c1"># Advanced examples</span>
+<a id="__codelineno-51-18" name="__codelineno-51-18" href="#__codelineno-51-18"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>dataset.csv<span class="w"> </span>--preset<span class="w"> </span>enterprise<span class="w"> </span>--mode<span class="w"> </span>fast<span class="w"> </span>--output-dir<span class="w"> </span>reports/
+<a id="__codelineno-51-19" name="__codelineno-51-19" href="#__codelineno-51-19"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>dataset.csv<span class="w"> </span>--report<span class="w"> </span>html<span class="w"> </span>--template<span class="w"> </span>dark<span class="w"> </span>--include<span class="w"> </span>summary,stats
+<a id="__codelineno-51-20" name="__codelineno-51-20" href="#__codelineno-51-20"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>dataset.csv<span class="w"> </span>--verbosity<span class="w"> </span>debug<span class="w"> </span>--preset<span class="w"> </span>audit<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w"> </span>debug.log
+</code></pre></div>
+<hr />
+<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="for-beginners">For Beginners<a class="headerlink" href="#for-beginners" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Start with <code>aniwa profile dataset.csv --preset quick</code></li>
+<li>Move to <code>aniwa profile dataset.csv --preset standard</code> for deeper analysis</li>
+<li>Use <code>aniwa profile dataset.csv --preset enterprise</code> for sharing reports</li>
+<li>Add <code>--verbosity verbose</code> to understand what's happening</li>
+</ol>
+<h3 id="for-daily-use">For Daily Use<a class="headerlink" href="#for-daily-use" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Use <code>aniwa profile dataset.csv --preset standard</code> as your default</li>
+<li>Override with <code>--mode fast</code> for very large files</li>
+<li>Add <code>--report html</code> when you need to save results</li>
+<li>Create a config file for your team's standards</li>
+</ol>
+<h3 id="for-cicd-pipelines">For CI/CD Pipelines<a class="headerlink" href="#for-cicd-pipelines" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>dataset.csv<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-52-2" name="__codelineno-52-2" href="#__codelineno-52-2"></a><span class="w">    </span>--preset<span class="w"> </span>quick<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-52-3" name="__codelineno-52-3" href="#__codelineno-52-3"></a><span class="w">    </span>--verbosity<span class="w"> </span>quiet<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-52-4" name="__codelineno-52-4" href="#__codelineno-52-4"></a><span class="w">    </span>--report<span class="w"> </span>json<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-52-5" name="__codelineno-52-5" href="#__codelineno-52-5"></a><span class="w">    </span>--output-dir<span class="w"> </span>./artifacts
+</code></pre></div>
+<h3 id="for-data-governance">For Data Governance<a class="headerlink" href="#for-data-governance" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>aniwa<span class="w"> </span>profile<span class="w"> </span>dataset.csv<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-53-2" name="__codelineno-53-2" href="#__codelineno-53-2"></a><span class="w">    </span>--preset<span class="w"> </span>audit<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-53-3" name="__codelineno-53-3" href="#__codelineno-53-3"></a><span class="w">    </span>--output-dir<span class="w"> </span>./audits/<span class="k">$(</span>date<span class="w"> </span>+%Y%m%d<span class="k">)</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-53-4" name="__codelineno-53-4" href="#__codelineno-53-4"></a><span class="w">    </span>--verbosity<span class="w"> </span>verbose<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-53-5" name="__codelineno-53-5" href="#__codelineno-53-5"></a><span class="w">    </span>--template<span class="w"> </span>enterprise
+</code></pre></div>
+<h3 id="for-performance-optimization">For Performance Optimization<a class="headerlink" href="#for-performance-optimization" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Use <code>--preset quick</code> for datasets &gt; 1M rows</li>
+<li>Use <code>--mode fast</code> when you don't need statistics</li>
+<li>Use <code>--exclude charts</code> to skip visualization generation</li>
+<li>Run <code>--verbosity verbose</code> once to identify bottlenecks</li>
+</ol>
+<hr />
+<h2 id="future-cli-roadmap">Future CLI Roadmap<a class="headerlink" href="#future-cli-roadmap" title="Permanent link">&para;</a></h2>
+<p>Planned CLI capabilities for future releases:</p>
+<h3 id="v02x-intelligence">v0.2.x - Intelligence<a class="headerlink" href="#v02x-intelligence" title="Permanent link">&para;</a></h3>
 <ul>
-<li>argument parsing</li>
-<li>validation</li>
-<li>config loading</li>
-<li>execution orchestration</li>
-<li>report routing</li>
-<li>metadata generation</li>
+<li><code>aniwa compare</code> - Compare two datasets</li>
+<li><code>aniwa diff</code> - Show detailed differences</li>
+<li><code>aniwa monitor</code> - Continuous profiling</li>
+</ul>
+<h3 id="v03x-universal-connectivity">v0.3.x - Universal Connectivity<a class="headerlink" href="#v03x-universal-connectivity" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>aniwa connect</code> - Database connection management</li>
+<li>Database-specific commands for PostgreSQL, MySQL, BigQuery</li>
+</ul>
+<h3 id="v04x-extensibility">v0.4.x - Extensibility<a class="headerlink" href="#v04x-extensibility" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>aniwa plugin</code> - Plugin management commands</li>
+<li><code>aniwa extension</code> - Extension installation</li>
+</ul>
+<h3 id="v05x-ai-intelligence">v0.5.x - AI Intelligence<a class="headerlink" href="#v05x-ai-intelligence" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>aniwa explain</code> - AI-powered insights</li>
+<li><code>aniwa suggest</code> - Optimization suggestions</li>
+</ul>
+<h3 id="v06-governance">v0.6+ - Governance<a class="headerlink" href="#v06-governance" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>aniwa validate</code> - Run validation rules</li>
+<li><code>aniwa lineage</code> - Data lineage tracking</li>
+<li><code>aniwa profile --watch</code> - Real-time profiling</li>
 </ul>
 <hr />
-<h1 id="recommended-usage-patterns">Recommended Usage Patterns<a class="headerlink" href="#recommended-usage-patterns" title="Permanent link">&para;</a></h1>
-<hr />
-<h2 id="exploration">Exploration<a class="headerlink" href="#exploration" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>aniwa<span class="w"> </span>dataset.csv
+<h2 id="environment-variables">Environment Variables<a class="headerlink" href="#environment-variables" title="Permanent link">&para;</a></h2>
+<p>Future support for environment variables:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="nv">ANIWA_VERBOSITY</span><span class="o">=</span>debug
+<a id="__codelineno-54-2" name="__codelineno-54-2" href="#__codelineno-54-2"></a><span class="nv">ANIWA_REPORT_FORMAT</span><span class="o">=</span>html
+<a id="__codelineno-54-3" name="__codelineno-54-3" href="#__codelineno-54-3"></a><span class="nv">ANIWA_OUTPUT_DIR</span><span class="o">=</span>./reports
+<a id="__codelineno-54-4" name="__codelineno-54-4" href="#__codelineno-54-4"></a><span class="nv">ANIWA_CONFIG_PATH</span><span class="o">=</span>/etc/aniwa/config.yaml
 </code></pre></div>
 <hr />
-<h2 id="reporting">Reporting<a class="headerlink" href="#reporting" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>aniwa<span class="w"> </span>dataset.csv<span class="w"> </span>--report<span class="w"> </span>html
-</code></pre></div>
-<hr />
-<h2 id="automation">Automation<a class="headerlink" href="#automation" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>aniwa<span class="w"> </span>dataset.csv<span class="w"> </span>--report<span class="w"> </span>json
-</code></pre></div>
-<hr />
-<h2 id="governance">Governance<a class="headerlink" href="#governance" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>aniwa<span class="w"> </span>dataset.csv<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a><span class="w">  </span>--report<span class="w"> </span>pdf<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a><span class="w">  </span>--template<span class="w"> </span>enterprise
-</code></pre></div>
-<hr />
-<h1 id="future-cli-roadmap">Future CLI Roadmap<a class="headerlink" href="#future-cli-roadmap" title="Permanent link">&para;</a></h1>
-<p>Future planned CLI capabilities:</p>
-<ul>
-<li>plugin commands</li>
-<li>interactive mode</li>
-<li>database connections</li>
-<li>streaming datasets</li>
-<li>remote profiling</li>
-<li>distributed execution</li>
-<li>cloud integrations</li>
-<li>AI-assisted analysis</li>
-</ul>
-<hr />
-<h1 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h1>
-<p>Recommended practices:</p>
-<ul>
-<li>use config files for teams</li>
-<li>standardize report templates</li>
-<li>automate profiling workflows</li>
-<li>use deep mode for audits</li>
-<li>use fast mode for CI</li>
-</ul>
-<hr />
-<h1 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h1>
-<p>Continue with:</p>
-<ul>
-<li>profiling-modes.md</li>
-<li>report-formats.md</li>
-<li>report-templates.md</li>
-<li>sections.md</li>
-</ul>
+<h2 id="exit-codes">Exit Codes<a class="headerlink" href="#exit-codes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Success - Profiling completed normally</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Error - Critical error occurred</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Warning - Quality issues detected</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Invalid input - Bad arguments or file</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Configuration error - Invalid config</td>
+</tr>
+</tbody>
+</table>
 
 
 
