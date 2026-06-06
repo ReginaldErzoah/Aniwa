@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Aniwa Dataset Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body {
@@ -197,32 +198,114 @@
             margin-top: 40px;
         }
 
-        @media (max-width: 900px) {
-            .cards,
-            .charts {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
+        /* Tablet */
+@media (max-width: 992px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-        @media (max-width: 600px) {
-            body {
-                padding: 20px;
-            }
+    .charts {
+        grid-template-columns: 1fr;
+    }
 
-            .cards,
-            .charts {
-                grid-template-columns: 1fr;
-            }
+    .header h1 {
+        font-size: 28px;
+    }
+}
 
-            .chart-card.full {
-                max-width: 100%;
-            }
+/* Mobile */
+@media (max-width: 768px) {
 
-            table {
-                display: block;
-                overflow-x: auto;
-            }
-        }
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .charts {
+        grid-template-columns: 1fr;
+    }
+
+    .card .value {
+        font-size: 24px;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .header p {
+        font-size: 14px;
+    }
+
+    section {
+        padding-top: 16px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .metadata-table td:first-child {
+        width: 140px;
+    }
+
+    .chart-card {
+        padding: 12px;
+    }
+
+    .chart-card canvas {
+        max-height: 250px;
+    }
+
+    .footer {
+        text-align: center;
+    }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .card {
+        padding: 12px;
+    }
+
+    .card .value {
+        font-size: 20px;
+    }
+
+    th,
+    td {
+        font-size: 12px;
+        padding: 8px 6px;
+    }
+
+    .badge {
+        font-size: 10px;
+        padding: 2px 6px;
+    }
+}
     </style>
 </head>
 <body>

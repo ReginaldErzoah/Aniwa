@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Aniwa Dataset Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <style>
@@ -195,32 +196,160 @@
             padding-top: 10px;
         }
 
-        @media (max-width: 900px) {
-            .cards,
-            .charts {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
+       /* ==========================
+   1200px - Large Screens
+========================== */
+@media screen and (max-width: 1200px){
 
-        @media (max-width: 700px) {
-            body {
-                padding: 12px;
-            }
+    .container{
+        max-width:100%;
+    }
 
-            .cards,
-            .charts {
-                grid-template-columns: 1fr;
-            }
+    .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
 
-            .chart-card.full {
-                max-width: 100%;
-            }
+/* ==========================
+   992px - Tablets
+========================== */
+@media screen and (max-width: 992px){
 
-            table {
-                display: block;
-                overflow-x: auto;
-            }
-        }
+    body{
+        padding:16px;
+    }
+
+    .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .charts{
+        grid-template-columns:1fr;
+    }
+
+    .header h1{
+        font-size:22px;
+    }
+
+    .card .value{
+        font-size:20px;
+    }
+}
+
+/* ==========================
+   768px - Small Tablets
+========================== */
+@media screen and (max-width: 768px){
+
+    body{
+        padding:12px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .charts{
+        grid-template-columns:1fr;
+    }
+
+    .chart-card.full{
+        max-width:100%;
+    }
+
+    table{
+        display:block;
+        width:100%;
+        overflow-x:auto;
+        white-space:nowrap;
+        -webkit-overflow-scrolling:touch;
+    }
+
+    .metadata-table td:first-child{
+        width:140px;
+    }
+
+    h2{
+        font-size:15px;
+    }
+
+    h3{
+        font-size:12px;
+    }
+}
+
+/* ==========================
+   576px - Mobile
+========================== */
+@media screen and (max-width: 576px){
+
+    body{
+        padding:10px;
+        font-size:12px;
+    }
+
+    .header h1{
+        font-size:20px;
+    }
+
+    .header p{
+        font-size:12px;
+    }
+
+    .card{
+        padding:10px;
+    }
+
+    .card .value{
+        font-size:18px;
+    }
+
+    .card .label{
+        font-size:10px;
+    }
+
+    th,
+    td{
+        padding:6px;
+        font-size:11px;
+    }
+
+    .chart-card{
+        padding:10px;
+    }
+
+    .chart-card canvas{
+        max-height:220px;
+    }
+
+    .footer{
+        text-align:center;
+        font-size:10px;
+    }
+}
+
+/* ==========================
+   400px - Small Phones
+========================== */
+@media screen and (max-width: 400px){
+
+    .header h1{
+        font-size:18px;
+    }
+
+    .card .value{
+        font-size:16px;
+    }
+
+    h2{
+        font-size:14px;
+    }
+
+    .badge{
+        font-size:9px;
+        padding:2px 5px;
+    }
+}
     </style>
 </head>
 

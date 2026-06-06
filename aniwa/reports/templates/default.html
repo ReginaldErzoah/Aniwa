@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Aniwa Dataset Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body {
@@ -185,32 +186,188 @@
             margin-top: 40px;
         }
 
-        @media (max-width: 900px) {
-            .cards,
-            .charts {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
+        /* ==========================
+   1200px
+========================== */
+@media screen and (max-width:1200px){
 
-        @media (max-width: 600px) {
-            body {
-                padding: 20px;
-            }
+    .container{
+        max-width:100%;
+    }
 
-            .cards,
-            .charts {
-                grid-template-columns: 1fr;
-            }
+    .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
 
-            .chart-card.full {
-                max-width: 100%;
-            }
+/* ==========================
+   992px
+========================== */
+@media screen and (max-width:992px){
 
-            table {
-                display: block;
-                overflow-x: auto;
-            }
-        }
+    body{
+        padding:25px;
+    }
+
+    .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .charts{
+        grid-template-columns:1fr;
+    }
+
+    .header h1{
+        font-size:30px;
+    }
+
+    .card .value{
+        font-size:26px;
+    }
+
+    section{
+        padding:20px;
+    }
+}
+
+/* ==========================
+   768px
+========================== */
+@media screen and (max-width:768px){
+
+    body{
+        padding:15px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .charts{
+        grid-template-columns:1fr;
+    }
+
+    .chart-card.full{
+        max-width:100%;
+    }
+
+    .header h1{
+        font-size:24px;
+    }
+
+    .header p{
+        font-size:14px;
+    }
+
+    table{
+        display:block;
+        width:100%;
+        overflow-x:auto;
+        white-space:nowrap;
+        -webkit-overflow-scrolling:touch;
+    }
+
+    .metadata-table td:first-child{
+        width:140px;
+    }
+
+    .card{
+        padding:16px;
+    }
+}
+
+/* ==========================
+   576px
+========================== */
+@media screen and (max-width:576px){
+
+    body{
+        padding:12px;
+    }
+
+    .header h1{
+        font-size:20px;
+    }
+
+    .header p{
+        font-size:13px;
+    }
+
+    h2{
+        font-size:18px;
+    }
+
+    h3{
+        font-size:14px;
+    }
+
+    .card{
+        padding:14px;
+    }
+
+    .card .label{
+        font-size:12px;
+    }
+
+    .card .value{
+        font-size:22px;
+    }
+
+    th,
+    td{
+        padding:8px;
+        font-size:12px;
+    }
+
+    .badge{
+        font-size:10px;
+        padding:3px 8px;
+    }
+
+    .chart-card{
+        padding:12px;
+    }
+
+    .chart-card canvas{
+        max-height:220px;
+    }
+
+    .footer{
+        text-align:center;
+        font-size:12px;
+    }
+}
+
+/* ==========================
+   400px
+========================== */
+@media screen and (max-width:400px){
+
+    .header h1{
+        font-size:18px;
+    }
+
+    .card .value{
+        font-size:18px;
+    }
+
+    h2{
+        font-size:16px;
+    }
+
+    h3{
+        font-size:13px;
+    }
+
+    th,
+    td{
+        font-size:11px;
+    }
+
+    .badge{
+        font-size:9px;
+    }
+}
     </style>
 </head>
 <body>
