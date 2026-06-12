@@ -1,0 +1,124 @@
+OrderID	CustomerID	CustomerName	ProductCategory	ProductName	OrderDate	Quantity	UnitPrice	TotalAmount	PaymentMethod	Region	OrderStatus
+ORD1000	CUST813	Brian Morris	Clothing	vote	2024-12-01	9	217.56	1958.04	Credit Card	West	Cancelled
+ORD1001	CUST559	Erin Richardson	Sports	TV	2025-11-18	10	415.46	4154.6	Cash	West	Returned
+ORD1002	CUST457	Rachel Bartlett	Clothing	president	2025-05-15	4	231.88	927.52	Debit Card	South	Delivered
+ORD1003	CUST110	Jill Jones	Books	represent	2026-02-12	5	149.94	749.7	UPI	East	Cancelled
+ORD1004	CUST104	Mariah White	Furniture	new	2025-06-28	1	234.03	234.03	Credit Card	North	Cancelled
+ORD1005	CUST205	Russell Campbell	Books	more	2025-04-02	7	408.6	2860.2	Cash	South	Cancelled
+ORD1006	CUST934	Luis Wilson	Clothing	benefit	2025-03-22	7	432.49	3027.43	Debit Card	South	Returned
+ORD1007	CUST722	Kathy Peters	Furniture	down	2024-11-02	9	465.06	4185.54	Credit Card	West	Cancelled
+ORD1008	CUST261	Roy Perez	Electronics	small	2024-09-27	8	135.12	1080.96	Credit Card	East	Cancelled
+ORD1009	CUST859	Paul Mendoza	Clothing	theory	2026-01-14	1	172.7	172.7	Credit Card	South	Delivered
+ORD1010	CUST529	Rhonda Garza	Sports	with	2024-12-22	7	108.77	761.39	Credit Card	North	Cancelled
+ORD1011	CUST259	Brandon Hamilton	Furniture	civil	2024-06-05	5	109.92	549.6	UPI	West	Cancelled
+ORD1012	CUST870	Michael Quinn	Sports	price	2026-04-07	1	243.48	243.48	Debit Card	South	Returned
+ORD1013	CUST112	Kristen Dennis	Furniture	minute	2026-03-10	9	247.44	2226.96	Credit Card	South	Returned
+ORD1014	CUST239	Stephen Hall	Books	myself	2025-07-23	8	246.22	1969.76			Returned
+ORD1015	CUST898	Joseph Nelson	Electronics	know	2026-05-04	7	62.89	440.23	UPI	North	Cancelled
+ORD1016	CUST219	Tracy Rogers	Clothing	want	2025-05-29	9	51.34	462.06	Cash	East	Returned
+ORD1017	CUST459	Angela Wagner	Books	rather	2025-01-24	5	421.55	2107.75	UPI	West	Processing
+ORD1018	CUST554	Brent Gray	Books	cut	2026-03-08	9	181.35	1632.15	Credit Card	South	Returned
+ORD1019	CUST931	Joseph Smith	Electronics	peace	2026-03-05	3	216.4	649.2	Cash	West	Delivered
+ORD1020	CUST409	Emma Beck	Electronics	too	2025-05-08	9	400.2	3601.8	Cash	South	Cancelled
+ORD1021	CUST601	Russell Barnes	Sports	agree	2024-06-15	5	273.51	1367.55	Cash	North	Processing
+ORD1022	CUST566	Robin Pena	Electronics	lawyer	2025-09-07	7	327.19	2290.33	UPI	South	Processing
+ORD1023	CUST950	Roberto Garrison	Books	rich	2024-11-06	4	362.56	1450.24	UPI	South	Returned
+ORD1024	CUST423	Michael Richard	Books	defense	2024-08-11	6	148.36	890.16	Credit Card	South	Delivered
+ORD1025	CUST473	Lisa James	Clothing	play	2026-02-21	9	461.74	4155.66	Credit Card	West	Processing
+ORD1026	CUST648	Sabrina Brown	Clothing	look	2025-05-05	6	354.26	2125.56	Credit Card	North	Returned
+ORD1027	CUST849	David Kelly	Clothing	prepare	2025-01-18	6	81.41	488.46	Credit Card	East	Delivered
+ORD1028	CUST695	Steven Kelly III	Clothing	explain	2026-04-27	9	243.92	2195.28	Cash	East	Cancelled
+ORD1029	CUST377	Christine Jordan	Electronics	high	2024-07-13	1	335.66	335.66	Debit Card	North	Delivered
+ORD1030	CUST285	Maria Young	Sports	stay	2025-10-17	10	165.62	1656.2	Debit Card	East	Returned
+ORD1031	CUST342	Douglas Miller	Electronics	trade	2024-11-28	9	117.69	1059.21	UPI	South	Returned
+ORD1032	CUST818	Sonya Ingram	Books	act	2025-03-17	10	10.5	105.0			Processing
+ORD1033	CUST170	Daniel Brooks	Furniture	difference	2026-01-12	4	317.99	1271.96	Credit Card	East	Cancelled
+ORD1034	CUST427	Isaac Roy	Clothing	receive	2024-06-11	8	208.37	1666.96	UPI	West	Returned
+ORD1035	CUST143	Lynn Garner	Electronics	determine	2025-04-30	8	159.08	1272.64	UPI	West	Returned
+ORD1036	CUST653	Jeremiah Chapman	Electronics	provide	2024-11-05	10	370.87	3708.7	Cash	North	Cancelled
+ORD1037	CUST374	Thomas Rodriguez	Sports	specific	2026-05-04	5	354.81	1774.05	Credit Card	South	Returned
+ORD1038	CUST777	Tracey Mosley	Electronics	line	2025-02-05	8	193.85	1550.8	Cash	South	Processing
+ORD1039	CUST154	Heather Bennett	Sports	yourself	2025-07-18	10	77.84	778.4	Cash	North	Returned
+ORD1040	CUST972	Patrick Boyle	Sports	attorney	2025-07-25	4	397.95	1591.8	Debit Card	West	Delivered
+ORD1041	CUST709	Cameron Williams	Electronics	name	2024-07-01	6	448.39	2690.34		North	Processing
+ORD1042	CUST262	Timothy Rodriguez	Sports	decision	2025-08-28	4	25.66	102.64	Cash	West	Cancelled
+ORD1043	CUST230	Susan Ruiz	Sports	let	2026-03-29	1	394.18	394.18	Cash	East	Processing
+ORD1044	CUST496	Anthony Carey	Furniture	store	2025-12-10	8	370.71	2965.68	Debit Card	West	Cancelled
+ORD1045	CUST167	Amanda Osborn	Books	task	2024-12-13	10	190.3	1903.0	Credit Card	West	Delivered
+ORD1046	CUST565	Kristin Hart	Clothing	medical	2026-02-13	8	19.43	155.44	Cash	South	Cancelled
+ORD1047	CUST461	Erica Smith	Books	sure	2025-08-05	7	472.46	3307.22	Cash	East	Processing
+ORD1048	CUST479	Gregory Smith	Clothing	after	2026-02-02	1	180.57	180.57			Delivered
+ORD1049	CUST438	Mackenzie Harris	Clothing	research	2026-04-29	4	231.87	927.48	Cash	North	Cancelled
+ORD1050	CUST871	Lindsay Mclean	Sports	manage	2025-01-15	7	17.06	119.42	Debit Card	West	Processing
+ORD1051	CUST484	Michelle Coffey	Sports	cost	2024-12-13	3	455.18	1365.54	Debit Card		Cancelled
+ORD1052	CUST389	Nicole Williams	Clothing	candidate	2024-06-14	7	163.59	1145.13	UPI	South	Delivered
+ORD1053	CUST504	Cynthia Wilson	Sports	cover	2025-06-16	7	220.66	1544.62	Credit Card	South	Returned
+ORD1054	CUST722	Annette Cruz	Furniture	machine	2026-04-21	2	63.98	127.96	Credit Card	East	Cancelled
+ORD1055	CUST393	Michele Lewis	Furniture	in	2025-09-11	8	263.38	2107.04	Debit Card	South	Processing
+ORD1056	CUST520	Debra Hernandez	Sports	dream	2025-06-23	9	83.45	751.05	UPI	West	Processing
+ORD1057	CUST964	Connie Edwards	Books	production	2025-07-27	6	76.64	459.84	Debit Card	South	Returned
+ORD1058	CUST209	Tricia Padilla	Electronics	race	2025-07-08	2	294.48	588.96	UPI	South	Cancelled
+ORD1059	CUST651	Cheryl Mcneil	Clothing	human	2024-08-14	2	495.31	990.62	Cash	North	Delivered
+ORD1060	CUST162	Tammy Smith	Electronics	leader	2025-06-25	7	32.47	227.29	Debit Card	South	Processing
+ORD1061	CUST625	Zachary Escobar	Furniture	figure	2024-08-17	6	482.92	2897.52	Credit Card	East	Delivered
+ORD1062	CUST840	Tara Terry	Books	win	2024-08-18	9	181.61	1634.49	UPI	South	Returned
+ORD1063	CUST872	Angela Robinson	Sports	ability	2025-10-07	4	43.47	173.88	Cash	East	Processing
+ORD1064	CUST599	Nancy Jenkins	Furniture	majority	2024-07-11	7	243.77	1706.39	Cash	East	Delivered
+ORD1065	CUST931	Karen Rice	Sports	check	2024-09-03	7	206.42	1444.94	Cash	North	Delivered
+ORD1066	CUST633	Michael Valencia	Electronics	impact	2025-12-05	10	288.07	2880.7	UPI	South	Cancelled
+ORD1067	CUST191	Heather Mcintyre	Furniture	matter	2025-06-30	10	480.69	4806.9	Cash	North	Delivered
+ORD1068	CUST242	Robert Jackson	Clothing	practice	2024-07-05	2	435.65	871.3	Cash	West	Returned
+ORD1069	CUST427	Ashley Meza	Electronics	she	2024-06-11	5	46.39	231.95	Debit Card		Delivered
+ORD1070	CUST824	Austin Fields	Clothing	plan	2026-01-02	5	257.83	1289.15	UPI	South	Cancelled
+ORD1071	CUST749	James Harper	Clothing	nice	2026-01-02	7	278.56	1949.92	UPI	North	Delivered
+ORD1072	CUST721	William Estrada	Electronics	process	2024-09-02	4	141.91	567.64	UPI	East	Processing
+ORD1073	CUST621	Danielle Baker	Electronics	loss	2024-11-13	7	421.8	2952.6	Credit Card	South	Returned
+ORD1074	CUST763	Joseph Rodriguez	Clothing	save	2024-12-14	2	42.21	84.42	Debit Card	West	Delivered
+ORD1075	CUST192	Nicholas Nguyen	Clothing	sound	2025-01-10	7	429.51	3006.57		West	Processing
+ORD1076	CUST439	Debra Walker	Furniture	city	2024-08-29	6	197.42	1184.52	Cash	South	Processing
+ORD1077	CUST621	Patricia Moore	Furniture	answer	2025-08-29	7	458.68	3210.76	Credit Card	North	Delivered
+ORD1078	CUST610	Bryan Andrews	Clothing	matter	2026-04-15	7	370.52	2593.64	Credit Card	North	Returned
+ORD1079	CUST283	Keith Daniel	Electronics	his	2025-04-21	8	442.87	3542.96	Credit Card	East	Processing
+ORD1080	CUST128	Katherine Bell	Furniture	none	2024-11-20	6	482.26	2893.56	Credit Card	North	Returned
+ORD1081	CUST972	Roberto Hickman	Sports	power	2026-02-02	9	236.4	2127.6	Debit Card	West	Processing
+ORD1082	CUST918	Christina Massey	Books	anything	2024-11-29	10	284.06	2840.6	Debit Card	East	Cancelled
+ORD1083	CUST603	Ronald Sanders	Furniture	nearly	2025-04-03	3	41.57	124.71	Cash	South	Cancelled
+ORD1084	CUST792	Paul Moore	Sports	wind	2026-04-26	8	134.67	1077.36	Cash	East	Delivered
+ORD1085	CUST684	Christian Gutierrez	Books	statement	2025-12-19	6	204.52	1227.12	UPI	South	Returned
+ORD1086	CUST974	Raymond Hudson	Sports	ahead	2025-07-01	6	239.88	1439.28	Cash	East	Returned
+ORD1087	CUST948	Sandra Schwartz	Clothing	away	2026-06-02	2	145.16	290.32	Credit Card	North	Processing
+ORD1088	CUST144	Gregory Dominguez	Furniture	benefit	2025-10-19	6	307.96	1847.76	Cash	North	Processing
+ORD1089	CUST906	Christian Hamilton	Furniture	citizen	2026-01-05	3	406.41	1219.23	Cash	South	Cancelled
+ORD1090	CUST423	Michael Wilson	Electronics	control	2024-10-18	8	178.0	1424.0	Cash	East	Processing
+ORD1091	CUST760	Daniel Rodriguez	Books	quickly	2025-04-30	1	190.54	190.54	Credit Card	North	Returned
+ORD1092	CUST813	Timothy Snyder	Furniture	see	2025-08-17	8	409.07	3272.56	UPI	South	Cancelled
+ORD1093	CUST802	Suzanne Mcfarland	Furniture	bit	2026-03-30	2	449.83	899.66		South	Delivered
+ORD1094	CUST381	Dale Drake	Books	itself	2025-07-21	8	281.29	2250.32	Cash	West	Returned
+ORD1095	CUST212	David Dixon	Clothing	light	2025-12-06	3	206.75	620.25	Credit Card	East	Delivered
+ORD1096	CUST647	Mallory Hicks	Furniture	education	2025-10-16	7	212.37	1486.59	Debit Card	West	Cancelled
+ORD1097	CUST798	George Smith	Sports	collection	2025-07-31	7	363.95	2547.65	Credit Card	South	Delivered
+ORD1098	CUST275	Mason Williams	Books	man	2026-02-06	7	241.29	1689.03	Debit Card	South	Cancelled
+ORD1099	CUST770	Danielle Taylor	Books	manage	2026-05-20	3	449.31	1347.93	Credit Card	North	Processing
+ORD1100	CUST788	Bethany Lee	Furniture	listen	2024-08-21	8	145.59	1164.72	Credit Card	South	Processing
+ORD1101	CUST549	Brianna Jackson	Electronics	challenge	2025-04-12	5	483.49	2417.45	Credit Card	East	Delivered
+ORD1102	CUST181	Stephen Osborne	Electronics	recognize	2025-04-08	7	462.98	3240.86	Debit Card	West	Cancelled
+ORD1103	CUST964	Kayla Richmond	Sports	price	2025-05-02	8	46.56	372.48	Debit Card	North	Returned
+ORD1104	CUST225	Evan Vargas	Electronics	network	2026-04-04	1	433.11	433.11	UPI	East	Delivered
+ORD1105	CUST541	Hunter Andrews	Sports	type	2024-06-15	4	44.78	179.12	Debit Card		Delivered
+ORD1106	CUST951	James Stewart	Clothing	ask	2026-02-07	7	165.59	1159.13	Debit Card	West	Returned
+ORD1107	CUST284	Joshua Kane	Furniture	how	2026-05-31	5	259.05	1295.25	Debit Card	West	Delivered
+ORD1108	CUST760	Kimberly Jenkins	Books	coach	2024-06-26	2	118.77	237.54	Credit Card	East	Processing
+ORD1109	CUST200	Bruce Kelley	Books	field	2024-10-27	1	261.16	261.16	Credit Card	East	Delivered
+ORD1110	CUST112	Adam Davis	Sports	build	2024-10-08	4	247.32	989.28	Credit Card	West	Delivered
+ORD1111	CUST796	Christian Leach	Books	hold	2025-08-28	3	418.2	1254.6	Credit Card	North	Cancelled
+ORD1112	CUST225	Justin Dalton	Electronics	story	2026-05-31	9	498.41	4485.69	Credit Card	North	Returned
+ORD1113	CUST101	John Juarez	Books	strategy	2024-12-20	7	412.49	2887.43	Credit Card	South	Delivered
+ORD1114	CUST733	Aaron Thompson	Books	write	2025-04-02	5	361.94	1809.7	Cash	South	Processing
+ORD1115	CUST227	Paul Ruiz	Sports	almost	2026-05-16	7	390.77	2735.39	Credit Card	South	Cancelled
+ORD1116	CUST937	Nicholas Khan	Sports	central	2026-01-23	10	350.32	3503.2	Credit Card	North	Delivered
+ORD1117	CUST825	Kyle Hayes	Sports	only	2025-06-26	9	153.11	1377.99	UPI	East	Delivered
+ORD1118	CUST844	Jamie Brooks	Clothing	significant	2025-03-27	8	337.73	2701.84	Credit Card	South	Returned
+ORD1119	CUST132	Kenneth Jones	Furniture	hospital	2025-08-13	5	367.9	1839.5	Debit Card	East	Returned
+ORD1057	CUST964	Connie Edwards	Books	production	2025-07-27	6	76.64	459.84	Debit Card	South	Returned
+ORD1081	CUST972	Roberto Hickman	Sports	power	2026-02-02	9	236.4	2127.6	Debit Card	West	Processing
+ORD1060	CUST162	Tammy Smith	Electronics	leader	2025-06-25	7	32.47	227.29	Debit Card	South	Processing
