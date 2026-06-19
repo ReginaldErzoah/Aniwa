@@ -13,6 +13,7 @@ cd Aniwa
 git remote add upstream https://github.com/ReginaldErzoah/Aniwa.git
 ```
 
+
 ---
 
 ### Step 2: Setup
@@ -91,4 +92,3 @@ git rebase --abort   # Go back to before rebase
 | Create branch | `git checkout -b my-branch` |
 | Push | `git push origin my-branch` |
 | Rebase | `git fetch upstream && git rebase upstream/main && git push --force` |
-
