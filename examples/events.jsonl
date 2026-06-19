@@ -1,5 +1,66 @@
-{"event_id":1,"event_type":"signup","user_id":101,"country":"Ghana","amount":0}
-{"event_id":2,"event_type":"purchase","user_id":101,"country":"Ghana","amount":120}
-{"event_id":3,"event_type":"purchase","user_id":102,"country":"Nigeria","amount":250}
-{"event_id":4,"event_type":"refund","user_id":102,"country":"Nigeria","amount":-50}
-{"event_id":5,"event_type":"signup","user_id":103,"country":"Kenya","amount":0}
+{"event_id":200,"event_type":"purchase","user_id":200,"country":"Unknown","amount":0.0}
+{"event_id":142,"event_type":"purchase","user_id":189,"country":"India","amount":-249.04}
+{"event_id":134,"event_type":"purchase","user_id":139,"country":"Germany","amount":-195.7}
+{"event_id":24,"event_type":"refund","user_id":114,"country":"UK","amount":113.01}
+{"event_id":48,"event_type":"purchase","user_id":114,"country":"South Africa","amount":-461.81}
+{"event_id":4,"event_type":"refund","user_id":102,"country":"Nigeria","amount":50.0}
+{"event_id":208,"event_type":"purchase","user_id":208,"country":"Unknown","amount":0.0}
+{"event_id":36,"event_type":"refund","user_id":152,"country":"Kenya","amount":94.95}
+{"event_id":22,"event_type":"purchase","user_id":143,"country":"South Africa","amount":-264.9}
+{"event_id":133,"event_type":"refund","user_id":198,"country":"Ghana","amount":198.85}
+{"event_id":137,"event_type":"refund","user_id":152,"country":"India","amount":28.79}
+{"event_id":125,"event_type":"purchase","user_id":165,"country":"USA","amount":-498.55}
+{"event_id":13,"event_type":"refund","user_id":138,"country":"Kenya","amount":25.13}
+{"event_id":90,"event_type":"purchase","user_id":198,"country":"Ghana","amount":-142.09}
+{"event_id":26,"event_type":"purchase","user_id":110,"country":"Ghana","amount":-87.95}
+{"event_id":55,"event_type":"refund","user_id":163,"country":"Nigeria","amount":28.67}
+{"event_id":53,"event_type":"refund","user_id":118,"country":"India","amount":69.51}
+{"event_id":205,"event_type":"purchase","user_id":205,"country":"Unknown","amount":0.0}
+{"event_id":141,"event_type":"purchase","user_id":139,"country":"UK","amount":-186.12}
+{"event_id":28,"event_type":"refund","user_id":187,"country":"Ghana","amount":90.93}
+{"event_id":44,"event_type":"refund","user_id":106,"country":"USA","amount":100.25}
+{"event_id":92,"event_type":"refund","user_id":138,"country":"South Africa","amount":185.67}
+{"event_id":126,"event_type":"purchase","user_id":156,"country":"Kenya","amount":-101.86}
+{"event_id":132,"event_type":"purchase","user_id":157,"country":"Kenya","amount":-73.78}
+{"event_id":61,"event_type":"purchase","user_id":106,"country":"South Africa","amount":-397.56}
+{"event_id":45,"event_type":"refund","user_id":139,"country":"USA","amount":77.64}
+{"event_id":127,"event_type":"purchase","user_id":198,"country":"India","amount":-413.47}
+{"event_id":123,"event_type":"refund","user_id":104,"country":"India","amount":153.86}
+{"event_id":59,"event_type":"refund","user_id":190,"country":"Germany","amount":164.16}
+{"event_id":10,"event_type":"refund","user_id":118,"country":null,"amount":168.61}
+{"event_id":73,"event_type":"purchase","user_id":138,"country":"South Africa","amount":-9.11}
+{"event_id":2,"event_type":"purchase","user_id":106,"country":"South Africa","amount":-385.79}
+{"event_id":42,"event_type":"purchase","user_id":124,"country":"Brazil","amount":-368.09}
+{"event_id":4,"event_type":"purchase","user_id":198,"country":"Kenya","amount":-29.37}
+{"event_id":149,"event_type":"refund","user_id":138,"country":"South Africa","amount":82.31}
+{"event_id":17,"event_type":"purchase","user_id":163,"country":"USA","amount":-371.32}
+{"event_id":43,"event_type":"purchase","user_id":138,"country":"Nigeria","amount":-177.84}
+{"event_id":146,"event_type":"purchase","user_id":110,"country":"Kenya","amount":-237.28}
+{"event_id":93,"event_type":"purchase","user_id":119,"country":"South Africa","amount":-44.53}
+{"event_id":130,"event_type":"purchase","user_id":178,"country":"Brazil","amount":-495.83}
+{"event_id":32,"event_type":"refund","user_id":163,"country":"Brazil","amount":88.93}
+{"event_id":207,"event_type":"purchase","user_id":207,"country":"Unknown","amount":0.0}
+{"event_id":144,"event_type":"refund","user_id":104,"country":"Kenya","amount":95.68}
+{"event_id":203,"event_type":"purchase","user_id":203,"country":"Unknown","amount":0.0}
+{"event_id":135,"event_type":"refund","user_id":187,"country":"India","amount":113.52}
+{"event_id":2,"event_type":"purchase","user_id":101,"country":"Ghana","amount":-120.0}
+{"event_id":209,"event_type":"purchase","user_id":209,"country":"Unknown","amount":0.0}
+{"event_id":38,"event_type":"refund","user_id":156,"country":"Brazil","amount":47.59}
+{"event_id":138,"event_type":"purchase","user_id":193,"country":"UK","amount":-407.05}
+{"event_id":1,"event_type":"purchase","user_id":143,"country":"UK","amount":-335.03}
+{"event_id":15,"event_type":"purchase","user_id":187,"country":"Germany","amount":-450.23}
+{"event_id":75,"event_type":"refund","user_id":138,"country":null,"amount":174.61}
+{"event_id":63,"event_type":"purchase","user_id":163,"country":"USA","amount":-303.58}
+{"event_id":69,"event_type":"purchase","user_id":156,"country":"South Africa","amount":-256.79}
+{"event_id":54,"event_type":"purchase","user_id":198,"country":"India","amount":-281.7}
+{"event_id":116,"event_type":"purchase","user_id":198,"country":"Brazil","amount":-43.44}
+{"event_id":120,"event_type":"refund","user_id":111,"country":null,"amount":75.25}
+{"event_id":202,"event_type":"purchase","user_id":202,"country":"Unknown","amount":0.0}
+{"event_id":206,"event_type":"purchase","user_id":206,"country":"Unknown","amount":0.0}
+{"event_id":204,"event_type":"purchase","user_id":204,"country":"Unknown","amount":0.0}
+{"event_id":67,"event_type":"refund","user_id":188,"country":"Ghana","amount":193.89}
+{"event_id":81,"event_type":"refund","user_id":198,"country":"South Africa","amount":15.74}
+{"event_id":47,"event_type":"purchase","user_id":105,"country":"UK","amount":-232.69}
+{"event_id":49,"event_type":"purchase","user_id":152,"country":null,"amount":-118.84}
+{"event_id":201,"event_type":"purchase","user_id":201,"country":"Unknown","amount":0.0}
+{"event_id":3,"event_type":"purchase","user_id":102,"country":"Nigeria","amount":-250.0}
