@@ -109,7 +109,7 @@ The roadmap is divided into major ecosystem phases:
 
 ---
 
-# v0.1.x — Foundation Era
+# v0.1.x - Foundation Era
 
 Focus:
 
