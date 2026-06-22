@@ -6,12 +6,19 @@ class DatasetSummary(BaseModel):
     columns: int
 
 
+class HistogramData(BaseModel):
+    bins: list[float] = []
+    counts: list[int] = []
+
+
 class NumericStats(BaseModel):
     min: float | None = None
     max: float | None = None
     mean: float | None = None
     median: float | None = None
     std: float | None = None
+
+    histogram: HistogramData | None = None
 
 
 class ColumnProfile(BaseModel):

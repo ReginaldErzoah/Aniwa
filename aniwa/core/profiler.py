@@ -6,6 +6,7 @@ from aniwa.models.profile import (
     ColumnProfile,
     DatasetProfile,
     DatasetSummary,
+    HistogramData,
     Insight,
     NumericStats,
     QualityProfile,
@@ -252,6 +253,7 @@ def _profile_columns(
                     mean=_safe_float(series.mean()),
                     median=_safe_float(series.median()),
                     std=_safe_float(series.std()),
+                    histogram=_generate_histogram(series),
                 )
                 
                 if verbose:
@@ -308,6 +310,55 @@ def _safe_float(value: object) -> float | None:
     except (TypeError, ValueError, OverflowError):
         return None
 
+
+def _generate_histogram(
+    series: pl.Series,
+    bins: int = 10,
+) -> HistogramData | None:
+    """
+    Generate histogram distribution data for numeric columns.
+    """
+
+    try:
+        values = series.drop_nulls()
+
+        if values.len() == 0:
+            return None
+
+        min_value = float(values.min())
+        max_value = float(values.max())
+
+        if min_value == max_value:
+            return HistogramData(
+                bins=[min_value],
+                counts=[values.len()],
+            )
+
+        step = (max_value - min_value) / bins
+
+        edges = [
+            round(min_value + (step * i), 4)
+            for i in range(bins + 1)
+        ]
+
+        counts = [0] * bins
+
+        for value in values:
+            index = int((float(value) - min_value) / step)
+
+            if index == bins:
+                index -= 1
+
+            counts[index] += 1
+
+        return HistogramData(
+            bins=edges,
+            counts=counts,
+        )
+
+    except Exception:
+        return None
+    
 
 def generate_insights(
     columns: list[ColumnProfile],
