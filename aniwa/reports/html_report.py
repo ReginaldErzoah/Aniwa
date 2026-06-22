@@ -72,12 +72,21 @@ def _prepare_chart_data(profile: DatasetProfile) -> dict:
     columns = []
     null_percents = []
     unique_counts = []
+    numeric_distributions = []
     
     if profile.columns:
         for col in profile.columns:
             columns.append(col.name)
             null_percents.append(round(col.null_percent, 2))
             unique_counts.append(col.unique_count)
+
+    
+            if col.numeric_stats and col.numeric_stats.distribution:
+                numeric_distributions.append({
+                    "name": col.name,
+                    "bins": col.numeric_stats.distribution.bins,
+                    "counts": col.numeric_stats.distribution.counts,
+                })
     
     # Get duplicate data
     duplicate_rows = 0
@@ -88,15 +97,16 @@ def _prepare_chart_data(profile: DatasetProfile) -> dict:
         unique_rows = profile.summary.rows - duplicate_rows
     
     # Check if we have data to show charts
-    has_column_charts = len(columns) > 0
+    has_column_charts = len(numeric_distributions) > 0 or len(null_percents) > 0
     has_duplicate_chart = profile.quality is not None and duplicate_rows > 0
     
     return {
-        "columns": columns,
-        "nullPercents": null_percents,
-        "uniqueCounts": unique_counts,
-        "duplicateRows": duplicate_rows,
-        "uniqueRows": unique_rows,
-        "hasColumnCharts": has_column_charts,
-        "hasDuplicateChart": has_duplicate_chart,
-    }
+    "columns": columns,
+    "nullPercents": null_percents,
+    "uniqueCounts": unique_counts,
+    "duplicateRows": duplicate_rows,
+    "uniqueRows": unique_rows,
+    "hasColumnCharts": has_column_charts,
+    "hasDuplicateChart": has_duplicate_chart,
+    "numericDistributions": numeric_distributions,
+}

@@ -438,6 +438,10 @@
     <section>
         <h2>Charts</h2>
 
+        <noscript>
+            Some charts require JavaScript to display.
+        </noscript>
+
         <div class="charts">
             {% if profile.columns %}
             <div class="chart-card">
@@ -450,6 +454,11 @@
                 <canvas id="aniwaDefaultCardinalityChart"></canvas>
             </div>
             {% endif %}
+
+            <div class="chart-card full" id="numeric-distribution-section" style="display:none;">
+                    <h3>Numeric Distributions</h3>
+                <div id="numeric-distribution-container"></div>
+            </div>
 
             {% if profile.summary and profile.quality %}
             <div class="chart-card full">
@@ -465,24 +474,129 @@
     </script>
 
     <script>
-        (() => {
-            const chartDataElement = document.getElementById("aniwa-default-chart-data");
+(() => {
+    const chartDataElement = document.getElementById("aniwa-default-chart-data");
 
-            if (!chartDataElement) {
-                return;
-            }
+    if (!chartDataElement) {
+        return;
+    }
 
-            const chartData = JSON.parse(chartDataElement.textContent);
+    let chartData;
 
-            if (chartData.hasColumnCharts) {
-                new Chart(document.getElementById("aniwaDefaultNullChart"), {
+    try {
+        chartData = JSON.parse(chartDataElement.textContent || "{}");
+    } catch (e) {
+        console.error("Failed to parse chart data JSON", e);
+        return;
+    }
+
+        if (chartData.hasColumnCharts) {
+
+        const nullChartEl = document.getElementById("aniwaDefaultNullChart");
+        const cardinalityChartEl = document.getElementById("aniwaDefaultCardinalityChart");
+
+        if (nullChartEl) {
+            new Chart(nullChartEl, {
+                type: "bar",
+                data: {
+                    labels: chartData.columns || [],
+                    datasets: [{
+                        label: "Null %",
+                        data: chartData.nullPercents || []
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: { display: false }
+                    }
+                }
+            });
+        }
+
+        if (cardinalityChartEl) {
+            new Chart(cardinalityChartEl, {
+                type: "bar",
+                data: {
+                    labels: chartData.columns || [],
+                    datasets: [{
+                        label: "Unique Values",
+                        data: chartData.uniqueCounts || []
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: { display: false }
+                    }
+                }
+            });
+        }
+    }
+
+    if (chartData.hasDuplicateChart) {
+
+        const duplicateChartEl = document.getElementById("aniwaDefaultDuplicateChart");
+
+        if (duplicateChartEl) {
+            new Chart(duplicateChartEl, {
+                type: "doughnut",
+                data: {
+                    labels: ["Duplicate Rows", "Unique Rows"],
+                    datasets: [{
+                        data: [
+                            chartData.duplicateRows || 0,
+                            chartData.uniqueRows || 0
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true
+                }
+            });
+        }
+    }
+
+    // ----------------------------
+// NUMERIC DISTRIBUTIONS (FIXED)
+// ----------------------------
+        const distributions = chartData.numericDistributions || [];
+
+        if (Array.isArray(distributions) && distributions.length > 0) {
+
+        const section = document.getElementById("numeric-distribution-section");
+        const container = document.getElementById("numeric-distribution-container");
+
+        if (section && container) {
+            section.style.display = "block";
+
+            distributions.forEach((dist, index) => {
+
+                const wrapper = document.createElement("div");
+                wrapper.style.marginBottom = "24px";
+
+                const canvasId = `dist-${index + 1}`;
+
+                wrapper.innerHTML = `
+                    <h4>${dist.name}</h4>
+                    <canvas id="${canvasId}"></canvas>
+            `;
+
+                container.appendChild(wrapper);
+
+                const canvas = document.getElementById(canvasId);
+
+                if (!canvas) return;
+
+                new Chart(canvas, {
                     type: "bar",
                     data: {
-                        labels: chartData.columns,
+                        labels: dist.bins || [],
                         datasets: [{
-                            label: "Null %",
-                            data: chartData.nullPercents
-                        }]
+                            label: "Frequency",
+                            data: dist.counts || []
+                     }]
                     },
                     options: {
                         responsive: true,
@@ -491,45 +605,11 @@
                         }
                     }
                 });
-
-                new Chart(document.getElementById("aniwaDefaultCardinalityChart"), {
-                    type: "bar",
-                    data: {
-                        labels: chartData.columns,
-                        datasets: [{
-                            label: "Unique Values",
-                            data: chartData.uniqueCounts
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        plugins: {
-                            legend: { display: false }
-                        }
-                    }
-                });
-            }
-
-            if (chartData.hasDuplicateChart) {
-                new Chart(document.getElementById("aniwaDefaultDuplicateChart"), {
-                    type: "doughnut",
-                    data: {
-                        labels: ["Duplicate Rows", "Unique Rows"],
-                        datasets: [{
-                            data: [
-                                chartData.duplicateRows,
-                                chartData.uniqueRows
-                            ]
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: true
-                    }
-                });
-            }
-        })();
-    </script>
+            });
+        }
+    }
+})();
+</script>
     {% endif %}
 
     {% if insights_enabled and profile.insights is not none %}
