@@ -103,61 +103,8 @@
             color: #cbd5e1;
         }
 
-        tr:last-child td {
-            border-bottom: none;
-        }
-
         tr:hover td {
             background: #111827;
-        }
-
-        .metadata-table td:first-child {
-            width: 220px;
-            font-weight: 700;
-            color: #f8fafc;
-        }
-
-        .metadata-table td:last-child {
-            word-break: break-word;
-        }
-
-        code {
-            font-family: Consolas, Monaco, monospace;
-            font-size: 12px;
-            background: rgba(148, 163, 184, 0.18);
-            color: #e2e8f0;
-            padding: 2px 6px;
-            border-radius: 6px;
-            white-space: normal;
-            word-break: break-word;
-        }
-
-        .charts {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 18px;
-            margin-top: 16px;
-        }
-
-        .chart-card {
-            background: #111827;
-            border: 1px solid #1e293b;
-            border-radius: 14px;
-            padding: 18px;
-        }
-
-        .chart-card.full {
-            grid-column: 1 / -1;
-            max-width: 420px;
-            margin: 0 auto;
-        }
-
-        .chart-card canvas {
-            max-height: 320px;
-        }
-
-        .chart-card.full canvas {
-            max-height: 260px;
         }
 
         .badge {
@@ -187,10 +134,22 @@
             border: 1px solid rgba(248, 113, 113, 0.35);
         }
 
-        .empty-state {
-            color: #94a3b8;
-            font-size: 14px;
-            margin: 0;
+        .charts {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-top: 16px;
+        }
+
+        .chart-card {
+            background: #111827;
+            border: 1px solid #1e293b;
+            border-radius: 14px;
+            padding: 18px;
+        }
+
+        .chart-card canvas {
+            max-height: 320px;
         }
 
         .footer {
@@ -215,21 +174,13 @@
             .charts {
                 grid-template-columns: 1fr;
             }
-
-            .chart-card.full {
-                max-width: 100%;
-            }
-
-            table {
-                display: block;
-                overflow-x: auto;
-            }
         }
     </style>
 </head>
 
 <body>
 <div class="container">
+
     {% set enabled_sections = profile.metadata.included_sections if profile.metadata and profile.metadata.included_sections else [] %}
     {% set summary_enabled = "summary" in enabled_sections %}
     {% set schema_enabled = "schema" in enabled_sections %}
@@ -243,9 +194,10 @@
         <p>Universal dataset profiling and intelligence report.</p>
     </div>
 
-    {% if (summary_enabled and profile.summary) or (quality_enabled and profile.quality) %}
+    {% if profile.summary or profile.quality %}
     <div class="cards">
-        {% if summary_enabled and profile.summary %}
+
+        {% if profile.summary %}
         <div class="card">
             <div class="label">Rows</div>
             <div class="value">{{ profile.summary.rows }}</div>
@@ -257,7 +209,7 @@
         </div>
         {% endif %}
 
-        {% if quality_enabled and profile.quality %}
+        {% if profile.quality %}
         <div class="card">
             <div class="label">Duplicate Rows</div>
             <div class="value">{{ profile.quality.duplicate_rows }}</div>
@@ -268,27 +220,11 @@
             <div class="value">{{ profile.quality.duplicate_percent }}%</div>
         </div>
         {% endif %}
+
     </div>
     {% endif %}
 
-    {% if profile.metadata %}
-    <section>
-        <h2>Profiling Metadata</h2>
-
-        <table class="metadata-table">
-            <tbody>
-            {% if profile.metadata.generated_at %}
-            <tr>
-                <td>Generated At</td>
-                <td>{{ profile.metadata.generated_at }}</td>
-            </tr>
-            {% endif %}
-            </tbody>
-        </table>
-    </section>
-    {% endif %}
-
-    {% if schema_enabled and profile.columns %}
+    {% if profile.columns %}
     <section>
         <h2>Column Profile</h2>
         <table>
@@ -296,7 +232,6 @@
             <tr>
                 <th>Column</th>
                 <th>Type</th>
-                <th>Nulls</th>
                 <th>Null %</th>
                 <th>Unique</th>
             </tr>
@@ -306,7 +241,6 @@
             <tr>
                 <td>{{ col.name }}</td>
                 <td>{{ col.dtype }}</td>
-                <td>{{ col.null_count }}</td>
                 <td>{{ col.null_percent }}%</td>
                 <td>{{ col.unique_count }}</td>
             </tr>
@@ -332,6 +266,7 @@
             </thead>
             <tbody>
             {% for col in profile.columns %}
+            {% if col.numeric_stats %}
             <tr>
                 <td>{{ col.name }}</td>
                 <td>{{ col.numeric_stats.min }}</td>
@@ -340,6 +275,7 @@
                 <td>{{ col.numeric_stats.median }}</td>
                 <td>{{ col.numeric_stats.std }}</td>
             </tr>
+            {% endif %}
             {% endfor %}
             </tbody>
         </table>
@@ -350,137 +286,129 @@
     <section>
         <h2>Charts</h2>
 
-        <noscript>
-            <p class="empty-state">
-                Charts require JavaScript to render visualizations.
-            </p>
-        </noscript>
-
         <div class="charts">
-            {% if profile.columns %}
+
             <div class="chart-card">
-                <h3>Null Percentage by Column</h3>
-                <canvas id="aniwaDarkNullChart"></canvas>
+                <h3>Null Percentage</h3>
+                <canvas id="nullChart"></canvas>
             </div>
 
             <div class="chart-card">
-                <h3>Unique Values by Column</h3>
-                <canvas id="aniwaDarkCardinalityChart"></canvas>
+                <h3>Unique Values</h3>
+                <canvas id="uniqueChart"></canvas>
             </div>
-            {% endif %}
 
-            {% if profile.summary and profile.quality %}
-            <div class="chart-card full">
-                <h3>Duplicate Overview</h3>
-                <canvas id="aniwaDarkDuplicateChart"></canvas>
-            </div>
-            {% endif %}
         </div>
+
+        <!-- NEW: Histogram charts -->
+        <div class="charts" id="histogramContainer"></div>
     </section>
 
-    <script id="aniwa-dark-chart-data" type="application/json">
+    <script id="chart-data" type="application/json">
 {{ chart_data_json | safe }}
     </script>
 
     <script>
     (() => {
-        const chartDataElement = document.getElementById("aniwa-dark-chart-data");
+        const data = JSON.parse(document.getElementById("chart-data").textContent);
 
-        if (!chartDataElement) return;
+        const axisColor = "#94a3b8";
+        const gridColor = "#1e293b";
 
-        const chartData = JSON.parse(chartDataElement.textContent);
+        new Chart(document.getElementById("nullChart"), {
+            type: "bar",
+            data: {
+                labels: data.columns,
+                datasets: [{
+                    label: "Null %",
+                    data: data.nullPercents,
+                    backgroundColor: "#38bdf8"
+                }]
+            },
+            options: {
+                scales: {
+                    x: { ticks: { color: axisColor }, grid: { color: gridColor } },
+                    y: { ticks: { color: axisColor }, grid: { color: gridColor } }
+                }
+            }
+        });
 
-        const darkAxis = "#cbd5e1";
-        const darkGrid = "#334155";
+        new Chart(document.getElementById("uniqueChart"), {
+            type: "bar",
+            data: {
+                labels: data.columns,
+                datasets: [{
+                    label: "Unique Values",
+                    data: data.uniqueCounts,
+                    backgroundColor: "#818cf8"
+                }]
+            },
+            options: {
+                scales: {
+                    x: { ticks: { color: axisColor }, grid: { color: gridColor } },
+                    y: { ticks: { color: axisColor }, grid: { color: gridColor } }
+                }
+            }
+        });
 
-        if (chartData.hasColumnCharts) {
-            new Chart(document.getElementById("aniwaDarkNullChart"), {
+        // =========================
+        // HISTOGRAM RENDERING (NEW)
+        // =========================
+        const container = document.getElementById("histogramContainer");
+
+        (data.numericDistributions || []).forEach((dist) => {
+            const card = document.createElement("div");
+            card.className = "chart-card";
+
+            const title = document.createElement("h3");
+            title.textContent = dist.name + " Distribution";
+
+            const canvas = document.createElement("canvas");
+
+            card.appendChild(title);
+            card.appendChild(canvas);
+            container.appendChild(card);
+
+            new Chart(canvas, {
                 type: "bar",
                 data: {
-                    labels: chartData.columns,
+                    labels: dist.bins,
                     datasets: [{
-                        label: "Null %",
-                        data: chartData.nullPercents,
+                        label: "Frequency",
+                        data: dist.counts,
                         backgroundColor: "#38bdf8"
                     }]
                 },
                 options: {
-                    responsive: true,
                     scales: {
-                        x: { ticks: { color: darkAxis }, grid: { color: darkGrid } },
-                        y: { ticks: { color: darkAxis }, grid: { color: darkGrid } }
+                        x: { ticks: { color: axisColor }, grid: { color: gridColor } },
+                        y: { ticks: { color: axisColor }, grid: { color: gridColor } }
                     }
                 }
             });
-
-            new Chart(document.getElementById("aniwaDarkCardinalityChart"), {
-                type: "bar",
-                data: {
-                    labels: chartData.columns,
-                    datasets: [{
-                        label: "Unique Values",
-                        data: chartData.uniqueCounts,
-                        backgroundColor: "#818cf8"
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    scales: {
-                        x: { ticks: { color: darkAxis }, grid: { color: darkGrid } },
-                        y: { ticks: { color: darkAxis }, grid: { color: darkGrid } }
-                    }
-                }
-            });
-        }
-
-        if (chartData.hasDuplicateChart) {
-            new Chart(document.getElementById("aniwaDarkDuplicateChart"), {
-                type: "doughnut",
-                data: {
-                    labels: ["Duplicate Rows", "Unique Rows"],
-                    datasets: [{
-                        data: [
-                            chartData.duplicateRows,
-                            chartData.uniqueRows
-                        ],
-                        backgroundColor: ["#f87171", "#38bdf8"]
-                    }]
-                }
-            });
-        }
+        });
 
     })();
     </script>
     {% endif %}
 
-    {% if insights_enabled and profile.insights is not none %}
+    {% if insights_enabled and profile.insights %}
     <section>
         <h2>Insights</h2>
 
         {% if profile.insights %}
         <table>
-            <thead>
-            <tr>
-                <th>Level</th>
-                <th>Message</th>
-            </tr>
-            </thead>
             <tbody>
             {% for insight in profile.insights %}
             <tr>
-                <td>
-                    <span class="badge {{ insight.level }}">
-                        {{ insight.level }}
-                    </span>
-                </td>
+                <td><span class="badge {{ insight.level }}">{{ insight.level }}</span></td>
                 <td>{{ insight.message }}</td>
             </tr>
             {% endfor %}
             </tbody>
         </table>
-        {% else %}
-        <p class="empty-state">No major issues detected.</p>
         {% endif %}
+
     </section>
     {% endif %}
 

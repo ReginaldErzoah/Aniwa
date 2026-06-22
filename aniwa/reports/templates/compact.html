@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Aniwa Dataset Profile</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <style>
         body {
@@ -75,13 +74,6 @@
             font-weight: 700;
         }
 
-        h3 {
-            margin: 0 0 8px 0;
-            font-size: 13px;
-            font-weight: 700;
-            color: #374151;
-        }
-
         table {
             width: 100%;
             border-collapse: collapse;
@@ -129,34 +121,6 @@
             word-break: break-word;
         }
 
-        .charts {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-            margin-top: 10px;
-        }
-
-        .chart-card {
-            border: 1px solid #e5e7eb;
-            background: #fafafa;
-            border-radius: 8px;
-            padding: 12px;
-        }
-
-        .chart-card.full {
-            grid-column: 1 / -1;
-            max-width: 380px;
-            margin: 0 auto;
-        }
-
-        .chart-card canvas {
-            max-height: 260px;
-        }
-
-        .chart-card.full canvas {
-            max-height: 220px;
-        }
-
         .badge {
             display: inline-block;
             padding: 2px 6px;
@@ -196,8 +160,7 @@
         }
 
         @media (max-width: 900px) {
-            .cards,
-            .charts {
+            .cards {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
@@ -207,13 +170,8 @@
                 padding: 12px;
             }
 
-            .cards,
-            .charts {
+            .cards {
                 grid-template-columns: 1fr;
-            }
-
-            .chart-card.full {
-                max-width: 100%;
             }
 
             table {
@@ -233,11 +191,10 @@
     {% set quality_enabled = "quality" in enabled_sections %}
     {% set statistics_enabled = "statistics" in enabled_sections %}
     {% set insights_enabled = "insights" in enabled_sections %}
-    {% set charts_enabled = "charts" in enabled_sections %}
 
     <div class="header">
         <h1>Aniwa Dataset Profile</h1>
-        <p>Compact profiling report optimized for dense data inspection.</p>
+        <p>Compact profiling report optimized for fast inspection (no charts).</p>
     </div>
 
     {% if (summary_enabled and profile.summary) or (quality_enabled and profile.quality) %}
@@ -458,129 +415,6 @@
     {% endif %}
     {% endif %}
 
-    {% if charts_enabled %}
-    <section>
-        <h2>Charts</h2>
-
-        <noscript>
-            Charts require JavaScript to render. Please enable JavaScript to view visual analytics.
-        </noscript>
-
-        <div class="charts">
-            {% if profile.columns %}
-            <div class="chart-card">
-                <h3>Null Percentage by Column</h3>
-                <canvas id="aniwaCompactNullChart"></canvas>
-            </div>
-
-            <div class="chart-card">
-                <h3>Unique Values by Column</h3>
-                <canvas id="aniwaCompactCardinalityChart"></canvas>
-            </div>
-            {% endif %}
-
-            {% if profile.summary and profile.quality %}
-            <div class="chart-card full">
-                <h3>Duplicate Overview</h3>
-                <canvas id="aniwaCompactDuplicateChart"></canvas>
-            </div>
-            {% endif %}
-        </div>
-    </section>
-
-    <script id="aniwa-compact-chart-data" type="application/json">
-{{ chart_data_json | safe }}
-    </script>
-
-    <script>
-(() => {
-    const chartDataElement = document.getElementById("aniwa-compact-chart-data");
-
-    if (!chartDataElement) return;
-
-    let chartData;
-
-    try {
-        chartData = JSON.parse(chartDataElement.textContent || "{}");
-    } catch (e) {
-        console.error("Failed to parse chart data JSON", e);
-        return;
-    }
-
-    const columns = chartData.columns || [];
-    const nullPercents = chartData.nullPercents || [];
-    const uniqueCounts = chartData.uniqueCounts || [];
-
-    if (chartData.hasColumnCharts) {
-        const nullEl = document.getElementById("aniwaCompactNullChart");
-        const cardEl = document.getElementById("aniwaCompactCardinalityChart");
-
-        if (nullEl) {
-            new Chart(nullEl, {
-                type: "bar",
-                data: {
-                    labels: columns,
-                    datasets: [{
-                        label: "Null %",
-                        data: nullPercents
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: { display: false }
-                    }
-                }
-            });
-        }
-
-        if (cardEl) {
-            new Chart(cardEl, {
-                type: "bar",
-                data: {
-                    labels: columns,
-                    datasets: [{
-                        label: "Unique Values",
-                        data: uniqueCounts
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: { display: false }
-                    }
-                }
-            });
-        }
-    }
-
-    if (chartData.hasDuplicateChart) {
-        const dupEl = document.getElementById("aniwaCompactDuplicateChart");
-
-        if (dupEl) {
-            new Chart(dupEl, {
-                type: "doughnut",
-                data: {
-                    labels: ["Duplicate Rows", "Unique Rows"],
-                    datasets: [{
-                        data: [
-                            chartData.duplicateRows || 0,
-                            chartData.uniqueRows || 0
-                        ]
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: true
-                }
-            });
-        }
-    }
-})();
-</script>
-
-    {% endif %}
-
     {% if insights_enabled and profile.insights is not none %}
     <section>
 
@@ -617,7 +451,7 @@
     {% endif %}
 
     <div class="footer">
-        Generated by Aniwa - See your data clearly.
+        Generated by Aniwa - Compact mode (no charts for performance).
     </div>
 
 </div>

@@ -6,7 +6,151 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <style>
-        /* (unchanged styles above) */
+        body {
+            font-family: Inter, Arial, sans-serif;
+            background: #eef4ff;
+            color: #0f172a;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3a8a, #2563eb);
+            color: #ffffff;
+            border-radius: 18px;
+            padding: 28px;
+            margin-bottom: 28px;
+            box-shadow: 0 14px 34px rgba(30, 58, 138, 0.22);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 38px;
+            letter-spacing: -0.03em;
+        }
+
+        .header p {
+            color: #dbeafe;
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 28px;
+        }
+
+        .card {
+            background: #ffffff;
+            border: 1px solid #dbeafe;
+            border-left: 5px solid #2563eb;
+            border-radius: 14px;
+            padding: 20px;
+            box-shadow: 0 10px 26px rgba(30, 58, 138, 0.08);
+        }
+
+        .card .label {
+            color: #475569;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .card .value {
+            font-size: 31px;
+            font-weight: 800;
+            margin-top: 8px;
+            color: #1e3a8a;
+        }
+
+        section {
+            background: #ffffff;
+            border: 1px solid #dbeafe;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 26px rgba(30, 58, 138, 0.08);
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 22px;
+            color: #1e3a8a;
+        }
+
+        h3 {
+            margin-top: 0;
+            font-size: 16px;
+            color: #1e3a8a;
+        }
+
+        .charts {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-top: 16px;
+        }
+
+        .chart-card {
+            background: #ffffff;
+            border: 1px solid #bfdbfe;
+            border-radius: 14px;
+            padding: 18px;
+            box-shadow: 0 8px 20px rgba(30, 58, 138, 0.06);
+        }
+
+        .chart-card canvas {
+            max-height: 320px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        th {
+            text-align: left;
+            background: #eff6ff;
+            color: #1e3a8a;
+            padding: 12px;
+            border-bottom: 1px solid #bfdbfe;
+            font-weight: 800;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #e0ecff;
+            color: #334155;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .info { background: #dbeafe; color: #1d4ed8; }
+        .warning { background: #fef3c7; color: #92400e; }
+        .critical { background: #fee2e2; color: #991b1b; }
+
+        .footer {
+            color: #64748b;
+            font-size: 13px;
+            margin-top: 40px;
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -15,7 +159,6 @@
 
     {% set enabled_sections = profile.metadata.included_sections if profile.metadata and profile.metadata.included_sections else [] %}
     {% set summary_enabled = "summary" in enabled_sections %}
-    {% set schema_enabled = "schema" in enabled_sections %}
     {% set quality_enabled = "quality" in enabled_sections %}
     {% set statistics_enabled = "statistics" in enabled_sections %}
     {% set insights_enabled = "insights" in enabled_sections %}
@@ -26,7 +169,92 @@
         <p>Enterprise reporting view for dataset quality, structure, and profiling intelligence.</p>
     </div>
 
-    <!-- (cards + metadata unchanged) -->
+    {% if profile.summary or profile.quality %}
+    <div class="cards">
+
+        {% if profile.summary %}
+        <div class="card">
+            <div class="label">Rows</div>
+            <div class="value">{{ profile.summary.rows }}</div>
+        </div>
+
+        <div class="card">
+            <div class="label">Columns</div>
+            <div class="value">{{ profile.summary.columns }}</div>
+        </div>
+        {% endif %}
+
+        {% if profile.quality %}
+        <div class="card">
+            <div class="label">Duplicate Rows</div>
+            <div class="value">{{ profile.quality.duplicate_rows }}</div>
+        </div>
+
+        <div class="card">
+            <div class="label">Duplicate %</div>
+            <div class="value">{{ profile.quality.duplicate_percent }}%</div>
+        </div>
+        {% endif %}
+    </div>
+    {% endif %}
+
+    {% if profile.columns %}
+    <section>
+        <h2>Column Profile</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Column</th>
+                <th>Type</th>
+                <th>Null %</th>
+                <th>Unique</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for col in profile.columns %}
+            <tr>
+                <td>{{ col.name }}</td>
+                <td>{{ col.dtype }}</td>
+                <td>{{ col.null_percent }}%</td>
+                <td>{{ col.unique_count }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </section>
+    {% endif %}
+
+    {% if statistics_enabled and profile.columns %}
+    <section>
+        <h2>Numeric Statistics</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Column</th>
+                <th>Min</th>
+                <th>Max</th>
+                <th>Mean</th>
+                <th>Median</th>
+                <th>Std</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for col in profile.columns %}
+            {% if col.numeric_stats %}
+            <tr>
+                <td>{{ col.name }}</td>
+                <td>{{ col.numeric_stats.min }}</td>
+                <td>{{ col.numeric_stats.max }}</td>
+                <td>{{ col.numeric_stats.mean }}</td>
+                <td>{{ col.numeric_stats.median }}</td>
+                <td>{{ col.numeric_stats.std }}</td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+            </tbody>
+        </table>
+    </section>
+    {% endif %}
 
     {% if charts_enabled %}
     <section>
@@ -34,131 +262,99 @@
 
         <div class="charts">
 
-            {% if profile.columns %}
             <div class="chart-card">
-                <h3>Null Percentage by Column</h3>
-                <canvas id="aniwaEnterpriseNullChart"></canvas>
+                <h3>Null Percentage</h3>
+                <canvas id="nullChart"></canvas>
             </div>
 
             <div class="chart-card">
-                <h3>Unique Values by Column</h3>
-                <canvas id="aniwaEnterpriseCardinalityChart"></canvas>
+                <h3>Unique Values</h3>
+                <canvas id="uniqueChart"></canvas>
             </div>
-            {% endif %}
-
-            {% if profile.summary and profile.quality %}
-            <div class="chart-card full">
-                <h3>Duplicate Overview</h3>
-                <canvas id="aniwaEnterpriseDuplicateChart"></canvas>
-            </div>
-            {% endif %}
-
-            <!-- ✅ NEW: Histogram Section -->
-            {% if chart_data_json %}
-            <div class="chart-card full">
-                <h3>Numeric Distributions (Histograms)</h3>
-                <canvas id="aniwaEnterpriseHistogramChart"></canvas>
-            </div>
-            {% endif %}
 
         </div>
+
+        <div class="charts" id="histogramContainer"></div>
     </section>
 
-    <script id="aniwa-enterprise-chart-data" type="application/json">
+    <script id="chart-data" type="application/json">
 {{ chart_data_json | safe }}
     </script>
 
     <script>
-        (() => {
-            const chartDataElement = document.getElementById("aniwa-enterprise-chart-data");
-            if (!chartDataElement) return;
+    (() => {
+        const data = JSON.parse(document.getElementById("chart-data").textContent);
 
-            const chartData = JSON.parse(chartDataElement.textContent);
-
-            // -------------------------
-            // Existing charts
-            // -------------------------
-            if (chartData.hasColumnCharts) {
-
-                new Chart(document.getElementById("aniwaEnterpriseNullChart"), {
-                    type: "bar",
-                    data: {
-                        labels: chartData.columns,
-                        datasets: [{
-                            label: "Null %",
-                            data: chartData.nullPercents,
-                            backgroundColor: "#2563eb"
-                        }]
-                    }
-                });
-
-                new Chart(document.getElementById("aniwaEnterpriseCardinalityChart"), {
-                    type: "bar",
-                    data: {
-                        labels: chartData.columns,
-                        datasets: [{
-                            label: "Unique Values",
-                            data: chartData.uniqueCounts,
-                            backgroundColor: "#0f766e"
-                        }]
-                    }
-                });
+        new Chart(document.getElementById("nullChart"), {
+            type: "bar",
+            data: {
+                labels: data.columns,
+                datasets: [{
+                    label: "Null %",
+                    data: data.nullPercents,
+                    backgroundColor: "#2563eb"
+                }]
             }
+        });
 
-            if (chartData.hasDuplicateChart) {
-                new Chart(document.getElementById("aniwaEnterpriseDuplicateChart"), {
-                    type: "doughnut",
-                    data: {
-                        labels: ["Duplicate Rows", "Unique Rows"],
-                        datasets: [{
-                            data: [
-                                chartData.duplicateRows,
-                                chartData.uniqueRows
-                            ],
-                            backgroundColor: ["#dc2626", "#2563eb"]
-                        }]
-                    }
-                });
+        new Chart(document.getElementById("uniqueChart"), {
+            type: "bar",
+            data: {
+                labels: data.columns,
+                datasets: [{
+                    label: "Unique",
+                    data: data.uniqueCounts,
+                    backgroundColor: "#0f766e"
+                }]
             }
+        });
 
-            // -------------------------
-            // ✅ NEW: Histogram rendering
-            // -------------------------
-            if (chartData.hasHistogramCharts && chartData.numericDistributions) {
+        // HISTOGRAMS
+        const container = document.getElementById("histogramContainer");
 
-                // create ONE combined histogram view (simple + scalable)
-                const ctx = document.getElementById("aniwaEnterpriseHistogramChart");
+        (data.numericDistributions || []).forEach((dist) => {
+            const wrapper = document.createElement("div");
+            wrapper.className = "chart-card";
 
-                const datasets = chartData.numericDistributions.map((dist, idx) => ({
-                    label: dist.name,
-                    data: dist.counts,
-                    borderWidth: 1
-                }));
+            const canvas = document.createElement("canvas");
+            wrapper.appendChild(canvas);
+            container.appendChild(wrapper);
 
-                new Chart(ctx, {
-                    type: "bar",
-                    data: {
-                        labels: chartData.numericDistributions[0]?.bins || [],
-                        datasets: datasets
-                    },
-                    options: {
-                        responsive: true,
-                        plugins: {
-                            legend: { display: true }
-                        },
-                        scales: {
-                            x: { title: { display: true, text: "Bins" } },
-                            y: { title: { display: true, text: "Frequency" } }
-                        }
-                    }
-                });
-            }
-
-        })();
+            new Chart(canvas, {
+                type: "bar",
+                data: {
+                    labels: dist.bins,
+                    datasets: [{
+                        label: dist.name,
+                        data: dist.counts,
+                        backgroundColor: "#1e3a8a"
+                    }]
+                }
+            });
+        });
+    })();
     </script>
     {% endif %}
 
-    <!-- insights unchanged -->
+    {% if insights_enabled and profile.insights %}
+    <section>
+        <h2>Insights</h2>
+        <table>
+            <tbody>
+            {% for i in profile.insights %}
+            <tr>
+                <td><span class="badge {{ i.level }}">{{ i.level }}</span></td>
+                <td>{{ i.message }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </section>
+    {% endif %}
+
+    <div class="footer">
+        Generated by Aniwa - See your data clearly.
+    </div>
 
 </div>
 </body>
