@@ -10,6 +10,14 @@ class HistogramData(BaseModel):
     bins: list[float] = []
     counts: list[int] = []
 
+    # Optional metadata for explainability / tuning
+    bin_method: str | None = None
+    bin_count: int | None = None
+
+
+class NumericDistribution(BaseModel):
+    histogram: HistogramData | None = None
+
 
 class NumericStats(BaseModel):
     min: float | None = None
@@ -18,7 +26,8 @@ class NumericStats(BaseModel):
     median: float | None = None
     std: float | None = None
 
-    histogram: HistogramData | None = None
+    # Histogram-based distribution (used for charts)
+    distribution: NumericDistribution | None = None
 
 
 class ColumnProfile(BaseModel):
@@ -27,6 +36,7 @@ class ColumnProfile(BaseModel):
     null_count: int
     null_percent: float
     unique_count: int
+
     numeric_stats: NumericStats | None = None
 
 

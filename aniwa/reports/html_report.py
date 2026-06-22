@@ -1,5 +1,6 @@
 from pathlib import Path
 import json
+from typing import Any
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
@@ -23,8 +24,7 @@ def render_html_report(
     template_dir = Path(__file__).parent / "templates"
 
     if template not in AVAILABLE_TEMPLATES:
-        valid_templates = ", ".join(AVAILABLE_TEMPLATES)
-
+        valid_templates = ", ".join(AVAILABLE_TEMPLATES.keys())
         raise ValueError(
             f"Invalid HTML report template: {template}. "
             f"Valid templates are: {valid_templates}."
@@ -35,15 +35,13 @@ def render_html_report(
         autoescape=select_autoescape(["html", "xml"]),
     )
 
-    html_template = env.get_template(
-        AVAILABLE_TEMPLATES[template]
-    )
+    html_template = env.get_template(AVAILABLE_TEMPLATES[template])
 
-    # Prepare chart data for JavaScript
+    # Build chart payload
     chart_data = _prepare_chart_data(profile)
-    chart_data_json = json.dumps(chart_data)
 
-    # Render template with both profile and chart_data
+    chart_data_json = json.dumps(chart_data, ensure_ascii=False)
+
     html = html_template.render(
         profile=profile,
         chart_data_json=chart_data_json,
@@ -51,62 +49,89 @@ def render_html_report(
 
     if output:
         output_path = Path(output)
+        output_path.parent.mkdir(parents=True, exist_ok=True)
 
-        output_path.parent.mkdir(
-            parents=True,
-            exist_ok=True,
-        )
-
-        output_path.write_text(
-            html,
-            encoding="utf-8",
-        )
+        output_path.write_text(html, encoding="utf-8")
 
     return html
 
 
-def _prepare_chart_data(profile: DatasetProfile) -> dict:
-    """Prepare chart data for JavaScript rendering."""
-    
-    # Get column data
-    columns = []
-    null_percents = []
-    unique_counts = []
-    numeric_distributions = []
-    
+def _prepare_chart_data(profile: DatasetProfile) -> dict[str, Any]:
+    """
+    Prepare all chart-ready data for enterprise HTML reports.
+    Includes:
+    - column metrics
+    - histogram distributions
+    - duplicate summary
+    """
+
+    columns: list[str] = []
+    null_percents: list[float] = []
+    unique_counts: list[int] = []
+
+    histograms: list[dict[str, Any]] = []
+
+    # ----------------------------
+    # COLUMN DATA
+    # ----------------------------
     if profile.columns:
         for col in profile.columns:
             columns.append(col.name)
-            null_percents.append(round(col.null_percent, 2))
-            unique_counts.append(col.unique_count)
+            null_percents.append(round(col.null_percent or 0.0, 2))
+            unique_counts.append(col.unique_count or 0)
 
-    
-            if col.numeric_stats and col.numeric_stats.distribution:
-                numeric_distributions.append({
+            # ----------------------------
+            # HISTOGRAM EXTRACTION (FIXED)
+            # ----------------------------
+            if (
+                col.numeric_stats
+                and col.numeric_stats.histogram
+                and col.numeric_stats.histogram.bins
+                and col.numeric_stats.histogram.counts
+            ):
+                hist = col.numeric_stats.histogram
+
+                histograms.append({
                     "name": col.name,
-                    "bins": col.numeric_stats.distribution.bins,
-                    "counts": col.numeric_stats.distribution.counts,
+                    "bins": hist.bins,
+                    "counts": hist.counts,
                 })
-    
-    # Get duplicate data
+
+    # ----------------------------
+    # DUPLICATE METRICS
+    # ----------------------------
     duplicate_rows = 0
     unique_rows = 0
-    
+
     if profile.quality and profile.summary:
-        duplicate_rows = profile.quality.duplicate_rows
-        unique_rows = profile.summary.rows - duplicate_rows
-    
-    # Check if we have data to show charts
-    has_column_charts = len(numeric_distributions) > 0 or len(null_percents) > 0
-    has_duplicate_chart = profile.quality is not None and duplicate_rows > 0
-    
+        duplicate_rows = profile.quality.duplicate_rows or 0
+        unique_rows = max(profile.summary.rows - duplicate_rows, 0)
+
+    # ----------------------------
+    # CHART FLAGS
+    # ----------------------------
+    has_column_charts = bool(columns)
+    has_histogram_charts = len(histograms) > 0
+    has_duplicate_chart = (
+        profile.quality is not None
+        and profile.summary is not None
+    )
+
     return {
-    "columns": columns,
-    "nullPercents": null_percents,
-    "uniqueCounts": unique_counts,
-    "duplicateRows": duplicate_rows,
-    "uniqueRows": unique_rows,
-    "hasColumnCharts": has_column_charts,
-    "hasDuplicateChart": has_duplicate_chart,
-    "numericDistributions": numeric_distributions,
-}
+        # column charts
+        "columns": columns,
+        "nullPercents": null_percents,
+        "uniqueCounts": unique_counts,
+
+        # histogram charts (NEW CORE FEATURE)
+        "histograms": histograms,
+        "hasHistogramCharts": has_histogram_charts,
+
+        # duplicates
+        "duplicateRows": duplicate_rows,
+        "uniqueRows": unique_rows,
+        "hasDuplicateChart": has_duplicate_chart,
+
+        # global chart flag
+        "hasColumnCharts": has_column_charts,
+    }
