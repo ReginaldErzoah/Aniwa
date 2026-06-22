@@ -226,6 +226,7 @@
 
 <body>
 <div class="container">
+
     {% set enabled_sections = profile.metadata.included_sections if profile.metadata and profile.metadata.included_sections else [] %}
     {% set summary_enabled = "summary" in enabled_sections %}
     {% set schema_enabled = "schema" in enabled_sections %}
@@ -461,6 +462,10 @@
     <section>
         <h2>Charts</h2>
 
+        <noscript>
+            Charts require JavaScript to render. Please enable JavaScript to view visual analytics.
+        </noscript>
+
         <div class="charts">
             {% if profile.columns %}
             <div class="chart-card">
@@ -488,71 +493,92 @@
     </script>
 
     <script>
-        (() => {
-            const chartDataElement = document.getElementById("aniwa-compact-chart-data");
+(() => {
+    const chartDataElement = document.getElementById("aniwa-compact-chart-data");
 
-            if (!chartDataElement) {
-                return;
-            }
+    if (!chartDataElement) return;
 
-            const chartData = JSON.parse(chartDataElement.textContent);
+    let chartData;
 
-            if (chartData.hasColumnCharts) {
-                new Chart(document.getElementById("aniwaCompactNullChart"), {
-                    type: "bar",
-                    data: {
-                        labels: chartData.columns,
-                        datasets: [{
-                            label: "Null %",
-                            data: chartData.nullPercents
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        plugins: {
-                            legend: { display: false }
-                        }
+    try {
+        chartData = JSON.parse(chartDataElement.textContent || "{}");
+    } catch (e) {
+        console.error("Failed to parse chart data JSON", e);
+        return;
+    }
+
+    const columns = chartData.columns || [];
+    const nullPercents = chartData.nullPercents || [];
+    const uniqueCounts = chartData.uniqueCounts || [];
+
+    if (chartData.hasColumnCharts) {
+        const nullEl = document.getElementById("aniwaCompactNullChart");
+        const cardEl = document.getElementById("aniwaCompactCardinalityChart");
+
+        if (nullEl) {
+            new Chart(nullEl, {
+                type: "bar",
+                data: {
+                    labels: columns,
+                    datasets: [{
+                        label: "Null %",
+                        data: nullPercents
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: { display: false }
                     }
-                });
+                }
+            });
+        }
 
-                new Chart(document.getElementById("aniwaCompactCardinalityChart"), {
-                    type: "bar",
-                    data: {
-                        labels: chartData.columns,
-                        datasets: [{
-                            label: "Unique Values",
-                            data: chartData.uniqueCounts
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        plugins: {
-                            legend: { display: false }
-                        }
+        if (cardEl) {
+            new Chart(cardEl, {
+                type: "bar",
+                data: {
+                    labels: columns,
+                    datasets: [{
+                        label: "Unique Values",
+                        data: uniqueCounts
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: { display: false }
                     }
-                });
-            }
+                }
+            });
+        }
+    }
 
-            if (chartData.hasDuplicateChart) {
-                new Chart(document.getElementById("aniwaCompactDuplicateChart"), {
-                    type: "doughnut",
-                    data: {
-                        labels: ["Duplicate Rows", "Unique Rows"],
-                        datasets: [{
-                            data: [
-                                chartData.duplicateRows,
-                                chartData.uniqueRows
-                            ]
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: true
-                    }
-                });
-            }
-        })();
-    </script>
+    if (chartData.hasDuplicateChart) {
+        const dupEl = document.getElementById("aniwaCompactDuplicateChart");
+
+        if (dupEl) {
+            new Chart(dupEl, {
+                type: "doughnut",
+                data: {
+                    labels: ["Duplicate Rows", "Unique Rows"],
+                    datasets: [{
+                        data: [
+                            chartData.duplicateRows || 0,
+                            chartData.uniqueRows || 0
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true
+                }
+            });
+        }
+    }
+})();
+</script>
+
     {% endif %}
 
     {% if insights_enabled and profile.insights is not none %}

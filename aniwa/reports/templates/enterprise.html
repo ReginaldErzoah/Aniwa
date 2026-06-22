@@ -363,7 +363,7 @@
             <tr>
                 <td>Included Sections</td>
                 <td>{{ profile.metadata.included_sections | join(", ") }}</td>
-            <tr>
+            </tr>
             {% endif %}
 
             {% if profile.metadata.excluded_sections %}
@@ -424,6 +424,7 @@
 
     {% if statistics_enabled and profile.columns %}
     {% set numeric_columns = profile.columns | selectattr("numeric_stats") | list %}
+
     {% if numeric_columns %}
     <section>
         <h2>Numeric Statistics</h2>
@@ -462,6 +463,7 @@
         <h2>Charts</h2>
 
         <div class="charts">
+
             {% if profile.columns %}
             <div class="chart-card">
                 <h3>Null Percentage by Column</h3>
@@ -480,6 +482,7 @@
                 <canvas id="aniwaEnterpriseDuplicateChart"></canvas>
             </div>
             {% endif %}
+
         </div>
     </section>
 
@@ -491,9 +494,7 @@
         (() => {
             const chartDataElement = document.getElementById("aniwa-enterprise-chart-data");
 
-            if (!chartDataElement) {
-                return;
-            }
+            if (!chartDataElement) return;
 
             const chartData = JSON.parse(chartDataElement.textContent);
 
@@ -510,9 +511,7 @@
                     },
                     options: {
                         responsive: true,
-                        plugins: {
-                            legend: { display: false }
-                        }
+                        plugins: { legend: { display: false } }
                     }
                 });
 
@@ -528,9 +527,7 @@
                     },
                     options: {
                         responsive: true,
-                        plugins: {
-                            legend: { display: false }
-                        }
+                        plugins: { legend: { display: false } }
                     }
                 });
             }
@@ -545,10 +542,7 @@
                                 chartData.duplicateRows,
                                 chartData.uniqueRows
                             ],
-                            backgroundColor: [
-                                "#dc2626",
-                                "#2563eb"
-                            ]
+                            backgroundColor: ["#dc2626", "#2563eb"]
                         }]
                     },
                     options: {

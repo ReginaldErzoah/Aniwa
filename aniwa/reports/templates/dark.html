@@ -277,112 +277,12 @@
 
         <table class="metadata-table">
             <tbody>
-
             {% if profile.metadata.generated_at %}
             <tr>
                 <td>Generated At</td>
                 <td>{{ profile.metadata.generated_at }}</td>
             </tr>
             {% endif %}
-
-            {% if profile.metadata.aniwa_version %}
-            <tr>
-                <td>Aniwa Version</td>
-                <td>{{ profile.metadata.aniwa_version }}</td>
-            </tr>
-            {% endif %}
-
-            {% if profile.metadata.python_version %}
-            <tr>
-                <td>Python Version</td>
-                <td>{{ profile.metadata.python_version }}</td>
-            </tr>
-            {% endif %}
-
-            {% if profile.metadata.operating_system %}
-            <tr>
-                <td>Operating System</td>
-                <td>{{ profile.metadata.operating_system }}</td>
-            </tr>
-            {% endif %}
-
-            {% if profile.metadata.polars_version %}
-            <tr>
-                <td>Polars Version</td>
-                <td>{{ profile.metadata.polars_version }}</td>
-            </tr>
-            {% endif %}
-
-            {% if profile.metadata.dataset_path %}
-            <tr>
-                <td>Dataset Path</td>
-                <td>{{ profile.metadata.dataset_path }}</td>
-            </tr>
-            {% endif %}
-
-            {% if profile.metadata.dataset_file_type %}
-            <tr>
-                <td>Dataset File Type</td>
-                <td>{{ profile.metadata.dataset_file_type }}</td>
-            </tr>
-            {% endif %}
-
-            {% if profile.metadata.dataset_size %}
-            <tr>
-                <td>Dataset Size</td>
-                <td>{{ profile.metadata.dataset_size }}</td>
-            </tr>
-            {% endif %}
-
-            {% if profile.metadata.profiling_mode %}
-            <tr>
-                <td>Profiling Mode</td>
-                <td>{{ profile.metadata.profiling_mode }}</td>
-            </tr>
-            {% endif %}
-
-            {% if profile.metadata.report_format %}
-            <tr>
-                <td>Report Format</td>
-                <td>{{ profile.metadata.report_format }}</td>
-            </tr>
-            {% endif %}
-
-            {% if profile.metadata.report_template %}
-            <tr>
-                <td>Report Template</td>
-                <td>{{ profile.metadata.report_template }}</td>
-            </tr>
-            {% endif %}
-
-            {% if profile.metadata.included_sections %}
-            <tr>
-                <td>Included Sections</td>
-                <td>{{ profile.metadata.included_sections | join(", ") }}</td>
-            </tr>
-            {% endif %}
-
-            {% if profile.metadata.excluded_sections %}
-            <tr>
-                <td>Excluded Sections</td>
-                <td>{{ profile.metadata.excluded_sections | join(", ") }}</td>
-            </tr>
-            {% endif %}
-
-            {% if profile.metadata.profiling_duration %}
-            <tr>
-                <td>Profiling Duration</td>
-                <td>{{ profile.metadata.profiling_duration }}</td>
-            </tr>
-            {% endif %}
-
-            {% if profile.metadata.command_used %}
-            <tr>
-                <td>Command Used</td>
-                <td><code>{{ profile.metadata.command_used }}</code></td>
-            </tr>
-            {% endif %}
-
             </tbody>
         </table>
     </section>
@@ -391,7 +291,6 @@
     {% if schema_enabled and profile.columns %}
     <section>
         <h2>Column Profile</h2>
-
         <table>
             <thead>
             <tr>
@@ -402,7 +301,6 @@
                 <th>Unique</th>
             </tr>
             </thead>
-
             <tbody>
             {% for col in profile.columns %}
             <tr>
@@ -419,12 +317,8 @@
     {% endif %}
 
     {% if statistics_enabled and profile.columns %}
-    {% set numeric_columns = profile.columns | selectattr("numeric_stats") | list %}
-
-    {% if numeric_columns %}
     <section>
         <h2>Numeric Statistics</h2>
-
         <table>
             <thead>
             <tr>
@@ -436,9 +330,8 @@
                 <th>Std</th>
             </tr>
             </thead>
-
             <tbody>
-            {% for col in numeric_columns %}
+            {% for col in profile.columns %}
             <tr>
                 <td>{{ col.name }}</td>
                 <td>{{ col.numeric_stats.min }}</td>
@@ -452,14 +345,18 @@
         </table>
     </section>
     {% endif %}
-    {% endif %}
 
     {% if charts_enabled %}
     <section>
         <h2>Charts</h2>
 
-        <div class="charts">
+        <noscript>
+            <p class="empty-state">
+                Charts require JavaScript to render visualizations.
+            </p>
+        </noscript>
 
+        <div class="charts">
             {% if profile.columns %}
             <div class="chart-card">
                 <h3>Null Percentage by Column</h3>
@@ -478,7 +375,6 @@
                 <canvas id="aniwaDarkDuplicateChart"></canvas>
             </div>
             {% endif %}
-
         </div>
     </section>
 
@@ -488,12 +384,9 @@
 
     <script>
     (() => {
-
         const chartDataElement = document.getElementById("aniwa-dark-chart-data");
 
-        if (!chartDataElement) {
-            return;
-        }
+        if (!chartDataElement) return;
 
         const chartData = JSON.parse(chartDataElement.textContent);
 
@@ -513,30 +406,9 @@
                 },
                 options: {
                     responsive: true,
-                    plugins: {
-                        legend: {
-                            labels: {
-                                color: darkAxis
-                            }
-                        }
-                    },
                     scales: {
-                        x: {
-                            ticks: {
-                                color: darkAxis
-                            },
-                            grid: {
-                                color: darkGrid
-                            }
-                        },
-                        y: {
-                            ticks: {
-                                color: darkAxis
-                            },
-                            grid: {
-                                color: darkGrid
-                            }
-                        }
+                        x: { ticks: { color: darkAxis }, grid: { color: darkGrid } },
+                        y: { ticks: { color: darkAxis }, grid: { color: darkGrid } }
                     }
                 }
             });
@@ -553,30 +425,9 @@
                 },
                 options: {
                     responsive: true,
-                    plugins: {
-                        legend: {
-                            labels: {
-                                color: darkAxis
-                            }
-                        }
-                    },
                     scales: {
-                        x: {
-                            ticks: {
-                                color: darkAxis
-                            },
-                            grid: {
-                                color: darkGrid
-                            }
-                        },
-                        y: {
-                            ticks: {
-                                color: darkAxis
-                            },
-                            grid: {
-                                color: darkGrid
-                            }
-                        }
+                        x: { ticks: { color: darkAxis }, grid: { color: darkGrid } },
+                        y: { ticks: { color: darkAxis }, grid: { color: darkGrid } }
                     }
                 }
             });
@@ -592,22 +443,8 @@
                             chartData.duplicateRows,
                             chartData.uniqueRows
                         ],
-                        backgroundColor: [
-                            "#f87171",
-                            "#38bdf8"
-                        ]
+                        backgroundColor: ["#f87171", "#38bdf8"]
                     }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: true,
-                    plugins: {
-                        legend: {
-                            labels: {
-                                color: darkAxis
-                            }
-                        }
-                    }
                 }
             });
         }
@@ -618,7 +455,6 @@
 
     {% if insights_enabled and profile.insights is not none %}
     <section>
-
         <h2>Insights</h2>
 
         {% if profile.insights %}
@@ -629,7 +465,6 @@
                 <th>Message</th>
             </tr>
             </thead>
-
             <tbody>
             {% for insight in profile.insights %}
             <tr>
@@ -638,7 +473,6 @@
                         {{ insight.level }}
                     </span>
                 </td>
-
                 <td>{{ insight.message }}</td>
             </tr>
             {% endfor %}
@@ -647,7 +481,6 @@
         {% else %}
         <p class="empty-state">No major issues detected.</p>
         {% endif %}
-
     </section>
     {% endif %}
 
