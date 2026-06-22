@@ -170,7 +170,7 @@ strong foundational architecture
 
 ---
 
-# v0.1.2 — Reporting Expansion
+# v0.1.2 - Reporting Expansion
 
 Focus:
 
@@ -204,7 +204,7 @@ This phase improves:
 
 ---
 
-# v0.2.x — Intelligence Era
+# v0.2.x - Intelligence Era
 
 Focus:
 
@@ -259,7 +259,7 @@ why a dataset appears risky or suspicious
 
 ---
 
-# v0.3.x — Universal Connectivity
+# v0.3.x - Universal Connectivity
 
 Focus:
 
@@ -321,7 +321,7 @@ Potential streaming systems:
 
 ---
 
-# v0.4.x — Extensibility Era
+# v0.4.x - Extensibility Era
 
 Focus:
 
@@ -365,7 +365,7 @@ Potential future systems:
 
 ---
 
-# v0.5.x — AI Intelligence Era
+# v0.5.x - AI Intelligence Era
 
 Focus:
 
@@ -420,7 +420,7 @@ Potential future systems:
 
 ---
 
-# v0.6.x — Governance Era
+# v0.6.x - Governance Era
 
 Focus:
 
@@ -464,7 +464,7 @@ dataset trust scoring
 
 ---
 
-# v0.7.x — Observability Era
+# v0.7.x - Observability Era
 
 Focus:
 
@@ -509,7 +509,7 @@ Potential future systems:
 
 ---
 
-# v0.8.x — Cloud Infrastructure Era
+# v0.8.x - Cloud Infrastructure Era
 
 Focus:
 
@@ -555,7 +555,7 @@ web UI
 
 ---
 
-# v0.9.x — Enterprise Ecosystem Era
+# v0.9.x - Enterprise Ecosystem Era
 
 Focus:
 
@@ -588,7 +588,7 @@ Enterprise adoption improves:
 
 ---
 
-# v1.0.0 — Platform Maturity
+# v1.0.0 - Platform Maturity
 
 Focus:
 
