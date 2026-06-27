@@ -1,11 +1,17 @@
 # Aniwa
 
-<p align="left">
-  <img
-    src="https://raw.githubusercontent.com/ReginaldErzoah/Aniwa/main/docs/assets/aniwa-logo.png"
-    width="220"
-    alt="Aniwa Logo"
-  >
+<p align="center">
+
+  <picture>
+    <source
+      media="(prefers-color-scheme: dark)"
+      srcset="https://raw.githubusercontent.com/ReginaldErzoah/Aniwa/main/docs/assets/aniwa-logo-dark.png"
+    />
+    <source
+      media="(prefers-color-scheme: light)"
+      srcset="https://raw.githubusercontent.com/ReginaldErzoah/Aniwa/main/docs/assets/aniwa-logo-light.png"
+    />
+  </picture>
 </p>
 
 > **See your data clearly.**
