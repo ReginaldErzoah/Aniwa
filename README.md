@@ -1,7 +1,6 @@
 # Aniwa
 
 <p align="center">
-
   <picture>
     <source
       media="(prefers-color-scheme: dark)"
@@ -11,10 +10,23 @@
       media="(prefers-color-scheme: light)"
       srcset="https://raw.githubusercontent.com/ReginaldErzoah/Aniwa/main/docs/assets/aniwa-logo-light.png"
     />
+    <img
+      src="https://raw.githubusercontent.com/ReginaldErzoah/Aniwa/main/docs/assets/aniwa-logo.png"
+      width="400"
+      alt="Aniwa Logo"
+    />
   </picture>
 </p>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/python-3.10+-blue" />
+  <img src="https://img.shields.io/badge/license-MIT-green" />
+  <img src="https://img.shields.io/badge/version-0.1.1-blue" />
+</p>
+
 > **See your data clearly.**
+
+## What is Aniwa?
 
 Aniwa is an open-source universal dataset profiling and intelligence tool for developers, analysts, data engineers, researchers, and modern data teams.
 
@@ -34,17 +46,10 @@ Whether you're working with CSV files, Excel spreadsheets, JSON datasets, or Par
 Full documentation available here:
 https://reginalderzoah.github.io/Aniwa/
 
----
-
-# Current Version
-
-```text
-v0.1.1
-```
 
 ---
 
-# Why Aniwa?
+## Why Aniwa?
 
 Modern data workflows constantly involve:
 
@@ -70,9 +75,9 @@ fast, intelligent, and developer-friendly
 
 ---
 
-# Features
+## Features
 
-## Universal Dataset Support
+### Universal Dataset Support
 
 Aniwa currently supports:
 
@@ -91,30 +96,30 @@ Future releases are planned to support:
 
 ---
 
-## Core Profiling
+### Core Profiling
 
 Aniwa currently provides:
 
-### Dataset Summary
+#### Dataset Summary
 
 - row counts
 - column counts
 - dataset size analysis
 
-### Schema Profiling
+#### Schema Profiling
 
 - type inference
 - schema overview
 - mixed type detection
 
-### Data Quality Analysis
+#### Data Quality Analysis
 
 - null analysis
 - duplicate detection
 - uniqueness analysis
 - sparse column detection
 
-### Statistical Profiling
+#### Statistical Profiling
 
 - minimum values
 - maximum values
@@ -122,7 +127,7 @@ Aniwa currently provides:
 - median
 - standard deviation
 
-### Intelligent Insights
+#### Intelligent Insights
 
 - possible ID detection
 - high-cardinality warnings
@@ -131,7 +136,7 @@ Aniwa currently provides:
 
 ---
 
-## Reporting
+### Reporting
 
 Aniwa currently supports:
 
@@ -149,7 +154,7 @@ Upcoming releases are planned to include:
 
 ---
 
-# Quick Installation
+## Quick Installation
 
 Install Aniwa from PyPI:
 
@@ -171,7 +176,7 @@ pip install --upgrade aniwa
 
 ---
 
-# Quick Start
+## Quick Start
 
 Profile a dataset:
 
@@ -205,7 +210,7 @@ aniwa profile customers.csv --mode deep
 
 ---
 
-# Configuration Files
+## Configuration Files
 
 Aniwa supports configuration-driven workflows.
 
@@ -275,7 +280,7 @@ aniwa profile customers.csv --exclude statistics
 
 ---
 
-# Example Console Output
+## Example Console Output
 
 ```text
 ┌──────────────────────────────┐
@@ -289,7 +294,7 @@ aniwa profile customers.csv --exclude statistics
 
 ---
 
-# Documentation
+## Documentation
 
 Aniwa now includes a full documentation system.
 
@@ -331,7 +336,7 @@ docs/
 
 ---
 
-# Installation for Development
+## Installation for Development
 
 Clone the repository:
 
@@ -374,17 +379,17 @@ pip install -e .
 
 ---
 
-# Architecture
+## Architecture
 
 Aniwa currently follows a modular layered architecture:
 
 ```text
 CLI
-→ Configuration
-→ Readers
-→ Profiling Engine
-→ Models
-→ Reports
+-> Configuration
+-> Readers
+-> Profiling Engine
+-> Models
+-> Reports
 ```
 
 This architecture prioritizes:
@@ -396,7 +401,7 @@ This architecture prioritizes:
 
 ---
 
-# Project Structure
+## Project Structure
 
 ```text
 Aniwa/
@@ -425,9 +430,9 @@ Aniwa/
 
 ---
 
-# Roadmap
+## Roadmap
 
-## v0.1.x - Foundation
+### v0.1.x - Foundation
 
 - universal dataset profiling
 - reporting systems
@@ -435,7 +440,7 @@ Aniwa/
 - modular architecture
 - developer-first UX
 
-## v0.2.x - Better User Experience
+### v0.2.x - Better User Experience
 
 Planned features:
 
@@ -448,7 +453,7 @@ Planned features:
 - Config file supports (yml, json & toml).
 - Improved documentation.
 
-## v0.3.x - Intelligence
+### v0.3.x - Intelligence
 
 Planned features:
 
@@ -457,7 +462,7 @@ Planned features:
 - semantic profiling
 - improved insights
 
-## v0.4.x - Universal Connectivity
+### v0.4.x - Universal Connectivity
 
 Planned features:
 
@@ -468,7 +473,7 @@ Planned features:
 - profiling history
 - snapshot management
 
-## v0.5.x - Extensibility
+### v0.5.x - Extensibility
 
 Planned features:
 
@@ -476,7 +481,7 @@ Planned features:
 - custom profiling modules
 - community extensions
 
-## v0.6.x - AI Intelligence
+### v0.6.x - AI Intelligence
 
 Planned features:
 
@@ -487,7 +492,7 @@ Planned features:
 
 ---
 
-# Philosophy
+## Philosophy
 
 Aniwa is built around several core principles:
 
@@ -514,7 +519,7 @@ docs/roadmap.md
 
 ---
 
-# Contributing
+## Contributing
 
 Contributions are welcome.
 
@@ -534,7 +539,7 @@ for:
 
 ---
 
-# Support
+## Support
 
 If you find this project useful:
 
@@ -542,11 +547,3 @@ If you find this project useful:
 - Share repo with friends
 - Contribute to making this project better solving open issues
 - Recommendations can also be sent to maintainer
-
----
-
-# License
-
-Aniwa is released under the MIT License.
-
-See [LICENSE](LICENSE) for details.
