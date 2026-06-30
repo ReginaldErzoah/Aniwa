@@ -46,7 +46,7 @@ git push origin your-branch-name
 
 ### Step 5: Create Pull Request
 
-Go to GitHub → Click "Compare & pull request"
+Go to GitHub -> Click "Compare & pull request"
 
 ---
 
