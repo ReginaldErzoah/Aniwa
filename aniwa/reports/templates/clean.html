@@ -99,7 +99,6 @@
             font-weight: 700;
             padding: 10px 8px;
             border-bottom: 2px solid #e5e7eb;
-            background: #ffffff;
         }
 
         td {
@@ -110,26 +109,6 @@
 
         tr:last-child td {
             border-bottom: none;
-        }
-
-        .metadata-table td:first-child {
-            width: 220px;
-            color: #111827;
-            font-weight: 700;
-        }
-
-        .metadata-table td:last-child {
-            word-break: break-word;
-        }
-
-        code {
-            font-family: Consolas, Monaco, monospace;
-            font-size: 12px;
-            background: rgba(148, 163, 184, 0.12);
-            padding: 2px 6px;
-            border-radius: 6px;
-            white-space: normal;
-            word-break: break-word;
         }
 
         .charts {
@@ -148,8 +127,6 @@
 
         .chart-card.full {
             grid-column: 1 / -1;
-            max-width: 420px;
-            margin: 0 auto;
         }
 
         .empty-state {
@@ -163,29 +140,6 @@
             color: #9ca3af;
             font-size: 13px;
             margin-top: 40px;
-        }
-
-        @media (max-width: 900px) {
-            .cards,
-            .charts {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 600px) {
-            body {
-                padding: 20px;
-            }
-
-            .cards,
-            .charts {
-                grid-template-columns: 1fr;
-            }
-
-            table {
-                display: block;
-                overflow-x: auto;
-            }
         }
     </style>
 </head>
@@ -206,8 +160,10 @@
         <p>Universal dataset profiling and intelligence report.</p>
     </div>
 
+    <!-- SUMMARY -->
     {% if (summary_enabled and profile.summary) or (quality_enabled and profile.quality) %}
     <div class="cards">
+
         {% if summary_enabled and profile.summary %}
         <div class="card">
             <div class="label">Rows</div>
@@ -222,37 +178,34 @@
 
         {% if quality_enabled and profile.quality %}
         <div class="card">
-            <div class="label">Duplicate Rows</div>
+            <div class="label">Duplicates</div>
             <div class="value">{{ profile.quality.duplicate_rows }}</div>
         </div>
-
-        <div class="card">
-            <div class="label">Duplicate %</div>
-            <div class="value">{{ profile.quality.duplicate_percent }}%</div>
-        </div>
         {% endif %}
+
     </div>
     {% endif %}
 
+    <!-- METADATA (SAFE) -->
     {% if profile.metadata %}
     <section>
         <h2>Profiling Metadata</h2>
-        <table class="metadata-table">
+        <table>
             <tbody>
-            {% for key, value in profile.metadata.items() %}
-            <tr>
-                <td>{{ key }}</td>
-                <td>{{ value }}</td>
-            </tr>
-            {% endfor %}
+            <tr><td>Generated At</td><td>{{ profile.metadata.generated_at }}</td></tr>
+            <tr><td>Aniwa Version</td><td>{{ profile.metadata.aniwa_version }}</td></tr>
+            <tr><td>Report Format</td><td>{{ profile.metadata.report_format }}</td></tr>
+            <tr><td>Dataset Path</td><td>{{ profile.metadata.dataset_path }}</td></tr>
             </tbody>
         </table>
     </section>
     {% endif %}
 
+    <!-- COLUMN TABLE -->
     {% if schema_enabled and profile.columns %}
     <section>
         <h2>Column Profile</h2>
+
         <table>
             <thead>
             <tr>
@@ -263,6 +216,7 @@
                 <th>Unique</th>
             </tr>
             </thead>
+
             <tbody>
             {% for col in profile.columns %}
             <tr>
@@ -278,11 +232,19 @@
     </section>
     {% endif %}
 
+    <!-- NUMERIC STATS -->
     {% if statistics_enabled and profile.columns %}
-    {% set numeric_columns = profile.columns | selectattr("numeric_stats") | list %}
+    {% set numeric_columns = [] %}
+    {% for col in profile.columns %}
+        {% if col.numeric_stats %}
+            {% set _ = numeric_columns.append(col) %}
+        {% endif %}
+    {% endfor %}
+
     {% if numeric_columns %}
     <section>
         <h2>Numeric Statistics</h2>
+
         <table>
             <thead>
             <tr>
@@ -294,6 +256,7 @@
                 <th>Std</th>
             </tr>
             </thead>
+
             <tbody>
             {% for col in numeric_columns %}
             <tr>
@@ -311,111 +274,124 @@
     {% endif %}
     {% endif %}
 
+    <!-- CHARTS -->
     {% if charts_enabled %}
     <section>
         <h2>Charts</h2>
-
-        <noscript>
-            Some charts require JavaScript to render.
-        </noscript>
 
         <div class="charts">
 
             {% if profile.columns %}
             <div class="chart-card">
-                <h3>Null Percentage by Column</h3>
-                <canvas id="aniwaCleanNullChart"></canvas>
+                <h3>Null Percentage</h3>
+                <canvas id="nullChart"></canvas>
             </div>
 
             <div class="chart-card">
-                <h3>Unique Values by Column</h3>
-                <canvas id="aniwaCleanCardinalityChart"></canvas>
+                <h3>Unique Values</h3>
+                <canvas id="uniqueChart"></canvas>
             </div>
             {% endif %}
 
-            {% if profile.summary and profile.quality %}
-            <div class="chart-card full">
-                <h3>Duplicate Overview</h3>
-                <canvas id="aniwaCleanDuplicateChart"></canvas>
+            <!-- NEW: HISTOGRAM SECTION -->
+            <div class="chart-card full" id="hist-section" style="display:none;">
+                <h3>Numeric Distributions</h3>
+                <div id="hist-container"></div>
             </div>
-            {% endif %}
 
         </div>
     </section>
 
-    <script id="aniwa-clean-chart-data" type="application/json">
+    <script id="chart-data" type="application/json">
 {{ chart_data_json | safe }}
     </script>
 
     <script>
 (() => {
-    const el = document.getElementById("aniwa-clean-chart-data");
-
+    const el = document.getElementById("chart-data");
     if (!el) return;
 
-    let chartData = {};
-
+    let data;
     try {
-        chartData = JSON.parse(el.textContent || "{}");
+        data = JSON.parse(el.textContent || "{}");
     } catch (e) {
-        console.error("Chart JSON parse error", e);
+        console.error("Invalid chart JSON", e);
         return;
     }
 
-    if (chartData.hasColumnCharts) {
-        const nullEl = document.getElementById("aniwaCleanNullChart");
-        const cardEl = document.getElementById("aniwaCleanCardinalityChart");
+    // BASIC CHARTS
+    if (data.hasColumnCharts) {
 
-        if (nullEl) {
-            new Chart(nullEl, {
-                type: "bar",
-                data: {
-                    labels: chartData.columns || [],
-                    datasets: [{ label: "Null %", data: chartData.nullPercents || [] }]
-                },
-                options: { responsive: true, plugins: { legend: { display: false } } }
-            });
-        }
+        new Chart(document.getElementById("nullChart"), {
+            type: "bar",
+            data: {
+                labels: data.columns,
+                datasets: [{ label: "Null %", data: data.nullPercents }]
+            }
+        });
 
-        if (cardEl) {
-            new Chart(cardEl, {
-                type: "bar",
-                data: {
-                    labels: chartData.columns || [],
-                    datasets: [{ label: "Unique Values", data: chartData.uniqueCounts || [] }]
-                },
-                options: { responsive: true, plugins: { legend: { display: false } } }
-            });
-        }
+        new Chart(document.getElementById("uniqueChart"), {
+            type: "bar",
+            data: {
+                labels: data.columns,
+                datasets: [{ label: "Unique", data: data.uniqueCounts }]
+            }
+        });
     }
 
-    if (chartData.hasDuplicateChart) {
-        const dupEl = document.getElementById("aniwaCleanDuplicateChart");
+    // HISTOGRAMS (NEW)
+    const histograms = data.numericDistributions;
 
-        if (dupEl) {
-            new Chart(dupEl, {
-                type: "doughnut",
+    if (Array.isArray(histograms) && histograms.length > 0) {
+
+        const section = document.getElementById("hist-section");
+        const container = document.getElementById("hist-container");
+
+        section.style.display = "block";
+
+        histograms.forEach((h, i) => {
+
+            if (!h || !h.bins || !h.counts) return;
+
+            const wrapper = document.createElement("div");
+            wrapper.style.marginBottom = "18px";
+
+            const id = `hist-${i}`;
+
+            const labels = h.bins.slice(0, -1).map((b, idx) => {
+                const next = h.bins[idx + 1];
+                return `${b} - ${next}`;
+            });
+
+            wrapper.innerHTML = `
+                <h4>${h.name}</h4>
+                <canvas id="${id}"></canvas>
+            `;
+
+            container.appendChild(wrapper);
+
+            const canvas = document.getElementById(id);
+
+            new Chart(canvas, {
+                type: "bar",
                 data: {
-                    labels: ["Duplicate Rows", "Unique Rows"],
+                    labels: labels,
                     datasets: [{
-                        data: [
-                            chartData.duplicateRows || 0,
-                            chartData.uniqueRows || 0
-                        ]
+                        label: "Frequency",
+                        data: h.counts
                     }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: true
                 }
             });
-        }
+        });
     }
+
 })();
 </script>
+
     {% endif %}
 
-    {% if insights_enabled and profile.insights is not none %}
+    <!-- INSIGHTS -->
+    {% if insights_enabled and profile.insights %}
     <section>
         <h2>Insights</h2>
 
@@ -427,14 +403,11 @@
                 <th>Message</th>
             </tr>
             </thead>
+
             <tbody>
             {% for insight in profile.insights %}
             <tr>
-                <td>
-                    <span class="badge {{ insight.level }}">
-                        {{ insight.level }}
-                    </span>
-                </td>
+                <td>{{ insight.level }}</td>
                 <td>{{ insight.message }}</td>
             </tr>
             {% endfor %}
@@ -449,6 +422,7 @@
     <div class="footer">
         Generated by Aniwa - See your data clearly.
     </div>
+
 </div>
 </body>
 </html>
