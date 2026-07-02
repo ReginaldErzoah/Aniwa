@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Aniwa Dataset Profile</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <style>
         body {
             font-family: Inter, Arial, sans-serif;
@@ -13,24 +14,11 @@
             padding: 40px;
         }
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
+        .container { max-width: 1100px; margin: 0 auto; }
 
-        .header {
-            margin-bottom: 32px;
-        }
-
-        .header h1 {
-            margin: 0;
-            font-size: 36px;
-        }
-
-        .header p {
-            color: #475569;
-            font-size: 16px;
-        }
+        .header { margin-bottom: 32px; }
+        .header h1 { margin: 0; font-size: 36px; }
+        .header p { color: #475569; font-size: 16px; }
 
         .cards {
             display: grid;
@@ -47,16 +35,8 @@
             box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
         }
 
-        .card .label {
-            color: #64748b;
-            font-size: 14px;
-        }
-
-        .card .value {
-            font-size: 30px;
-            font-weight: 700;
-            margin-top: 8px;
-        }
+        .card .label { color: #64748b; font-size: 14px; }
+        .card .value { font-size: 30px; font-weight: 700; margin-top: 8px; }
 
         section {
             background: white;
@@ -67,16 +47,8 @@
             box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
         }
 
-        h2 {
-            margin-top: 0;
-            font-size: 22px;
-        }
-
-        h3 {
-            margin-top: 0;
-            font-size: 16px;
-            color: #334155;
-        }
+        h2 { margin-top: 0; font-size: 22px; }
+        h3 { margin-top: 0; font-size: 16px; color: #334155; }
 
         table {
             width: 100%;
@@ -110,20 +82,7 @@
             padding: 18px;
         }
 
-        .chart-card.full {
-            grid-column: 1 / -1;
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 4px 10px;
-            border-radius: 999px;
-            font-size: 12px;
-        }
-
-        .info { background: #dbeafe; color: #1e40af; }
-        .warning { background: #fef3c7; color: #92400e; }
-        .critical { background: #fee2e2; color: #991b1b; }
+        .chart-card.full { grid-column: 1 / -1; }
 
         .footer {
             margin-top: 40px;
@@ -149,7 +108,7 @@
         <p>Universal dataset profiling and intelligence report.</p>
     </div>
 
-    <!-- SUMMARY CARDS -->
+    <!-- SUMMARY -->
     {% if (summary_enabled and profile.summary) or (quality_enabled and profile.quality) %}
     <div class="cards">
 
@@ -175,10 +134,11 @@
     </div>
     {% endif %}
 
-    <!-- TABLES -->
+    <!-- TABLE -->
     {% if schema_enabled and profile.columns %}
     <section>
         <h2>Column Profile</h2>
+
         <table>
             <thead>
             <tr>
@@ -189,6 +149,7 @@
                 <th>Unique</th>
             </tr>
             </thead>
+
             <tbody>
             {% for col in profile.columns %}
             <tr>
@@ -248,73 +209,91 @@
         return;
     }
 
-    // --------------------
-    // basic charts
-    // --------------------
+    // -------------------------
+    // Basic charts
+    // -------------------------
     if (data.hasColumnCharts) {
 
-        new Chart(document.getElementById("nullChart"), {
-            type: "bar",
-            data: {
-                labels: data.columns,
-                datasets: [{
-                    label: "Null %",
-                    data: data.nullPercents
-                }]
-            }
-        });
+        const nullEl = document.getElementById("nullChart");
+        const uniqueEl = document.getElementById("uniqueChart");
 
-        new Chart(document.getElementById("uniqueChart"), {
-            type: "bar",
-            data: {
-                labels: data.columns,
-                datasets: [{
-                    label: "Unique",
-                    data: data.uniqueCounts
-                }]
-            }
-        });
+        if (nullEl) {
+            new Chart(nullEl, {
+                type: "bar",
+                data: {
+                    labels: data.columns,
+                    datasets: [{
+                        label: "Null %",
+                        data: data.nullPercents
+                    }]
+                }
+            });
+        }
+
+        if (uniqueEl) {
+            new Chart(uniqueEl, {
+                type: "bar",
+                data: {
+                    labels: data.columns,
+                    datasets: [{
+                        label: "Unique",
+                        data: data.uniqueCounts
+                    }]
+                }
+            });
+        }
     }
 
-    // --------------------
-    // HISTOGRAMS (NEW FIXED SECTION)
-    // --------------------
-    const histograms = data.numericDistributions || [];
+    // -------------------------
+    // HISTOGRAMS (SAFE VERSION)
+    // -------------------------
+    const histograms = data.numericDistributions;
 
     if (Array.isArray(histograms) && histograms.length > 0) {
 
         const section = document.getElementById("hist-section");
         const container = document.getElementById("hist-container");
 
-        section.style.display = "block";
+        if (section && container) {
+            section.style.display = "block";
 
-        histograms.forEach((h, i) => {
+            histograms.forEach((h, i) => {
 
-            const wrapper = document.createElement("div");
-            wrapper.style.marginBottom = "20px";
+                if (!h || !h.bins || !h.counts) return;
 
-            const id = `hist-${i}`;
+                const wrapper = document.createElement("div");
+                wrapper.style.marginBottom = "20px";
 
-            wrapper.innerHTML = `
-                <h4>${h.name}</h4>
-                <canvas id="${id}"></canvas>
-            `;
+                const id = `hist-${i}`;
 
-            container.appendChild(wrapper);
+                const labels = h.bins.slice(0, -1).map((b, idx) => {
+                    const next = h.bins[idx + 1];
+                    return `${b} - ${next}`;
+                });
 
-            const canvas = document.getElementById(id);
+                wrapper.innerHTML = `
+                    <h4>${h.name}</h4>
+                    <canvas id="${id}"></canvas>
+                `;
 
-            new Chart(canvas, {
-                type: "bar",
-                data: {
-                    labels: h.bins,
-                    datasets: [{
-                        label: "Frequency",
-                        data: h.counts
-                    }]
+                container.appendChild(wrapper);
+
+                const canvas = document.getElementById(id);
+
+                if (canvas) {
+                    new Chart(canvas, {
+                        type: "bar",
+                        data: {
+                            labels: labels,
+                            datasets: [{
+                                label: "Frequency",
+                                data: h.counts
+                            }]
+                        }
+                    });
                 }
             });
-        });
+        }
     }
 
 })();

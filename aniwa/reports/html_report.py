@@ -71,15 +71,14 @@ def _prepare_chart_data(profile: DatasetProfile) -> dict:
             null_percents.append(round(col.null_percent, 2))
             unique_counts.append(col.unique_count)
 
-            # ✅ SAFE FIX: use distribution.histogram (NOT histogram directly)
+            
             if (
                 col.numeric_stats
-                and col.numeric_stats.distribution
-                and col.numeric_stats.distribution.histogram
+                and col.numeric_stats.histogram
             ):
-                hist = col.numeric_stats.distribution.histogram
+                hist = col.numeric_stats.histogram
 
-                # extra safety guards
+                # safety guards
                 if hist.bins and hist.counts:
                     numeric_distributions.append({
                         "name": col.name,
