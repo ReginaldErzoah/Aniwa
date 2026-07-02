@@ -182,9 +182,10 @@ def _generate_histogram(series: pl.Series, bins: int = 10) -> HistogramData | No
         min_value = float(values.min())
         max_value = float(values.max())
 
+        # Edge case: constant column
         if min_value == max_value:
             return HistogramData(
-                bins=[min_value],
+                bins=[min_value, min_value],
                 counts=[values.len()],
                 bin_count=1,
                 bin_method="constant",
@@ -200,9 +201,14 @@ def _generate_histogram(series: pl.Series, bins: int = 10) -> HistogramData | No
         counts = [0] * bins
 
         for value in values:
-            index = int((float(value) - min_value) / step)
-            if index == bins:
-                index -= 1
+            v = float(value)
+            index = int((v - min_value) / step)
+
+            if index >= bins:
+                index = bins - 1
+            elif index < 0:
+                index = 0
+
             counts[index] += 1
 
         return HistogramData(
@@ -290,7 +296,7 @@ def generate_insights(
                     )
                 )
 
-            if stats.mean and stats.std and stats.mean != 0:
+            if stats.mean is not None and stats.std is not None and stats.mean != 0:
                 ratio = abs(stats.std / stats.mean)
                 if ratio > 2:
                     insights.append(

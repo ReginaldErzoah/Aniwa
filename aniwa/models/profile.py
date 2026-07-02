@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class DatasetSummary(BaseModel):
@@ -7,16 +7,12 @@ class DatasetSummary(BaseModel):
 
 
 class HistogramData(BaseModel):
-    bins: list[float] = []
-    counts: list[int] = []
+    bins: list[float] = Field(default_factory=list)
+    counts: list[int] = Field(default_factory=list)
 
     # Optional metadata for explainability / tuning
     bin_method: str | None = None
     bin_count: int | None = None
-
-
-class NumericDistribution(BaseModel):
-    histogram: HistogramData | None = None
 
 
 class NumericStats(BaseModel):
@@ -27,7 +23,7 @@ class NumericStats(BaseModel):
     std: float | None = None
 
     # Histogram-based distribution (used for charts)
-    distribution: NumericDistribution | None = None
+    histogram: HistogramData | None = None
 
 
 class ColumnProfile(BaseModel):
