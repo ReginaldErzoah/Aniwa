@@ -6,9 +6,9 @@ try:
     import tomllib
 except ModuleNotFoundError:
     try:
-        import tomli as tomllib
+        import tomli as tomllib  # type: ignore
     except ImportError:
-        tomllib = None
+        tomllib = None  # TOML support unavailable
 
 
 SUPPORTED_CONFIG_EXTENSIONS = {
@@ -43,12 +43,11 @@ def _read_config(path: pathlib.Path, suffix: str) -> dict[str, Any]:
     if suffix == ".json":
         with path.open(encoding="utf-8") as file:
             data = json.load(file) or {}
-
         return _ensure_dict(data, path)
 
     if suffix == ".toml":
         if tomllib is None:
-            raise ValueError("Install 'tomli' to use TOML configs.")
+            raise ValueError("Install 'tomli' (or Python 3.11+) to use TOML configs.")
 
         with path.open("rb") as file:
             data = tomllib.load(file) or {}
@@ -66,10 +65,7 @@ def _read_config(path: pathlib.Path, suffix: str) -> dict[str, Any]:
 
         return _ensure_dict(data, path)
 
-    raise ValueError(
-        "Unsupported configuration file type. "
-        "Supported types are: .yaml, .yml, .toml, .json."
-    )
+    raise ValueError("Unsupported configuration file type.")
 
 
 def _ensure_dict(data: Any, path: pathlib.Path) -> dict[str, Any]:
@@ -77,13 +73,11 @@ def _ensure_dict(data: Any, path: pathlib.Path) -> dict[str, Any]:
         raise ValueError(
             f"Configuration file '{path}' must contain a top-level object."
         )
-
     return cast(dict[str, Any], data)
 
 
 def get_flattened_config(file_path: str) -> dict[str, Any]:
     """Load and flatten a configuration file."""
-
     try:
         raw = load_config(file_path)
     except ValueError as e:
@@ -96,74 +90,40 @@ def get_flattened_config(file_path: str) -> dict[str, Any]:
 
     flattened: dict[str, Any] = {}
 
-    # -------------------------
     # Core mode
-    # -------------------------
     if "mode" in raw:
-        mode = raw["mode"]
+        flattened["mode"] = raw["mode"]
 
-        if mode not in {"fast", "deep"}:
-            raise ValueError(
-                f"Invalid mode in config: {mode}. Use 'fast' or 'deep'."
-            )
-
-        flattened["mode"] = mode
-
-    # -------------------------
     # Report config
-    # -------------------------
-    if "report" in raw:
-        report = raw["report"]
-
-        if not isinstance(report, dict):
-            raise ValueError("Invalid config: 'report' must be an object.")
-
+    report = raw.get("report")
+    if isinstance(report, dict):
         if "format" in report:
             flattened["report"] = report["format"]
-
         if "template" in report:
             flattened["template"] = report["template"]
-
         if "output" in report:
             flattened["output"] = report["output"]
-
         if "output_dir" in report:
             flattened["output_dir"] = report["output_dir"]
 
-    # -------------------------
-    # Sections config (UPDATED SAFETY LAYER)
-    # -------------------------
-    if "sections" in raw:
-        sections = raw["sections"]
-
-        if not isinstance(sections, dict):
-            raise ValueError("Invalid config: 'sections' must be an object.")
-
+    # Sections
+    sections = raw.get("sections")
+    if isinstance(sections, dict):
         include = sections.get("include")
         exclude = sections.get("exclude")
 
         if include is not None and exclude is not None:
             raise ValueError(
-                "Invalid config: use either sections.include or sections.exclude, not both."
+                "Use either sections.include or sections.exclude, not both."
             )
 
-        if include is not None:
-            if not isinstance(include, list):
-                raise ValueError("Invalid config: sections.include must be a list.")
+        if isinstance(include, list):
+            flattened["include"] = ",".join(map(str, include))
 
-            flattened["include"] = ",".join(str(s) for s in include)
-            flattened["included_sections"] = include  # NEW (safe structured form)
+        if isinstance(exclude, list):
+            flattened["exclude"] = ",".join(map(str, exclude))
 
-        if exclude is not None:
-            if not isinstance(exclude, list):
-                raise ValueError("Invalid config: sections.exclude must be a list.")
-
-            flattened["exclude"] = ",".join(str(s) for s in exclude)
-            flattened["excluded_sections"] = exclude  # NEW (safe structured form)
-
-    # -------------------------
-    # Misc
-    # -------------------------
+    # verbosity support (NEW)
     if "verbosity" in raw:
         flattened["verbosity"] = raw["verbosity"]
 
