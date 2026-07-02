@@ -19,9 +19,7 @@ SUPPORTED_CONFIG_EXTENSIONS = {
 }
 
 
-def load_config(
-    file_path: str,
-) -> dict[str, Any]:
+def load_config(file_path: str) -> dict[str, Any]:
     path = pathlib.Path(file_path)
 
     if not path.exists():
@@ -41,10 +39,7 @@ def load_config(
         raise ValueError(f"Error parsing config file '{file_path}': {exc}") from exc
 
 
-def _read_config(
-    path: pathlib.Path,
-    suffix: str,
-) -> dict[str, Any]:
+def _read_config(path: pathlib.Path, suffix: str) -> dict[str, Any]:
     if suffix == ".json":
         with path.open(encoding="utf-8") as file:
             data = json.load(file) or {}
@@ -77,10 +72,7 @@ def _read_config(
     )
 
 
-def _ensure_dict(
-    data: Any,
-    path: pathlib.Path,
-) -> dict[str, Any]:
+def _ensure_dict(data: Any, path: pathlib.Path) -> dict[str, Any]:
     if not isinstance(data, dict):
         raise ValueError(
             f"Configuration file '{path}' must contain a top-level object."
@@ -89,30 +81,24 @@ def _ensure_dict(
     return cast(dict[str, Any], data)
 
 
-def get_flattened_config(
-    file_path: str,
-) -> dict[str, Any]:
-    """Load and flatten a configuration file.
-    
-    Args:
-        file_path: Path to the configuration file
-    
-    Returns:
-        Flattened configuration dictionary, or empty dict if file doesn't exist
-    """
+def get_flattened_config(file_path: str) -> dict[str, Any]:
+    """Load and flatten a configuration file."""
+
     try:
         raw = load_config(file_path)
     except ValueError as e:
-        # If file doesn't exist, return empty dict
         if "not found" in str(e).lower():
             return {}
         raise
-    
+
     if not raw:
         return {}
 
     flattened: dict[str, Any] = {}
 
+    # -------------------------
+    # Core mode
+    # -------------------------
     if "mode" in raw:
         mode = raw["mode"]
 
@@ -123,6 +109,9 @@ def get_flattened_config(
 
         flattened["mode"] = mode
 
+    # -------------------------
+    # Report config
+    # -------------------------
     if "report" in raw:
         report = raw["report"]
 
@@ -141,6 +130,9 @@ def get_flattened_config(
         if "output_dir" in report:
             flattened["output_dir"] = report["output_dir"]
 
+    # -------------------------
+    # Sections config (UPDATED SAFETY LAYER)
+    # -------------------------
     if "sections" in raw:
         sections = raw["sections"]
 
@@ -159,14 +151,19 @@ def get_flattened_config(
             if not isinstance(include, list):
                 raise ValueError("Invalid config: sections.include must be a list.")
 
-            flattened["include"] = ",".join(str(section) for section in include)
+            flattened["include"] = ",".join(str(s) for s in include)
+            flattened["included_sections"] = include  # NEW (safe structured form)
 
         if exclude is not None:
             if not isinstance(exclude, list):
                 raise ValueError("Invalid config: sections.exclude must be a list.")
 
-            flattened["exclude"] = ",".join(str(section) for section in exclude)
+            flattened["exclude"] = ",".join(str(s) for s in exclude)
+            flattened["excluded_sections"] = exclude  # NEW (safe structured form)
 
+    # -------------------------
+    # Misc
+    # -------------------------
     if "verbosity" in raw:
         flattened["verbosity"] = raw["verbosity"]
 
