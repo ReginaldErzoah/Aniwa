@@ -130,25 +130,20 @@
             text-transform: uppercase;
         }
 
-        .info {
-            background: #dbeafe;
-            color: #1d4ed8;
-        }
-
-        .warning {
-            background: #fef3c7;
-            color: #92400e;
-        }
-
-        .critical {
-            background: #fee2e2;
-            color: #b91c1c;
-        }
+        .info { background: #dbeafe; color: #1d4ed8; }
+        .warning { background: #fef3c7; color: #92400e; }
+        .critical { background: #fee2e2; color: #b91c1c; }
 
         .empty-state {
             color: #6b7280;
             font-size: 13px;
             margin: 0;
+        }
+
+        .hist-bar {
+            font-family: monospace;
+            white-space: pre;
+            color: #111827;
         }
 
         .footer {
@@ -191,12 +186,14 @@
     {% set quality_enabled = "quality" in enabled_sections %}
     {% set statistics_enabled = "statistics" in enabled_sections %}
     {% set insights_enabled = "insights" in enabled_sections %}
+    {% set charts_enabled = "charts" in enabled_sections %}
 
     <div class="header">
         <h1>Aniwa Dataset Profile</h1>
         <p>Compact profiling report optimized for fast inspection (no charts).</p>
     </div>
 
+    <!-- SUMMARY -->
     {% if (summary_enabled and profile.summary) or (quality_enabled and profile.quality) %}
     <div class="cards">
 
@@ -227,125 +224,29 @@
     </div>
     {% endif %}
 
+    <!-- METADATA -->
     {% if profile.metadata %}
     <section>
-
         <h2>Profiling Metadata</h2>
 
         <table class="metadata-table">
             <tbody>
 
-            {% if profile.metadata.generated_at %}
+            {% for key, value in profile.metadata.__dict__.items() %}
+            {% if value is not none %}
             <tr>
-                <td>Generated At</td>
-                <td>{{ profile.metadata.generated_at }}</td>
+                <td>{{ key }}</td>
+                <td>{{ value }}</td>
             </tr>
             {% endif %}
-
-            {% if profile.metadata.aniwa_version %}
-            <tr>
-                <td>Aniwa Version</td>
-                <td>{{ profile.metadata.aniwa_version }}</td>
-            </tr>
-            {% endif %}
-
-            {% if profile.metadata.python_version %}
-            <tr>
-                <td>Python Version</td>
-                <td>{{ profile.metadata.python_version }}</td>
-            </tr>
-            {% endif %}
-
-            {% if profile.metadata.operating_system %}
-            <tr>
-                <td>Operating System</td>
-                <td>{{ profile.metadata.operating_system }}</td>
-            </tr>
-            {% endif %}
-
-            {% if profile.metadata.polars_version %}
-            <tr>
-                <td>Polars Version</td>
-                <td>{{ profile.metadata.polars_version }}</td>
-            </tr>
-            {% endif %}
-
-            {% if profile.metadata.dataset_path %}
-            <tr>
-                <td>Dataset Path</td>
-                <td>{{ profile.metadata.dataset_path }}</td>
-            </tr>
-            {% endif %}
-
-            {% if profile.metadata.dataset_file_type %}
-            <tr>
-                <td>Dataset File Type</td>
-                <td>{{ profile.metadata.dataset_file_type }}</td>
-            </tr>
-            {% endif %}
-
-            {% if profile.metadata.dataset_size %}
-            <tr>
-                <td>Dataset Size</td>
-                <td>{{ profile.metadata.dataset_size }}</td>
-            </tr>
-            {% endif %}
-
-            {% if profile.metadata.profiling_mode %}
-            <tr>
-                <td>Profiling Mode</td>
-                <td>{{ profile.metadata.profiling_mode }}</td>
-            </tr>
-            {% endif %}
-
-            {% if profile.metadata.report_format %}
-            <tr>
-                <td>Report Format</td>
-                <td>{{ profile.metadata.report_format }}</td>
-            </tr>
-            {% endif %}
-
-            {% if profile.metadata.report_template %}
-            <tr>
-                <td>Report Template</td>
-                <td>{{ profile.metadata.report_template }}</td>
-            </tr>
-            {% endif %}
-
-            {% if profile.metadata.included_sections %}
-            <tr>
-                <td>Included Sections</td>
-                <td>{{ profile.metadata.included_sections | join(", ") }}</td>
-            </tr>
-            {% endif %}
-
-            {% if profile.metadata.excluded_sections %}
-            <tr>
-                <td>Excluded Sections</td>
-                <td>{{ profile.metadata.excluded_sections | join(", ") }}</td>
-            </tr>
-            {% endif %}
-
-            {% if profile.metadata.profiling_duration %}
-            <tr>
-                <td>Profiling Duration</td>
-                <td>{{ profile.metadata.profiling_duration }}</td>
-            </tr>
-            {% endif %}
-
-            {% if profile.metadata.command_used %}
-            <tr>
-                <td>Command Used</td>
-                <td><code>{{ profile.metadata.command_used }}</code></td>
-            </tr>
-            {% endif %}
+            {% endfor %}
 
             </tbody>
         </table>
-
     </section>
     {% endif %}
 
+    <!-- COLUMN PROFILE -->
     {% if schema_enabled and profile.columns %}
     <section>
 
@@ -378,8 +279,15 @@
     </section>
     {% endif %}
 
+    <!-- NUMERIC STATS -->
     {% if statistics_enabled and profile.columns %}
-    {% set numeric_columns = profile.columns | selectattr("numeric_stats") | list %}
+    {% set numeric_columns = [] %}
+    {% for col in profile.columns %}
+        {% if col.numeric_stats %}
+            {% set _ = numeric_columns.append(col) %}
+        {% endif %}
+    {% endfor %}
+
     {% if numeric_columns %}
     <section>
 
@@ -415,7 +323,38 @@
     {% endif %}
     {% endif %}
 
-    {% if insights_enabled and profile.insights is not none %}
+    <!-- NEW: HISTOGRAMS (TEXT MODE) -->
+    {% if charts_enabled and profile.columns %}
+    {% set hist_columns = [] %}
+    {% for col in profile.columns %}
+        {% if col.numeric_stats and col.numeric_stats.histogram %}
+            {% set _ = hist_columns.append(col) %}
+        {% endif %}
+    {% endfor %}
+
+    {% if hist_columns %}
+    <section>
+
+        <h2>Numeric Distributions</h2>
+
+        {% for col in hist_columns %}
+        <div style="margin-bottom: 14px;">
+            <strong>{{ col.name }}</strong>
+
+            <div class="hist-bar">
+{% for i in range(col.numeric_stats.histogram.counts | length) %}
+{{ col.numeric_stats.histogram.bins[i] }} - {{ col.numeric_stats.histogram.bins[i+1] }} : {{ "█" * (col.numeric_stats.histogram.counts[i] // 1) }}
+{% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+
+    </section>
+    {% endif %}
+    {% endif %}
+
+    <!-- INSIGHTS -->
+    {% if insights_enabled and profile.insights %}
     <section>
 
         <h2>Insights</h2>
