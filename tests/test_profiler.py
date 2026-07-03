@@ -74,6 +74,50 @@ def test_numeric_statistics():
     assert revenue_profile.numeric_stats.median == 250.0
 
 
+def test_histogram_generation_in_deep_mode():
+    df = pl.DataFrame(
+        {
+            "revenue": [100, 200, 300, 400, 500],
+        }
+    )
+
+    profile = profile_dataframe(
+        df,
+        mode="deep",
+        sections={ReportSection.statistics},
+    )
+
+    revenue_profile = next(
+        col for col in profile.columns if col.name == "revenue"
+    )
+
+    assert revenue_profile.numeric_stats is not None
+    assert revenue_profile.numeric_stats.histogram is not None
+    assert len(revenue_profile.numeric_stats.histogram.bins) > 0
+    assert len(revenue_profile.numeric_stats.histogram.counts) > 0
+
+
+def test_histogram_skipped_in_fast_mode():
+    df = pl.DataFrame(
+        {
+            "revenue": [100, 200, 300, 400, 500],
+        }
+    )
+
+    profile = profile_dataframe(
+        df,
+        mode="fast",
+        sections={ReportSection.statistics},
+    )
+
+    revenue_profile = next(
+        col for col in profile.columns if col.name == "revenue"
+    )
+
+    # fast mode should NOT generate histogram
+    assert revenue_profile.numeric_stats is None or revenue_profile.numeric_stats.histogram is None
+
+
 def test_profile_dataframe_can_include_only_summary():
     df = pl.DataFrame({"id": [1, 2, 3]})
 
@@ -225,9 +269,7 @@ def test_profile_dataframe_fast_mode_skips_numeric_statistics():
     profile = profile_dataframe(
         df,
         mode="fast",
-        sections={
-            ReportSection.statistics,
-        },
+        sections={ReportSection.statistics},
     )
 
     assert profile.columns is not None
