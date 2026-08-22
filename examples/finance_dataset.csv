@@ -1,0 +1,1001 @@
+Transaction_ID,Date,Region,Account_Type,Transaction_Type,Category,Amount,Payment_Method,Status,Currency,Month,Day_of_Week
+TXN00001,2024-01-01,Western,Business,Expense,Transport,476.84,Mobile Money,Completed,GHS,2024-01,Monday
+TXN00002,2024-01-01,Eastern,Personal,Income,Salary,8263.97,Debit Card,Failed,GHS,2024-01,Monday
+TXN00003,2024-01-02,Eastern,Personal,Expense,Shopping,421.59,Bank Transfer,Failed,GHS,2024-01,Tuesday
+TXN00004,2024-01-03,Ashanti,Personal,Expense,Transport,317.57,Cash,Completed,GHS,2024-01,Wednesday
+TXN00005,2024-01-03,Central,Personal,Income,Business,3800.58,Bank Transfer,Completed,GHS,2024-01,Wednesday
+TXN00006,2024-01-04,Greater Accra,Personal,Income,Business,5850.38,Bank Transfer,Pending,GHS,2024-01,Thursday
+TXN00007,2024-01-05,Western,Business,Income,Salary,6223.47,Bank Transfer,Pending,GHS,2024-01,Friday
+TXN00008,2024-01-06,Northern,Personal,Expense,Rent,2002.76,Debit Card,Pending,GHS,2024-01,Saturday
+TXN00009,2024-01-06,Northern,Personal,Expense,Shopping,1096.32,Bank Transfer,Failed,GHS,2024-01,Saturday
+TXN00010,2024-01-07,Ashanti,Business,Expense,Transport,419.51,Mobile Money,Failed,GHS,2024-01,Sunday
+TXN00011,2024-01-08,Greater Accra,Business,Expense,Shopping,180.46,Bank Transfer,Completed,GHS,2024-01,Monday
+TXN00012,2024-01-09,Western,Personal,Expense,Entertainment,559.42,Mobile Money,Completed,GHS,2024-01,Tuesday
+TXN00013,2024-01-09,Greater Accra,Personal,Expense,Shopping,836.54,Bank Transfer,Failed,GHS,2024-01,Tuesday
+TXN00014,2024-01-10,Greater Accra,Personal,Expense,Healthcare,1336.46,Cash,Completed,GHS,2024-01,Wednesday
+TXN00015,2024-01-11,Western,Personal,Expense,Rent,2496.13,Mobile Money,Completed,GHS,2024-01,Thursday
+TXN00016,2024-01-11,Greater Accra,Personal,Expense,Food,724.95,Mobile Money,Failed,GHS,2024-01,Thursday
+TXN00017,2024-01-12,Eastern,Business,Expense,Utilities,553.33,Mobile Money,Completed,GHS,2024-01,Friday
+TXN00018,2024-01-13,Greater Accra,Personal,Income,Business,5848.72,Mobile Money,Pending,GHS,2024-01,Saturday
+TXN00019,2024-01-14,Ashanti,Personal,Expense,Shopping,993.85,Mobile Money,Completed,GHS,2024-01,Sunday
+TXN00020,2024-01-14,Central,Business,Expense,Entertainment,30.35,Bank Transfer,Completed,GHS,2024-01,Sunday
+TXN00021,2024-01-15,Eastern,Personal,Expense,Food,166.3,Bank Transfer,Completed,GHS,2024-01,Monday
+TXN00022,2024-01-16,Eastern,Personal,Income,Salary,4896.53,Mobile Money,Completed,GHS,2024-01,Tuesday
+TXN00023,2024-01-17,Ashanti,Personal,Income,Business,2600.69,Bank Transfer,Failed,GHS,2024-01,Wednesday
+TXN00024,2024-01-17,Central,Personal,Expense,Healthcare,1037.02,Cash,Pending,GHS,2024-01,Wednesday
+TXN00025,2024-01-18,Northern,Personal,Expense,Transport,143.82,Mobile Money,Completed,GHS,2024-01,Thursday
+TXN00026,2024-01-19,Western,Personal,Expense,Education,386.36,Bank Transfer,Pending,GHS,2024-01,Friday
+TXN00027,2024-01-19,Western,Personal,Expense,Food,592.03,Bank Transfer,Completed,GHS,2024-01,Friday
+TXN00028,2024-01-20,Greater Accra,Personal,Expense,Transport,470.26,Debit Card,Completed,GHS,2024-01,Saturday
+TXN00029,2024-01-21,Eastern,Personal,Expense,Shopping,501.4,Cash,Pending,GHS,2024-01,Sunday
+TXN00030,2024-01-22,Eastern,Personal,Expense,Food,147.03,Cash,Completed,GHS,2024-01,Monday
+TXN00031,2024-01-22,Eastern,Business,Expense,Entertainment,597.26,Debit Card,Pending,GHS,2024-01,Monday
+TXN00032,2024-01-23,Eastern,Personal,Income,Salary,8442.05,Mobile Money,Completed,GHS,2024-01,Tuesday
+TXN00033,2024-01-24,Ashanti,Personal,Income,Salary,4384.44,Mobile Money,Failed,GHS,2024-01,Wednesday
+TXN00034,2024-01-25,Central,Personal,Expense,Entertainment,188.96,Mobile Money,Completed,GHS,2024-01,Thursday
+TXN00035,2024-01-25,Western,Personal,Expense,Rent,1006.08,Bank Transfer,Failed,GHS,2024-01,Thursday
+TXN00036,2024-01-26,Central,Personal,Income,Business,3606.37,Mobile Money,Completed,GHS,2024-01,Friday
+TXN00037,2024-01-27,Western,Business,Expense,Education,633.47,Bank Transfer,Pending,GHS,2024-01,Saturday
+TXN00038,2024-01-28,Western,Personal,Income,Business,6489.19,Cash,Failed,GHS,2024-01,Sunday
+TXN00039,2024-01-28,Greater Accra,Personal,Income,Business,6781.72,Bank Transfer,Completed,GHS,2024-01,Sunday
+TXN00040,2024-01-29,Northern,Personal,Income,Salary,6562.41,Mobile Money,Completed,GHS,2024-01,Monday
+TXN00041,2024-01-30,Western,Personal,Income,Business,1840.5,Bank Transfer,Completed,GHS,2024-01,Tuesday
+TXN00042,2024-01-30,Ashanti,Business,Expense,Entertainment,400.39,Debit Card,Completed,GHS,2024-01,Tuesday
+TXN00043,2024-01-31,Eastern,Business,Income,Salary,3528.52,Mobile Money,Pending,GHS,2024-01,Wednesday
+TXN00044,2024-02-01,Northern,Personal,Income,Salary,6683.76,Bank Transfer,Failed,GHS,2024-02,Thursday
+TXN00045,2024-02-02,Ashanti,Business,Expense,Shopping,487.94,Mobile Money,Pending,GHS,2024-02,Friday
+TXN00046,2024-02-02,Eastern,Personal,Expense,Shopping,525.2,Bank Transfer,Failed,GHS,2024-02,Friday
+TXN00047,2024-02-03,Eastern,Personal,Expense,Utilities,519.71,Cash,Completed,GHS,2024-02,Saturday
+TXN00048,2024-02-04,Eastern,Personal,Expense,Education,614.58,Bank Transfer,Completed,GHS,2024-02,Sunday
+TXN00049,2024-02-05,Central,Personal,Expense,Shopping,1267.95,Cash,Completed,GHS,2024-02,Monday
+TXN00050,2024-02-05,Central,Personal,Income,Salary,4505.76,Cash,Failed,GHS,2024-02,Monday
+TXN00051,2024-02-06,Western,Business,Expense,Utilities,248.64,Bank Transfer,Pending,GHS,2024-02,Tuesday
+TXN00052,2024-02-07,Eastern,Personal,Income,Salary,8205.03,Bank Transfer,Completed,GHS,2024-02,Wednesday
+TXN00053,2024-02-07,Northern,Personal,Expense,Utilities,203.92,Bank Transfer,Failed,GHS,2024-02,Wednesday
+TXN00054,2024-02-08,Western,Personal,Expense,Transport,37.19,Cash,Failed,GHS,2024-02,Thursday
+TXN00055,2024-02-09,Ashanti,Personal,Expense,Healthcare,1418.64,Mobile Money,Completed,GHS,2024-02,Friday
+TXN00056,2024-02-10,Greater Accra,Personal,Expense,Entertainment,414.16,Mobile Money,Failed,GHS,2024-02,Saturday
+TXN00057,2024-02-10,Western,Personal,Expense,Shopping,1190.1,Bank Transfer,Completed,GHS,2024-02,Saturday
+TXN00058,2024-02-11,Ashanti,Personal,Expense,Healthcare,538.0,Debit Card,Completed,GHS,2024-02,Sunday
+TXN00059,2024-02-12,Ashanti,Personal,Expense,Transport,263.14,Mobile Money,Failed,GHS,2024-02,Monday
+TXN00060,2024-02-13,Eastern,Personal,Expense,Utilities,680.55,Debit Card,Completed,GHS,2024-02,Tuesday
+TXN00061,2024-02-13,Northern,Personal,Expense,Utilities,323.21,Bank Transfer,Failed,GHS,2024-02,Tuesday
+TXN00062,2024-02-14,Greater Accra,Personal,Expense,Food,351.96,Debit Card,Failed,GHS,2024-02,Wednesday
+TXN00063,2024-02-15,Greater Accra,Business,Expense,Transport,35.09,Mobile Money,Pending,GHS,2024-02,Thursday
+TXN00064,2024-02-16,Central,Personal,Income,Business,4440.63,Mobile Money,Pending,GHS,2024-02,Friday
+TXN00065,2024-02-16,Greater Accra,Personal,Expense,Education,1604.0,Cash,Completed,GHS,2024-02,Friday
+TXN00066,2024-02-17,Central,Personal,Expense,Rent,1771.37,Bank Transfer,Pending,GHS,2024-02,Saturday
+TXN00067,2024-02-18,Northern,Personal,Expense,Shopping,1567.02,Debit Card,Completed,GHS,2024-02,Sunday
+TXN00068,2024-02-18,Central,Personal,Expense,Shopping,306.56,Cash,Failed,GHS,2024-02,Sunday
+TXN00069,2024-02-19,Greater Accra,Personal,Expense,Shopping,1707.69,Mobile Money,Pending,GHS,2024-02,Monday
+TXN00070,2024-02-20,Western,Personal,Expense,Education,1160.97,Bank Transfer,Completed,GHS,2024-02,Tuesday
+TXN00071,2024-02-21,Eastern,Personal,Expense,Utilities,442.88,Bank Transfer,Completed,GHS,2024-02,Wednesday
+TXN00072,2024-02-21,Greater Accra,Personal,Expense,Entertainment,189.13,Bank Transfer,Completed,GHS,2024-02,Wednesday
+TXN00073,2024-02-22,Central,Personal,Income,Business,1072.93,Cash,Failed,GHS,2024-02,Thursday
+TXN00074,2024-02-23,Eastern,Personal,Income,Salary,6546.2,Bank Transfer,Completed,GHS,2024-02,Friday
+TXN00075,2024-02-24,Northern,Personal,Expense,Utilities,476.53,Debit Card,Completed,GHS,2024-02,Saturday
+TXN00076,2024-02-24,Eastern,Personal,Income,Business,6341.58,Bank Transfer,Completed,GHS,2024-02,Saturday
+TXN00077,2024-02-25,Ashanti,Personal,Expense,Utilities,312.01,Mobile Money,Pending,GHS,2024-02,Sunday
+TXN00078,2024-02-26,Greater Accra,Personal,Expense,Entertainment,389.18,Mobile Money,Failed,GHS,2024-02,Monday
+TXN00079,2024-02-26,Western,Personal,Income,Salary,8672.93,Mobile Money,Completed,GHS,2024-02,Monday
+TXN00080,2024-02-27,Central,Personal,Expense,Shopping,1015.28,Mobile Money,Completed,GHS,2024-02,Tuesday
+TXN00081,2024-02-28,Ashanti,Personal,Income,Business,3260.43,Cash,Completed,GHS,2024-02,Wednesday
+TXN00082,2024-02-29,Greater Accra,Personal,Income,Salary,3702.52,Bank Transfer,Pending,GHS,2024-02,Thursday
+TXN00083,2024-02-29,Central,Personal,Income,Business,6979.82,Debit Card,Completed,GHS,2024-02,Thursday
+TXN00084,2024-03-01,Northern,Personal,Expense,Food,404.39,Bank Transfer,Pending,GHS,2024-03,Friday
+TXN00085,2024-03-02,Eastern,Personal,Expense,Entertainment,444.15,Bank Transfer,Completed,GHS,2024-03,Saturday
+TXN00086,2024-03-03,Eastern,Business,Expense,Education,1088.31,Cash,Completed,GHS,2024-03,Sunday
+TXN00087,2024-03-03,Central,Personal,Income,Salary,3658.3,Debit Card,Completed,GHS,2024-03,Sunday
+TXN00088,2024-03-04,Ashanti,Personal,Expense,Healthcare,1471.67,Mobile Money,Completed,GHS,2024-03,Monday
+TXN00089,2024-03-05,Greater Accra,Business,Expense,Education,1140.15,Mobile Money,Completed,GHS,2024-03,Tuesday
+TXN00090,2024-03-06,Greater Accra,Personal,Income,Business,1882.44,Bank Transfer,Failed,GHS,2024-03,Wednesday
+TXN00091,2024-03-06,Western,Personal,Expense,Rent,1523.25,Bank Transfer,Completed,GHS,2024-03,Wednesday
+TXN00092,2024-03-07,Eastern,Personal,Expense,Healthcare,630.44,Bank Transfer,Completed,GHS,2024-03,Thursday
+TXN00093,2024-03-08,Central,Personal,Expense,Rent,2940.84,Bank Transfer,Failed,GHS,2024-03,Friday
+TXN00094,2024-03-08,Northern,Personal,Expense,Transport,44.95,Mobile Money,Completed,GHS,2024-03,Friday
+TXN00095,2024-03-09,Western,Personal,Income,Salary,5315.55,Debit Card,Completed,GHS,2024-03,Saturday
+TXN00096,2024-03-10,Central,Personal,Expense,Rent,1145.35,Cash,Completed,GHS,2024-03,Sunday
+TXN00097,2024-03-11,Northern,Personal,Income,Business,4219.54,Debit Card,Completed,GHS,2024-03,Monday
+TXN00098,2024-03-11,Western,Business,Income,Salary,4888.4,Mobile Money,Pending,GHS,2024-03,Monday
+TXN00099,2024-03-12,Greater Accra,Personal,Expense,Utilities,419.57,Bank Transfer,Completed,GHS,2024-03,Tuesday
+TXN00100,2024-03-13,Greater Accra,Business,Income,Salary,6444.35,Mobile Money,Pending,GHS,2024-03,Wednesday
+TXN00101,2024-03-14,Eastern,Personal,Expense,Entertainment,351.32,Mobile Money,Completed,GHS,2024-03,Thursday
+TXN00102,2024-03-14,Eastern,Personal,Expense,Transport,188.6,Mobile Money,Completed,GHS,2024-03,Thursday
+TXN00103,2024-03-15,Northern,Personal,Expense,Healthcare,393.98,Mobile Money,Pending,GHS,2024-03,Friday
+TXN00104,2024-03-16,Greater Accra,Personal,Income,Salary,7932.26,Mobile Money,Failed,GHS,2024-03,Saturday
+TXN00105,2024-03-16,Eastern,Business,Income,Salary,5688.21,Bank Transfer,Completed,GHS,2024-03,Saturday
+TXN00106,2024-03-17,Ashanti,Personal,Expense,Education,1659.64,Mobile Money,Completed,GHS,2024-03,Sunday
+TXN00107,2024-03-18,Eastern,Personal,Expense,Food,776.96,Mobile Money,Completed,GHS,2024-03,Monday
+TXN00108,2024-03-19,Northern,Personal,Expense,Entertainment,544.41,Bank Transfer,Pending,GHS,2024-03,Tuesday
+TXN00109,2024-03-19,Ashanti,Personal,Expense,Healthcare,585.38,Mobile Money,Completed,GHS,2024-03,Tuesday
+TXN00110,2024-03-20,Central,Personal,Expense,Shopping,495.62,Bank Transfer,Completed,GHS,2024-03,Wednesday
+TXN00111,2024-03-21,Eastern,Personal,Income,Business,5983.72,Cash,Completed,GHS,2024-03,Thursday
+TXN00112,2024-03-22,Northern,Personal,Expense,Food,127.88,Debit Card,Completed,GHS,2024-03,Friday
+TXN00113,2024-03-22,Central,Personal,Expense,Food,197.83,Bank Transfer,Completed,GHS,2024-03,Friday
+TXN00114,2024-03-23,Ashanti,Business,Expense,Transport,306.5,Mobile Money,Completed,GHS,2024-03,Saturday
+TXN00115,2024-03-24,Greater Accra,Personal,Expense,Rent,1765.24,Cash,Completed,GHS,2024-03,Sunday
+TXN00116,2024-03-25,Western,Personal,Income,Business,4745.43,Bank Transfer,Completed,GHS,2024-03,Monday
+TXN00117,2024-03-25,Central,Personal,Income,Salary,7867.14,Debit Card,Completed,GHS,2024-03,Monday
+TXN00118,2024-03-26,Central,Business,Income,Salary,5214.47,Bank Transfer,Pending,GHS,2024-03,Tuesday
+TXN00119,2024-03-27,Greater Accra,Personal,Expense,Education,1765.85,Mobile Money,Pending,GHS,2024-03,Wednesday
+TXN00120,2024-03-27,Central,Personal,Expense,Healthcare,778.32,Mobile Money,Failed,GHS,2024-03,Wednesday
+TXN00121,2024-03-28,Eastern,Personal,Expense,Entertainment,494.95,Mobile Money,Pending,GHS,2024-03,Thursday
+TXN00122,2024-03-29,Ashanti,Business,Income,Business,4500.35,Bank Transfer,Failed,GHS,2024-03,Friday
+TXN00123,2024-03-30,Eastern,Personal,Income,Salary,4908.09,Bank Transfer,Pending,GHS,2024-03,Saturday
+TXN00124,2024-03-30,Greater Accra,Personal,Income,Salary,7082.52,Mobile Money,Completed,GHS,2024-03,Saturday
+TXN00125,2024-03-31,Greater Accra,Personal,Income,Business,6553.41,Cash,Pending,GHS,2024-03,Sunday
+TXN00126,2024-04-01,Western,Personal,Income,Business,6219.38,Mobile Money,Completed,GHS,2024-04,Monday
+TXN00127,2024-04-02,Ashanti,Personal,Expense,Food,647.21,Mobile Money,Completed,GHS,2024-04,Tuesday
+TXN00128,2024-04-02,Western,Personal,Income,Business,3794.2,Mobile Money,Completed,GHS,2024-04,Tuesday
+TXN00129,2024-04-03,Greater Accra,Personal,Income,Business,2489.36,Mobile Money,Completed,GHS,2024-04,Wednesday
+TXN00130,2024-04-04,Eastern,Personal,Expense,Healthcare,966.78,Mobile Money,Completed,GHS,2024-04,Thursday
+TXN00131,2024-04-04,Eastern,Personal,Income,Salary,5780.43,Bank Transfer,Completed,GHS,2024-04,Thursday
+TXN00132,2024-04-05,Western,Personal,Expense,Utilities,356.07,Mobile Money,Completed,GHS,2024-04,Friday
+TXN00133,2024-04-06,Ashanti,Personal,Expense,Utilities,438.9,Debit Card,Completed,GHS,2024-04,Saturday
+TXN00134,2024-04-07,Northern,Business,Expense,Utilities,340.46,Bank Transfer,Failed,GHS,2024-04,Sunday
+TXN00135,2024-04-07,Western,Personal,Expense,Education,617.37,Mobile Money,Pending,GHS,2024-04,Sunday
+TXN00136,2024-04-08,Greater Accra,Personal,Expense,Shopping,763.97,Bank Transfer,Completed,GHS,2024-04,Monday
+TXN00137,2024-04-09,Central,Personal,Expense,Healthcare,541.94,Debit Card,Completed,GHS,2024-04,Tuesday
+TXN00138,2024-04-10,Northern,Business,Income,Business,4619.18,Mobile Money,Failed,GHS,2024-04,Wednesday
+TXN00139,2024-04-10,Ashanti,Personal,Expense,Utilities,294.39,Bank Transfer,Failed,GHS,2024-04,Wednesday
+TXN00140,2024-04-11,Eastern,Personal,Expense,Food,499.79,Cash,Failed,GHS,2024-04,Thursday
+TXN00141,2024-04-12,Eastern,Business,Expense,Food,353.38,Bank Transfer,Completed,GHS,2024-04,Friday
+TXN00142,2024-04-13,Northern,Business,Expense,Transport,475.77,Bank Transfer,Completed,GHS,2024-04,Saturday
+TXN00143,2024-04-13,Western,Personal,Expense,Education,907.91,Debit Card,Completed,GHS,2024-04,Saturday
+TXN00144,2024-04-14,Western,Personal,Expense,Food,180.34,Bank Transfer,Failed,GHS,2024-04,Sunday
+TXN00145,2024-04-15,Ashanti,Personal,Expense,Transport,38.64,Debit Card,Completed,GHS,2024-04,Monday
+TXN00146,2024-04-15,Ashanti,Personal,Expense,Rent,2233.12,Bank Transfer,Failed,GHS,2024-04,Monday
+TXN00147,2024-04-16,Ashanti,Personal,Expense,Transport,374.13,Debit Card,Completed,GHS,2024-04,Tuesday
+TXN00148,2024-04-17,Ashanti,Personal,Expense,Utilities,329.88,Mobile Money,Completed,GHS,2024-04,Wednesday
+TXN00149,2024-04-18,Central,Personal,Income,Salary,7740.42,Bank Transfer,Pending,GHS,2024-04,Thursday
+TXN00150,2024-04-18,Ashanti,Personal,Expense,Transport,296.21,Cash,Failed,GHS,2024-04,Thursday
+TXN00151,2024-04-19,Western,Personal,Expense,Transport,283.73,Bank Transfer,Completed,GHS,2024-04,Friday
+TXN00152,2024-04-20,Central,Personal,Expense,Transport,392.33,Mobile Money,Completed,GHS,2024-04,Saturday
+TXN00153,2024-04-21,Western,Business,Expense,Entertainment,321.33,Debit Card,Pending,GHS,2024-04,Sunday
+TXN00154,2024-04-21,Central,Personal,Income,Salary,4067.02,Cash,Failed,GHS,2024-04,Sunday
+TXN00155,2024-04-22,Eastern,Personal,Expense,Entertainment,379.27,Cash,Failed,GHS,2024-04,Monday
+TXN00156,2024-04-23,Greater Accra,Business,Expense,Education,1310.74,Mobile Money,Completed,GHS,2024-04,Tuesday
+TXN00157,2024-04-23,Ashanti,Personal,Income,Business,1236.56,Cash,Completed,GHS,2024-04,Tuesday
+TXN00158,2024-04-24,Central,Personal,Income,Business,1203.68,Bank Transfer,Completed,GHS,2024-04,Wednesday
+TXN00159,2024-04-25,Eastern,Business,Expense,Education,1515.62,Bank Transfer,Completed,GHS,2024-04,Thursday
+TXN00160,2024-04-26,Eastern,Personal,Expense,Entertainment,274.35,Bank Transfer,Failed,GHS,2024-04,Friday
+TXN00161,2024-04-26,Greater Accra,Personal,Expense,Utilities,342.69,Debit Card,Failed,GHS,2024-04,Friday
+TXN00162,2024-04-27,Northern,Personal,Expense,Shopping,1127.76,Mobile Money,Completed,GHS,2024-04,Saturday
+TXN00163,2024-04-28,Western,Personal,Expense,Shopping,975.64,Bank Transfer,Failed,GHS,2024-04,Sunday
+TXN00164,2024-04-29,Greater Accra,Personal,Expense,Utilities,387.93,Bank Transfer,Completed,GHS,2024-04,Monday
+TXN00165,2024-04-29,Central,Personal,Expense,Utilities,352.81,Bank Transfer,Failed,GHS,2024-04,Monday
+TXN00166,2024-04-30,Northern,Personal,Expense,Transport,169.26,Bank Transfer,Failed,GHS,2024-04,Tuesday
+TXN00167,2024-05-01,Eastern,Personal,Expense,Utilities,330.6,Cash,Failed,GHS,2024-05,Wednesday
+TXN00168,2024-05-02,Northern,Personal,Expense,Healthcare,1474.38,Cash,Completed,GHS,2024-05,Thursday
+TXN00169,2024-05-02,Eastern,Business,Income,Business,2390.03,Bank Transfer,Completed,GHS,2024-05,Thursday
+TXN00170,2024-05-03,Ashanti,Personal,Expense,Food,207.1,Cash,Failed,GHS,2024-05,Friday
+TXN00171,2024-05-04,Western,Personal,Income,Business,6302.72,Mobile Money,Completed,GHS,2024-05,Saturday
+TXN00172,2024-05-04,Western,Business,Expense,Education,1422.44,Bank Transfer,Failed,GHS,2024-05,Saturday
+TXN00173,2024-05-05,Ashanti,Personal,Expense,Healthcare,891.13,Mobile Money,Completed,GHS,2024-05,Sunday
+TXN00174,2024-05-06,Eastern,Personal,Expense,Shopping,1722.39,Bank Transfer,Completed,GHS,2024-05,Monday
+TXN00175,2024-05-07,Northern,Personal,Income,Salary,5746.49,Debit Card,Completed,GHS,2024-05,Tuesday
+TXN00176,2024-05-07,Eastern,Personal,Income,Business,1656.81,Cash,Failed,GHS,2024-05,Tuesday
+TXN00177,2024-05-08,Ashanti,Personal,Expense,Healthcare,1245.79,Cash,Completed,GHS,2024-05,Wednesday
+TXN00178,2024-05-09,Greater Accra,Personal,Expense,Education,1351.06,Bank Transfer,Failed,GHS,2024-05,Thursday
+TXN00179,2024-05-10,Western,Business,Expense,Entertainment,485.69,Bank Transfer,Completed,GHS,2024-05,Friday
+TXN00180,2024-05-10,Ashanti,Personal,Expense,Utilities,627.44,Bank Transfer,Completed,GHS,2024-05,Friday
+TXN00181,2024-05-11,Ashanti,Personal,Expense,Shopping,938.07,Mobile Money,Completed,GHS,2024-05,Saturday
+TXN00182,2024-05-12,Central,Business,Income,Salary,5571.82,Bank Transfer,Completed,GHS,2024-05,Sunday
+TXN00183,2024-05-12,Northern,Business,Expense,Shopping,736.26,Debit Card,Pending,GHS,2024-05,Sunday
+TXN00184,2024-05-13,Greater Accra,Business,Income,Salary,5155.3,Debit Card,Completed,GHS,2024-05,Monday
+TXN00185,2024-05-14,Northern,Business,Income,Salary,8188.28,Cash,Pending,GHS,2024-05,Tuesday
+TXN00186,2024-05-15,Central,Personal,Expense,Healthcare,606.24,Bank Transfer,Completed,GHS,2024-05,Wednesday
+TXN00187,2024-05-15,Ashanti,Business,Income,Salary,4374.16,Mobile Money,Failed,GHS,2024-05,Wednesday
+TXN00188,2024-05-16,Western,Personal,Expense,Rent,2617.03,Bank Transfer,Pending,GHS,2024-05,Thursday
+TXN00189,2024-05-17,Eastern,Personal,Expense,Transport,476.91,Debit Card,Failed,GHS,2024-05,Friday
+TXN00190,2024-05-18,Western,Personal,Expense,Utilities,264.53,Bank Transfer,Completed,GHS,2024-05,Saturday
+TXN00191,2024-05-18,Eastern,Personal,Income,Salary,7084.17,Mobile Money,Completed,GHS,2024-05,Saturday
+TXN00192,2024-05-19,Central,Personal,Expense,Food,705.41,Mobile Money,Completed,GHS,2024-05,Sunday
+TXN00193,2024-05-20,Central,Business,Expense,Healthcare,240.31,Cash,Pending,GHS,2024-05,Monday
+TXN00194,2024-05-21,Greater Accra,Personal,Expense,Utilities,170.38,Bank Transfer,Completed,GHS,2024-05,Tuesday
+TXN00195,2024-05-21,Northern,Personal,Expense,Rent,941.26,Mobile Money,Completed,GHS,2024-05,Tuesday
+TXN00196,2024-05-22,Northern,Personal,Income,Salary,6055.29,Mobile Money,Completed,GHS,2024-05,Wednesday
+TXN00197,2024-05-23,Western,Personal,Expense,Shopping,1414.74,Bank Transfer,Completed,GHS,2024-05,Thursday
+TXN00198,2024-05-23,Northern,Personal,Expense,Healthcare,76.63,Debit Card,Completed,GHS,2024-05,Thursday
+TXN00199,2024-05-24,Greater Accra,Personal,Income,Business,1434.5,Mobile Money,Completed,GHS,2024-05,Friday
+TXN00200,2024-05-25,Northern,Personal,Expense,Transport,181.38,Debit Card,Completed,GHS,2024-05,Saturday
+TXN00201,2024-05-26,Western,Personal,Income,Salary,7187.12,Cash,Completed,GHS,2024-05,Sunday
+TXN00202,2024-05-26,Ashanti,Business,Income,Salary,6477.13,Cash,Pending,GHS,2024-05,Sunday
+TXN00203,2024-05-27,Western,Business,Expense,Transport,412.97,Mobile Money,Completed,GHS,2024-05,Monday
+TXN00204,2024-05-28,Eastern,Personal,Expense,Utilities,124.45,Bank Transfer,Pending,GHS,2024-05,Tuesday
+TXN00205,2024-05-29,Ashanti,Personal,Income,Salary,8294.81,Mobile Money,Failed,GHS,2024-05,Wednesday
+TXN00206,2024-05-29,Western,Personal,Expense,Education,1351.54,Bank Transfer,Completed,GHS,2024-05,Wednesday
+TXN00207,2024-05-30,Western,Personal,Income,Business,6848.76,Mobile Money,Failed,GHS,2024-05,Thursday
+TXN00208,2024-05-31,Eastern,Personal,Income,Salary,4917.26,Cash,Completed,GHS,2024-05,Friday
+TXN00209,2024-05-31,Eastern,Business,Expense,Utilities,307.56,Mobile Money,Completed,GHS,2024-05,Friday
+TXN00210,2024-06-01,Central,Personal,Expense,Healthcare,685.99,Mobile Money,Completed,GHS,2024-06,Saturday
+TXN00211,2024-06-02,Ashanti,Business,Expense,Entertainment,694.73,Bank Transfer,Failed,GHS,2024-06,Sunday
+TXN00212,2024-06-03,Ashanti,Personal,Expense,Shopping,462.64,Cash,Completed,GHS,2024-06,Monday
+TXN00213,2024-06-03,Central,Personal,Income,Business,2085.86,Mobile Money,Pending,GHS,2024-06,Monday
+TXN00214,2024-06-04,Eastern,Personal,Expense,Healthcare,890.15,Bank Transfer,Completed,GHS,2024-06,Tuesday
+TXN00215,2024-06-05,Central,Personal,Expense,Utilities,614.79,Debit Card,Pending,GHS,2024-06,Wednesday
+TXN00216,2024-06-06,Western,Personal,Expense,Utilities,241.63,Bank Transfer,Failed,GHS,2024-06,Thursday
+TXN00217,2024-06-06,Eastern,Personal,Expense,Shopping,804.05,Cash,Completed,GHS,2024-06,Thursday
+TXN00218,2024-06-07,Central,Personal,Income,Salary,3701.69,Mobile Money,Completed,GHS,2024-06,Friday
+TXN00219,2024-06-08,Northern,Personal,Expense,Shopping,1074.37,Bank Transfer,Completed,GHS,2024-06,Saturday
+TXN00220,2024-06-09,Ashanti,Personal,Income,Salary,4771.22,Bank Transfer,Failed,GHS,2024-06,Sunday
+TXN00221,2024-06-09,Northern,Personal,Expense,Transport,268.4,Mobile Money,Completed,GHS,2024-06,Sunday
+TXN00222,2024-06-10,Ashanti,Business,Income,Salary,8734.96,Mobile Money,Completed,GHS,2024-06,Monday
+TXN00223,2024-06-11,Northern,Personal,Expense,Entertainment,123.57,Debit Card,Completed,GHS,2024-06,Tuesday
+TXN00224,2024-06-11,Central,Personal,Income,Salary,4535.92,Cash,Completed,GHS,2024-06,Tuesday
+TXN00225,2024-06-12,Northern,Personal,Income,Business,3245.78,Mobile Money,Completed,GHS,2024-06,Wednesday
+TXN00226,2024-06-13,Greater Accra,Personal,Income,Business,5137.16,Cash,Failed,GHS,2024-06,Thursday
+TXN00227,2024-06-14,Ashanti,Business,Expense,Healthcare,555.43,Bank Transfer,Completed,GHS,2024-06,Friday
+TXN00228,2024-06-14,Central,Personal,Income,Business,5514.57,Debit Card,Pending,GHS,2024-06,Friday
+TXN00229,2024-06-15,Western,Business,Expense,Education,1858.78,Debit Card,Completed,GHS,2024-06,Saturday
+TXN00230,2024-06-16,Northern,Personal,Expense,Shopping,707.43,Bank Transfer,Completed,GHS,2024-06,Sunday
+TXN00231,2024-06-17,Eastern,Personal,Expense,Utilities,517.28,Mobile Money,Completed,GHS,2024-06,Monday
+TXN00232,2024-06-17,Northern,Personal,Income,Salary,6728.84,Debit Card,Completed,GHS,2024-06,Monday
+TXN00233,2024-06-18,Northern,Business,Expense,Shopping,958.39,Debit Card,Completed,GHS,2024-06,Tuesday
+TXN00234,2024-06-19,Eastern,Personal,Expense,Utilities,448.1,Mobile Money,Completed,GHS,2024-06,Wednesday
+TXN00235,2024-06-19,Western,Personal,Expense,Rent,2609.27,Mobile Money,Pending,GHS,2024-06,Wednesday
+TXN00236,2024-06-20,Eastern,Business,Expense,Entertainment,284.65,Mobile Money,Completed,GHS,2024-06,Thursday
+TXN00237,2024-06-21,Northern,Personal,Expense,Healthcare,808.47,Debit Card,Completed,GHS,2024-06,Friday
+TXN00238,2024-06-22,Ashanti,Personal,Income,Salary,7447.0,Mobile Money,Completed,GHS,2024-06,Saturday
+TXN00239,2024-06-22,Central,Personal,Income,Salary,8226.79,Bank Transfer,Completed,GHS,2024-06,Saturday
+TXN00240,2024-06-23,Eastern,Personal,Expense,Food,773.31,Debit Card,Pending,GHS,2024-06,Sunday
+TXN00241,2024-06-24,Northern,Business,Expense,Healthcare,1429.53,Cash,Completed,GHS,2024-06,Monday
+TXN00242,2024-06-25,Greater Accra,Business,Expense,Entertainment,147.1,Cash,Completed,GHS,2024-06,Tuesday
+TXN00243,2024-06-25,Western,Business,Expense,Education,622.13,Debit Card,Completed,GHS,2024-06,Tuesday
+TXN00244,2024-06-26,Ashanti,Personal,Expense,Healthcare,705.06,Bank Transfer,Pending,GHS,2024-06,Wednesday
+TXN00245,2024-06-27,Central,Personal,Expense,Food,148.91,Mobile Money,Completed,GHS,2024-06,Thursday
+TXN00246,2024-06-28,Northern,Personal,Expense,Utilities,456.69,Bank Transfer,Failed,GHS,2024-06,Friday
+TXN00247,2024-06-28,Greater Accra,Personal,Expense,Utilities,367.47,Cash,Pending,GHS,2024-06,Friday
+TXN00248,2024-06-29,Central,Personal,Expense,Healthcare,538.98,Bank Transfer,Completed,GHS,2024-06,Saturday
+TXN00249,2024-06-30,Northern,Personal,Expense,Utilities,320.17,Bank Transfer,Completed,GHS,2024-06,Sunday
+TXN00250,2024-06-30,Central,Personal,Expense,Entertainment,76.85,Mobile Money,Completed,GHS,2024-06,Sunday
+TXN00251,2024-07-01,Northern,Personal,Expense,Transport,186.51,Mobile Money,Completed,GHS,2024-07,Monday
+TXN00252,2024-07-02,Northern,Personal,Expense,Utilities,300.14,Cash,Failed,GHS,2024-07,Tuesday
+TXN00253,2024-07-03,Ashanti,Personal,Expense,Education,423.91,Mobile Money,Pending,GHS,2024-07,Wednesday
+TXN00254,2024-07-03,Northern,Personal,Expense,Entertainment,562.95,Mobile Money,Failed,GHS,2024-07,Wednesday
+TXN00255,2024-07-04,Northern,Personal,Expense,Education,562.95,Mobile Money,Completed,GHS,2024-07,Thursday
+TXN00256,2024-07-05,Eastern,Business,Expense,Shopping,1114.85,Debit Card,Pending,GHS,2024-07,Friday
+TXN00257,2024-07-06,Central,Personal,Expense,Transport,199.26,Bank Transfer,Completed,GHS,2024-07,Saturday
+TXN00258,2024-07-06,Eastern,Business,Expense,Utilities,368.32,Bank Transfer,Completed,GHS,2024-07,Saturday
+TXN00259,2024-07-07,Eastern,Business,Expense,Rent,1660.29,Bank Transfer,Completed,GHS,2024-07,Sunday
+TXN00260,2024-07-08,Northern,Business,Expense,Entertainment,386.76,Debit Card,Pending,GHS,2024-07,Monday
+TXN00261,2024-07-08,Western,Personal,Expense,Transport,40.76,Bank Transfer,Pending,GHS,2024-07,Monday
+TXN00262,2024-07-09,Central,Business,Income,Business,4450.98,Cash,Completed,GHS,2024-07,Tuesday
+TXN00263,2024-07-10,Western,Business,Expense,Education,432.19,Debit Card,Failed,GHS,2024-07,Wednesday
+TXN00264,2024-07-11,Greater Accra,Personal,Income,Salary,3641.97,Bank Transfer,Pending,GHS,2024-07,Thursday
+TXN00265,2024-07-11,Northern,Business,Expense,Utilities,287.09,Bank Transfer,Failed,GHS,2024-07,Thursday
+TXN00266,2024-07-12,Western,Personal,Expense,Healthcare,578.96,Bank Transfer,Completed,GHS,2024-07,Friday
+TXN00267,2024-07-13,Greater Accra,Personal,Income,Business,1346.68,Bank Transfer,Failed,GHS,2024-07,Saturday
+TXN00268,2024-07-14,Eastern,Personal,Expense,Transport,77.49,Mobile Money,Completed,GHS,2024-07,Sunday
+TXN00269,2024-07-14,Eastern,Personal,Expense,Food,205.1,Mobile Money,Failed,GHS,2024-07,Sunday
+TXN00270,2024-07-15,Western,Personal,Expense,Utilities,216.77,Debit Card,Failed,GHS,2024-07,Monday
+TXN00271,2024-07-16,Northern,Personal,Income,Business,2491.48,Bank Transfer,Failed,GHS,2024-07,Tuesday
+TXN00272,2024-07-17,Greater Accra,Personal,Income,Salary,6444.21,Debit Card,Failed,GHS,2024-07,Wednesday
+TXN00273,2024-07-17,Eastern,Personal,Expense,Shopping,1729.26,Bank Transfer,Completed,GHS,2024-07,Wednesday
+TXN00274,2024-07-18,Ashanti,Personal,Expense,Shopping,221.64,Cash,Pending,GHS,2024-07,Thursday
+TXN00275,2024-07-19,Central,Personal,Expense,Shopping,1124.64,Debit Card,Failed,GHS,2024-07,Friday
+TXN00276,2024-07-19,Greater Accra,Personal,Income,Salary,7122.81,Mobile Money,Failed,GHS,2024-07,Friday
+TXN00277,2024-07-20,Central,Business,Income,Business,2518.35,Mobile Money,Completed,GHS,2024-07,Saturday
+TXN00278,2024-07-21,Central,Personal,Expense,Food,720.36,Debit Card,Completed,GHS,2024-07,Sunday
+TXN00279,2024-07-22,Western,Personal,Income,Salary,3709.12,Debit Card,Completed,GHS,2024-07,Monday
+TXN00280,2024-07-22,Ashanti,Personal,Income,Business,5425.05,Cash,Pending,GHS,2024-07,Monday
+TXN00281,2024-07-23,Western,Personal,Expense,Entertainment,154.08,Mobile Money,Completed,GHS,2024-07,Tuesday
+TXN00282,2024-07-24,Greater Accra,Business,Income,Salary,8823.23,Debit Card,Completed,GHS,2024-07,Wednesday
+TXN00283,2024-07-25,Greater Accra,Business,Expense,Healthcare,1173.22,Mobile Money,Completed,GHS,2024-07,Thursday
+TXN00284,2024-07-25,Ashanti,Personal,Income,Salary,6108.85,Mobile Money,Pending,GHS,2024-07,Thursday
+TXN00285,2024-07-26,Ashanti,Personal,Income,Salary,4109.44,Mobile Money,Completed,GHS,2024-07,Friday
+TXN00286,2024-07-27,Eastern,Personal,Expense,Transport,106.93,Bank Transfer,Completed,GHS,2024-07,Saturday
+TXN00287,2024-07-27,Northern,Business,Expense,Entertainment,221.56,Debit Card,Completed,GHS,2024-07,Saturday
+TXN00288,2024-07-28,Northern,Business,Expense,Healthcare,370.54,Debit Card,Pending,GHS,2024-07,Sunday
+TXN00289,2024-07-29,Greater Accra,Business,Expense,Transport,384.0,Bank Transfer,Completed,GHS,2024-07,Monday
+TXN00290,2024-07-30,Ashanti,Personal,Expense,Entertainment,91.55,Mobile Money,Pending,GHS,2024-07,Tuesday
+TXN00291,2024-07-30,Western,Personal,Expense,Rent,2098.76,Mobile Money,Failed,GHS,2024-07,Tuesday
+TXN00292,2024-07-31,Central,Personal,Expense,Healthcare,1321.85,Mobile Money,Completed,GHS,2024-07,Wednesday
+TXN00293,2024-08-01,Western,Personal,Expense,Shopping,536.33,Debit Card,Completed,GHS,2024-08,Thursday
+TXN00294,2024-08-02,Western,Personal,Expense,Education,1648.72,Mobile Money,Failed,GHS,2024-08,Friday
+TXN00295,2024-08-02,Ashanti,Personal,Expense,Rent,2665.71,Debit Card,Completed,GHS,2024-08,Friday
+TXN00296,2024-08-03,Western,Business,Expense,Transport,183.66,Mobile Money,Completed,GHS,2024-08,Saturday
+TXN00297,2024-08-04,Eastern,Business,Expense,Transport,240.85,Bank Transfer,Completed,GHS,2024-08,Sunday
+TXN00298,2024-08-05,Central,Personal,Expense,Utilities,517.37,Bank Transfer,Pending,GHS,2024-08,Monday
+TXN00299,2024-08-05,Eastern,Personal,Income,Salary,6735.11,Debit Card,Failed,GHS,2024-08,Monday
+TXN00300,2024-08-06,Northern,Personal,Expense,Rent,2033.45,Mobile Money,Completed,GHS,2024-08,Tuesday
+TXN00301,2024-08-07,Northern,Personal,Expense,Shopping,921.95,Debit Card,Pending,GHS,2024-08,Wednesday
+TXN00302,2024-08-07,Western,Personal,Expense,Entertainment,558.37,Bank Transfer,Completed,GHS,2024-08,Wednesday
+TXN00303,2024-08-08,Western,Business,Income,Salary,4713.37,Debit Card,Completed,GHS,2024-08,Thursday
+TXN00304,2024-08-09,Eastern,Personal,Expense,Entertainment,312.24,Bank Transfer,Pending,GHS,2024-08,Friday
+TXN00305,2024-08-10,Greater Accra,Personal,Expense,Healthcare,902.27,Cash,Completed,GHS,2024-08,Saturday
+TXN00306,2024-08-10,Central,Personal,Income,Salary,8074.33,Cash,Completed,GHS,2024-08,Saturday
+TXN00307,2024-08-11,Western,Personal,Expense,Food,389.35,Mobile Money,Pending,GHS,2024-08,Sunday
+TXN00308,2024-08-12,Northern,Personal,Expense,Utilities,389.78,Bank Transfer,Completed,GHS,2024-08,Monday
+TXN00309,2024-08-13,Greater Accra,Personal,Expense,Education,113.36,Mobile Money,Pending,GHS,2024-08,Tuesday
+TXN00310,2024-08-13,Central,Personal,Income,Business,3832.36,Bank Transfer,Pending,GHS,2024-08,Tuesday
+TXN00311,2024-08-14,Ashanti,Personal,Expense,Transport,399.95,Debit Card,Completed,GHS,2024-08,Wednesday
+TXN00312,2024-08-15,Eastern,Personal,Expense,Transport,103.5,Bank Transfer,Completed,GHS,2024-08,Thursday
+TXN00313,2024-08-15,Western,Personal,Expense,Transport,178.14,Cash,Completed,GHS,2024-08,Thursday
+TXN00314,2024-08-16,Central,Personal,Expense,Rent,1081.57,Mobile Money,Completed,GHS,2024-08,Friday
+TXN00315,2024-08-17,Ashanti,Personal,Income,Business,1869.79,Bank Transfer,Completed,GHS,2024-08,Saturday
+TXN00316,2024-08-18,Greater Accra,Personal,Expense,Healthcare,556.78,Debit Card,Completed,GHS,2024-08,Sunday
+TXN00317,2024-08-18,Central,Personal,Expense,Entertainment,395.22,Mobile Money,Completed,GHS,2024-08,Sunday
+TXN00318,2024-08-19,Northern,Personal,Expense,Entertainment,394.17,Debit Card,Completed,GHS,2024-08,Monday
+TXN00319,2024-08-20,Ashanti,Personal,Income,Business,6099.85,Cash,Completed,GHS,2024-08,Tuesday
+TXN00320,2024-08-21,Northern,Business,Expense,Rent,937.0,Mobile Money,Completed,GHS,2024-08,Wednesday
+TXN00321,2024-08-21,Eastern,Personal,Expense,Food,266.21,Debit Card,Pending,GHS,2024-08,Wednesday
+TXN00322,2024-08-22,Northern,Personal,Expense,Food,712.04,Bank Transfer,Failed,GHS,2024-08,Thursday
+TXN00323,2024-08-23,Ashanti,Personal,Income,Business,5632.07,Mobile Money,Pending,GHS,2024-08,Friday
+TXN00324,2024-08-24,Eastern,Personal,Expense,Rent,1032.04,Mobile Money,Completed,GHS,2024-08,Saturday
+TXN00325,2024-08-24,Ashanti,Personal,Income,Business,2222.6,Mobile Money,Completed,GHS,2024-08,Saturday
+TXN00326,2024-08-25,Northern,Personal,Expense,Healthcare,1206.98,Bank Transfer,Pending,GHS,2024-08,Sunday
+TXN00327,2024-08-26,Central,Business,Income,Salary,6874.1,Bank Transfer,Completed,GHS,2024-08,Monday
+TXN00328,2024-08-26,Eastern,Business,Income,Salary,5500.31,Bank Transfer,Completed,GHS,2024-08,Monday
+TXN00329,2024-08-27,Greater Accra,Personal,Expense,Shopping,934.11,Cash,Failed,GHS,2024-08,Tuesday
+TXN00330,2024-08-28,Ashanti,Personal,Expense,Transport,498.63,Bank Transfer,Completed,GHS,2024-08,Wednesday
+TXN00331,2024-08-29,Eastern,Business,Income,Salary,3661.5,Bank Transfer,Failed,GHS,2024-08,Thursday
+TXN00332,2024-08-29,Northern,Personal,Expense,Transport,169.35,Debit Card,Pending,GHS,2024-08,Thursday
+TXN00333,2024-08-30,Greater Accra,Personal,Income,Business,4910.01,Mobile Money,Completed,GHS,2024-08,Friday
+TXN00334,2024-08-31,Eastern,Business,Expense,Rent,1337.55,Bank Transfer,Failed,GHS,2024-08,Saturday
+TXN00335,2024-09-01,Ashanti,Personal,Income,Business,5438.03,Debit Card,Completed,GHS,2024-09,Sunday
+TXN00336,2024-09-01,Western,Personal,Expense,Utilities,687.46,Debit Card,Completed,GHS,2024-09,Sunday
+TXN00337,2024-09-02,Northern,Business,Expense,Entertainment,76.66,Bank Transfer,Completed,GHS,2024-09,Monday
+TXN00338,2024-09-03,Central,Personal,Expense,Rent,1471.68,Bank Transfer,Pending,GHS,2024-09,Tuesday
+TXN00339,2024-09-03,Western,Personal,Expense,Shopping,1390.61,Cash,Completed,GHS,2024-09,Tuesday
+TXN00340,2024-09-04,Western,Personal,Expense,Entertainment,405.5,Mobile Money,Pending,GHS,2024-09,Wednesday
+TXN00341,2024-09-05,Northern,Personal,Income,Salary,5770.19,Bank Transfer,Completed,GHS,2024-09,Thursday
+TXN00342,2024-09-06,Northern,Business,Income,Salary,7392.29,Debit Card,Completed,GHS,2024-09,Friday
+TXN00343,2024-09-06,Greater Accra,Personal,Income,Business,4728.07,Debit Card,Pending,GHS,2024-09,Friday
+TXN00344,2024-09-07,Central,Personal,Expense,Utilities,231.07,Bank Transfer,Completed,GHS,2024-09,Saturday
+TXN00345,2024-09-08,Western,Personal,Expense,Utilities,280.76,Bank Transfer,Completed,GHS,2024-09,Sunday
+TXN00346,2024-09-09,Greater Accra,Personal,Income,Business,6113.58,Bank Transfer,Failed,GHS,2024-09,Monday
+TXN00347,2024-09-09,Western,Business,Expense,Transport,231.72,Cash,Failed,GHS,2024-09,Monday
+TXN00348,2024-09-10,Greater Accra,Personal,Expense,Shopping,1098.21,Mobile Money,Completed,GHS,2024-09,Tuesday
+TXN00349,2024-09-11,Greater Accra,Personal,Expense,Shopping,1588.21,Debit Card,Pending,GHS,2024-09,Wednesday
+TXN00350,2024-09-12,Western,Business,Expense,Utilities,182.51,Mobile Money,Failed,GHS,2024-09,Thursday
+TXN00351,2024-09-12,Eastern,Personal,Expense,Healthcare,1068.82,Bank Transfer,Pending,GHS,2024-09,Thursday
+TXN00352,2024-09-13,Ashanti,Personal,Expense,Utilities,491.33,Mobile Money,Completed,GHS,2024-09,Friday
+TXN00353,2024-09-14,Greater Accra,Personal,Expense,Healthcare,152.85,Bank Transfer,Completed,GHS,2024-09,Saturday
+TXN00354,2024-09-14,Greater Accra,Personal,Expense,Food,418.14,Mobile Money,Completed,GHS,2024-09,Saturday
+TXN00355,2024-09-15,Central,Personal,Expense,Utilities,454.52,Bank Transfer,Completed,GHS,2024-09,Sunday
+TXN00356,2024-09-16,Central,Personal,Expense,Transport,247.54,Mobile Money,Completed,GHS,2024-09,Monday
+TXN00357,2024-09-17,Greater Accra,Personal,Expense,Transport,413.84,Bank Transfer,Completed,GHS,2024-09,Tuesday
+TXN00358,2024-09-17,Western,Personal,Expense,Healthcare,93.02,Mobile Money,Failed,GHS,2024-09,Tuesday
+TXN00359,2024-09-18,Central,Personal,Expense,Utilities,346.61,Mobile Money,Completed,GHS,2024-09,Wednesday
+TXN00360,2024-09-19,Greater Accra,Personal,Income,Business,5927.19,Bank Transfer,Failed,GHS,2024-09,Thursday
+TXN00361,2024-09-20,Ashanti,Personal,Income,Salary,8293.79,Mobile Money,Pending,GHS,2024-09,Friday
+TXN00362,2024-09-20,Eastern,Business,Income,Salary,5804.21,Mobile Money,Completed,GHS,2024-09,Friday
+TXN00363,2024-09-21,Greater Accra,Personal,Income,Business,5011.44,Cash,Failed,GHS,2024-09,Saturday
+TXN00364,2024-09-22,Greater Accra,Personal,Expense,Healthcare,1374.27,Bank Transfer,Completed,GHS,2024-09,Sunday
+TXN00365,2024-09-22,Northern,Personal,Expense,Rent,2623.84,Bank Transfer,Pending,GHS,2024-09,Sunday
+TXN00366,2024-09-23,Ashanti,Business,Expense,Utilities,446.32,Debit Card,Completed,GHS,2024-09,Monday
+TXN00367,2024-09-24,Northern,Business,Expense,Entertainment,596.55,Mobile Money,Failed,GHS,2024-09,Tuesday
+TXN00368,2024-09-25,Eastern,Personal,Expense,Transport,400.82,Mobile Money,Completed,GHS,2024-09,Wednesday
+TXN00369,2024-09-25,Western,Personal,Income,Business,3585.91,Mobile Money,Completed,GHS,2024-09,Wednesday
+TXN00370,2024-09-26,Ashanti,Personal,Expense,Utilities,415.49,Mobile Money,Pending,GHS,2024-09,Thursday
+TXN00371,2024-09-27,Western,Personal,Expense,Education,1898.62,Mobile Money,Pending,GHS,2024-09,Friday
+TXN00372,2024-09-28,Western,Personal,Expense,Transport,402.11,Debit Card,Failed,GHS,2024-09,Saturday
+TXN00373,2024-09-28,Northern,Personal,Expense,Shopping,1065.39,Debit Card,Failed,GHS,2024-09,Saturday
+TXN00374,2024-09-29,Western,Business,Expense,Food,783.77,Mobile Money,Completed,GHS,2024-09,Sunday
+TXN00375,2024-09-30,Western,Personal,Income,Business,3484.9,Debit Card,Failed,GHS,2024-09,Monday
+TXN00376,2024-10-01,Ashanti,Personal,Income,Business,1696.83,Mobile Money,Pending,GHS,2024-10,Tuesday
+TXN00377,2024-10-01,Western,Business,Expense,Rent,994.04,Mobile Money,Failed,GHS,2024-10,Tuesday
+TXN00378,2024-10-02,Greater Accra,Personal,Expense,Education,1962.21,Mobile Money,Failed,GHS,2024-10,Wednesday
+TXN00379,2024-10-03,Central,Personal,Expense,Utilities,281.4,Bank Transfer,Pending,GHS,2024-10,Thursday
+TXN00380,2024-10-03,Greater Accra,Personal,Expense,Shopping,1003.45,Bank Transfer,Completed,GHS,2024-10,Thursday
+TXN00381,2024-10-04,Central,Business,Expense,Shopping,412.79,Cash,Completed,GHS,2024-10,Friday
+TXN00382,2024-10-05,Eastern,Business,Expense,Utilities,538.49,Debit Card,Completed,GHS,2024-10,Saturday
+TXN00383,2024-10-06,Northern,Personal,Expense,Healthcare,918.72,Cash,Failed,GHS,2024-10,Sunday
+TXN00384,2024-10-06,Eastern,Personal,Expense,Rent,927.03,Bank Transfer,Completed,GHS,2024-10,Sunday
+TXN00385,2024-10-07,Eastern,Business,Expense,Rent,1006.08,Mobile Money,Completed,GHS,2024-10,Monday
+TXN00386,2024-10-08,Western,Personal,Expense,Rent,2037.97,Mobile Money,Completed,GHS,2024-10,Tuesday
+TXN00387,2024-10-09,Eastern,Business,Expense,Shopping,847.96,Debit Card,Pending,GHS,2024-10,Wednesday
+TXN00388,2024-10-09,Eastern,Personal,Expense,Utilities,697.67,Mobile Money,Completed,GHS,2024-10,Wednesday
+TXN00389,2024-10-10,Western,Personal,Income,Salary,8359.06,Cash,Failed,GHS,2024-10,Thursday
+TXN00390,2024-10-11,Central,Personal,Income,Salary,6122.64,Cash,Completed,GHS,2024-10,Friday
+TXN00391,2024-10-11,Ashanti,Personal,Expense,Transport,198.6,Debit Card,Completed,GHS,2024-10,Friday
+TXN00392,2024-10-12,Ashanti,Business,Income,Business,2203.91,Bank Transfer,Completed,GHS,2024-10,Saturday
+TXN00393,2024-10-13,Central,Personal,Expense,Shopping,1345.83,Cash,Pending,GHS,2024-10,Sunday
+TXN00394,2024-10-14,Ashanti,Personal,Expense,Education,1707.25,Mobile Money,Completed,GHS,2024-10,Monday
+TXN00395,2024-10-14,Northern,Personal,Expense,Utilities,344.26,Mobile Money,Pending,GHS,2024-10,Monday
+TXN00396,2024-10-15,Western,Personal,Expense,Entertainment,34.08,Bank Transfer,Completed,GHS,2024-10,Tuesday
+TXN00397,2024-10-16,Eastern,Personal,Expense,Education,1443.46,Debit Card,Pending,GHS,2024-10,Wednesday
+TXN00398,2024-10-17,Northern,Personal,Expense,Utilities,275.51,Bank Transfer,Failed,GHS,2024-10,Thursday
+TXN00399,2024-10-17,Central,Personal,Expense,Rent,1282.4,Mobile Money,Completed,GHS,2024-10,Thursday
+TXN00400,2024-10-18,Northern,Personal,Expense,Food,598.25,Debit Card,Pending,GHS,2024-10,Friday
+TXN00401,2024-10-19,Northern,Business,Expense,Rent,1818.98,Debit Card,Pending,GHS,2024-10,Saturday
+TXN00402,2024-10-20,Northern,Business,Expense,Education,615.68,Debit Card,Completed,GHS,2024-10,Sunday
+TXN00403,2024-10-20,Greater Accra,Personal,Expense,Utilities,161.65,Bank Transfer,Completed,GHS,2024-10,Sunday
+TXN00404,2024-10-21,Central,Business,Expense,Shopping,56.68,Bank Transfer,Pending,GHS,2024-10,Monday
+TXN00405,2024-10-22,Western,Business,Expense,Transport,157.08,Mobile Money,Completed,GHS,2024-10,Tuesday
+TXN00406,2024-10-22,Eastern,Personal,Expense,Utilities,645.97,Bank Transfer,Completed,GHS,2024-10,Tuesday
+TXN00407,2024-10-23,Ashanti,Personal,Income,Business,6065.49,Bank Transfer,Completed,GHS,2024-10,Wednesday
+TXN00408,2024-10-24,Greater Accra,Personal,Income,Business,5566.23,Cash,Completed,GHS,2024-10,Thursday
+TXN00409,2024-10-25,Ashanti,Personal,Expense,Education,1323.88,Mobile Money,Pending,GHS,2024-10,Friday
+TXN00410,2024-10-25,Northern,Business,Expense,Utilities,166.59,Bank Transfer,Completed,GHS,2024-10,Friday
+TXN00411,2024-10-26,Ashanti,Personal,Expense,Rent,1714.75,Debit Card,Completed,GHS,2024-10,Saturday
+TXN00412,2024-10-27,Central,Personal,Expense,Entertainment,563.48,Mobile Money,Pending,GHS,2024-10,Sunday
+TXN00413,2024-10-28,Central,Personal,Expense,Transport,333.07,Mobile Money,Completed,GHS,2024-10,Monday
+TXN00414,2024-10-28,Greater Accra,Business,Expense,Transport,202.86,Debit Card,Failed,GHS,2024-10,Monday
+TXN00415,2024-10-29,Central,Business,Expense,Shopping,75.71,Debit Card,Completed,GHS,2024-10,Tuesday
+TXN00416,2024-10-30,Northern,Personal,Expense,Utilities,395.72,Mobile Money,Failed,GHS,2024-10,Wednesday
+TXN00417,2024-10-30,Northern,Business,Income,Business,4114.19,Mobile Money,Completed,GHS,2024-10,Wednesday
+TXN00418,2024-10-31,Central,Personal,Income,Business,1753.3,Mobile Money,Completed,GHS,2024-10,Thursday
+TXN00419,2024-11-01,Central,Personal,Expense,Transport,38.25,Debit Card,Pending,GHS,2024-11,Friday
+TXN00420,2024-11-02,Central,Personal,Expense,Healthcare,873.73,Cash,Completed,GHS,2024-11,Saturday
+TXN00421,2024-11-02,Greater Accra,Personal,Expense,Shopping,1420.6,Bank Transfer,Completed,GHS,2024-11,Saturday
+TXN00422,2024-11-03,Ashanti,Personal,Income,Salary,4755.29,Mobile Money,Pending,GHS,2024-11,Sunday
+TXN00423,2024-11-04,Greater Accra,Personal,Income,Salary,8767.84,Mobile Money,Pending,GHS,2024-11,Monday
+TXN00424,2024-11-05,Greater Accra,Personal,Income,Business,1453.63,Debit Card,Completed,GHS,2024-11,Tuesday
+TXN00425,2024-11-05,Western,Personal,Expense,Shopping,601.51,Debit Card,Pending,GHS,2024-11,Tuesday
+TXN00426,2024-11-06,Greater Accra,Business,Expense,Entertainment,204.14,Bank Transfer,Pending,GHS,2024-11,Wednesday
+TXN00427,2024-11-07,Ashanti,Personal,Income,Salary,7295.0,Bank Transfer,Pending,GHS,2024-11,Thursday
+TXN00428,2024-11-08,Northern,Personal,Income,Salary,5786.03,Bank Transfer,Failed,GHS,2024-11,Friday
+TXN00429,2024-11-08,Northern,Business,Income,Business,4725.45,Mobile Money,Completed,GHS,2024-11,Friday
+TXN00430,2024-11-09,Northern,Personal,Expense,Utilities,436.52,Bank Transfer,Completed,GHS,2024-11,Saturday
+TXN00431,2024-11-10,Ashanti,Business,Income,Salary,8972.4,Bank Transfer,Completed,GHS,2024-11,Sunday
+TXN00432,2024-11-10,Western,Business,Income,Business,6968.92,Mobile Money,Completed,GHS,2024-11,Sunday
+TXN00433,2024-11-11,Northern,Personal,Income,Business,2056.57,Cash,Pending,GHS,2024-11,Monday
+TXN00434,2024-11-12,Greater Accra,Business,Expense,Education,774.58,Mobile Money,Completed,GHS,2024-11,Tuesday
+TXN00435,2024-11-13,Northern,Personal,Expense,Utilities,612.53,Bank Transfer,Completed,GHS,2024-11,Wednesday
+TXN00436,2024-11-13,Ashanti,Business,Expense,Education,1924.32,Mobile Money,Completed,GHS,2024-11,Wednesday
+TXN00437,2024-11-14,Eastern,Personal,Expense,Education,816.27,Mobile Money,Completed,GHS,2024-11,Thursday
+TXN00438,2024-11-15,Western,Personal,Expense,Shopping,1325.51,Bank Transfer,Failed,GHS,2024-11,Friday
+TXN00439,2024-11-16,Greater Accra,Personal,Expense,Entertainment,109.4,Cash,Completed,GHS,2024-11,Saturday
+TXN00440,2024-11-16,Greater Accra,Personal,Income,Salary,7685.54,Bank Transfer,Completed,GHS,2024-11,Saturday
+TXN00441,2024-11-17,Greater Accra,Business,Expense,Utilities,265.33,Bank Transfer,Pending,GHS,2024-11,Sunday
+TXN00442,2024-11-18,Greater Accra,Personal,Expense,Utilities,608.36,Cash,Pending,GHS,2024-11,Monday
+TXN00443,2024-11-18,Central,Personal,Expense,Shopping,1365.6,Bank Transfer,Completed,GHS,2024-11,Monday
+TXN00444,2024-11-19,Western,Personal,Expense,Food,390.59,Mobile Money,Pending,GHS,2024-11,Tuesday
+TXN00445,2024-11-20,Ashanti,Business,Expense,Transport,195.93,Mobile Money,Pending,GHS,2024-11,Wednesday
+TXN00446,2024-11-21,Central,Personal,Expense,Shopping,1002.89,Bank Transfer,Completed,GHS,2024-11,Thursday
+TXN00447,2024-11-21,Western,Personal,Income,Salary,6998.23,Cash,Failed,GHS,2024-11,Thursday
+TXN00448,2024-11-22,Central,Personal,Income,Salary,8047.11,Debit Card,Completed,GHS,2024-11,Friday
+TXN00449,2024-11-23,Central,Personal,Expense,Rent,1819.25,Mobile Money,Failed,GHS,2024-11,Saturday
+TXN00450,2024-11-24,Central,Personal,Expense,Rent,1970.45,Mobile Money,Failed,GHS,2024-11,Sunday
+TXN00451,2024-11-24,Central,Personal,Expense,Food,226.58,Bank Transfer,Completed,GHS,2024-11,Sunday
+TXN00452,2024-11-25,Western,Personal,Expense,Food,303.26,Debit Card,Failed,GHS,2024-11,Monday
+TXN00453,2024-11-26,Central,Personal,Expense,Healthcare,1349.26,Debit Card,Completed,GHS,2024-11,Tuesday
+TXN00454,2024-11-27,Northern,Personal,Income,Business,5840.16,Mobile Money,Completed,GHS,2024-11,Wednesday
+TXN00455,2024-11-27,Western,Personal,Expense,Utilities,552.3,Mobile Money,Completed,GHS,2024-11,Wednesday
+TXN00456,2024-11-28,Eastern,Business,Income,Salary,4959.29,Mobile Money,Completed,GHS,2024-11,Thursday
+TXN00457,2024-11-29,Greater Accra,Personal,Income,Salary,6326.2,Cash,Completed,GHS,2024-11,Friday
+TXN00458,2024-11-29,Greater Accra,Personal,Expense,Entertainment,339.35,Bank Transfer,Failed,GHS,2024-11,Friday
+TXN00459,2024-11-30,Central,Personal,Expense,Transport,409.32,Bank Transfer,Pending,GHS,2024-11,Saturday
+TXN00460,2024-12-01,Eastern,Personal,Expense,Shopping,1277.05,Mobile Money,Completed,GHS,2024-12,Sunday
+TXN00461,2024-12-02,Eastern,Personal,Expense,Utilities,404.0,Bank Transfer,Pending,GHS,2024-12,Monday
+TXN00462,2024-12-02,Ashanti,Personal,Expense,Education,1270.23,Bank Transfer,Completed,GHS,2024-12,Monday
+TXN00463,2024-12-03,Western,Personal,Expense,Entertainment,387.97,Bank Transfer,Failed,GHS,2024-12,Tuesday
+TXN00464,2024-12-04,Western,Business,Expense,Entertainment,668.15,Debit Card,Pending,GHS,2024-12,Wednesday
+TXN00465,2024-12-05,Greater Accra,Business,Expense,Transport,413.71,Bank Transfer,Completed,GHS,2024-12,Thursday
+TXN00466,2024-12-05,Eastern,Personal,Income,Business,4767.96,Bank Transfer,Completed,GHS,2024-12,Thursday
+TXN00467,2024-12-06,Eastern,Personal,Expense,Utilities,214.86,Bank Transfer,Completed,GHS,2024-12,Friday
+TXN00468,2024-12-07,Greater Accra,Personal,Expense,Healthcare,408.34,Mobile Money,Completed,GHS,2024-12,Saturday
+TXN00469,2024-12-07,Eastern,Business,Income,Salary,4629.71,Debit Card,Completed,GHS,2024-12,Saturday
+TXN00470,2024-12-08,Ashanti,Business,Expense,Healthcare,1486.02,Cash,Completed,GHS,2024-12,Sunday
+TXN00471,2024-12-09,Ashanti,Personal,Income,Business,1618.73,Mobile Money,Failed,GHS,2024-12,Monday
+TXN00472,2024-12-10,Greater Accra,Personal,Expense,Healthcare,346.44,Bank Transfer,Completed,GHS,2024-12,Tuesday
+TXN00473,2024-12-10,Ashanti,Personal,Expense,Education,1298.33,Bank Transfer,Completed,GHS,2024-12,Tuesday
+TXN00474,2024-12-11,Northern,Personal,Income,Business,2783.74,Mobile Money,Completed,GHS,2024-12,Wednesday
+TXN00475,2024-12-12,Western,Personal,Expense,Transport,37.1,Mobile Money,Completed,GHS,2024-12,Thursday
+TXN00476,2024-12-13,Eastern,Personal,Expense,Healthcare,503.72,Bank Transfer,Pending,GHS,2024-12,Friday
+TXN00477,2024-12-13,Western,Personal,Income,Salary,4351.56,Cash,Completed,GHS,2024-12,Friday
+TXN00478,2024-12-14,Central,Personal,Expense,Healthcare,591.65,Bank Transfer,Pending,GHS,2024-12,Saturday
+TXN00479,2024-12-15,Ashanti,Personal,Expense,Rent,2867.23,Debit Card,Completed,GHS,2024-12,Sunday
+TXN00480,2024-12-16,Ashanti,Personal,Expense,Food,558.8,Mobile Money,Completed,GHS,2024-12,Monday
+TXN00481,2024-12-16,Eastern,Personal,Income,Salary,7939.54,Debit Card,Completed,GHS,2024-12,Monday
+TXN00482,2024-12-17,Greater Accra,Personal,Expense,Food,473.75,Debit Card,Completed,GHS,2024-12,Tuesday
+TXN00483,2024-12-18,Greater Accra,Personal,Income,Salary,8513.37,Bank Transfer,Completed,GHS,2024-12,Wednesday
+TXN00484,2024-12-18,Ashanti,Personal,Expense,Utilities,539.64,Mobile Money,Completed,GHS,2024-12,Wednesday
+TXN00485,2024-12-19,Central,Business,Expense,Transport,261.95,Mobile Money,Completed,GHS,2024-12,Thursday
+TXN00486,2024-12-20,Northern,Personal,Income,Business,2748.97,Cash,Completed,GHS,2024-12,Friday
+TXN00487,2024-12-21,Northern,Business,Expense,Transport,203.17,Bank Transfer,Completed,GHS,2024-12,Saturday
+TXN00488,2024-12-21,Eastern,Business,Expense,Healthcare,410.16,Mobile Money,Completed,GHS,2024-12,Saturday
+TXN00489,2024-12-22,Ashanti,Personal,Income,Business,1384.04,Debit Card,Completed,GHS,2024-12,Sunday
+TXN00490,2024-12-23,Central,Personal,Expense,Transport,266.24,Bank Transfer,Pending,GHS,2024-12,Monday
+TXN00491,2024-12-24,Ashanti,Personal,Expense,Education,878.38,Cash,Failed,GHS,2024-12,Tuesday
+TXN00492,2024-12-24,Central,Personal,Income,Salary,4521.06,Debit Card,Pending,GHS,2024-12,Tuesday
+TXN00493,2024-12-25,Eastern,Personal,Expense,Shopping,63.94,Mobile Money,Completed,GHS,2024-12,Wednesday
+TXN00494,2024-12-26,Greater Accra,Business,Expense,Transport,419.42,Bank Transfer,Failed,GHS,2024-12,Thursday
+TXN00495,2024-12-26,Greater Accra,Personal,Expense,Transport,267.65,Cash,Completed,GHS,2024-12,Thursday
+TXN00496,2024-12-27,Central,Personal,Expense,Transport,275.15,Debit Card,Completed,GHS,2024-12,Friday
+TXN00497,2024-12-28,Central,Personal,Income,Salary,5127.69,Debit Card,Pending,GHS,2024-12,Saturday
+TXN00498,2024-12-29,Central,Personal,Income,Salary,4409.06,Debit Card,Completed,GHS,2024-12,Sunday
+TXN00499,2024-12-29,Northern,Personal,Expense,Rent,1559.51,Cash,Completed,GHS,2024-12,Sunday
+TXN00500,2024-12-30,Greater Accra,Personal,Income,Salary,4722.99,Bank Transfer,Completed,GHS,2024-12,Monday
+TXN00501,2024-12-31,Western,Personal,Expense,Education,1186.63,Mobile Money,Completed,GHS,2024-12,Tuesday
+TXN00502,2025-01-01,Greater Accra,Personal,Expense,Entertainment,500.44,Bank Transfer,Failed,GHS,2025-01,Wednesday
+TXN00503,2025-01-01,Central,Personal,Expense,Healthcare,822.13,Mobile Money,Failed,GHS,2025-01,Wednesday
+TXN00504,2025-01-02,Central,Personal,Income,Salary,7306.41,Cash,Completed,GHS,2025-01,Thursday
+TXN00505,2025-01-03,Greater Accra,Business,Expense,Utilities,110.87,Debit Card,Completed,GHS,2025-01,Friday
+TXN00506,2025-01-04,Eastern,Business,Expense,Healthcare,1048.52,Debit Card,Completed,GHS,2025-01,Saturday
+TXN00507,2025-01-04,Greater Accra,Personal,Expense,Shopping,1487.43,Bank Transfer,Completed,GHS,2025-01,Saturday
+TXN00508,2025-01-05,Greater Accra,Business,Expense,Rent,2605.32,Mobile Money,Failed,GHS,2025-01,Sunday
+TXN00509,2025-01-06,Ashanti,Personal,Expense,Entertainment,40.39,Cash,Pending,GHS,2025-01,Monday
+TXN00510,2025-01-06,Eastern,Personal,Expense,Education,1711.06,Bank Transfer,Completed,GHS,2025-01,Monday
+TXN00511,2025-01-07,Central,Personal,Income,Business,2389.29,Bank Transfer,Completed,GHS,2025-01,Tuesday
+TXN00512,2025-01-08,Northern,Personal,Expense,Education,1255.98,Mobile Money,Completed,GHS,2025-01,Wednesday
+TXN00513,2025-01-09,Western,Business,Expense,Entertainment,35.6,Debit Card,Completed,GHS,2025-01,Thursday
+TXN00514,2025-01-09,Greater Accra,Personal,Expense,Shopping,1402.42,Mobile Money,Completed,GHS,2025-01,Thursday
+TXN00515,2025-01-10,Ashanti,Business,Expense,Education,1625.7,Bank Transfer,Completed,GHS,2025-01,Friday
+TXN00516,2025-01-11,Greater Accra,Personal,Expense,Education,422.77,Mobile Money,Completed,GHS,2025-01,Saturday
+TXN00517,2025-01-12,Ashanti,Business,Expense,Education,1234.6,Mobile Money,Completed,GHS,2025-01,Sunday
+TXN00518,2025-01-12,Western,Personal,Expense,Utilities,527.67,Mobile Money,Completed,GHS,2025-01,Sunday
+TXN00519,2025-01-13,Greater Accra,Personal,Income,Business,4042.36,Bank Transfer,Completed,GHS,2025-01,Monday
+TXN00520,2025-01-14,Northern,Personal,Expense,Entertainment,563.48,Bank Transfer,Completed,GHS,2025-01,Tuesday
+TXN00521,2025-01-14,Eastern,Personal,Expense,Transport,156.67,Bank Transfer,Completed,GHS,2025-01,Tuesday
+TXN00522,2025-01-15,Eastern,Personal,Expense,Transport,341.13,Cash,Pending,GHS,2025-01,Wednesday
+TXN00523,2025-01-16,Greater Accra,Personal,Expense,Education,386.16,Bank Transfer,Failed,GHS,2025-01,Thursday
+TXN00524,2025-01-17,Northern,Personal,Expense,Food,481.28,Bank Transfer,Completed,GHS,2025-01,Friday
+TXN00525,2025-01-17,Central,Business,Expense,Education,929.2,Debit Card,Completed,GHS,2025-01,Friday
+TXN00526,2025-01-18,Western,Business,Expense,Entertainment,678.07,Bank Transfer,Completed,GHS,2025-01,Saturday
+TXN00527,2025-01-19,Western,Personal,Expense,Shopping,1795.85,Bank Transfer,Failed,GHS,2025-01,Sunday
+TXN00528,2025-01-20,Western,Personal,Income,Salary,5482.35,Bank Transfer,Pending,GHS,2025-01,Monday
+TXN00529,2025-01-20,Northern,Business,Expense,Food,90.35,Debit Card,Pending,GHS,2025-01,Monday
+TXN00530,2025-01-21,Western,Business,Expense,Shopping,1134.17,Mobile Money,Failed,GHS,2025-01,Tuesday
+TXN00531,2025-01-22,Western,Personal,Expense,Healthcare,1486.48,Debit Card,Completed,GHS,2025-01,Wednesday
+TXN00532,2025-01-23,Western,Business,Expense,Rent,2710.5,Bank Transfer,Failed,GHS,2025-01,Thursday
+TXN00533,2025-01-23,Ashanti,Personal,Expense,Utilities,365.84,Debit Card,Pending,GHS,2025-01,Thursday
+TXN00534,2025-01-24,Central,Personal,Expense,Rent,2888.24,Debit Card,Completed,GHS,2025-01,Friday
+TXN00535,2025-01-25,Greater Accra,Personal,Income,Business,4789.86,Cash,Completed,GHS,2025-01,Saturday
+TXN00536,2025-01-25,Greater Accra,Personal,Expense,Education,1639.49,Debit Card,Completed,GHS,2025-01,Saturday
+TXN00537,2025-01-26,Eastern,Personal,Expense,Shopping,347.02,Bank Transfer,Completed,GHS,2025-01,Sunday
+TXN00538,2025-01-27,Northern,Business,Expense,Shopping,1454.92,Mobile Money,Completed,GHS,2025-01,Monday
+TXN00539,2025-01-28,Northern,Personal,Income,Salary,6649.34,Bank Transfer,Completed,GHS,2025-01,Tuesday
+TXN00540,2025-01-28,Central,Personal,Expense,Transport,54.43,Bank Transfer,Pending,GHS,2025-01,Tuesday
+TXN00541,2025-01-29,Central,Business,Expense,Shopping,1203.33,Debit Card,Completed,GHS,2025-01,Wednesday
+TXN00542,2025-01-30,Western,Personal,Expense,Transport,407.24,Bank Transfer,Completed,GHS,2025-01,Thursday
+TXN00543,2025-01-31,Central,Personal,Income,Business,3790.06,Bank Transfer,Failed,GHS,2025-01,Friday
+TXN00544,2025-01-31,Northern,Personal,Expense,Shopping,1541.96,Mobile Money,Completed,GHS,2025-01,Friday
+TXN00545,2025-02-01,Eastern,Personal,Expense,Food,245.14,Cash,Pending,GHS,2025-02,Saturday
+TXN00546,2025-02-02,Greater Accra,Business,Expense,Rent,2967.67,Mobile Money,Completed,GHS,2025-02,Sunday
+TXN00547,2025-02-02,Eastern,Business,Expense,Transport,139.28,Mobile Money,Pending,GHS,2025-02,Sunday
+TXN00548,2025-02-03,Northern,Business,Income,Salary,4657.79,Debit Card,Completed,GHS,2025-02,Monday
+TXN00549,2025-02-04,Northern,Personal,Expense,Entertainment,443.54,Mobile Money,Completed,GHS,2025-02,Tuesday
+TXN00550,2025-02-05,Greater Accra,Personal,Income,Salary,8314.73,Bank Transfer,Completed,GHS,2025-02,Wednesday
+TXN00551,2025-02-05,Northern,Personal,Expense,Transport,200.99,Mobile Money,Completed,GHS,2025-02,Wednesday
+TXN00552,2025-02-06,Central,Business,Expense,Entertainment,163.49,Cash,Pending,GHS,2025-02,Thursday
+TXN00553,2025-02-07,Greater Accra,Personal,Expense,Rent,1835.91,Mobile Money,Completed,GHS,2025-02,Friday
+TXN00554,2025-02-08,Eastern,Personal,Income,Salary,7898.45,Mobile Money,Failed,GHS,2025-02,Saturday
+TXN00555,2025-02-08,Central,Personal,Expense,Shopping,942.76,Mobile Money,Pending,GHS,2025-02,Saturday
+TXN00556,2025-02-09,Western,Personal,Income,Business,5449.62,Mobile Money,Pending,GHS,2025-02,Sunday
+TXN00557,2025-02-10,Northern,Business,Expense,Shopping,908.84,Bank Transfer,Failed,GHS,2025-02,Monday
+TXN00558,2025-02-11,Northern,Personal,Expense,Rent,1616.57,Debit Card,Completed,GHS,2025-02,Tuesday
+TXN00559,2025-02-11,Central,Business,Expense,Transport,372.85,Bank Transfer,Completed,GHS,2025-02,Tuesday
+TXN00560,2025-02-12,Eastern,Personal,Expense,Food,454.45,Bank Transfer,Failed,GHS,2025-02,Wednesday
+TXN00561,2025-02-13,Eastern,Business,Expense,Healthcare,127.6,Bank Transfer,Completed,GHS,2025-02,Thursday
+TXN00562,2025-02-13,Ashanti,Business,Expense,Food,291.64,Cash,Completed,GHS,2025-02,Thursday
+TXN00563,2025-02-14,Greater Accra,Business,Income,Business,3808.41,Debit Card,Completed,GHS,2025-02,Friday
+TXN00564,2025-02-15,Central,Business,Expense,Rent,2348.98,Mobile Money,Completed,GHS,2025-02,Saturday
+TXN00565,2025-02-16,Greater Accra,Personal,Income,Salary,4624.47,Mobile Money,Completed,GHS,2025-02,Sunday
+TXN00566,2025-02-16,Eastern,Personal,Expense,Education,334.46,Cash,Completed,GHS,2025-02,Sunday
+TXN00567,2025-02-17,Ashanti,Personal,Income,Salary,3637.34,Bank Transfer,Pending,GHS,2025-02,Monday
+TXN00568,2025-02-18,Western,Personal,Income,Salary,6845.76,Mobile Money,Completed,GHS,2025-02,Tuesday
+TXN00569,2025-02-19,Greater Accra,Personal,Expense,Education,338.42,Mobile Money,Failed,GHS,2025-02,Wednesday
+TXN00570,2025-02-19,Ashanti,Personal,Income,Business,3323.94,Debit Card,Completed,GHS,2025-02,Wednesday
+TXN00571,2025-02-20,Western,Personal,Expense,Education,545.41,Bank Transfer,Completed,GHS,2025-02,Thursday
+TXN00572,2025-02-21,Greater Accra,Personal,Income,Business,2592.98,Bank Transfer,Pending,GHS,2025-02,Friday
+TXN00573,2025-02-21,Eastern,Personal,Income,Business,6309.13,Cash,Pending,GHS,2025-02,Friday
+TXN00574,2025-02-22,Greater Accra,Personal,Income,Salary,7438.27,Mobile Money,Completed,GHS,2025-02,Saturday
+TXN00575,2025-02-23,Western,Business,Expense,Transport,67.1,Bank Transfer,Completed,GHS,2025-02,Sunday
+TXN00576,2025-02-24,Eastern,Personal,Expense,Food,348.21,Bank Transfer,Pending,GHS,2025-02,Monday
+TXN00577,2025-02-24,Ashanti,Personal,Expense,Transport,240.93,Bank Transfer,Completed,GHS,2025-02,Monday
+TXN00578,2025-02-25,Western,Business,Expense,Entertainment,212.94,Debit Card,Completed,GHS,2025-02,Tuesday
+TXN00579,2025-02-26,Greater Accra,Personal,Expense,Education,978.54,Mobile Money,Completed,GHS,2025-02,Wednesday
+TXN00580,2025-02-27,Eastern,Personal,Expense,Transport,386.01,Debit Card,Completed,GHS,2025-02,Thursday
+TXN00581,2025-02-27,Central,Personal,Expense,Education,1886.42,Debit Card,Failed,GHS,2025-02,Thursday
+TXN00582,2025-02-28,Ashanti,Personal,Expense,Rent,1433.48,Mobile Money,Completed,GHS,2025-02,Friday
+TXN00583,2025-03-01,Greater Accra,Personal,Income,Salary,6506.83,Bank Transfer,Pending,GHS,2025-03,Saturday
+TXN00584,2025-03-02,Western,Personal,Income,Salary,8301.61,Mobile Money,Pending,GHS,2025-03,Sunday
+TXN00585,2025-03-02,Central,Personal,Expense,Shopping,1451.72,Bank Transfer,Failed,GHS,2025-03,Sunday
+TXN00586,2025-03-03,Greater Accra,Business,Income,Business,2288.18,Debit Card,Pending,GHS,2025-03,Monday
+TXN00587,2025-03-04,Ashanti,Business,Expense,Shopping,440.36,Debit Card,Failed,GHS,2025-03,Tuesday
+TXN00588,2025-03-04,Ashanti,Personal,Expense,Utilities,576.14,Bank Transfer,Pending,GHS,2025-03,Tuesday
+TXN00589,2025-03-05,Central,Personal,Expense,Rent,1280.17,Bank Transfer,Completed,GHS,2025-03,Wednesday
+TXN00590,2025-03-06,Northern,Business,Expense,Shopping,1486.22,Debit Card,Completed,GHS,2025-03,Thursday
+TXN00591,2025-03-07,Greater Accra,Personal,Expense,Food,140.98,Cash,Completed,GHS,2025-03,Friday
+TXN00592,2025-03-07,Northern,Business,Expense,Transport,409.95,Debit Card,Failed,GHS,2025-03,Friday
+TXN00593,2025-03-08,Ashanti,Personal,Income,Salary,7235.6,Mobile Money,Completed,GHS,2025-03,Saturday
+TXN00594,2025-03-09,Western,Personal,Expense,Transport,147.39,Cash,Completed,GHS,2025-03,Sunday
+TXN00595,2025-03-10,Eastern,Personal,Expense,Shopping,441.97,Mobile Money,Completed,GHS,2025-03,Monday
+TXN00596,2025-03-10,Eastern,Personal,Expense,Entertainment,464.32,Mobile Money,Pending,GHS,2025-03,Monday
+TXN00597,2025-03-11,Western,Business,Expense,Healthcare,591.51,Mobile Money,Pending,GHS,2025-03,Tuesday
+TXN00598,2025-03-12,Northern,Personal,Expense,Entertainment,470.97,Bank Transfer,Pending,GHS,2025-03,Wednesday
+TXN00599,2025-03-12,Central,Personal,Income,Salary,4710.49,Bank Transfer,Completed,GHS,2025-03,Wednesday
+TXN00600,2025-03-13,Eastern,Business,Expense,Transport,423.15,Mobile Money,Completed,GHS,2025-03,Thursday
+TXN00601,2025-03-14,Ashanti,Personal,Income,Salary,5231.54,Mobile Money,Pending,GHS,2025-03,Friday
+TXN00602,2025-03-15,Northern,Personal,Expense,Shopping,1201.6,Debit Card,Pending,GHS,2025-03,Saturday
+TXN00603,2025-03-15,Ashanti,Personal,Income,Business,2507.02,Mobile Money,Completed,GHS,2025-03,Saturday
+TXN00604,2025-03-16,Western,Personal,Expense,Healthcare,521.56,Debit Card,Completed,GHS,2025-03,Sunday
+TXN00605,2025-03-17,Greater Accra,Personal,Income,Business,3370.93,Cash,Completed,GHS,2025-03,Monday
+TXN00606,2025-03-18,Western,Personal,Expense,Utilities,569.98,Debit Card,Completed,GHS,2025-03,Tuesday
+TXN00607,2025-03-18,Greater Accra,Personal,Expense,Entertainment,490.99,Bank Transfer,Completed,GHS,2025-03,Tuesday
+TXN00608,2025-03-19,Northern,Business,Expense,Food,301.2,Bank Transfer,Completed,GHS,2025-03,Wednesday
+TXN00609,2025-03-20,Northern,Personal,Expense,Education,1411.77,Bank Transfer,Completed,GHS,2025-03,Thursday
+TXN00610,2025-03-21,Western,Business,Income,Salary,4785.97,Cash,Completed,GHS,2025-03,Friday
+TXN00611,2025-03-21,Ashanti,Business,Expense,Shopping,1671.31,Bank Transfer,Completed,GHS,2025-03,Friday
+TXN00612,2025-03-22,Northern,Business,Expense,Shopping,1329.53,Bank Transfer,Completed,GHS,2025-03,Saturday
+TXN00613,2025-03-23,Ashanti,Personal,Expense,Utilities,684.28,Mobile Money,Pending,GHS,2025-03,Sunday
+TXN00614,2025-03-23,Central,Personal,Expense,Shopping,1459.89,Bank Transfer,Failed,GHS,2025-03,Sunday
+TXN00615,2025-03-24,Eastern,Personal,Expense,Food,116.4,Bank Transfer,Completed,GHS,2025-03,Monday
+TXN00616,2025-03-25,Central,Personal,Expense,Shopping,1378.4,Mobile Money,Pending,GHS,2025-03,Tuesday
+TXN00617,2025-03-26,Western,Business,Expense,Healthcare,1217.88,Mobile Money,Completed,GHS,2025-03,Wednesday
+TXN00618,2025-03-26,Ashanti,Personal,Expense,Transport,221.97,Bank Transfer,Failed,GHS,2025-03,Wednesday
+TXN00619,2025-03-27,Northern,Personal,Expense,Shopping,481.41,Cash,Pending,GHS,2025-03,Thursday
+TXN00620,2025-03-28,Northern,Personal,Income,Salary,4111.25,Debit Card,Completed,GHS,2025-03,Friday
+TXN00621,2025-03-29,Central,Personal,Expense,Rent,1032.3,Debit Card,Failed,GHS,2025-03,Saturday
+TXN00622,2025-03-29,Central,Business,Income,Salary,8943.66,Bank Transfer,Pending,GHS,2025-03,Saturday
+TXN00623,2025-03-30,Greater Accra,Personal,Expense,Education,1352.9,Mobile Money,Failed,GHS,2025-03,Sunday
+TXN00624,2025-03-31,Ashanti,Personal,Expense,Utilities,367.87,Mobile Money,Failed,GHS,2025-03,Monday
+TXN00625,2025-03-31,Central,Business,Expense,Transport,90.71,Bank Transfer,Completed,GHS,2025-03,Monday
+TXN00626,2025-04-01,Greater Accra,Personal,Expense,Utilities,395.34,Debit Card,Completed,GHS,2025-04,Tuesday
+TXN00627,2025-04-02,Western,Business,Expense,Rent,934.22,Debit Card,Failed,GHS,2025-04,Wednesday
+TXN00628,2025-04-03,Northern,Personal,Income,Salary,8392.67,Debit Card,Pending,GHS,2025-04,Thursday
+TXN00629,2025-04-03,Central,Personal,Expense,Transport,97.4,Cash,Completed,GHS,2025-04,Thursday
+TXN00630,2025-04-04,Central,Personal,Expense,Education,515.56,Bank Transfer,Completed,GHS,2025-04,Friday
+TXN00631,2025-04-05,Ashanti,Personal,Income,Salary,7537.83,Mobile Money,Pending,GHS,2025-04,Saturday
+TXN00632,2025-04-06,Greater Accra,Personal,Expense,Utilities,108.21,Bank Transfer,Pending,GHS,2025-04,Sunday
+TXN00633,2025-04-06,Northern,Personal,Expense,Entertainment,515.25,Debit Card,Completed,GHS,2025-04,Sunday
+TXN00634,2025-04-07,Central,Personal,Expense,Shopping,1059.54,Mobile Money,Failed,GHS,2025-04,Monday
+TXN00635,2025-04-08,Eastern,Personal,Expense,Transport,461.12,Cash,Failed,GHS,2025-04,Tuesday
+TXN00636,2025-04-09,Eastern,Personal,Expense,Rent,2335.23,Bank Transfer,Failed,GHS,2025-04,Wednesday
+TXN00637,2025-04-09,Central,Personal,Income,Business,2774.94,Bank Transfer,Pending,GHS,2025-04,Wednesday
+TXN00638,2025-04-10,Northern,Personal,Income,Salary,5933.02,Bank Transfer,Failed,GHS,2025-04,Thursday
+TXN00639,2025-04-11,Eastern,Business,Income,Salary,4194.49,Mobile Money,Pending,GHS,2025-04,Friday
+TXN00640,2025-04-11,Western,Personal,Income,Salary,5711.15,Cash,Failed,GHS,2025-04,Friday
+TXN00641,2025-04-12,Northern,Personal,Expense,Transport,149.61,Debit Card,Failed,GHS,2025-04,Saturday
+TXN00642,2025-04-13,Northern,Business,Expense,Rent,1931.81,Mobile Money,Completed,GHS,2025-04,Sunday
+TXN00643,2025-04-14,Greater Accra,Personal,Expense,Transport,142.94,Bank Transfer,Completed,GHS,2025-04,Monday
+TXN00644,2025-04-14,Northern,Business,Income,Business,3428.35,Cash,Completed,GHS,2025-04,Monday
+TXN00645,2025-04-15,Greater Accra,Personal,Expense,Transport,173.7,Cash,Failed,GHS,2025-04,Tuesday
+TXN00646,2025-04-16,Central,Personal,Expense,Transport,377.1,Debit Card,Failed,GHS,2025-04,Wednesday
+TXN00647,2025-04-17,Western,Personal,Expense,Shopping,795.39,Mobile Money,Failed,GHS,2025-04,Thursday
+TXN00648,2025-04-17,Central,Business,Expense,Education,684.31,Bank Transfer,Pending,GHS,2025-04,Thursday
+TXN00649,2025-04-18,Western,Personal,Expense,Rent,1420.98,Debit Card,Completed,GHS,2025-04,Friday
+TXN00650,2025-04-19,Northern,Personal,Income,Business,3844.99,Bank Transfer,Completed,GHS,2025-04,Saturday
+TXN00651,2025-04-19,Northern,Personal,Expense,Rent,2316.48,Debit Card,Pending,GHS,2025-04,Saturday
+TXN00652,2025-04-20,Northern,Business,Expense,Shopping,1070.48,Bank Transfer,Failed,GHS,2025-04,Sunday
+TXN00653,2025-04-21,Eastern,Personal,Expense,Entertainment,546.2,Cash,Failed,GHS,2025-04,Monday
+TXN00654,2025-04-22,Northern,Personal,Income,Salary,7715.9,Cash,Pending,GHS,2025-04,Tuesday
+TXN00655,2025-04-22,Western,Personal,Expense,Education,962.95,Mobile Money,Failed,GHS,2025-04,Tuesday
+TXN00656,2025-04-23,Ashanti,Business,Expense,Healthcare,1455.52,Mobile Money,Completed,GHS,2025-04,Wednesday
+TXN00657,2025-04-24,Greater Accra,Personal,Income,Salary,7119.56,Bank Transfer,Pending,GHS,2025-04,Thursday
+TXN00658,2025-04-25,Western,Personal,Income,Salary,8358.0,Mobile Money,Failed,GHS,2025-04,Friday
+TXN00659,2025-04-25,Greater Accra,Business,Expense,Entertainment,71.17,Mobile Money,Completed,GHS,2025-04,Friday
+TXN00660,2025-04-26,Central,Personal,Expense,Food,268.98,Cash,Completed,GHS,2025-04,Saturday
+TXN00661,2025-04-27,Greater Accra,Personal,Expense,Utilities,197.6,Debit Card,Pending,GHS,2025-04,Sunday
+TXN00662,2025-04-28,Western,Personal,Expense,Healthcare,1314.27,Bank Transfer,Pending,GHS,2025-04,Monday
+TXN00663,2025-04-28,Northern,Personal,Income,Salary,6612.18,Bank Transfer,Failed,GHS,2025-04,Monday
+TXN00664,2025-04-29,Eastern,Personal,Income,Salary,5880.24,Mobile Money,Completed,GHS,2025-04,Tuesday
+TXN00665,2025-04-30,Northern,Personal,Expense,Rent,1241.7,Mobile Money,Pending,GHS,2025-04,Wednesday
+TXN00666,2025-04-30,Greater Accra,Personal,Expense,Transport,472.21,Cash,Completed,GHS,2025-04,Wednesday
+TXN00667,2025-05-01,Northern,Personal,Expense,Education,176.54,Mobile Money,Failed,GHS,2025-05,Thursday
+TXN00668,2025-05-02,Eastern,Business,Expense,Shopping,311.0,Bank Transfer,Completed,GHS,2025-05,Friday
+TXN00669,2025-05-03,Western,Personal,Income,Salary,4746.8,Mobile Money,Pending,GHS,2025-05,Saturday
+TXN00670,2025-05-03,Western,Personal,Income,Salary,4199.03,Debit Card,Completed,GHS,2025-05,Saturday
+TXN00671,2025-05-04,Eastern,Personal,Income,Salary,8012.68,Bank Transfer,Completed,GHS,2025-05,Sunday
+TXN00672,2025-05-05,Northern,Personal,Expense,Rent,2617.05,Mobile Money,Failed,GHS,2025-05,Monday
+TXN00673,2025-05-06,Eastern,Personal,Income,Business,4246.68,Bank Transfer,Completed,GHS,2025-05,Tuesday
+TXN00674,2025-05-06,Central,Business,Expense,Food,122.9,Mobile Money,Completed,GHS,2025-05,Tuesday
+TXN00675,2025-05-07,Western,Personal,Expense,Transport,323.91,Bank Transfer,Pending,GHS,2025-05,Wednesday
+TXN00676,2025-05-08,Northern,Personal,Expense,Healthcare,608.4,Mobile Money,Completed,GHS,2025-05,Thursday
+TXN00677,2025-05-08,Central,Personal,Expense,Rent,936.49,Mobile Money,Completed,GHS,2025-05,Thursday
+TXN00678,2025-05-09,Greater Accra,Business,Expense,Rent,2911.54,Debit Card,Completed,GHS,2025-05,Friday
+TXN00679,2025-05-10,Greater Accra,Personal,Expense,Rent,2220.26,Mobile Money,Completed,GHS,2025-05,Saturday
+TXN00680,2025-05-11,Ashanti,Business,Income,Salary,4198.19,Debit Card,Pending,GHS,2025-05,Sunday
+TXN00681,2025-05-11,Western,Personal,Income,Business,5105.89,Cash,Completed,GHS,2025-05,Sunday
+TXN00682,2025-05-12,Greater Accra,Personal,Income,Salary,3523.03,Bank Transfer,Completed,GHS,2025-05,Monday
+TXN00683,2025-05-13,Northern,Business,Income,Salary,5344.54,Bank Transfer,Completed,GHS,2025-05,Tuesday
+TXN00684,2025-05-14,Northern,Personal,Expense,Education,699.19,Bank Transfer,Pending,GHS,2025-05,Wednesday
+TXN00685,2025-05-14,Central,Personal,Expense,Education,1387.34,Cash,Failed,GHS,2025-05,Wednesday
+TXN00686,2025-05-15,Western,Personal,Expense,Transport,397.74,Debit Card,Failed,GHS,2025-05,Thursday
+TXN00687,2025-05-16,Northern,Personal,Expense,Utilities,345.8,Debit Card,Completed,GHS,2025-05,Friday
+TXN00688,2025-05-17,Greater Accra,Business,Expense,Transport,373.83,Debit Card,Failed,GHS,2025-05,Saturday
+TXN00689,2025-05-17,Western,Personal,Income,Business,6340.83,Debit Card,Pending,GHS,2025-05,Saturday
+TXN00690,2025-05-18,Eastern,Business,Income,Salary,7215.01,Bank Transfer,Failed,GHS,2025-05,Sunday
+TXN00691,2025-05-19,Northern,Personal,Income,Salary,5749.97,Debit Card,Completed,GHS,2025-05,Monday
+TXN00692,2025-05-19,Ashanti,Personal,Expense,Healthcare,1411.06,Bank Transfer,Completed,GHS,2025-05,Monday
+TXN00693,2025-05-20,Western,Business,Expense,Transport,135.56,Bank Transfer,Completed,GHS,2025-05,Tuesday
+TXN00694,2025-05-21,Central,Personal,Expense,Entertainment,251.48,Debit Card,Completed,GHS,2025-05,Wednesday
+TXN00695,2025-05-22,Eastern,Personal,Income,Salary,5922.97,Mobile Money,Completed,GHS,2025-05,Thursday
+TXN00696,2025-05-22,Greater Accra,Personal,Expense,Food,309.71,Bank Transfer,Failed,GHS,2025-05,Thursday
+TXN00697,2025-05-23,Central,Personal,Income,Salary,4207.28,Bank Transfer,Completed,GHS,2025-05,Friday
+TXN00698,2025-05-24,Western,Business,Expense,Transport,88.93,Bank Transfer,Failed,GHS,2025-05,Saturday
+TXN00699,2025-05-25,Ashanti,Personal,Income,Salary,6734.52,Debit Card,Completed,GHS,2025-05,Sunday
+TXN00700,2025-05-25,Western,Personal,Income,Business,4432.74,Bank Transfer,Completed,GHS,2025-05,Sunday
+TXN00701,2025-05-26,Ashanti,Personal,Expense,Rent,2093.58,Debit Card,Completed,GHS,2025-05,Monday
+TXN00702,2025-05-27,Eastern,Personal,Income,Salary,6349.43,Bank Transfer,Failed,GHS,2025-05,Tuesday
+TXN00703,2025-05-27,Greater Accra,Personal,Income,Salary,7071.58,Bank Transfer,Completed,GHS,2025-05,Tuesday
+TXN00704,2025-05-28,Central,Personal,Income,Salary,8373.94,Debit Card,Completed,GHS,2025-05,Wednesday
+TXN00705,2025-05-29,Central,Personal,Income,Salary,7547.55,Cash,Completed,GHS,2025-05,Thursday
+TXN00706,2025-05-30,Ashanti,Business,Income,Salary,8467.73,Mobile Money,Pending,GHS,2025-05,Friday
+TXN00707,2025-05-30,Ashanti,Personal,Income,Business,1241.73,Cash,Failed,GHS,2025-05,Friday
+TXN00708,2025-05-31,Greater Accra,Personal,Expense,Transport,397.49,Bank Transfer,Completed,GHS,2025-05,Saturday
+TXN00709,2025-06-01,Eastern,Personal,Income,Business,3569.1,Mobile Money,Completed,GHS,2025-06,Sunday
+TXN00710,2025-06-02,Central,Personal,Expense,Food,305.55,Mobile Money,Completed,GHS,2025-06,Monday
+TXN00711,2025-06-02,Greater Accra,Personal,Income,Business,5872.47,Debit Card,Completed,GHS,2025-06,Monday
+TXN00712,2025-06-03,Northern,Personal,Expense,Food,768.53,Bank Transfer,Completed,GHS,2025-06,Tuesday
+TXN00713,2025-06-04,Ashanti,Personal,Expense,Transport,410.15,Cash,Completed,GHS,2025-06,Wednesday
+TXN00714,2025-06-05,Ashanti,Business,Expense,Transport,458.55,Debit Card,Completed,GHS,2025-06,Thursday
+TXN00715,2025-06-05,Western,Personal,Expense,Entertainment,184.96,Bank Transfer,Completed,GHS,2025-06,Thursday
+TXN00716,2025-06-06,Central,Personal,Income,Salary,8738.13,Bank Transfer,Completed,GHS,2025-06,Friday
+TXN00717,2025-06-07,Western,Business,Income,Business,2877.52,Cash,Failed,GHS,2025-06,Saturday
+TXN00718,2025-06-07,Western,Personal,Expense,Entertainment,199.05,Bank Transfer,Completed,GHS,2025-06,Saturday
+TXN00719,2025-06-08,Greater Accra,Business,Expense,Food,143.47,Debit Card,Completed,GHS,2025-06,Sunday
+TXN00720,2025-06-09,Greater Accra,Personal,Expense,Education,1071.12,Debit Card,Completed,GHS,2025-06,Monday
+TXN00721,2025-06-10,Central,Business,Income,Salary,8113.7,Bank Transfer,Pending,GHS,2025-06,Tuesday
+TXN00722,2025-06-10,Northern,Personal,Income,Salary,5742.78,Bank Transfer,Completed,GHS,2025-06,Tuesday
+TXN00723,2025-06-11,Western,Personal,Expense,Healthcare,442.31,Cash,Completed,GHS,2025-06,Wednesday
+TXN00724,2025-06-12,Northern,Business,Expense,Utilities,183.55,Bank Transfer,Completed,GHS,2025-06,Thursday
+TXN00725,2025-06-13,Ashanti,Personal,Expense,Transport,191.72,Mobile Money,Failed,GHS,2025-06,Friday
+TXN00726,2025-06-13,Ashanti,Personal,Income,Salary,5682.15,Debit Card,Failed,GHS,2025-06,Friday
+TXN00727,2025-06-14,Central,Business,Expense,Utilities,590.57,Mobile Money,Completed,GHS,2025-06,Saturday
+TXN00728,2025-06-15,Eastern,Personal,Expense,Transport,51.65,Bank Transfer,Completed,GHS,2025-06,Sunday
+TXN00729,2025-06-15,Western,Personal,Expense,Utilities,652.41,Bank Transfer,Failed,GHS,2025-06,Sunday
+TXN00730,2025-06-16,Northern,Business,Income,Salary,6546.03,Debit Card,Failed,GHS,2025-06,Monday
+TXN00731,2025-06-17,Greater Accra,Personal,Income,Salary,7482.16,Debit Card,Pending,GHS,2025-06,Tuesday
+TXN00732,2025-06-18,Greater Accra,Personal,Expense,Transport,206.17,Bank Transfer,Pending,GHS,2025-06,Wednesday
+TXN00733,2025-06-18,Ashanti,Personal,Income,Salary,4779.5,Bank Transfer,Failed,GHS,2025-06,Wednesday
+TXN00734,2025-06-19,Western,Personal,Expense,Utilities,543.45,Mobile Money,Completed,GHS,2025-06,Thursday
+TXN00735,2025-06-20,Ashanti,Personal,Income,Salary,7779.25,Debit Card,Completed,GHS,2025-06,Friday
+TXN00736,2025-06-21,Greater Accra,Business,Expense,Education,572.35,Mobile Money,Completed,GHS,2025-06,Saturday
+TXN00737,2025-06-21,Western,Personal,Expense,Entertainment,261.54,Cash,Completed,GHS,2025-06,Saturday
+TXN00738,2025-06-22,Greater Accra,Business,Income,Business,1411.89,Bank Transfer,Completed,GHS,2025-06,Sunday
+TXN00739,2025-06-23,Northern,Personal,Income,Salary,4731.59,Cash,Pending,GHS,2025-06,Monday
+TXN00740,2025-06-24,Greater Accra,Business,Expense,Education,1120.38,Bank Transfer,Completed,GHS,2025-06,Tuesday
+TXN00741,2025-06-24,Northern,Business,Expense,Transport,107.21,Debit Card,Completed,GHS,2025-06,Tuesday
+TXN00742,2025-06-25,Greater Accra,Business,Income,Salary,7684.87,Mobile Money,Failed,GHS,2025-06,Wednesday
+TXN00743,2025-06-26,Eastern,Personal,Expense,Utilities,542.73,Mobile Money,Completed,GHS,2025-06,Thursday
+TXN00744,2025-06-26,Western,Personal,Expense,Education,1876.11,Debit Card,Pending,GHS,2025-06,Thursday
+TXN00745,2025-06-27,Central,Personal,Expense,Rent,2732.51,Mobile Money,Completed,GHS,2025-06,Friday
+TXN00746,2025-06-28,Eastern,Business,Expense,Food,401.98,Debit Card,Pending,GHS,2025-06,Saturday
+TXN00747,2025-06-29,Western,Personal,Income,Salary,5708.24,Mobile Money,Completed,GHS,2025-06,Sunday
+TXN00748,2025-06-29,Greater Accra,Personal,Expense,Transport,485.72,Bank Transfer,Completed,GHS,2025-06,Sunday
+TXN00749,2025-06-30,Greater Accra,Personal,Income,Salary,7699.34,Mobile Money,Failed,GHS,2025-06,Monday
+TXN00750,2025-07-01,Ashanti,Personal,Expense,Healthcare,328.42,Mobile Money,Completed,GHS,2025-07,Tuesday
+TXN00751,2025-07-02,Greater Accra,Personal,Expense,Entertainment,649.13,Bank Transfer,Completed,GHS,2025-07,Wednesday
+TXN00752,2025-07-02,Northern,Personal,Expense,Healthcare,1230.86,Mobile Money,Completed,GHS,2025-07,Wednesday
+TXN00753,2025-07-03,Greater Accra,Personal,Expense,Transport,332.11,Debit Card,Pending,GHS,2025-07,Thursday
+TXN00754,2025-07-04,Ashanti,Personal,Expense,Utilities,580.56,Mobile Money,Failed,GHS,2025-07,Friday
+TXN00755,2025-07-04,Ashanti,Personal,Expense,Entertainment,46.98,Bank Transfer,Failed,GHS,2025-07,Friday
+TXN00756,2025-07-05,Northern,Personal,Income,Salary,4611.82,Bank Transfer,Failed,GHS,2025-07,Saturday
+TXN00757,2025-07-06,Greater Accra,Personal,Expense,Utilities,247.33,Bank Transfer,Completed,GHS,2025-07,Sunday
+TXN00758,2025-07-07,Central,Personal,Expense,Food,613.93,Bank Transfer,Completed,GHS,2025-07,Monday
+TXN00759,2025-07-07,Central,Personal,Expense,Food,199.69,Bank Transfer,Completed,GHS,2025-07,Monday
+TXN00760,2025-07-08,Western,Personal,Income,Salary,6261.05,Bank Transfer,Completed,GHS,2025-07,Tuesday
+TXN00761,2025-07-09,Eastern,Personal,Expense,Food,615.61,Debit Card,Pending,GHS,2025-07,Wednesday
+TXN00762,2025-07-10,Greater Accra,Business,Expense,Shopping,383.09,Mobile Money,Completed,GHS,2025-07,Thursday
+TXN00763,2025-07-10,Greater Accra,Business,Expense,Transport,370.8,Mobile Money,Pending,GHS,2025-07,Thursday
+TXN00764,2025-07-11,Eastern,Business,Expense,Healthcare,541.87,Debit Card,Completed,GHS,2025-07,Friday
+TXN00765,2025-07-12,Ashanti,Personal,Expense,Utilities,504.25,Mobile Money,Pending,GHS,2025-07,Saturday
+TXN00766,2025-07-13,Ashanti,Personal,Expense,Education,1136.82,Mobile Money,Completed,GHS,2025-07,Sunday
+TXN00767,2025-07-13,Central,Personal,Expense,Food,776.44,Mobile Money,Pending,GHS,2025-07,Sunday
+TXN00768,2025-07-14,Central,Personal,Expense,Shopping,968.84,Debit Card,Pending,GHS,2025-07,Monday
+TXN00769,2025-07-15,Ashanti,Personal,Expense,Food,80.68,Mobile Money,Failed,GHS,2025-07,Tuesday
+TXN00770,2025-07-15,Eastern,Business,Expense,Shopping,1013.66,Cash,Pending,GHS,2025-07,Tuesday
+TXN00771,2025-07-16,Western,Personal,Expense,Shopping,782.01,Mobile Money,Failed,GHS,2025-07,Wednesday
+TXN00772,2025-07-17,Western,Personal,Income,Salary,5303.14,Bank Transfer,Completed,GHS,2025-07,Thursday
+TXN00773,2025-07-18,Western,Personal,Expense,Shopping,204.24,Bank Transfer,Completed,GHS,2025-07,Friday
+TXN00774,2025-07-18,Western,Personal,Expense,Entertainment,388.68,Bank Transfer,Failed,GHS,2025-07,Friday
+TXN00775,2025-07-19,Ashanti,Personal,Expense,Shopping,1282.59,Mobile Money,Completed,GHS,2025-07,Saturday
+TXN00776,2025-07-20,Greater Accra,Business,Expense,Rent,1369.59,Bank Transfer,Completed,GHS,2025-07,Sunday
+TXN00777,2025-07-21,Eastern,Personal,Expense,Rent,2041.72,Debit Card,Failed,GHS,2025-07,Monday
+TXN00778,2025-07-21,Ashanti,Personal,Income,Business,5365.79,Debit Card,Failed,GHS,2025-07,Monday
+TXN00779,2025-07-22,Greater Accra,Personal,Expense,Healthcare,923.58,Bank Transfer,Pending,GHS,2025-07,Tuesday
+TXN00780,2025-07-23,Eastern,Personal,Expense,Food,659.73,Mobile Money,Completed,GHS,2025-07,Wednesday
+TXN00781,2025-07-23,Eastern,Business,Expense,Rent,1563.41,Mobile Money,Completed,GHS,2025-07,Wednesday
+TXN00782,2025-07-24,Northern,Personal,Expense,Shopping,1559.36,Cash,Completed,GHS,2025-07,Thursday
+TXN00783,2025-07-25,Western,Personal,Expense,Healthcare,141.5,Cash,Failed,GHS,2025-07,Friday
+TXN00784,2025-07-26,Ashanti,Personal,Expense,Utilities,385.23,Bank Transfer,Pending,GHS,2025-07,Saturday
+TXN00785,2025-07-26,Eastern,Personal,Expense,Food,443.54,Cash,Completed,GHS,2025-07,Saturday
+TXN00786,2025-07-27,Northern,Personal,Income,Salary,3790.09,Debit Card,Completed,GHS,2025-07,Sunday
+TXN00787,2025-07-28,Ashanti,Personal,Expense,Transport,228.2,Cash,Failed,GHS,2025-07,Monday
+TXN00788,2025-07-29,Central,Business,Expense,Transport,178.3,Bank Transfer,Pending,GHS,2025-07,Tuesday
+TXN00789,2025-07-29,Greater Accra,Personal,Expense,Shopping,1038.12,Debit Card,Pending,GHS,2025-07,Tuesday
+TXN00790,2025-07-30,Ashanti,Business,Expense,Entertainment,224.33,Bank Transfer,Completed,GHS,2025-07,Wednesday
+TXN00791,2025-07-31,Ashanti,Business,Expense,Utilities,167.98,Mobile Money,Failed,GHS,2025-07,Thursday
+TXN00792,2025-08-01,Ashanti,Personal,Expense,Food,451.02,Bank Transfer,Completed,GHS,2025-08,Friday
+TXN00793,2025-08-01,Eastern,Personal,Expense,Rent,2693.47,Debit Card,Completed,GHS,2025-08,Friday
+TXN00794,2025-08-02,Northern,Business,Expense,Transport,46.55,Mobile Money,Failed,GHS,2025-08,Saturday
+TXN00795,2025-08-03,Greater Accra,Personal,Expense,Food,597.85,Bank Transfer,Completed,GHS,2025-08,Sunday
+TXN00796,2025-08-03,Western,Personal,Expense,Entertainment,299.59,Bank Transfer,Failed,GHS,2025-08,Sunday
+TXN00797,2025-08-04,Central,Personal,Expense,Food,580.97,Bank Transfer,Failed,GHS,2025-08,Monday
+TXN00798,2025-08-05,Western,Personal,Income,Business,2254.58,Debit Card,Pending,GHS,2025-08,Tuesday
+TXN00799,2025-08-06,Eastern,Personal,Expense,Shopping,606.33,Debit Card,Completed,GHS,2025-08,Wednesday
+TXN00800,2025-08-06,Northern,Personal,Expense,Rent,2809.11,Bank Transfer,Completed,GHS,2025-08,Wednesday
+TXN00801,2025-08-07,Ashanti,Personal,Expense,Education,1888.54,Cash,Pending,GHS,2025-08,Thursday
+TXN00802,2025-08-08,Central,Business,Expense,Food,531.78,Bank Transfer,Completed,GHS,2025-08,Friday
+TXN00803,2025-08-09,Northern,Personal,Expense,Transport,217.59,Bank Transfer,Pending,GHS,2025-08,Saturday
+TXN00804,2025-08-09,Eastern,Personal,Income,Salary,5363.47,Mobile Money,Completed,GHS,2025-08,Saturday
+TXN00805,2025-08-10,Greater Accra,Personal,Expense,Food,762.33,Debit Card,Pending,GHS,2025-08,Sunday
+TXN00806,2025-08-11,Eastern,Personal,Income,Salary,4833.99,Bank Transfer,Failed,GHS,2025-08,Monday
+TXN00807,2025-08-11,Greater Accra,Personal,Expense,Transport,341.96,Bank Transfer,Completed,GHS,2025-08,Monday
+TXN00808,2025-08-12,Northern,Personal,Expense,Entertainment,41.16,Mobile Money,Completed,GHS,2025-08,Tuesday
+TXN00809,2025-08-13,Greater Accra,Personal,Expense,Healthcare,421.8,Debit Card,Completed,GHS,2025-08,Wednesday
+TXN00810,2025-08-14,Ashanti,Personal,Expense,Shopping,867.04,Debit Card,Completed,GHS,2025-08,Thursday
+TXN00811,2025-08-14,Eastern,Business,Expense,Utilities,331.63,Debit Card,Completed,GHS,2025-08,Thursday
+TXN00812,2025-08-15,Central,Personal,Expense,Utilities,141.25,Cash,Completed,GHS,2025-08,Friday
+TXN00813,2025-08-16,Eastern,Personal,Expense,Rent,920.14,Mobile Money,Completed,GHS,2025-08,Saturday
+TXN00814,2025-08-17,Ashanti,Personal,Expense,Shopping,583.58,Mobile Money,Pending,GHS,2025-08,Sunday
+TXN00815,2025-08-17,Eastern,Personal,Expense,Utilities,236.49,Mobile Money,Completed,GHS,2025-08,Sunday
+TXN00816,2025-08-18,Central,Personal,Income,Business,3911.38,Mobile Money,Completed,GHS,2025-08,Monday
+TXN00817,2025-08-19,Greater Accra,Personal,Income,Business,1301.05,Bank Transfer,Failed,GHS,2025-08,Tuesday
+TXN00818,2025-08-20,Ashanti,Personal,Income,Salary,3758.82,Mobile Money,Failed,GHS,2025-08,Wednesday
+TXN00819,2025-08-20,Ashanti,Personal,Expense,Utilities,274.15,Debit Card,Completed,GHS,2025-08,Wednesday
+TXN00820,2025-08-21,Eastern,Personal,Expense,Education,1974.71,Cash,Completed,GHS,2025-08,Thursday
+TXN00821,2025-08-22,Northern,Personal,Expense,Utilities,667.22,Mobile Money,Completed,GHS,2025-08,Friday
+TXN00822,2025-08-22,Northern,Business,Income,Salary,6689.06,Debit Card,Completed,GHS,2025-08,Friday
+TXN00823,2025-08-23,Greater Accra,Personal,Income,Salary,6681.98,Debit Card,Failed,GHS,2025-08,Saturday
+TXN00824,2025-08-24,Central,Business,Expense,Food,307.85,Mobile Money,Completed,GHS,2025-08,Sunday
+TXN00825,2025-08-25,Central,Business,Expense,Transport,403.27,Cash,Completed,GHS,2025-08,Monday
+TXN00826,2025-08-25,Ashanti,Personal,Expense,Rent,831.23,Debit Card,Completed,GHS,2025-08,Monday
+TXN00827,2025-08-26,Greater Accra,Business,Expense,Shopping,1722.73,Bank Transfer,Pending,GHS,2025-08,Tuesday
+TXN00828,2025-08-27,Central,Personal,Expense,Shopping,922.08,Mobile Money,Failed,GHS,2025-08,Wednesday
+TXN00829,2025-08-28,Greater Accra,Business,Income,Business,4668.05,Debit Card,Completed,GHS,2025-08,Thursday
+TXN00830,2025-08-28,Eastern,Personal,Income,Salary,4818.05,Debit Card,Completed,GHS,2025-08,Thursday
+TXN00831,2025-08-29,Greater Accra,Business,Expense,Shopping,467.01,Bank Transfer,Completed,GHS,2025-08,Friday
+TXN00832,2025-08-30,Ashanti,Business,Expense,Entertainment,372.43,Bank Transfer,Pending,GHS,2025-08,Saturday
+TXN00833,2025-08-30,Eastern,Personal,Income,Salary,6630.64,Cash,Completed,GHS,2025-08,Saturday
+TXN00834,2025-08-31,Greater Accra,Business,Income,Salary,6018.45,Bank Transfer,Completed,GHS,2025-08,Sunday
+TXN00835,2025-09-01,Eastern,Business,Expense,Food,330.6,Bank Transfer,Pending,GHS,2025-09,Monday
+TXN00836,2025-09-02,Eastern,Personal,Expense,Rent,2313.09,Bank Transfer,Completed,GHS,2025-09,Tuesday
+TXN00837,2025-09-02,Central,Personal,Expense,Transport,260.78,Bank Transfer,Pending,GHS,2025-09,Tuesday
+TXN00838,2025-09-03,Northern,Personal,Expense,Utilities,366.83,Debit Card,Completed,GHS,2025-09,Wednesday
+TXN00839,2025-09-04,Ashanti,Personal,Expense,Healthcare,178.44,Mobile Money,Completed,GHS,2025-09,Thursday
+TXN00840,2025-09-05,Northern,Business,Expense,Utilities,512.31,Mobile Money,Completed,GHS,2025-09,Friday
+TXN00841,2025-09-05,Central,Personal,Expense,Entertainment,109.74,Bank Transfer,Failed,GHS,2025-09,Friday
+TXN00842,2025-09-06,Greater Accra,Personal,Income,Salary,5093.5,Debit Card,Completed,GHS,2025-09,Saturday
+TXN00843,2025-09-07,Northern,Business,Expense,Rent,1106.5,Cash,Completed,GHS,2025-09,Sunday
+TXN00844,2025-09-08,Western,Personal,Expense,Transport,366.8,Mobile Money,Failed,GHS,2025-09,Monday
+TXN00845,2025-09-08,Greater Accra,Personal,Expense,Shopping,679.43,Bank Transfer,Completed,GHS,2025-09,Monday
+TXN00846,2025-09-09,Eastern,Personal,Income,Salary,5750.5,Cash,Completed,GHS,2025-09,Tuesday
+TXN00847,2025-09-10,Central,Personal,Expense,Transport,239.77,Cash,Completed,GHS,2025-09,Wednesday
+TXN00848,2025-09-10,Ashanti,Personal,Expense,Rent,1969.25,Debit Card,Failed,GHS,2025-09,Wednesday
+TXN00849,2025-09-11,Northern,Business,Expense,Transport,273.59,Mobile Money,Completed,GHS,2025-09,Thursday
+TXN00850,2025-09-12,Central,Personal,Expense,Utilities,116.25,Bank Transfer,Completed,GHS,2025-09,Friday
+TXN00851,2025-09-13,Greater Accra,Personal,Expense,Entertainment,65.32,Bank Transfer,Failed,GHS,2025-09,Saturday
+TXN00852,2025-09-13,Northern,Personal,Expense,Entertainment,101.16,Cash,Pending,GHS,2025-09,Saturday
+TXN00853,2025-09-14,Central,Business,Expense,Entertainment,589.0,Bank Transfer,Completed,GHS,2025-09,Sunday
+TXN00854,2025-09-15,Central,Business,Income,Salary,7014.3,Mobile Money,Completed,GHS,2025-09,Monday
+TXN00855,2025-09-16,Greater Accra,Personal,Expense,Utilities,699.43,Mobile Money,Completed,GHS,2025-09,Tuesday
+TXN00856,2025-09-16,Western,Business,Expense,Rent,1827.97,Mobile Money,Failed,GHS,2025-09,Tuesday
+TXN00857,2025-09-17,Central,Personal,Expense,Entertainment,241.55,Bank Transfer,Completed,GHS,2025-09,Wednesday
+TXN00858,2025-09-18,Eastern,Personal,Income,Salary,5626.83,Debit Card,Completed,GHS,2025-09,Thursday
+TXN00859,2025-09-18,Northern,Personal,Expense,Healthcare,1401.9,Bank Transfer,Pending,GHS,2025-09,Thursday
+TXN00860,2025-09-19,Western,Personal,Expense,Education,1245.5,Debit Card,Completed,GHS,2025-09,Friday
+TXN00861,2025-09-20,Ashanti,Personal,Expense,Utilities,308.67,Debit Card,Completed,GHS,2025-09,Saturday
+TXN00862,2025-09-21,Eastern,Business,Expense,Rent,1986.22,Cash,Pending,GHS,2025-09,Sunday
+TXN00863,2025-09-21,Eastern,Personal,Expense,Transport,418.4,Debit Card,Completed,GHS,2025-09,Sunday
+TXN00864,2025-09-22,Ashanti,Personal,Expense,Utilities,657.13,Mobile Money,Failed,GHS,2025-09,Monday
+TXN00865,2025-09-23,Ashanti,Personal,Income,Business,3160.36,Debit Card,Failed,GHS,2025-09,Tuesday
+TXN00866,2025-09-24,Central,Personal,Expense,Entertainment,209.66,Debit Card,Completed,GHS,2025-09,Wednesday
+TXN00867,2025-09-24,Central,Personal,Income,Salary,7436.55,Mobile Money,Failed,GHS,2025-09,Wednesday
+TXN00868,2025-09-25,Northern,Personal,Expense,Education,1051.98,Debit Card,Completed,GHS,2025-09,Thursday
+TXN00869,2025-09-26,Northern,Personal,Expense,Utilities,503.0,Cash,Failed,GHS,2025-09,Friday
+TXN00870,2025-09-27,Ashanti,Personal,Income,Salary,8140.51,Mobile Money,Completed,GHS,2025-09,Saturday
+TXN00871,2025-09-27,Central,Personal,Expense,Education,1752.27,Bank Transfer,Completed,GHS,2025-09,Saturday
+TXN00872,2025-09-28,Northern,Personal,Income,Salary,3769.53,Cash,Completed,GHS,2025-09,Sunday
+TXN00873,2025-09-29,Ashanti,Personal,Expense,Healthcare,447.61,Bank Transfer,Pending,GHS,2025-09,Monday
+TXN00874,2025-09-29,Ashanti,Personal,Expense,Education,1382.94,Bank Transfer,Completed,GHS,2025-09,Monday
+TXN00875,2025-09-30,Ashanti,Personal,Expense,Shopping,1734.78,Bank Transfer,Failed,GHS,2025-09,Tuesday
+TXN00876,2025-10-01,Ashanti,Personal,Expense,Healthcare,946.51,Debit Card,Completed,GHS,2025-10,Wednesday
+TXN00877,2025-10-02,Eastern,Personal,Expense,Education,1716.62,Bank Transfer,Completed,GHS,2025-10,Thursday
+TXN00878,2025-10-02,Western,Personal,Income,Business,2259.51,Bank Transfer,Pending,GHS,2025-10,Thursday
+TXN00879,2025-10-03,Ashanti,Business,Expense,Utilities,108.79,Mobile Money,Completed,GHS,2025-10,Friday
+TXN00880,2025-10-04,Greater Accra,Personal,Expense,Food,192.87,Debit Card,Completed,GHS,2025-10,Saturday
+TXN00881,2025-10-05,Ashanti,Personal,Expense,Utilities,343.28,Cash,Completed,GHS,2025-10,Sunday
+TXN00882,2025-10-05,Western,Personal,Expense,Rent,1355.11,Cash,Completed,GHS,2025-10,Sunday
+TXN00883,2025-10-06,Eastern,Personal,Expense,Entertainment,637.68,Debit Card,Pending,GHS,2025-10,Monday
+TXN00884,2025-10-07,Northern,Personal,Expense,Utilities,142.62,Bank Transfer,Completed,GHS,2025-10,Tuesday
+TXN00885,2025-10-07,Western,Personal,Expense,Rent,1035.89,Mobile Money,Pending,GHS,2025-10,Tuesday
+TXN00886,2025-10-08,Eastern,Business,Expense,Rent,990.92,Mobile Money,Completed,GHS,2025-10,Wednesday
+TXN00887,2025-10-09,Eastern,Personal,Expense,Food,237.18,Bank Transfer,Completed,GHS,2025-10,Thursday
+TXN00888,2025-10-10,Greater Accra,Personal,Expense,Shopping,1046.62,Bank Transfer,Completed,GHS,2025-10,Friday
+TXN00889,2025-10-10,Western,Personal,Expense,Entertainment,686.57,Bank Transfer,Completed,GHS,2025-10,Friday
+TXN00890,2025-10-11,Central,Business,Income,Salary,7793.85,Mobile Money,Failed,GHS,2025-10,Saturday
+TXN00891,2025-10-12,Greater Accra,Personal,Expense,Utilities,286.22,Mobile Money,Completed,GHS,2025-10,Sunday
+TXN00892,2025-10-13,Greater Accra,Personal,Expense,Shopping,1340.51,Cash,Completed,GHS,2025-10,Monday
+TXN00893,2025-10-13,Northern,Personal,Income,Salary,5422.38,Bank Transfer,Failed,GHS,2025-10,Monday
+TXN00894,2025-10-14,Western,Personal,Expense,Utilities,157.34,Mobile Money,Completed,GHS,2025-10,Tuesday
+TXN00895,2025-10-15,Eastern,Business,Income,Salary,8502.6,Cash,Failed,GHS,2025-10,Wednesday
+TXN00896,2025-10-16,Central,Personal,Expense,Entertainment,676.85,Debit Card,Failed,GHS,2025-10,Thursday
+TXN00897,2025-10-16,Greater Accra,Personal,Income,Business,6786.12,Bank Transfer,Pending,GHS,2025-10,Thursday
+TXN00898,2025-10-17,Greater Accra,Personal,Expense,Food,267.68,Cash,Pending,GHS,2025-10,Friday
+TXN00899,2025-10-18,Greater Accra,Personal,Income,Salary,8923.97,Bank Transfer,Pending,GHS,2025-10,Saturday
+TXN00900,2025-10-18,Ashanti,Personal,Expense,Healthcare,1396.71,Mobile Money,Completed,GHS,2025-10,Saturday
+TXN00901,2025-10-19,Greater Accra,Business,Expense,Education,430.53,Mobile Money,Completed,GHS,2025-10,Sunday
+TXN00902,2025-10-20,Central,Personal,Expense,Utilities,589.63,Mobile Money,Completed,GHS,2025-10,Monday
+TXN00903,2025-10-21,Ashanti,Personal,Expense,Utilities,462.58,Bank Transfer,Pending,GHS,2025-10,Tuesday
+TXN00904,2025-10-21,Ashanti,Personal,Expense,Shopping,463.83,Bank Transfer,Completed,GHS,2025-10,Tuesday
+TXN00905,2025-10-22,Greater Accra,Personal,Income,Business,6109.49,Bank Transfer,Completed,GHS,2025-10,Wednesday
+TXN00906,2025-10-23,Northern,Personal,Income,Salary,6726.31,Bank Transfer,Failed,GHS,2025-10,Thursday
+TXN00907,2025-10-24,Western,Personal,Expense,Entertainment,326.6,Cash,Completed,GHS,2025-10,Friday
+TXN00908,2025-10-24,Central,Business,Expense,Transport,236.88,Mobile Money,Failed,GHS,2025-10,Friday
+TXN00909,2025-10-25,Ashanti,Personal,Expense,Rent,916.4,Mobile Money,Failed,GHS,2025-10,Saturday
+TXN00910,2025-10-26,Northern,Personal,Expense,Utilities,391.53,Cash,Completed,GHS,2025-10,Sunday
+TXN00911,2025-10-26,Eastern,Personal,Expense,Entertainment,422.78,Mobile Money,Failed,GHS,2025-10,Sunday
+TXN00912,2025-10-27,Ashanti,Personal,Expense,Shopping,860.6,Mobile Money,Completed,GHS,2025-10,Monday
+TXN00913,2025-10-28,Central,Personal,Expense,Transport,76.6,Bank Transfer,Completed,GHS,2025-10,Tuesday
+TXN00914,2025-10-29,Ashanti,Personal,Expense,Utilities,611.88,Mobile Money,Completed,GHS,2025-10,Wednesday
+TXN00915,2025-10-29,Greater Accra,Personal,Income,Business,4998.44,Mobile Money,Completed,GHS,2025-10,Wednesday
+TXN00916,2025-10-30,Northern,Personal,Expense,Entertainment,194.45,Cash,Pending,GHS,2025-10,Thursday
+TXN00917,2025-10-31,Ashanti,Personal,Expense,Shopping,187.6,Mobile Money,Completed,GHS,2025-10,Friday
+TXN00918,2025-11-01,Central,Personal,Income,Business,5803.22,Bank Transfer,Pending,GHS,2025-11,Saturday
+TXN00919,2025-11-01,Greater Accra,Business,Income,Business,3196.68,Bank Transfer,Completed,GHS,2025-11,Saturday
+TXN00920,2025-11-02,Ashanti,Business,Income,Business,6148.83,Debit Card,Completed,GHS,2025-11,Sunday
+TXN00921,2025-11-03,Ashanti,Personal,Income,Salary,6981.97,Debit Card,Completed,GHS,2025-11,Monday
+TXN00922,2025-11-04,Eastern,Personal,Expense,Shopping,293.78,Cash,Completed,GHS,2025-11,Tuesday
+TXN00923,2025-11-04,Eastern,Personal,Income,Business,5953.21,Mobile Money,Failed,GHS,2025-11,Tuesday
+TXN00924,2025-11-05,Greater Accra,Personal,Income,Business,1299.16,Cash,Failed,GHS,2025-11,Wednesday
+TXN00925,2025-11-06,Greater Accra,Personal,Expense,Rent,1905.79,Mobile Money,Completed,GHS,2025-11,Thursday
+TXN00926,2025-11-06,Eastern,Personal,Expense,Healthcare,545.43,Mobile Money,Failed,GHS,2025-11,Thursday
+TXN00927,2025-11-07,Ashanti,Personal,Expense,Entertainment,367.16,Bank Transfer,Completed,GHS,2025-11,Friday
+TXN00928,2025-11-08,Greater Accra,Personal,Expense,Shopping,422.81,Mobile Money,Failed,GHS,2025-11,Saturday
+TXN00929,2025-11-09,Northern,Business,Expense,Transport,44.73,Cash,Failed,GHS,2025-11,Sunday
+TXN00930,2025-11-09,Ashanti,Personal,Expense,Education,351.69,Debit Card,Pending,GHS,2025-11,Sunday
+TXN00931,2025-11-10,Northern,Business,Expense,Shopping,1548.27,Debit Card,Pending,GHS,2025-11,Monday
+TXN00932,2025-11-11,Central,Business,Expense,Entertainment,97.78,Cash,Pending,GHS,2025-11,Tuesday
+TXN00933,2025-11-12,Ashanti,Business,Expense,Transport,180.43,Bank Transfer,Pending,GHS,2025-11,Wednesday
+TXN00934,2025-11-12,Ashanti,Personal,Income,Salary,5851.48,Debit Card,Completed,GHS,2025-11,Wednesday
+TXN00935,2025-11-13,Western,Business,Expense,Food,421.67,Mobile Money,Pending,GHS,2025-11,Thursday
+TXN00936,2025-11-14,Ashanti,Personal,Expense,Education,747.84,Debit Card,Completed,GHS,2025-11,Friday
+TXN00937,2025-11-14,Western,Personal,Income,Business,5356.37,Debit Card,Failed,GHS,2025-11,Friday
+TXN00938,2025-11-15,Central,Personal,Expense,Rent,2952.33,Debit Card,Failed,GHS,2025-11,Saturday
+TXN00939,2025-11-16,Western,Personal,Expense,Transport,46.52,Mobile Money,Pending,GHS,2025-11,Sunday
+TXN00940,2025-11-17,Greater Accra,Personal,Expense,Entertainment,250.27,Mobile Money,Completed,GHS,2025-11,Monday
+TXN00941,2025-11-17,Central,Personal,Expense,Food,590.69,Mobile Money,Completed,GHS,2025-11,Monday
+TXN00942,2025-11-18,Central,Business,Income,Business,6502.46,Bank Transfer,Completed,GHS,2025-11,Tuesday
+TXN00943,2025-11-19,Greater Accra,Personal,Expense,Food,282.89,Bank Transfer,Completed,GHS,2025-11,Wednesday
+TXN00944,2025-11-20,Greater Accra,Personal,Income,Business,6858.94,Bank Transfer,Completed,GHS,2025-11,Thursday
+TXN00945,2025-11-20,Eastern,Personal,Expense,Rent,1797.86,Mobile Money,Failed,GHS,2025-11,Thursday
+TXN00946,2025-11-21,Greater Accra,Business,Expense,Transport,423.47,Mobile Money,Completed,GHS,2025-11,Friday
+TXN00947,2025-11-22,Central,Personal,Expense,Transport,206.71,Bank Transfer,Completed,GHS,2025-11,Saturday
+TXN00948,2025-11-23,Northern,Personal,Expense,Healthcare,1064.11,Debit Card,Completed,GHS,2025-11,Sunday
+TXN00949,2025-11-23,Western,Business,Income,Business,5442.27,Bank Transfer,Completed,GHS,2025-11,Sunday
+TXN00950,2025-11-24,Western,Personal,Expense,Utilities,696.15,Mobile Money,Failed,GHS,2025-11,Monday
+TXN00951,2025-11-25,Greater Accra,Personal,Expense,Rent,2295.94,Debit Card,Completed,GHS,2025-11,Tuesday
+TXN00952,2025-11-25,Ashanti,Personal,Expense,Rent,2830.98,Cash,Pending,GHS,2025-11,Tuesday
+TXN00953,2025-11-26,Central,Personal,Expense,Utilities,691.94,Bank Transfer,Completed,GHS,2025-11,Wednesday
+TXN00954,2025-11-27,Northern,Personal,Expense,Transport,104.98,Mobile Money,Pending,GHS,2025-11,Thursday
+TXN00955,2025-11-28,Central,Personal,Expense,Transport,369.84,Bank Transfer,Pending,GHS,2025-11,Friday
+TXN00956,2025-11-28,Northern,Personal,Expense,Food,91.3,Bank Transfer,Completed,GHS,2025-11,Friday
+TXN00957,2025-11-29,Western,Personal,Income,Salary,4594.56,Bank Transfer,Completed,GHS,2025-11,Saturday
+TXN00958,2025-11-30,Eastern,Personal,Expense,Food,132.22,Cash,Completed,GHS,2025-11,Sunday
+TXN00959,2025-12-01,Eastern,Personal,Income,Salary,8713.21,Bank Transfer,Pending,GHS,2025-12,Monday
+TXN00960,2025-12-01,Eastern,Personal,Expense,Rent,1071.3,Debit Card,Completed,GHS,2025-12,Monday
+TXN00961,2025-12-02,Ashanti,Personal,Expense,Rent,2044.63,Debit Card,Pending,GHS,2025-12,Tuesday
+TXN00962,2025-12-03,Central,Personal,Expense,Transport,52.2,Cash,Completed,GHS,2025-12,Wednesday
+TXN00963,2025-12-03,Central,Personal,Expense,Rent,1885.22,Bank Transfer,Completed,GHS,2025-12,Wednesday
+TXN00964,2025-12-04,Western,Personal,Income,Salary,5447.85,Debit Card,Completed,GHS,2025-12,Thursday
+TXN00965,2025-12-05,Ashanti,Personal,Expense,Education,1538.16,Bank Transfer,Completed,GHS,2025-12,Friday
+TXN00966,2025-12-06,Western,Personal,Income,Salary,6050.95,Mobile Money,Completed,GHS,2025-12,Saturday
+TXN00967,2025-12-06,Northern,Personal,Income,Business,5038.67,Bank Transfer,Completed,GHS,2025-12,Saturday
+TXN00968,2025-12-07,Eastern,Business,Expense,Utilities,641.82,Bank Transfer,Pending,GHS,2025-12,Sunday
+TXN00969,2025-12-08,Ashanti,Personal,Expense,Transport,466.34,Debit Card,Pending,GHS,2025-12,Monday
+TXN00970,2025-12-09,Northern,Personal,Expense,Food,342.49,Debit Card,Completed,GHS,2025-12,Tuesday
+TXN00971,2025-12-09,Northern,Personal,Income,Salary,5611.71,Cash,Completed,GHS,2025-12,Tuesday
+TXN00972,2025-12-10,Ashanti,Business,Expense,Transport,379.96,Bank Transfer,Pending,GHS,2025-12,Wednesday
+TXN00973,2025-12-11,Northern,Personal,Expense,Transport,345.86,Bank Transfer,Completed,GHS,2025-12,Thursday
+TXN00974,2025-12-12,Northern,Personal,Income,Salary,6971.53,Mobile Money,Completed,GHS,2025-12,Friday
+TXN00975,2025-12-12,Greater Accra,Business,Expense,Transport,312.51,Mobile Money,Failed,GHS,2025-12,Friday
+TXN00976,2025-12-13,Central,Personal,Income,Business,5341.21,Bank Transfer,Completed,GHS,2025-12,Saturday
+TXN00977,2025-12-14,Northern,Personal,Expense,Rent,1590.73,Debit Card,Completed,GHS,2025-12,Sunday
+TXN00978,2025-12-14,Greater Accra,Business,Expense,Utilities,131.63,Mobile Money,Pending,GHS,2025-12,Sunday
+TXN00979,2025-12-15,Greater Accra,Personal,Expense,Food,616.22,Mobile Money,Pending,GHS,2025-12,Monday
+TXN00980,2025-12-16,Western,Business,Expense,Entertainment,466.15,Debit Card,Failed,GHS,2025-12,Tuesday
+TXN00981,2025-12-17,Western,Personal,Expense,Healthcare,1079.12,Bank Transfer,Completed,GHS,2025-12,Wednesday
+TXN00982,2025-12-17,Greater Accra,Personal,Income,Business,6810.51,Cash,Pending,GHS,2025-12,Wednesday
+TXN00983,2025-12-18,Central,Personal,Income,Business,4249.58,Debit Card,Completed,GHS,2025-12,Thursday
+TXN00984,2025-12-19,Northern,Personal,Expense,Entertainment,256.71,Bank Transfer,Failed,GHS,2025-12,Friday
+TXN00985,2025-12-20,Northern,Personal,Income,Business,1322.18,Mobile Money,Completed,GHS,2025-12,Saturday
+TXN00986,2025-12-20,Western,Business,Expense,Shopping,1332.54,Bank Transfer,Completed,GHS,2025-12,Saturday
+TXN00987,2025-12-21,Greater Accra,Personal,Expense,Entertainment,517.27,Cash,Completed,GHS,2025-12,Sunday
+TXN00988,2025-12-22,Greater Accra,Personal,Expense,Utilities,614.17,Debit Card,Completed,GHS,2025-12,Monday
+TXN00989,2025-12-22,Northern,Personal,Income,Salary,8387.3,Bank Transfer,Pending,GHS,2025-12,Monday
+TXN00990,2025-12-23,Greater Accra,Personal,Expense,Transport,432.59,Bank Transfer,Pending,GHS,2025-12,Tuesday
+TXN00991,2025-12-24,Northern,Business,Expense,Education,1614.94,Mobile Money,Completed,GHS,2025-12,Wednesday
+TXN00992,2025-12-25,Central,Business,Expense,Healthcare,199.21,Debit Card,Completed,GHS,2025-12,Thursday
+TXN00993,2025-12-25,Greater Accra,Personal,Expense,Education,579.07,Debit Card,Completed,GHS,2025-12,Thursday
+TXN00994,2025-12-26,Central,Personal,Expense,Transport,478.58,Bank Transfer,Completed,GHS,2025-12,Friday
+TXN00995,2025-12-27,Ashanti,Business,Expense,Food,183.68,Mobile Money,Completed,GHS,2025-12,Saturday
+TXN00996,2025-12-28,Greater Accra,Personal,Expense,Shopping,1794.49,Mobile Money,Completed,GHS,2025-12,Sunday
+TXN00997,2025-12-28,Greater Accra,Personal,Expense,Food,573.35,Debit Card,Completed,GHS,2025-12,Sunday
+TXN00998,2025-12-29,Central,Personal,Expense,Utilities,521.39,Bank Transfer,Completed,GHS,2025-12,Monday
+TXN00999,2025-12-30,Western,Personal,Expense,Education,517.4,Cash,Completed,GHS,2025-12,Tuesday
+TXN01000,2025-12-31,Eastern,Personal,Expense,Healthcare,833.12,Mobile Money,Completed,GHS,2025-12,Wednesday
