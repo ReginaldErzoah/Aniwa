@@ -1,0 +1,6 @@
+vehicle_id,type,make,model,year,mileage_km,battery_capacity_kwh,range_km,fuel_liters_per_100km,cargo_capacity_tons,fault_codes
+EV001,ElectricVehicle,Nissan,Leaf,2022,18500,40,270,,,P0A80
+EV002,ElectricVehicle,BYD,Atto 3,2023,9200,60,420,,,
+TRK001,CommercialTruck,Toyota,Hiace,2019,142000,,,11.5,1.5,P0301;P0420
+TRK002,CommercialTruck,Isuzu,NPR,2020,98000,,,18.2,5.0,P0171
+TRK003,CommercialTruck,Mercedes,Actros,2021,210000,,,28.0,25.0,
