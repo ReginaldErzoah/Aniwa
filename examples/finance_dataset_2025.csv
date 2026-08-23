@@ -1,0 +1,574 @@
+transaction_id,date,category,subcategory,amount,type,payment_method,description
+TXN1000,2025-01-01,Income,Salary,3055.77,Credit,Bank Transfer,Monthly salary deposit
+TXN1001,2025-01-02,Entertainment,Movies,162.81,Debit,Mobile Money,Movies purchase
+TXN1002,2025-01-03,Housing,Rent,771.1,Debit,Bank Transfer,Monthly rent payment
+TXN1003,2025-01-04,Housing,Utilities,158.38,Debit,Mobile Money,Utilities purchase
+TXN1004,2025-01-05,Health,Pharmacy,167.66,Debit,Credit Card,Pharmacy purchase
+TXN1005,2025-01-05,Savings,Retirement Contribution,63.3,Debit,Credit Card,Retirement Contribution purchase
+TXN1006,2025-01-05,Shopping,Clothing,23.13,Debit,Debit Card,Clothing purchase
+TXN1007,2025-01-06,Health,Pharmacy,161.35,Debit,Mobile Money,Pharmacy purchase
+TXN1008,2025-01-06,Food,Food Delivery,20.1,Debit,Bank Transfer,Food Delivery purchase
+TXN1009,2025-01-07,Entertainment,Streaming Service,12.94,Debit,Credit Card,Streaming Service purchase
+TXN1010,2025-01-07,Health,Pharmacy,188.6,Debit,Debit Card,Pharmacy purchase
+TXN1011,2025-01-08,Shopping,Electronics,83.33,Debit,Credit Card,Electronics purchase
+TXN1012,2025-01-08,Health,Pharmacy,135.18,Debit,Credit Card,Pharmacy purchase
+TXN1013,2025-01-08,Entertainment,Movies,103.31,Debit,Bank Transfer,Movies purchase
+TXN1014,2025-01-09,Shopping,Clothing,52.7,Debit,Debit Card,Clothing purchase
+TXN1015,2025-01-10,Health,Pharmacy,48.78,Debit,Mobile Money,Pharmacy purchase
+TXN1016,2025-01-10,Shopping,Electronics,145.23,Debit,Cash,Electronics purchase
+TXN1017,2025-01-10,Other,Subscription,60.48,Debit,Credit Card,Subscription purchase
+TXN1018,2025-01-11,Savings,Emergency Fund,89.67,Debit,Credit Card,Emergency Fund purchase
+TXN1019,2025-01-11,Transportation,Car Maintenance,22.73,Debit,Debit Card,Car Maintenance purchase
+TXN1020,2025-01-12,Transportation,Car Maintenance,132.42,Debit,Cash,Car Maintenance purchase
+TXN1021,2025-01-13,Health,Pharmacy,150.62,Debit,Debit Card,Pharmacy purchase
+TXN1022,2025-01-13,Health,Gym Membership,27.21,Debit,Cash,Gym Membership purchase
+TXN1023,2025-01-13,Transportation,Car Maintenance,3.7,Debit,Bank Transfer,Car Maintenance purchase
+TXN1024,2025-01-14,Food,Coffee Shop,185.64,Debit,Mobile Money,Coffee Shop purchase
+TXN1025,2025-01-15,Shopping,Electronics,120.05,Debit,Mobile Money,Electronics purchase
+TXN1026,2025-01-16,Other,Bank Fee,27.28,Debit,Bank Transfer,Bank Fee purchase
+TXN1027,2025-01-16,Health,Doctor Visit,15.57,Debit,Mobile Money,Doctor Visit purchase
+TXN1028,2025-01-19,Transportation,Car Maintenance,208.47,Debit,Credit Card,Car Maintenance purchase
+TXN1029,2025-01-20,Entertainment,Movies,157.71,Debit,Cash,Movies purchase
+TXN1030,2025-01-20,Shopping,Online Retail,198.22,Debit,Cash,Online Retail purchase
+TXN1031,2025-01-20,Food,Restaurant,51.76,Debit,Bank Transfer,Restaurant purchase
+TXN1032,2025-01-20,Income,Freelance Payment,543.14,Credit,Bank Transfer,Freelance project payment
+TXN1033,2025-01-21,Housing,Rent,156.6,Debit,Debit Card,Rent purchase
+TXN1034,2025-01-24,Other,Subscription,120.01,Debit,Mobile Money,Subscription purchase
+TXN1035,2025-01-24,Other,Subscription,173.26,Debit,Cash,Subscription purchase
+TXN1036,2025-01-26,Savings,Retirement Contribution,104.34,Debit,Debit Card,Retirement Contribution purchase
+TXN1037,2025-01-26,Food,Groceries,90.37,Debit,Bank Transfer,Groceries purchase
+TXN1038,2025-01-28,Other,Subscription,94.55,Debit,Bank Transfer,Subscription purchase
+TXN1039,2025-02-01,Income,Salary,3170.55,Credit,Bank Transfer,Monthly salary deposit
+TXN1040,2025-02-01,Transportation,Car Maintenance,108.38,Debit,Credit Card,Car Maintenance purchase
+TXN1041,2025-02-03,Housing,Rent,750.11,Debit,Bank Transfer,Monthly rent payment
+TXN1042,2025-02-03,Health,Health Insurance,64.9,Debit,Mobile Money,Health Insurance purchase
+TXN1043,2025-02-03,Other,Subscription,44.21,Debit,Credit Card,Subscription purchase
+TXN1044,2025-02-03,Housing,Rent,165.31,Debit,Debit Card,Rent purchase
+TXN1045,2025-02-04,Transportation,Fuel,211.49,Debit,Debit Card,Fuel purchase
+TXN1046,2025-02-04,Transportation,Fuel,132.12,Debit,Credit Card,Fuel purchase
+TXN1047,2025-02-04,Savings,Transfer to Savings,207.33,Debit,Mobile Money,Transfer to Savings purchase
+TXN1048,2025-02-06,Shopping,Home Goods,47.32,Debit,Bank Transfer,Home Goods purchase
+TXN1049,2025-02-06,Entertainment,Concert Tickets,88.89,Debit,Bank Transfer,Concert Tickets purchase
+TXN1050,2025-02-06,Other,Gift,204.6,Debit,Debit Card,Gift purchase
+TXN1051,2025-02-06,Income,Freelance Payment,596.93,Credit,Bank Transfer,Freelance project payment
+TXN1052,2025-02-08,Health,Doctor Visit,205.52,Debit,Debit Card,Doctor Visit purchase
+TXN1053,2025-02-09,Health,Doctor Visit,98.09,Debit,Mobile Money,Doctor Visit purchase
+TXN1054,2025-02-09,Health,Pharmacy,147.93,Debit,Mobile Money,Pharmacy purchase
+TXN1055,2025-02-11,Health,Pharmacy,196.07,Debit,Mobile Money,Pharmacy purchase
+TXN1056,2025-02-12,Entertainment,Concert Tickets,47.18,Debit,Bank Transfer,Concert Tickets purchase
+TXN1057,2025-02-12,Other,Gift,199.46,Debit,Debit Card,Gift purchase
+TXN1058,2025-02-13,Health,Pharmacy,3.77,Debit,Credit Card,Pharmacy purchase
+TXN1059,2025-02-13,Health,Doctor Visit,163.85,Debit,Mobile Money,Doctor Visit purchase
+TXN1060,2025-02-13,Savings,Emergency Fund,5.1,Debit,Debit Card,Emergency Fund purchase
+TXN1061,2025-02-14,Housing,Internet,129.4,Debit,Credit Card,Internet purchase
+TXN1062,2025-02-17,Entertainment,Streaming Service,79.75,Debit,Mobile Money,Streaming Service purchase
+TXN1063,2025-02-18,Transportation,Public Transit,190.62,Debit,Credit Card,Public Transit purchase
+TXN1064,2025-02-18,Savings,Transfer to Savings,41.92,Debit,Bank Transfer,Transfer to Savings purchase
+TXN1065,2025-02-18,Savings,Emergency Fund,190.5,Debit,Credit Card,Emergency Fund purchase
+TXN1066,2025-02-21,Entertainment,Gaming,78.88,Debit,Credit Card,Gaming purchase
+TXN1067,2025-02-22,Savings,Retirement Contribution,63.46,Debit,Debit Card,Retirement Contribution purchase
+TXN1068,2025-02-23,Shopping,Online Retail,150.46,Debit,Mobile Money,Online Retail purchase
+TXN1069,2025-02-23,Shopping,Clothing,28.03,Debit,Bank Transfer,Clothing purchase
+TXN1070,2025-02-24,Housing,Rent,132.46,Debit,Bank Transfer,Rent purchase
+TXN1071,2025-02-24,Shopping,Online Retail,134.55,Debit,Mobile Money,Online Retail purchase
+TXN1072,2025-02-25,Health,Pharmacy,156.81,Debit,Debit Card,Pharmacy purchase
+TXN1073,2025-02-26,Shopping,Online Retail,18.18,Debit,Bank Transfer,Online Retail purchase
+TXN1074,2025-02-28,Health,Health Insurance,73.78,Debit,Bank Transfer,Health Insurance purchase
+TXN1075,2025-02-28,Transportation,Public Transit,94.24,Debit,Cash,Public Transit purchase
+TXN1076,2025-03-01,Income,Salary,3161.12,Credit,Bank Transfer,Monthly salary deposit
+TXN1077,2025-03-01,Savings,Emergency Fund,183.92,Debit,Bank Transfer,Emergency Fund purchase
+TXN1078,2025-03-01,Health,Doctor Visit,96.29,Debit,Mobile Money,Doctor Visit purchase
+TXN1079,2025-03-02,Other,Miscellaneous,98.95,Debit,Credit Card,Miscellaneous purchase
+TXN1080,2025-03-02,Other,Subscription,145.97,Debit,Bank Transfer,Subscription purchase
+TXN1081,2025-03-03,Housing,Rent,781.65,Debit,Bank Transfer,Monthly rent payment
+TXN1082,2025-03-03,Food,Restaurant,149.0,Debit,Credit Card,Restaurant purchase
+TXN1083,2025-03-03,Entertainment,Movies,8.3,Debit,Credit Card,Movies purchase
+TXN1084,2025-03-05,Savings,Retirement Contribution,89.72,Debit,Credit Card,Retirement Contribution purchase
+TXN1085,2025-03-08,Transportation,Car Maintenance,13.9,Debit,Credit Card,Car Maintenance purchase
+TXN1086,2025-03-10,Shopping,Online Retail,135.95,Debit,Mobile Money,Online Retail purchase
+TXN1087,2025-03-10,Savings,Emergency Fund,99.76,Debit,Credit Card,Emergency Fund purchase
+TXN1088,2025-03-10,Other,Miscellaneous,59.24,Debit,Credit Card,Miscellaneous purchase
+TXN1089,2025-03-11,Other,Subscription,62.59,Debit,Debit Card,Subscription purchase
+TXN1090,2025-03-11,Health,Doctor Visit,61.96,Debit,Bank Transfer,Doctor Visit purchase
+TXN1091,2025-03-13,Savings,Emergency Fund,36.16,Debit,Credit Card,Emergency Fund purchase
+TXN1092,2025-03-14,Shopping,Online Retail,93.22,Debit,Credit Card,Online Retail purchase
+TXN1093,2025-03-14,Savings,Retirement Contribution,199.35,Debit,Mobile Money,Retirement Contribution purchase
+TXN1094,2025-03-14,Housing,Home Maintenance,106.5,Debit,Bank Transfer,Home Maintenance purchase
+TXN1095,2025-03-15,Savings,Emergency Fund,165.21,Debit,Mobile Money,Emergency Fund purchase
+TXN1096,2025-03-15,Entertainment,Gaming,50.61,Debit,Cash,Gaming purchase
+TXN1097,2025-03-15,Other,Bank Fee,87.38,Debit,Cash,Bank Fee purchase
+TXN1098,2025-03-16,Transportation,Fuel,199.8,Debit,Mobile Money,Fuel purchase
+TXN1099,2025-03-16,Housing,Rent,142.48,Debit,Credit Card,Rent purchase
+TXN1100,2025-03-16,Other,Subscription,13.91,Debit,Cash,Subscription purchase
+TXN1101,2025-03-17,Shopping,Home Goods,168.19,Debit,Cash,Home Goods purchase
+TXN1102,2025-03-17,Health,Health Insurance,57.74,Debit,Debit Card,Health Insurance purchase
+TXN1103,2025-03-17,Other,Bank Fee,165.54,Debit,Debit Card,Bank Fee purchase
+TXN1104,2025-03-18,Entertainment,Streaming Service,172.53,Debit,Debit Card,Streaming Service purchase
+TXN1105,2025-03-18,Housing,Utilities,46.26,Debit,Debit Card,Utilities purchase
+TXN1106,2025-03-19,Transportation,Car Maintenance,148.27,Debit,Mobile Money,Car Maintenance purchase
+TXN1107,2025-03-20,Health,Gym Membership,39.41,Debit,Mobile Money,Gym Membership purchase
+TXN1108,2025-03-20,Food,Restaurant,212.34,Debit,Debit Card,Restaurant purchase
+TXN1109,2025-03-20,Housing,Internet,127.95,Debit,Cash,Internet purchase
+TXN1110,2025-03-21,Food,Restaurant,25.11,Debit,Bank Transfer,Restaurant purchase
+TXN1111,2025-03-24,Shopping,Clothing,112.79,Debit,Bank Transfer,Clothing purchase
+TXN1112,2025-03-24,Housing,Home Maintenance,181.45,Debit,Debit Card,Home Maintenance purchase
+TXN1113,2025-03-24,Savings,Retirement Contribution,140.92,Debit,Cash,Retirement Contribution purchase
+TXN1114,2025-03-25,Transportation,Ride Share,136.65,Debit,Mobile Money,Ride Share purchase
+TXN1115,2025-03-25,Other,Miscellaneous,97.52,Debit,Mobile Money,Miscellaneous purchase
+TXN1116,2025-03-25,Health,Gym Membership,187.82,Debit,Debit Card,Gym Membership purchase
+TXN1117,2025-03-26,Entertainment,Gaming,126.66,Debit,Cash,Gaming purchase
+TXN1118,2025-03-26,Shopping,Clothing,110.26,Debit,Bank Transfer,Clothing purchase
+TXN1119,2025-03-26,Transportation,Car Maintenance,49.03,Debit,Bank Transfer,Car Maintenance purchase
+TXN1120,2025-03-27,Housing,Utilities,21.58,Debit,Cash,Utilities purchase
+TXN1121,2025-03-27,Other,Subscription,152.86,Debit,Cash,Subscription purchase
+TXN1122,2025-03-29,Savings,Emergency Fund,55.8,Debit,Mobile Money,Emergency Fund purchase
+TXN1123,2025-03-30,Savings,Emergency Fund,122.43,Debit,Bank Transfer,Emergency Fund purchase
+TXN1124,2025-03-30,Other,Gift,69.54,Debit,Credit Card,Gift purchase
+TXN1125,2025-03-31,Shopping,Clothing,164.21,Debit,Credit Card,Clothing purchase
+TXN1126,2025-04-01,Income,Salary,3095.44,Credit,Bank Transfer,Monthly salary deposit
+TXN1127,2025-04-01,Health,Pharmacy,183.68,Debit,Bank Transfer,Pharmacy purchase
+TXN1128,2025-04-01,Entertainment,Concert Tickets,41.94,Debit,Debit Card,Concert Tickets purchase
+TXN1129,2025-04-02,Health,Pharmacy,214.42,Debit,Mobile Money,Pharmacy purchase
+TXN1130,2025-04-03,Housing,Rent,797.2,Debit,Bank Transfer,Monthly rent payment
+TXN1131,2025-04-03,Food,Groceries,127.57,Debit,Cash,Groceries purchase
+TXN1132,2025-04-03,Other,Miscellaneous,76.93,Debit,Debit Card,Miscellaneous purchase
+TXN1133,2025-04-03,Health,Health Insurance,27.76,Debit,Debit Card,Health Insurance purchase
+TXN1134,2025-04-06,Food,Restaurant,28.7,Debit,Cash,Restaurant purchase
+TXN1135,2025-04-06,Entertainment,Gaming,100.76,Debit,Cash,Gaming purchase
+TXN1136,2025-04-07,Health,Pharmacy,135.29,Debit,Debit Card,Pharmacy purchase
+TXN1137,2025-04-07,Entertainment,Movies,60.43,Debit,Debit Card,Movies purchase
+TXN1138,2025-04-07,Transportation,Public Transit,40.72,Debit,Debit Card,Public Transit purchase
+TXN1139,2025-04-08,Other,Miscellaneous,66.2,Debit,Credit Card,Miscellaneous purchase
+TXN1140,2025-04-08,Health,Gym Membership,155.55,Debit,Cash,Gym Membership purchase
+TXN1141,2025-04-08,Food,Restaurant,203.49,Debit,Mobile Money,Restaurant purchase
+TXN1142,2025-04-09,Savings,Transfer to Savings,121.17,Debit,Credit Card,Transfer to Savings purchase
+TXN1143,2025-04-10,Food,Groceries,39.01,Debit,Bank Transfer,Groceries purchase
+TXN1144,2025-04-11,Other,Bank Fee,104.71,Debit,Bank Transfer,Bank Fee purchase
+TXN1145,2025-04-11,Savings,Retirement Contribution,111.6,Debit,Cash,Retirement Contribution purchase
+TXN1146,2025-04-13,Health,Pharmacy,22.82,Debit,Mobile Money,Pharmacy purchase
+TXN1147,2025-04-13,Housing,Internet,128.05,Debit,Credit Card,Internet purchase
+TXN1148,2025-04-14,Health,Doctor Visit,219.34,Debit,Cash,Doctor Visit purchase
+TXN1149,2025-04-14,Other,Bank Fee,104.99,Debit,Cash,Bank Fee purchase
+TXN1150,2025-04-14,Shopping,Home Goods,148.42,Debit,Credit Card,Home Goods purchase
+TXN1151,2025-04-15,Health,Health Insurance,179.54,Debit,Mobile Money,Health Insurance purchase
+TXN1152,2025-04-15,Housing,Home Maintenance,22.11,Debit,Bank Transfer,Home Maintenance purchase
+TXN1153,2025-04-15,Shopping,Clothing,213.53,Debit,Cash,Clothing purchase
+TXN1154,2025-04-17,Savings,Transfer to Savings,43.71,Debit,Bank Transfer,Transfer to Savings purchase
+TXN1155,2025-04-17,Other,Miscellaneous,167.92,Debit,Credit Card,Miscellaneous purchase
+TXN1156,2025-04-17,Health,Doctor Visit,204.3,Debit,Cash,Doctor Visit purchase
+TXN1157,2025-04-18,Food,Groceries,214.17,Debit,Mobile Money,Groceries purchase
+TXN1158,2025-04-18,Entertainment,Movies,70.43,Debit,Debit Card,Movies purchase
+TXN1159,2025-04-18,Savings,Transfer to Savings,51.76,Debit,Debit Card,Transfer to Savings purchase
+TXN1160,2025-04-20,Other,Gift,113.43,Debit,Bank Transfer,Gift purchase
+TXN1161,2025-04-21,Other,Subscription,102.12,Debit,Credit Card,Subscription purchase
+TXN1162,2025-04-21,Savings,Transfer to Savings,203.05,Debit,Mobile Money,Transfer to Savings purchase
+TXN1163,2025-04-21,Transportation,Fuel,62.95,Debit,Cash,Fuel purchase
+TXN1164,2025-04-22,Housing,Internet,160.55,Debit,Mobile Money,Internet purchase
+TXN1165,2025-04-22,Other,Subscription,99.9,Debit,Cash,Subscription purchase
+TXN1166,2025-04-23,Other,Gift,191.7,Debit,Credit Card,Gift purchase
+TXN1167,2025-04-23,Savings,Transfer to Savings,188.75,Debit,Cash,Transfer to Savings purchase
+TXN1168,2025-04-23,Housing,Internet,164.6,Debit,Cash,Internet purchase
+TXN1169,2025-04-24,Other,Bank Fee,30.4,Debit,Mobile Money,Bank Fee purchase
+TXN1170,2025-04-26,Food,Food Delivery,6.33,Debit,Credit Card,Food Delivery purchase
+TXN1171,2025-04-26,Savings,Emergency Fund,213.48,Debit,Debit Card,Emergency Fund purchase
+TXN1172,2025-04-26,Other,Gift,76.47,Debit,Cash,Gift purchase
+TXN1173,2025-04-27,Savings,Retirement Contribution,139.02,Debit,Cash,Retirement Contribution purchase
+TXN1174,2025-04-27,Housing,Rent,53.95,Debit,Bank Transfer,Rent purchase
+TXN1175,2025-05-01,Income,Salary,3077.6,Credit,Bank Transfer,Monthly salary deposit
+TXN1176,2025-05-03,Housing,Rent,768.74,Debit,Bank Transfer,Monthly rent payment
+TXN1177,2025-05-03,Entertainment,Gaming,125.81,Debit,Credit Card,Gaming purchase
+TXN1178,2025-05-05,Entertainment,Gaming,201.08,Debit,Credit Card,Gaming purchase
+TXN1179,2025-05-05,Entertainment,Gaming,141.43,Debit,Cash,Gaming purchase
+TXN1180,2025-05-05,Health,Pharmacy,198.06,Debit,Cash,Pharmacy purchase
+TXN1181,2025-05-06,Food,Food Delivery,208.12,Debit,Mobile Money,Food Delivery purchase
+TXN1182,2025-05-07,Health,Health Insurance,186.43,Debit,Credit Card,Health Insurance purchase
+TXN1183,2025-05-07,Savings,Retirement Contribution,26.14,Debit,Cash,Retirement Contribution purchase
+TXN1184,2025-05-07,Shopping,Home Goods,218.41,Debit,Bank Transfer,Home Goods purchase
+TXN1185,2025-05-07,Income,Freelance Payment,764.03,Credit,Bank Transfer,Freelance project payment
+TXN1186,2025-05-08,Health,Pharmacy,125.81,Debit,Debit Card,Pharmacy purchase
+TXN1187,2025-05-08,Other,Gift,171.34,Debit,Credit Card,Gift purchase
+TXN1188,2025-05-08,Shopping,Electronics,141.15,Debit,Mobile Money,Electronics purchase
+TXN1189,2025-05-09,Food,Groceries,70.04,Debit,Cash,Groceries purchase
+TXN1190,2025-05-10,Transportation,Fuel,200.39,Debit,Bank Transfer,Fuel purchase
+TXN1191,2025-05-10,Savings,Transfer to Savings,46.57,Debit,Mobile Money,Transfer to Savings purchase
+TXN1192,2025-05-11,Health,Doctor Visit,58.76,Debit,Cash,Doctor Visit purchase
+TXN1193,2025-05-11,Health,Gym Membership,177.52,Debit,Cash,Gym Membership purchase
+TXN1194,2025-05-12,Entertainment,Gaming,212.9,Debit,Mobile Money,Gaming purchase
+TXN1195,2025-05-13,Housing,Internet,119.44,Debit,Cash,Internet purchase
+TXN1196,2025-05-13,Shopping,Home Goods,129.85,Debit,Bank Transfer,Home Goods purchase
+TXN1197,2025-05-13,Food,Restaurant,105.31,Debit,Mobile Money,Restaurant purchase
+TXN1198,2025-05-14,Entertainment,Streaming Service,140.88,Debit,Cash,Streaming Service purchase
+TXN1199,2025-05-14,Health,Health Insurance,28.32,Debit,Debit Card,Health Insurance purchase
+TXN1200,2025-05-15,Other,Bank Fee,24.09,Debit,Mobile Money,Bank Fee purchase
+TXN1201,2025-05-15,Transportation,Car Maintenance,101.44,Debit,Mobile Money,Car Maintenance purchase
+TXN1202,2025-05-16,Savings,Emergency Fund,24.49,Debit,Cash,Emergency Fund purchase
+TXN1203,2025-05-17,Housing,Internet,50.15,Debit,Cash,Internet purchase
+TXN1204,2025-05-17,Entertainment,Concert Tickets,24.56,Debit,Bank Transfer,Concert Tickets purchase
+TXN1205,2025-05-18,Housing,Home Maintenance,62.87,Debit,Debit Card,Home Maintenance purchase
+TXN1206,2025-05-18,Other,Bank Fee,146.82,Debit,Mobile Money,Bank Fee purchase
+TXN1207,2025-05-20,Transportation,Public Transit,17.89,Debit,Mobile Money,Public Transit purchase
+TXN1208,2025-05-21,Entertainment,Concert Tickets,171.04,Debit,Mobile Money,Concert Tickets purchase
+TXN1209,2025-05-21,Income,Freelance Payment,786.72,Credit,Bank Transfer,Freelance project payment
+TXN1210,2025-05-22,Transportation,Ride Share,176.28,Debit,Debit Card,Ride Share purchase
+TXN1211,2025-05-24,Entertainment,Concert Tickets,6.42,Debit,Bank Transfer,Concert Tickets purchase
+TXN1212,2025-05-24,Housing,Utilities,163.95,Debit,Mobile Money,Utilities purchase
+TXN1213,2025-05-26,Food,Food Delivery,112.33,Debit,Mobile Money,Food Delivery purchase
+TXN1214,2025-05-26,Housing,Internet,102.4,Debit,Debit Card,Internet purchase
+TXN1215,2025-05-27,Savings,Retirement Contribution,151.88,Debit,Cash,Retirement Contribution purchase
+TXN1216,2025-05-27,Other,Bank Fee,198.14,Debit,Bank Transfer,Bank Fee purchase
+TXN1217,2025-05-27,Transportation,Fuel,30.38,Debit,Mobile Money,Fuel purchase
+TXN1218,2025-05-28,Savings,Emergency Fund,118.13,Debit,Cash,Emergency Fund purchase
+TXN1219,2025-05-28,Savings,Transfer to Savings,175.1,Debit,Debit Card,Transfer to Savings purchase
+TXN1220,2025-05-29,Savings,Retirement Contribution,195.72,Debit,Cash,Retirement Contribution purchase
+TXN1221,2025-05-30,Savings,Retirement Contribution,161.33,Debit,Bank Transfer,Retirement Contribution purchase
+TXN1222,2025-05-30,Savings,Retirement Contribution,147.33,Debit,Bank Transfer,Retirement Contribution purchase
+TXN1223,2025-05-30,Transportation,Car Maintenance,17.57,Debit,Debit Card,Car Maintenance purchase
+TXN1224,2025-06-01,Income,Salary,2949.06,Credit,Bank Transfer,Monthly salary deposit
+TXN1225,2025-06-01,Housing,Internet,148.39,Debit,Cash,Internet purchase
+TXN1226,2025-06-02,Housing,Internet,133.29,Debit,Bank Transfer,Internet purchase
+TXN1227,2025-06-02,Food,Restaurant,36.58,Debit,Cash,Restaurant purchase
+TXN1228,2025-06-02,Entertainment,Streaming Service,78.97,Debit,Mobile Money,Streaming Service purchase
+TXN1229,2025-06-03,Housing,Rent,788.13,Debit,Bank Transfer,Monthly rent payment
+TXN1230,2025-06-03,Savings,Emergency Fund,214.48,Debit,Mobile Money,Emergency Fund purchase
+TXN1231,2025-06-05,Housing,Utilities,62.3,Debit,Bank Transfer,Utilities purchase
+TXN1232,2025-06-05,Shopping,Home Goods,4.32,Debit,Credit Card,Home Goods purchase
+TXN1233,2025-06-06,Food,Restaurant,163.79,Debit,Debit Card,Restaurant purchase
+TXN1234,2025-06-06,Food,Restaurant,84.63,Debit,Cash,Restaurant purchase
+TXN1235,2025-06-06,Shopping,Electronics,83.3,Debit,Bank Transfer,Electronics purchase
+TXN1236,2025-06-08,Transportation,Fuel,149.25,Debit,Bank Transfer,Fuel purchase
+TXN1237,2025-06-09,Other,Miscellaneous,92.88,Debit,Credit Card,Miscellaneous purchase
+TXN1238,2025-06-09,Food,Coffee Shop,96.29,Debit,Bank Transfer,Coffee Shop purchase
+TXN1239,2025-06-09,Other,Gift,12.86,Debit,Cash,Gift purchase
+TXN1240,2025-06-10,Income,Freelance Payment,341.14,Credit,Bank Transfer,Freelance project payment
+TXN1241,2025-06-11,Transportation,Ride Share,65.81,Debit,Debit Card,Ride Share purchase
+TXN1242,2025-06-11,Income,Freelance Payment,697.61,Credit,Bank Transfer,Freelance project payment
+TXN1243,2025-06-12,Transportation,Car Maintenance,118.57,Debit,Credit Card,Car Maintenance purchase
+TXN1244,2025-06-13,Food,Food Delivery,190.0,Debit,Debit Card,Food Delivery purchase
+TXN1245,2025-06-13,Savings,Transfer to Savings,102.77,Debit,Debit Card,Transfer to Savings purchase
+TXN1246,2025-06-14,Savings,Emergency Fund,141.91,Debit,Bank Transfer,Emergency Fund purchase
+TXN1247,2025-06-14,Food,Food Delivery,7.53,Debit,Bank Transfer,Food Delivery purchase
+TXN1248,2025-06-14,Transportation,Car Maintenance,183.55,Debit,Bank Transfer,Car Maintenance purchase
+TXN1249,2025-06-16,Food,Food Delivery,191.9,Debit,Bank Transfer,Food Delivery purchase
+TXN1250,2025-06-16,Entertainment,Concert Tickets,172.07,Debit,Debit Card,Concert Tickets purchase
+TXN1251,2025-06-16,Food,Restaurant,199.59,Debit,Bank Transfer,Restaurant purchase
+TXN1252,2025-06-17,Entertainment,Streaming Service,34.78,Debit,Credit Card,Streaming Service purchase
+TXN1253,2025-06-18,Food,Restaurant,209.43,Debit,Cash,Restaurant purchase
+TXN1254,2025-06-19,Shopping,Home Goods,35.76,Debit,Debit Card,Home Goods purchase
+TXN1255,2025-06-19,Other,Miscellaneous,140.01,Debit,Bank Transfer,Miscellaneous purchase
+TXN1256,2025-06-19,Housing,Internet,113.09,Debit,Bank Transfer,Internet purchase
+TXN1257,2025-06-21,Food,Groceries,136.46,Debit,Mobile Money,Groceries purchase
+TXN1258,2025-06-21,Savings,Retirement Contribution,128.93,Debit,Debit Card,Retirement Contribution purchase
+TXN1259,2025-06-22,Shopping,Online Retail,111.8,Debit,Debit Card,Online Retail purchase
+TXN1260,2025-06-23,Food,Restaurant,11.49,Debit,Cash,Restaurant purchase
+TXN1261,2025-06-23,Other,Subscription,81.97,Debit,Bank Transfer,Subscription purchase
+TXN1262,2025-06-24,Housing,Internet,17.3,Debit,Debit Card,Internet purchase
+TXN1263,2025-06-24,Savings,Retirement Contribution,57.68,Debit,Mobile Money,Retirement Contribution purchase
+TXN1264,2025-06-25,Food,Restaurant,201.93,Debit,Bank Transfer,Restaurant purchase
+TXN1265,2025-06-25,Savings,Transfer to Savings,132.12,Debit,Debit Card,Transfer to Savings purchase
+TXN1266,2025-06-26,Shopping,Electronics,148.42,Debit,Mobile Money,Electronics purchase
+TXN1267,2025-06-26,Food,Food Delivery,113.34,Debit,Debit Card,Food Delivery purchase
+TXN1268,2025-06-26,Shopping,Home Goods,42.12,Debit,Credit Card,Home Goods purchase
+TXN1269,2025-06-27,Entertainment,Movies,219.99,Debit,Credit Card,Movies purchase
+TXN1270,2025-06-27,Food,Coffee Shop,186.24,Debit,Debit Card,Coffee Shop purchase
+TXN1271,2025-06-27,Housing,Internet,193.18,Debit,Mobile Money,Internet purchase
+TXN1272,2025-06-28,Transportation,Public Transit,42.24,Debit,Mobile Money,Public Transit purchase
+TXN1273,2025-06-28,Transportation,Car Maintenance,12.48,Debit,Bank Transfer,Car Maintenance purchase
+TXN1274,2025-06-28,Entertainment,Gaming,135.5,Debit,Cash,Gaming purchase
+TXN1275,2025-06-29,Health,Health Insurance,199.16,Debit,Credit Card,Health Insurance purchase
+TXN1276,2025-06-30,Other,Gift,171.85,Debit,Mobile Money,Gift purchase
+TXN1277,2025-06-30,Savings,Transfer to Savings,180.27,Debit,Mobile Money,Transfer to Savings purchase
+TXN1278,2025-06-30,Transportation,Ride Share,14.32,Debit,Cash,Ride Share purchase
+TXN1279,2025-07-01,Income,Salary,3021.82,Credit,Bank Transfer,Monthly salary deposit
+TXN1280,2025-07-03,Housing,Rent,788.16,Debit,Bank Transfer,Monthly rent payment
+TXN1281,2025-07-03,Other,Subscription,183.34,Debit,Debit Card,Subscription purchase
+TXN1282,2025-07-03,Entertainment,Gaming,194.96,Debit,Debit Card,Gaming purchase
+TXN1283,2025-07-04,Shopping,Electronics,86.8,Debit,Debit Card,Electronics purchase
+TXN1284,2025-07-04,Shopping,Electronics,9.12,Debit,Debit Card,Electronics purchase
+TXN1285,2025-07-04,Shopping,Electronics,32.86,Debit,Bank Transfer,Electronics purchase
+TXN1286,2025-07-05,Transportation,Car Maintenance,100.35,Debit,Debit Card,Car Maintenance purchase
+TXN1287,2025-07-05,Food,Groceries,58.54,Debit,Credit Card,Groceries purchase
+TXN1288,2025-07-05,Savings,Transfer to Savings,171.43,Debit,Credit Card,Transfer to Savings purchase
+TXN1289,2025-07-07,Food,Groceries,184.56,Debit,Cash,Groceries purchase
+TXN1290,2025-07-07,Housing,Utilities,158.92,Debit,Bank Transfer,Utilities purchase
+TXN1291,2025-07-07,Savings,Transfer to Savings,136.41,Debit,Credit Card,Transfer to Savings purchase
+TXN1292,2025-07-08,Food,Coffee Shop,17.69,Debit,Mobile Money,Coffee Shop purchase
+TXN1293,2025-07-10,Housing,Home Maintenance,215.89,Debit,Bank Transfer,Home Maintenance purchase
+TXN1294,2025-07-10,Housing,Internet,174.11,Debit,Bank Transfer,Internet purchase
+TXN1295,2025-07-10,Entertainment,Streaming Service,170.42,Debit,Bank Transfer,Streaming Service purchase
+TXN1296,2025-07-11,Shopping,Electronics,183.19,Debit,Cash,Electronics purchase
+TXN1297,2025-07-11,Other,Subscription,179.09,Debit,Debit Card,Subscription purchase
+TXN1298,2025-07-12,Housing,Internet,46.75,Debit,Credit Card,Internet purchase
+TXN1299,2025-07-12,Housing,Internet,205.54,Debit,Mobile Money,Internet purchase
+TXN1300,2025-07-12,Savings,Emergency Fund,105.73,Debit,Debit Card,Emergency Fund purchase
+TXN1301,2025-07-13,Health,Gym Membership,190.08,Debit,Debit Card,Gym Membership purchase
+TXN1302,2025-07-14,Health,Pharmacy,176.46,Debit,Cash,Pharmacy purchase
+TXN1303,2025-07-14,Savings,Emergency Fund,98.42,Debit,Cash,Emergency Fund purchase
+TXN1304,2025-07-15,Other,Miscellaneous,82.71,Debit,Mobile Money,Miscellaneous purchase
+TXN1305,2025-07-18,Health,Gym Membership,25.26,Debit,Bank Transfer,Gym Membership purchase
+TXN1306,2025-07-19,Other,Miscellaneous,39.16,Debit,Cash,Miscellaneous purchase
+TXN1307,2025-07-19,Shopping,Online Retail,12.19,Debit,Bank Transfer,Online Retail purchase
+TXN1308,2025-07-20,Health,Pharmacy,19.28,Debit,Cash,Pharmacy purchase
+TXN1309,2025-07-20,Shopping,Electronics,209.76,Debit,Credit Card,Electronics purchase
+TXN1310,2025-07-20,Other,Bank Fee,30.39,Debit,Credit Card,Bank Fee purchase
+TXN1311,2025-07-21,Shopping,Online Retail,209.03,Debit,Debit Card,Online Retail purchase
+TXN1312,2025-07-21,Transportation,Car Maintenance,208.89,Debit,Bank Transfer,Car Maintenance purchase
+TXN1313,2025-07-23,Savings,Retirement Contribution,143.95,Debit,Credit Card,Retirement Contribution purchase
+TXN1314,2025-07-23,Food,Groceries,162.64,Debit,Cash,Groceries purchase
+TXN1315,2025-07-25,Other,Subscription,219.21,Debit,Bank Transfer,Subscription purchase
+TXN1316,2025-07-25,Other,Subscription,29.61,Debit,Debit Card,Subscription purchase
+TXN1317,2025-07-26,Food,Coffee Shop,147.92,Debit,Debit Card,Coffee Shop purchase
+TXN1318,2025-07-26,Health,Gym Membership,187.75,Debit,Credit Card,Gym Membership purchase
+TXN1319,2025-07-26,Shopping,Electronics,29.34,Debit,Credit Card,Electronics purchase
+TXN1320,2025-07-27,Other,Bank Fee,81.31,Debit,Mobile Money,Bank Fee purchase
+TXN1321,2025-07-28,Food,Groceries,70.12,Debit,Cash,Groceries purchase
+TXN1322,2025-07-29,Food,Restaurant,214.01,Debit,Debit Card,Restaurant purchase
+TXN1323,2025-07-29,Other,Miscellaneous,150.58,Debit,Bank Transfer,Miscellaneous purchase
+TXN1324,2025-07-29,Transportation,Public Transit,169.61,Debit,Credit Card,Public Transit purchase
+TXN1325,2025-07-31,Health,Doctor Visit,38.15,Debit,Credit Card,Doctor Visit purchase
+TXN1326,2025-08-01,Income,Salary,3176.36,Credit,Bank Transfer,Monthly salary deposit
+TXN1327,2025-08-01,Food,Coffee Shop,45.6,Debit,Mobile Money,Coffee Shop purchase
+TXN1328,2025-08-01,Health,Doctor Visit,138.63,Debit,Mobile Money,Doctor Visit purchase
+TXN1329,2025-08-02,Transportation,Public Transit,145.95,Debit,Mobile Money,Public Transit purchase
+TXN1330,2025-08-03,Housing,Rent,796.2,Debit,Bank Transfer,Monthly rent payment
+TXN1331,2025-08-05,Entertainment,Gaming,137.13,Debit,Debit Card,Gaming purchase
+TXN1332,2025-08-05,Other,Gift,142.29,Debit,Bank Transfer,Gift purchase
+TXN1333,2025-08-06,Health,Health Insurance,18.84,Debit,Debit Card,Health Insurance purchase
+TXN1334,2025-08-06,Transportation,Car Maintenance,93.19,Debit,Cash,Car Maintenance purchase
+TXN1335,2025-08-06,Entertainment,Concert Tickets,134.65,Debit,Bank Transfer,Concert Tickets purchase
+TXN1336,2025-08-07,Shopping,Online Retail,31.38,Debit,Bank Transfer,Online Retail purchase
+TXN1337,2025-08-07,Food,Coffee Shop,55.46,Debit,Debit Card,Coffee Shop purchase
+TXN1338,2025-08-08,Transportation,Fuel,13.98,Debit,Cash,Fuel purchase
+TXN1339,2025-08-09,Entertainment,Movies,179.52,Debit,Mobile Money,Movies purchase
+TXN1340,2025-08-09,Shopping,Electronics,168.6,Debit,Cash,Electronics purchase
+TXN1341,2025-08-09,Other,Miscellaneous,193.76,Debit,Cash,Miscellaneous purchase
+TXN1342,2025-08-09,Income,Freelance Payment,856.19,Credit,Bank Transfer,Freelance project payment
+TXN1343,2025-08-10,Entertainment,Movies,129.59,Debit,Debit Card,Movies purchase
+TXN1344,2025-08-10,Housing,Internet,110.39,Debit,Cash,Internet purchase
+TXN1345,2025-08-10,Health,Pharmacy,186.84,Debit,Cash,Pharmacy purchase
+TXN1346,2025-08-11,Shopping,Online Retail,82.41,Debit,Cash,Online Retail purchase
+TXN1347,2025-08-11,Housing,Utilities,81.67,Debit,Bank Transfer,Utilities purchase
+TXN1348,2025-08-12,Health,Pharmacy,30.92,Debit,Debit Card,Pharmacy purchase
+TXN1349,2025-08-12,Savings,Retirement Contribution,175.49,Debit,Bank Transfer,Retirement Contribution purchase
+TXN1350,2025-08-12,Shopping,Electronics,46.2,Debit,Mobile Money,Electronics purchase
+TXN1351,2025-08-14,Shopping,Online Retail,115.7,Debit,Credit Card,Online Retail purchase
+TXN1352,2025-08-15,Shopping,Home Goods,38.26,Debit,Mobile Money,Home Goods purchase
+TXN1353,2025-08-16,Shopping,Online Retail,156.8,Debit,Bank Transfer,Online Retail purchase
+TXN1354,2025-08-16,Other,Bank Fee,82.93,Debit,Debit Card,Bank Fee purchase
+TXN1355,2025-08-17,Housing,Home Maintenance,60.62,Debit,Mobile Money,Home Maintenance purchase
+TXN1356,2025-08-17,Entertainment,Streaming Service,129.62,Debit,Credit Card,Streaming Service purchase
+TXN1357,2025-08-18,Transportation,Public Transit,9.85,Debit,Debit Card,Public Transit purchase
+TXN1358,2025-08-18,Entertainment,Streaming Service,98.71,Debit,Cash,Streaming Service purchase
+TXN1359,2025-08-18,Transportation,Car Maintenance,152.84,Debit,Cash,Car Maintenance purchase
+TXN1360,2025-08-19,Housing,Utilities,115.55,Debit,Mobile Money,Utilities purchase
+TXN1361,2025-08-19,Shopping,Online Retail,117.03,Debit,Bank Transfer,Online Retail purchase
+TXN1362,2025-08-19,Transportation,Car Maintenance,200.93,Debit,Bank Transfer,Car Maintenance purchase
+TXN1363,2025-08-20,Other,Subscription,210.74,Debit,Bank Transfer,Subscription purchase
+TXN1364,2025-08-20,Health,Doctor Visit,207.3,Debit,Bank Transfer,Doctor Visit purchase
+TXN1365,2025-08-21,Other,Gift,107.12,Debit,Mobile Money,Gift purchase
+TXN1366,2025-08-22,Health,Pharmacy,127.44,Debit,Mobile Money,Pharmacy purchase
+TXN1367,2025-08-22,Savings,Retirement Contribution,180.59,Debit,Credit Card,Retirement Contribution purchase
+TXN1368,2025-08-23,Food,Coffee Shop,203.51,Debit,Bank Transfer,Coffee Shop purchase
+TXN1369,2025-08-23,Other,Subscription,46.85,Debit,Mobile Money,Subscription purchase
+TXN1370,2025-08-24,Transportation,Fuel,136.6,Debit,Mobile Money,Fuel purchase
+TXN1371,2025-08-24,Entertainment,Movies,14.02,Debit,Mobile Money,Movies purchase
+TXN1372,2025-08-25,Housing,Rent,92.69,Debit,Cash,Rent purchase
+TXN1373,2025-08-26,Housing,Utilities,91.3,Debit,Cash,Utilities purchase
+TXN1374,2025-08-27,Health,Gym Membership,64.94,Debit,Debit Card,Gym Membership purchase
+TXN1375,2025-08-29,Housing,Utilities,93.68,Debit,Credit Card,Utilities purchase
+TXN1376,2025-08-31,Other,Subscription,206.24,Debit,Bank Transfer,Subscription purchase
+TXN1377,2025-08-31,Housing,Rent,67.75,Debit,Mobile Money,Rent purchase
+TXN1378,2025-08-31,Food,Coffee Shop,64.75,Debit,Mobile Money,Coffee Shop purchase
+TXN1379,2025-09-01,Income,Salary,3155.7,Credit,Bank Transfer,Monthly salary deposit
+TXN1380,2025-09-01,Other,Gift,44.84,Debit,Debit Card,Gift purchase
+TXN1381,2025-09-02,Health,Doctor Visit,6.06,Debit,Bank Transfer,Doctor Visit purchase
+TXN1382,2025-09-02,Health,Doctor Visit,41.08,Debit,Cash,Doctor Visit purchase
+TXN1383,2025-09-02,Savings,Emergency Fund,74.16,Debit,Cash,Emergency Fund purchase
+TXN1384,2025-09-03,Housing,Rent,759.24,Debit,Bank Transfer,Monthly rent payment
+TXN1385,2025-09-03,Other,Gift,206.07,Debit,Debit Card,Gift purchase
+TXN1386,2025-09-04,Other,Gift,210.03,Debit,Bank Transfer,Gift purchase
+TXN1387,2025-09-06,Entertainment,Streaming Service,147.91,Debit,Cash,Streaming Service purchase
+TXN1388,2025-09-06,Health,Doctor Visit,90.98,Debit,Mobile Money,Doctor Visit purchase
+TXN1389,2025-09-07,Food,Coffee Shop,82.76,Debit,Credit Card,Coffee Shop purchase
+TXN1390,2025-09-07,Entertainment,Movies,106.77,Debit,Cash,Movies purchase
+TXN1391,2025-09-08,Savings,Emergency Fund,122.18,Debit,Cash,Emergency Fund purchase
+TXN1392,2025-09-08,Entertainment,Movies,150.63,Debit,Mobile Money,Movies purchase
+TXN1393,2025-09-10,Food,Groceries,16.4,Debit,Mobile Money,Groceries purchase
+TXN1394,2025-09-10,Entertainment,Movies,38.7,Debit,Mobile Money,Movies purchase
+TXN1395,2025-09-11,Other,Bank Fee,198.06,Debit,Cash,Bank Fee purchase
+TXN1396,2025-09-12,Transportation,Car Maintenance,102.13,Debit,Debit Card,Car Maintenance purchase
+TXN1397,2025-09-12,Other,Gift,159.95,Debit,Cash,Gift purchase
+TXN1398,2025-09-12,Health,Pharmacy,164.84,Debit,Mobile Money,Pharmacy purchase
+TXN1399,2025-09-13,Shopping,Clothing,120.43,Debit,Debit Card,Clothing purchase
+TXN1400,2025-09-13,Food,Food Delivery,9.89,Debit,Cash,Food Delivery purchase
+TXN1401,2025-09-13,Transportation,Public Transit,169.18,Debit,Cash,Public Transit purchase
+TXN1402,2025-09-14,Other,Miscellaneous,84.52,Debit,Mobile Money,Miscellaneous purchase
+TXN1403,2025-09-14,Transportation,Ride Share,28.74,Debit,Mobile Money,Ride Share purchase
+TXN1404,2025-09-14,Savings,Emergency Fund,30.63,Debit,Credit Card,Emergency Fund purchase
+TXN1405,2025-09-16,Savings,Emergency Fund,85.3,Debit,Credit Card,Emergency Fund purchase
+TXN1406,2025-09-16,Entertainment,Gaming,78.12,Debit,Bank Transfer,Gaming purchase
+TXN1407,2025-09-16,Entertainment,Streaming Service,9.99,Debit,Cash,Streaming Service purchase
+TXN1408,2025-09-22,Entertainment,Streaming Service,33.41,Debit,Bank Transfer,Streaming Service purchase
+TXN1409,2025-09-23,Shopping,Electronics,68.48,Debit,Credit Card,Electronics purchase
+TXN1410,2025-09-23,Entertainment,Gaming,68.21,Debit,Debit Card,Gaming purchase
+TXN1411,2025-09-24,Savings,Emergency Fund,110.55,Debit,Bank Transfer,Emergency Fund purchase
+TXN1412,2025-09-25,Shopping,Online Retail,91.59,Debit,Bank Transfer,Online Retail purchase
+TXN1413,2025-09-25,Savings,Transfer to Savings,166.71,Debit,Cash,Transfer to Savings purchase
+TXN1414,2025-09-25,Entertainment,Movies,68.26,Debit,Credit Card,Movies purchase
+TXN1415,2025-09-27,Transportation,Car Maintenance,55.7,Debit,Credit Card,Car Maintenance purchase
+TXN1416,2025-09-27,Shopping,Clothing,203.12,Debit,Bank Transfer,Clothing purchase
+TXN1417,2025-09-27,Food,Restaurant,14.18,Debit,Cash,Restaurant purchase
+TXN1418,2025-09-29,Entertainment,Gaming,48.33,Debit,Bank Transfer,Gaming purchase
+TXN1419,2025-10-01,Income,Salary,2876.01,Credit,Bank Transfer,Monthly salary deposit
+TXN1420,2025-10-02,Entertainment,Movies,89.07,Debit,Credit Card,Movies purchase
+TXN1421,2025-10-02,Shopping,Home Goods,85.6,Debit,Mobile Money,Home Goods purchase
+TXN1422,2025-10-02,Shopping,Home Goods,59.76,Debit,Mobile Money,Home Goods purchase
+TXN1423,2025-10-03,Housing,Rent,773.3,Debit,Bank Transfer,Monthly rent payment
+TXN1424,2025-10-03,Shopping,Electronics,83.44,Debit,Cash,Electronics purchase
+TXN1425,2025-10-03,Housing,Utilities,163.85,Debit,Debit Card,Utilities purchase
+TXN1426,2025-10-03,Health,Health Insurance,67.06,Debit,Credit Card,Health Insurance purchase
+TXN1427,2025-10-04,Entertainment,Gaming,122.49,Debit,Bank Transfer,Gaming purchase
+TXN1428,2025-10-04,Health,Health Insurance,212.73,Debit,Cash,Health Insurance purchase
+TXN1429,2025-10-04,Other,Subscription,162.01,Debit,Bank Transfer,Subscription purchase
+TXN1430,2025-10-05,Transportation,Fuel,116.7,Debit,Debit Card,Fuel purchase
+TXN1431,2025-10-05,Housing,Rent,92.49,Debit,Credit Card,Rent purchase
+TXN1432,2025-10-05,Food,Restaurant,4.98,Debit,Mobile Money,Restaurant purchase
+TXN1433,2025-10-07,Other,Bank Fee,4.43,Debit,Mobile Money,Bank Fee purchase
+TXN1434,2025-10-07,Savings,Transfer to Savings,6.63,Debit,Bank Transfer,Transfer to Savings purchase
+TXN1435,2025-10-07,Health,Pharmacy,111.98,Debit,Cash,Pharmacy purchase
+TXN1436,2025-10-08,Food,Groceries,116.79,Debit,Credit Card,Groceries purchase
+TXN1437,2025-10-09,Shopping,Home Goods,175.5,Debit,Debit Card,Home Goods purchase
+TXN1438,2025-10-09,Shopping,Online Retail,102.6,Debit,Credit Card,Online Retail purchase
+TXN1439,2025-10-10,Health,Pharmacy,144.86,Debit,Debit Card,Pharmacy purchase
+TXN1440,2025-10-11,Savings,Emergency Fund,106.29,Debit,Debit Card,Emergency Fund purchase
+TXN1441,2025-10-11,Transportation,Fuel,111.47,Debit,Cash,Fuel purchase
+TXN1442,2025-10-11,Shopping,Clothing,197.17,Debit,Debit Card,Clothing purchase
+TXN1443,2025-10-12,Health,Pharmacy,203.54,Debit,Bank Transfer,Pharmacy purchase
+TXN1444,2025-10-12,Housing,Utilities,204.54,Debit,Bank Transfer,Utilities purchase
+TXN1445,2025-10-12,Housing,Utilities,130.39,Debit,Cash,Utilities purchase
+TXN1446,2025-10-13,Transportation,Public Transit,125.97,Debit,Cash,Public Transit purchase
+TXN1447,2025-10-13,Shopping,Online Retail,166.97,Debit,Credit Card,Online Retail purchase
+TXN1448,2025-10-15,Housing,Rent,97.85,Debit,Debit Card,Rent purchase
+TXN1449,2025-10-15,Shopping,Online Retail,213.26,Debit,Bank Transfer,Online Retail purchase
+TXN1450,2025-10-15,Income,Freelance Payment,318.66,Credit,Bank Transfer,Freelance project payment
+TXN1451,2025-10-16,Other,Subscription,80.21,Debit,Cash,Subscription purchase
+TXN1452,2025-10-16,Savings,Transfer to Savings,150.49,Debit,Cash,Transfer to Savings purchase
+TXN1453,2025-10-16,Food,Coffee Shop,176.18,Debit,Debit Card,Coffee Shop purchase
+TXN1454,2025-10-17,Savings,Emergency Fund,173.1,Debit,Credit Card,Emergency Fund purchase
+TXN1455,2025-10-18,Shopping,Clothing,22.86,Debit,Bank Transfer,Clothing purchase
+TXN1456,2025-10-18,Other,Gift,168.21,Debit,Debit Card,Gift purchase
+TXN1457,2025-10-19,Savings,Retirement Contribution,123.87,Debit,Mobile Money,Retirement Contribution purchase
+TXN1458,2025-10-22,Savings,Transfer to Savings,66.33,Debit,Cash,Transfer to Savings purchase
+TXN1459,2025-10-22,Food,Restaurant,127.12,Debit,Credit Card,Restaurant purchase
+TXN1460,2025-10-23,Transportation,Ride Share,68.35,Debit,Cash,Ride Share purchase
+TXN1461,2025-10-24,Savings,Retirement Contribution,94.38,Debit,Cash,Retirement Contribution purchase
+TXN1462,2025-10-25,Health,Doctor Visit,159.44,Debit,Cash,Doctor Visit purchase
+TXN1463,2025-10-25,Entertainment,Gaming,26.21,Debit,Bank Transfer,Gaming purchase
+TXN1464,2025-10-25,Income,Freelance Payment,416.55,Credit,Bank Transfer,Freelance project payment
+TXN1465,2025-10-26,Shopping,Online Retail,75.64,Debit,Mobile Money,Online Retail purchase
+TXN1466,2025-10-26,Transportation,Ride Share,72.58,Debit,Credit Card,Ride Share purchase
+TXN1467,2025-10-26,Other,Gift,41.55,Debit,Cash,Gift purchase
+TXN1468,2025-10-27,Other,Subscription,73.72,Debit,Bank Transfer,Subscription purchase
+TXN1469,2025-10-27,Savings,Retirement Contribution,27.71,Debit,Mobile Money,Retirement Contribution purchase
+TXN1470,2025-10-28,Housing,Home Maintenance,207.63,Debit,Credit Card,Home Maintenance purchase
+TXN1471,2025-10-29,Food,Food Delivery,149.04,Debit,Credit Card,Food Delivery purchase
+TXN1472,2025-10-29,Health,Doctor Visit,57.83,Debit,Credit Card,Doctor Visit purchase
+TXN1473,2025-10-30,Food,Food Delivery,217.98,Debit,Cash,Food Delivery purchase
+TXN1474,2025-10-30,Savings,Emergency Fund,112.93,Debit,Cash,Emergency Fund purchase
+TXN1475,2025-10-30,Housing,Internet,155.25,Debit,Mobile Money,Internet purchase
+TXN1476,2025-11-01,Income,Salary,2899.29,Credit,Bank Transfer,Monthly salary deposit
+TXN1477,2025-11-01,Transportation,Fuel,125.22,Debit,Cash,Fuel purchase
+TXN1478,2025-11-01,Shopping,Online Retail,25.99,Debit,Debit Card,Online Retail purchase
+TXN1479,2025-11-02,Other,Gift,87.88,Debit,Mobile Money,Gift purchase
+TXN1480,2025-11-03,Housing,Rent,757.54,Debit,Bank Transfer,Monthly rent payment
+TXN1481,2025-11-04,Savings,Transfer to Savings,28.19,Debit,Credit Card,Transfer to Savings purchase
+TXN1482,2025-11-04,Shopping,Home Goods,77.45,Debit,Credit Card,Home Goods purchase
+TXN1483,2025-11-05,Other,Bank Fee,98.08,Debit,Cash,Bank Fee purchase
+TXN1484,2025-11-05,Shopping,Clothing,68.16,Debit,Debit Card,Clothing purchase
+TXN1485,2025-11-05,Income,Freelance Payment,374.46,Credit,Bank Transfer,Freelance project payment
+TXN1486,2025-11-07,Entertainment,Movies,122.76,Debit,Bank Transfer,Movies purchase
+TXN1487,2025-11-08,Entertainment,Gaming,139.66,Debit,Credit Card,Gaming purchase
+TXN1488,2025-11-08,Savings,Retirement Contribution,9.33,Debit,Mobile Money,Retirement Contribution purchase
+TXN1489,2025-11-08,Entertainment,Gaming,131.51,Debit,Cash,Gaming purchase
+TXN1490,2025-11-08,Income,Freelance Payment,271.84,Credit,Bank Transfer,Freelance project payment
+TXN1491,2025-11-09,Food,Groceries,176.49,Debit,Mobile Money,Groceries purchase
+TXN1492,2025-11-09,Transportation,Ride Share,73.74,Debit,Cash,Ride Share purchase
+TXN1493,2025-11-10,Shopping,Online Retail,135.65,Debit,Mobile Money,Online Retail purchase
+TXN1494,2025-11-10,Food,Coffee Shop,79.38,Debit,Cash,Coffee Shop purchase
+TXN1495,2025-11-10,Transportation,Ride Share,202.35,Debit,Mobile Money,Ride Share purchase
+TXN1496,2025-11-11,Shopping,Clothing,54.77,Debit,Debit Card,Clothing purchase
+TXN1497,2025-11-12,Savings,Retirement Contribution,132.42,Debit,Mobile Money,Retirement Contribution purchase
+TXN1498,2025-11-13,Other,Subscription,123.42,Debit,Cash,Subscription purchase
+TXN1499,2025-11-14,Shopping,Online Retail,137.41,Debit,Bank Transfer,Online Retail purchase
+TXN1500,2025-11-15,Transportation,Public Transit,179.9,Debit,Mobile Money,Public Transit purchase
+TXN1501,2025-11-15,Other,Miscellaneous,151.58,Debit,Cash,Miscellaneous purchase
+TXN1502,2025-11-15,Other,Miscellaneous,39.29,Debit,Mobile Money,Miscellaneous purchase
+TXN1503,2025-11-16,Health,Pharmacy,62.64,Debit,Mobile Money,Pharmacy purchase
+TXN1504,2025-11-17,Other,Bank Fee,127.28,Debit,Bank Transfer,Bank Fee purchase
+TXN1505,2025-11-17,Shopping,Clothing,167.92,Debit,Cash,Clothing purchase
+TXN1506,2025-11-17,Entertainment,Gaming,25.22,Debit,Credit Card,Gaming purchase
+TXN1507,2025-11-19,Food,Food Delivery,190.77,Debit,Debit Card,Food Delivery purchase
+TXN1508,2025-11-19,Entertainment,Movies,178.92,Debit,Mobile Money,Movies purchase
+TXN1509,2025-11-20,Transportation,Public Transit,173.31,Debit,Credit Card,Public Transit purchase
+TXN1510,2025-11-20,Housing,Internet,118.5,Debit,Mobile Money,Internet purchase
+TXN1511,2025-11-20,Transportation,Ride Share,215.44,Debit,Bank Transfer,Ride Share purchase
+TXN1512,2025-11-21,Food,Restaurant,211.92,Debit,Cash,Restaurant purchase
+TXN1513,2025-11-21,Housing,Internet,191.15,Debit,Credit Card,Internet purchase
+TXN1514,2025-11-22,Entertainment,Movies,157.37,Debit,Credit Card,Movies purchase
+TXN1515,2025-11-23,Other,Subscription,128.3,Debit,Bank Transfer,Subscription purchase
+TXN1516,2025-11-23,Savings,Retirement Contribution,101.08,Debit,Debit Card,Retirement Contribution purchase
+TXN1517,2025-11-23,Savings,Emergency Fund,165.71,Debit,Bank Transfer,Emergency Fund purchase
+TXN1518,2025-11-24,Shopping,Clothing,191.55,Debit,Debit Card,Clothing purchase
+TXN1519,2025-11-24,Other,Gift,187.47,Debit,Mobile Money,Gift purchase
+TXN1520,2025-11-24,Savings,Transfer to Savings,213.08,Debit,Credit Card,Transfer to Savings purchase
+TXN1521,2025-11-25,Health,Gym Membership,121.77,Debit,Credit Card,Gym Membership purchase
+TXN1522,2025-11-25,Other,Gift,197.03,Debit,Debit Card,Gift purchase
+TXN1523,2025-11-26,Housing,Rent,204.69,Debit,Credit Card,Rent purchase
+TXN1524,2025-11-26,Other,Miscellaneous,3.15,Debit,Cash,Miscellaneous purchase
+TXN1525,2025-11-26,Entertainment,Movies,194.43,Debit,Bank Transfer,Movies purchase
+TXN1526,2025-11-27,Food,Coffee Shop,57.33,Debit,Bank Transfer,Coffee Shop purchase
+TXN1527,2025-11-27,Transportation,Fuel,89.01,Debit,Bank Transfer,Fuel purchase
+TXN1528,2025-11-28,Savings,Emergency Fund,22.79,Debit,Debit Card,Emergency Fund purchase
+TXN1529,2025-11-28,Income,Freelance Payment,481.45,Credit,Bank Transfer,Freelance project payment
+TXN1530,2025-11-29,Entertainment,Gaming,5.02,Debit,Bank Transfer,Gaming purchase
+TXN1531,2025-11-30,Transportation,Car Maintenance,18.37,Debit,Cash,Car Maintenance purchase
+TXN1532,2025-11-30,Food,Groceries,25.39,Debit,Bank Transfer,Groceries purchase
+TXN1533,2025-11-30,Health,Doctor Visit,86.05,Debit,Credit Card,Doctor Visit purchase
+TXN1534,2025-12-01,Income,Salary,3070.85,Credit,Bank Transfer,Monthly salary deposit
+TXN1535,2025-12-03,Housing,Rent,758.21,Debit,Bank Transfer,Monthly rent payment
+TXN1536,2025-12-03,Entertainment,Movies,202.62,Debit,Mobile Money,Movies purchase
+TXN1537,2025-12-03,Other,Subscription,21.81,Debit,Debit Card,Subscription purchase
+TXN1538,2025-12-05,Shopping,Online Retail,71.25,Debit,Credit Card,Online Retail purchase
+TXN1539,2025-12-05,Entertainment,Concert Tickets,142.88,Debit,Credit Card,Concert Tickets purchase
+TXN1540,2025-12-05,Health,Pharmacy,186.99,Debit,Bank Transfer,Pharmacy purchase
+TXN1541,2025-12-06,Savings,Retirement Contribution,143.22,Debit,Credit Card,Retirement Contribution purchase
+TXN1542,2025-12-10,Transportation,Car Maintenance,189.8,Debit,Mobile Money,Car Maintenance purchase
+TXN1543,2025-12-10,Savings,Retirement Contribution,121.56,Debit,Credit Card,Retirement Contribution purchase
+TXN1544,2025-12-11,Income,Freelance Payment,154.03,Credit,Bank Transfer,Freelance project payment
+TXN1545,2025-12-12,Entertainment,Streaming Service,203.2,Debit,Cash,Streaming Service purchase
+TXN1546,2025-12-12,Health,Health Insurance,94.92,Debit,Cash,Health Insurance purchase
+TXN1547,2025-12-13,Health,Pharmacy,70.25,Debit,Mobile Money,Pharmacy purchase
+TXN1548,2025-12-14,Shopping,Online Retail,130.26,Debit,Debit Card,Online Retail purchase
+TXN1549,2025-12-15,Entertainment,Streaming Service,56.05,Debit,Cash,Streaming Service purchase
+TXN1550,2025-12-15,Food,Food Delivery,135.87,Debit,Debit Card,Food Delivery purchase
+TXN1551,2025-12-15,Health,Doctor Visit,28.92,Debit,Credit Card,Doctor Visit purchase
+TXN1552,2025-12-16,Other,Gift,116.49,Debit,Bank Transfer,Gift purchase
+TXN1553,2025-12-17,Health,Pharmacy,170.4,Debit,Debit Card,Pharmacy purchase
+TXN1554,2025-12-18,Health,Pharmacy,60.06,Debit,Mobile Money,Pharmacy purchase
+TXN1555,2025-12-18,Food,Food Delivery,101.78,Debit,Bank Transfer,Food Delivery purchase
+TXN1556,2025-12-18,Housing,Home Maintenance,189.48,Debit,Credit Card,Home Maintenance purchase
+TXN1557,2025-12-19,Food,Groceries,52.56,Debit,Mobile Money,Groceries purchase
+TXN1558,2025-12-19,Housing,Rent,189.34,Debit,Debit Card,Rent purchase
+TXN1559,2025-12-20,Shopping,Online Retail,202.69,Debit,Credit Card,Online Retail purchase
+TXN1560,2025-12-20,Housing,Home Maintenance,51.72,Debit,Credit Card,Home Maintenance purchase
+TXN1561,2025-12-20,Savings,Emergency Fund,72.43,Debit,Debit Card,Emergency Fund purchase
+TXN1562,2025-12-25,Health,Gym Membership,21.75,Debit,Cash,Gym Membership purchase
+TXN1563,2025-12-25,Housing,Internet,46.55,Debit,Mobile Money,Internet purchase
+TXN1564,2025-12-26,Other,Gift,131.4,Debit,Cash,Gift purchase
+TXN1565,2025-12-27,Entertainment,Movies,4.38,Debit,Cash,Movies purchase
+TXN1566,2025-12-27,Income,Freelance Payment,533.24,Credit,Bank Transfer,Freelance project payment
+TXN1567,2025-12-30,Health,Pharmacy,47.53,Debit,Credit Card,Pharmacy purchase
+TXN1568,2025-12-30,Savings,Retirement Contribution,211.58,Debit,Credit Card,Retirement Contribution purchase
+TXN1569,2025-12-30,Health,Pharmacy,12.53,Debit,Credit Card,Pharmacy purchase
+TXN1570,2025-12-31,Shopping,Online Retail,214.48,Debit,Debit Card,Online Retail purchase
+TXN1571,2025-12-31,Food,Restaurant,141.28,Debit,Cash,Restaurant purchase
+TXN1572,2025-12-31,Food,Groceries,97.39,Debit,Credit Card,Groceries purchase
