@@ -1,0 +1,501 @@
+record_id,date,industry,region,city,customer_type,customer_age,acquisition_channel,product_or_service,quantity,unit_price_ghs,discount_rate,revenue_ghs,cost_ghs,profit_ghs,customer_satisfaction,returned,payment_status
+REC-00001,2025-01-13,Healthcare,Northern,Tamale,Government,25,Website,Basic Plan,12,705.7,0.0,8468.4,4248.0,4220.4,1,False,Paid
+REC-00002,2025-01-14,Agriculture,Central,Kasoa,Individual,56,Mobile App,Training Package,9,517.12,0.15,3955.97,2394.24,1561.73,4,False,Paid
+REC-00003,2025-06-22,Technology,Ashanti,Obuasi,Individual,31,Phone,Support Package,2,254.55,0.0,509.1,296.71,212.39,1,False,Paid
+REC-00004,2025-11-18,Healthcare,Central,Cape Coast,SME,36,Walk-in,Basic Plan,10,2216.49,0.05,21056.65,13973.62,7083.03,2,False,Pending
+REC-00005,2025-11-22,Hospitality,Eastern,Koforidua,SME,47,Referral,Training Package,6,427.57,0.05,2437.15,1285.64,1151.51,2,False,Pending
+REC-00006,2025-11-24,Retail,Western,Takoradi,Individual,35,Walk-in,Consulting Service,12,1403.45,0.05,15999.33,12189.17,3810.16,3,False,Paid
+REC-00007,2025-06-11,Agriculture,Central,Cape Coast,Enterprise,63,Mobile App,Premium Plan,4,1647.21,0.1,5929.96,4609.55,1320.41,5,True,Paid
+REC-00008,2025-08-08,Finance,Northern,Yendi,Individual,55,Website,Basic Plan,10,1013.52,0.0,10135.2,8300.84,1834.36,2,False,Pending
+REC-00009,2025-07-17,Retail,Central,Cape Coast,Enterprise,22,Walk-in,Basic Plan,7,1499.82,0.1,9448.87,6101.82,3347.05,3,False,Paid
+REC-00010,2025-05-15,Hospitality,Western,Takoradi,SME,18,Walk-in,Premium Plan,9,1910.86,0.15,14618.08,11514.26,3103.82,5,True,Paid
+REC-00011,2025-09-08,Hospitality,Central,Cape Coast,Individual,38,Mobile App,Support Package,1,301.87,0.05,286.78,222.29,64.49,1,False,Pending
+REC-00012,2025-03-06,Manufacturing,Greater Accra,Accra,SME,52,Walk-in,Consulting Service,3,1657.88,0.15,4227.59,2160.71,2066.88,3,False,Refunded
+REC-00013,2025-05-07,Education,Western,Takoradi,Individual,25,Website,Training Package,4,183.46,0.0,733.84,489.97,243.87,1,False,Paid
+REC-00014,2025-02-06,Finance,Greater Accra,Tema,SME,39,Phone,Consulting Service,9,614.06,0.1,4973.89,2632.52,2341.37,2,False,Paid
+REC-00015,2025-07-01,Healthcare,Northern,Tamale,Government,45,Walk-in,Basic Plan,7,1042.48,0.0,7297.36,5101.91,2195.45,2,False,Paid
+REC-00016,2025-03-13,Healthcare,Central,Kasoa,Individual,46,Website,Training Package,7,479.13,0.1,3018.52,1637.33,1381.19,5,False,Paid
+REC-00017,2025-07-28,Finance,Ashanti,Obuasi,Individual,28,Phone,Enterprise Plan,8,1216.36,0.1,8757.79,6865.27,1892.52,4,False,Pending
+REC-00018,2025-10-12,Education,Northern,Tamale,Individual,64,Walk-in,Basic Plan,11,1803.06,0.0,19833.66,10318.7,9514.96,1,True,Pending
+REC-00019,2025-03-22,Healthcare,Central,Cape Coast,SME,51,Phone,Basic Plan,1,2402.93,0.0,2402.93,1838.23,564.7,5,False,Refunded
+REC-00020,2025-11-14,Technology,Central,Kasoa,SME,20,Walk-in,Premium Plan,2,1062.58,0.15,1806.39,1190.65,615.74,3,False,Paid
+REC-00021,2025-06-03,Healthcare,Northern,Tamale,SME,59,Referral,Enterprise Plan,8,807.54,0.0,6460.32,2929.41,3530.91,2,False,Paid
+REC-00022,2025-05-26,Retail,Ashanti,Obuasi,Individual,41,Mobile App,Enterprise Plan,3,1109.51,0.15,2829.25,2009.64,819.61,1,False,Refunded
+REC-00023,2025-05-25,Hospitality,Ashanti,Obuasi,Enterprise,35,Website,Basic Plan,10,546.31,0.05,5189.94,2726.44,2463.5,4,False,Paid
+REC-00024,2025-03-08,Manufacturing,Greater Accra,Accra,Individual,39,Website,Training Package,11,2450.0,0.0,26950.0,19518.68,7431.32,2,True,Paid
+REC-00025,2025-10-10,Retail,Eastern,Nkawkaw,SME,55,Mobile App,Training Package,3,1088.72,0.0,3266.16,1842.3,1423.86,1,False,Refunded
+REC-00026,2025-03-21,Retail,Western,Takoradi,Enterprise,57,Phone,Training Package,4,2164.9,0.0,8659.6,6720.92,1938.68,2,False,Paid
+REC-00027,2025-07-15,Agriculture,Northern,Yendi,Enterprise,24,Mobile App,Premium Plan,1,2150.02,0.0,2150.02,1126.27,1023.75,1,False,Pending
+REC-00028,2025-02-05,Technology,Eastern,Koforidua,Individual,35,Walk-in,Premium Plan,5,894.09,0.15,3799.88,2271.88,1528.0,5,False,Paid
+REC-00029,2025-08-11,Healthcare,Greater Accra,Tema,SME,56,Walk-in,Basic Plan,6,1828.15,0.05,10420.46,6371.75,4048.71,4,False,Refunded
+REC-00030,2025-12-10,Technology,Central,Kasoa,Individual,61,Walk-in,Support Package,4,926.45,0.0,3705.8,2968.66,737.14,3,False,Paid
+REC-00031,2025-06-01,Manufacturing,Western,Takoradi,Enterprise,62,Phone,Support Package,9,340.04,0.1,2754.32,1917.07,837.25,1,False,Paid
+REC-00032,2025-10-24,Education,Ashanti,Obuasi,SME,45,Website,Enterprise Plan,10,1645.4,0.1,14808.6,9084.5,5724.1,5,True,Paid
+REC-00033,2025-12-11,Retail,Greater Accra,Accra,Government,33,Referral,Basic Plan,5,580.99,0.0,2904.95,1465.61,1439.34,4,False,Refunded
+REC-00034,2025-12-23,Retail,Ashanti,Kumasi,Government,63,Mobile App,Premium Plan,7,1248.58,0.0,8740.06,4410.25,4329.81,5,False,Paid
+REC-00035,2025-03-04,Technology,Central,Kasoa,Government,33,Referral,Consulting Service,8,355.01,0.1,2556.07,1781.59,774.48,2,False,Pending
+REC-00036,2025-11-23,Education,Eastern,Nkawkaw,Government,33,Website,Training Package,5,1920.39,0.15,8161.66,5136.14,3025.52,3,False,Paid
+REC-00037,2025-10-04,Finance,Eastern,Koforidua,Individual,38,Phone,Consulting Service,2,367.48,0.0,734.96,434.89,300.07,3,True,Pending
+REC-00038,2025-04-16,Retail,Western,Tarkwa,Government,21,Website,Enterprise Plan,7,988.96,0.15,5884.31,4707.7,1176.61,3,False,Pending
+REC-00039,2025-10-07,Manufacturing,Central,Kasoa,Individual,65,Phone,Enterprise Plan,10,2247.08,0.1,20223.72,10742.56,9481.16,4,False,Pending
+REC-00040,2025-10-01,Retail,Ashanti,Kumasi,Government,57,Mobile App,Consulting Service,1,2269.65,0.15,1929.2,1271.01,658.19,2,False,Paid
+REC-00041,2025-04-19,Manufacturing,Western,Tarkwa,Individual,38,Phone,Basic Plan,8,833.94,0.1,6004.37,3320.15,2684.22,5,False,Paid
+REC-00042,2025-02-05,Education,Ashanti,Kumasi,SME,59,Mobile App,Premium Plan,11,124.64,0.0,1371.04,1098.69,272.35,4,False,Refunded
+REC-00043,2025-12-25,Healthcare,Ashanti,Kumasi,Enterprise,47,Website,Support Package,5,1923.07,0.0,9615.35,6482.48,3132.87,1,False,Refunded
+REC-00044,2025-07-23,Education,Northern,Tamale,Enterprise,42,Referral,Basic Plan,12,515.87,0.15,5261.87,3712.39,1549.48,5,False,Paid
+REC-00045,2025-12-05,Manufacturing,Central,Kasoa,Individual,45,Phone,Enterprise Plan,6,195.67,0.05,1115.32,507.12,608.2,4,False,Pending
+REC-00046,2025-09-25,Agriculture,Ashanti,Obuasi,Enterprise,64,Walk-in,Premium Plan,11,693.45,0.15,6483.76,4776.05,1707.71,1,False,Pending
+REC-00047,2025-10-19,Technology,Ashanti,Kumasi,Government,47,Mobile App,Enterprise Plan,10,1678.77,0.05,15948.32,7346.1,8602.22,3,False,Paid
+REC-00048,2025-05-22,Manufacturing,Central,Kasoa,SME,62,Phone,Training Package,9,50.12,0.0,451.08,217.27,233.81,4,False,Paid
+REC-00049,2025-04-24,Technology,Greater Accra,Tema,Enterprise,36,Phone,Training Package,7,1737.17,0.05,11552.18,8036.45,3515.73,5,False,Paid
+REC-00050,2025-05-19,Technology,Northern,Tamale,SME,47,Mobile App,Premium Plan,5,647.22,0.0,3236.1,2319.88,916.22,4,False,Refunded
+REC-00051,2025-05-25,Finance,Central,Kasoa,Individual,56,Referral,Premium Plan,2,2085.76,0.05,3962.94,2116.88,1846.06,3,False,Paid
+REC-00052,2025-12-24,Retail,Central,Kasoa,Government,36,Phone,Consulting Service,3,1603.73,0.1,4330.07,2112.89,2217.18,3,False,Paid
+REC-00053,2025-02-28,Retail,Eastern,Koforidua,SME,48,Referral,Enterprise Plan,2,1016.75,0.0,2033.5,1349.22,684.28,1,False,Paid
+REC-00054,2025-11-07,Manufacturing,Central,Kasoa,Government,44,Walk-in,Support Package,10,1982.08,0.0,19820.8,14608.06,5212.74,4,False,Refunded
+REC-00055,2025-11-09,Hospitality,Central,Cape Coast,SME,21,Mobile App,Premium Plan,12,270.6,0.0,3247.2,2212.77,1034.43,5,False,Paid
+REC-00056,2025-08-19,Hospitality,Greater Accra,Tema,Government,44,Website,Training Package,12,1494.68,0.05,17039.35,7873.49,9165.86,2,False,Refunded
+REC-00057,2025-08-06,Finance,Northern,Tamale,Individual,30,Mobile App,Enterprise Plan,2,1372.79,0.0,2745.58,2158.33,587.25,5,True,Paid
+REC-00058,2025-08-28,Agriculture,Western,Tarkwa,Individual,25,Referral,Basic Plan,12,777.63,0.1,8398.4,6708.56,1689.84,4,False,Refunded
+REC-00059,2025-02-16,Retail,Eastern,Nkawkaw,Individual,19,Mobile App,Consulting Service,4,2405.73,0.15,8179.48,5457.64,2721.84,5,False,Paid
+REC-00060,2025-08-12,Manufacturing,Ashanti,Obuasi,Enterprise,55,Website,Premium Plan,11,2040.26,0.0,22442.86,14002.19,8440.67,3,False,Pending
+REC-00061,2025-07-25,Technology,Eastern,Koforidua,Government,60,Referral,Basic Plan,9,115.83,0.0,1042.47,590.43,452.04,5,False,Pending
+REC-00062,2025-09-23,Retail,Greater Accra,Accra,Enterprise,30,Referral,Premium Plan,6,1566.02,0.1,8456.51,5762.28,2694.23,3,False,Pending
+REC-00063,2025-11-19,Retail,Greater Accra,Tema,Individual,19,Mobile App,Basic Plan,10,2003.3,0.0,20033.0,11318.2,8714.8,4,False,Paid
+REC-00064,2025-05-30,Agriculture,Western,Takoradi,Government,63,Referral,Premium Plan,9,1770.89,0.1,14344.21,10885.07,3459.14,4,False,Refunded
+REC-00065,2025-03-11,Hospitality,Central,Cape Coast,Enterprise,65,Walk-in,Support Package,2,708.71,0.1,1275.68,734.48,541.2,5,False,Paid
+REC-00066,2025-09-05,Technology,Western,Takoradi,SME,52,Referral,Consulting Service,6,847.79,0.15,4323.73,2549.13,1774.6,2,False,Paid
+REC-00067,2025-08-31,Finance,Eastern,Nkawkaw,Individual,65,Mobile App,Support Package,12,2285.74,0.1,24685.99,14635.07,10050.92,5,False,Paid
+REC-00068,2025-09-27,Finance,Western,Takoradi,Government,24,Walk-in,Enterprise Plan,8,62.99,0.0,503.92,303.2,200.72,5,False,Paid
+REC-00069,2025-10-01,Retail,Eastern,Koforidua,SME,61,Walk-in,Premium Plan,7,2386.5,0.1,15034.95,11618.73,3416.22,1,False,Paid
+REC-00070,2025-02-21,Retail,Northern,Yendi,Individual,63,Walk-in,Enterprise Plan,8,436.75,0.05,3319.3,2603.22,716.08,3,False,Paid
+REC-00071,2025-07-30,Healthcare,Ashanti,Obuasi,SME,51,Phone,Support Package,10,1712.46,0.0,17124.6,8783.1,8341.5,2,False,Pending
+REC-00072,2025-08-24,Finance,Northern,Tamale,Government,34,Walk-in,Support Package,5,1675.43,0.1,7539.43,5906.75,1632.68,3,False,Paid
+REC-00073,2025-04-12,Technology,Western,Tarkwa,Enterprise,37,Website,Training Package,7,2137.01,0.0,14959.07,8044.48,6914.59,4,False,Paid
+REC-00074,2025-01-26,Education,Central,Kasoa,SME,61,Mobile App,Support Package,10,1869.3,0.05,17758.35,13088.33,4670.02,3,False,Paid
+REC-00075,2025-01-21,Finance,Northern,Tamale,Enterprise,59,Walk-in,Training Package,5,1976.81,0.0,9884.05,6567.38,3316.67,4,False,Paid
+REC-00076,2025-07-07,Hospitality,Ashanti,Obuasi,Enterprise,52,Walk-in,Basic Plan,9,1266.94,0.05,10832.34,8203.06,2629.28,4,False,Paid
+REC-00077,2025-12-12,Manufacturing,Ashanti,Kumasi,Enterprise,61,Referral,Basic Plan,7,2418.99,0.15,14392.99,8424.75,5968.24,4,False,Paid
+REC-00078,2025-11-23,Technology,Central,Cape Coast,Individual,42,Phone,Training Package,6,293.16,0.0,1758.96,1098.38,660.58,3,False,Paid
+REC-00079,2025-01-20,Finance,Ashanti,Obuasi,Government,20,Walk-in,Training Package,5,2489.92,0.0,12449.6,6050.02,6399.58,5,False,Refunded
+REC-00080,2025-03-21,Hospitality,Northern,Tamale,Enterprise,64,Mobile App,Consulting Service,7,1645.93,0.1,10369.36,7028.26,3341.1,4,False,Paid
+REC-00081,2025-07-08,Hospitality,Greater Accra,Accra,Individual,61,Phone,Basic Plan,9,2256.7,0.05,19294.78,9114.92,10179.86,2,True,Paid
+REC-00082,2025-05-05,Education,Greater Accra,Accra,SME,39,Walk-in,Premium Plan,3,1972.77,0.0,5918.31,2813.48,3104.83,5,False,Paid
+REC-00083,2025-10-04,Retail,Ashanti,Kumasi,Individual,26,Walk-in,Premium Plan,5,2001.32,0.0,10006.6,6950.5,3056.1,5,False,Paid
+REC-00084,2025-01-27,Healthcare,Ashanti,Obuasi,Government,34,Walk-in,Support Package,3,1860.75,0.15,4744.91,2334.73,2410.18,5,False,Pending
+REC-00085,2025-11-11,Retail,Central,Cape Coast,Government,32,Phone,Consulting Service,1,1824.93,0.15,1551.19,871.15,680.04,1,False,Pending
+REC-00086,2025-06-14,Technology,Greater Accra,Tema,Enterprise,23,Phone,Support Package,10,392.13,0.0,3921.3,2163.6,1757.7,5,False,Paid
+REC-00087,2025-12-02,Education,Northern,Yendi,Government,25,Mobile App,Consulting Service,11,2197.32,0.15,20544.94,14724.78,5820.16,3,False,Pending
+REC-00088,2025-02-18,Finance,Western,Tarkwa,Individual,64,Website,Basic Plan,6,1081.24,0.05,6163.07,3626.91,2536.16,1,False,Paid
+REC-00089,2025-07-10,Technology,Northern,Tamale,Government,65,Walk-in,Training Package,3,1402.02,0.15,3575.15,2874.25,700.9,4,False,Paid
+REC-00090,2025-06-30,Agriculture,Central,Cape Coast,Individual,37,Walk-in,Support Package,2,1455.35,0.0,2910.7,1476.45,1434.25,3,False,Paid
+REC-00091,2025-08-08,Retail,Central,Kasoa,Individual,32,Mobile App,Enterprise Plan,9,2437.0,0.15,18643.05,12621.76,6021.29,3,False,Paid
+REC-00092,2025-03-15,Retail,Greater Accra,Accra,SME,29,Phone,Consulting Service,10,1651.93,0.0,16519.3,8300.84,8218.46,4,False,Paid
+REC-00093,2025-06-16,Retail,Eastern,Koforidua,Enterprise,37,Phone,Training Package,10,1500.65,0.0,15006.5,7616.77,7389.73,4,False,Refunded
+REC-00094,2025-05-20,Healthcare,Western,Tarkwa,Government,44,Referral,Training Package,4,1893.48,0.0,7573.92,4375.56,3198.36,3,False,Paid
+REC-00095,2025-01-29,Hospitality,Western,Tarkwa,Enterprise,56,Website,Basic Plan,1,530.95,0.0,530.95,389.67,141.28,4,False,Paid
+REC-00096,2025-09-30,Technology,Ashanti,Kumasi,Government,42,Website,Consulting Service,12,594.52,0.15,6064.1,4598.66,1465.44,1,False,Paid
+REC-00097,2025-08-08,Manufacturing,Eastern,Koforidua,Enterprise,54,Mobile App,Support Package,10,1025.95,0.1,9233.55,5144.2,4089.35,4,False,Paid
+REC-00098,2025-05-05,Hospitality,Western,Tarkwa,SME,24,Walk-in,Premium Plan,7,1482.46,0.15,8820.64,4225.96,4594.68,1,True,Paid
+REC-00099,2025-04-10,Finance,Central,Kasoa,SME,50,Mobile App,Support Package,6,893.97,0.0,5363.82,2882.62,2481.2,2,False,Paid
+REC-00100,2025-08-26,Technology,Northern,Yendi,SME,49,Phone,Basic Plan,10,1905.7,0.1,17151.3,12040.55,5110.75,4,False,Paid
+REC-00101,2025-01-29,Retail,Eastern,Koforidua,Enterprise,55,Walk-in,Basic Plan,6,1280.66,0.05,7299.76,4532.02,2767.74,1,True,Refunded
+REC-00102,2025-08-25,Education,Central,Kasoa,Government,42,Referral,Premium Plan,10,1396.93,0.0,13969.3,8610.7,5358.6,1,False,Paid
+REC-00103,2025-02-13,Agriculture,Eastern,Nkawkaw,SME,63,Walk-in,Enterprise Plan,9,1624.16,0.0,14617.44,7917.76,6699.68,3,False,Pending
+REC-00104,2025-11-03,Healthcare,Eastern,Nkawkaw,Enterprise,61,Walk-in,Training Package,1,1978.34,0.05,1879.42,891.57,987.85,5,False,Paid
+REC-00105,2025-12-06,Manufacturing,Greater Accra,Accra,Individual,55,Walk-in,Support Package,3,2293.95,0.05,6537.76,5282.82,1254.94,4,False,Paid
+REC-00106,2025-12-17,Retail,Northern,Yendi,Enterprise,62,Mobile App,Premium Plan,9,256.3,0.1,2076.03,1324.8,751.23,3,False,Paid
+REC-00107,2025-03-21,Retail,Ashanti,Obuasi,SME,26,Referral,Consulting Service,2,757.09,0.0,1514.18,965.81,548.37,2,False,Paid
+REC-00108,2025-03-26,Education,Northern,Yendi,Enterprise,57,Phone,Premium Plan,12,1108.24,0.1,11968.99,6999.36,4969.63,5,False,Paid
+REC-00109,2025-07-08,Hospitality,Western,Tarkwa,Government,30,Mobile App,Premium Plan,11,2369.15,0.1,23454.59,14561.12,8893.47,5,False,Paid
+REC-00110,2025-09-04,Healthcare,Greater Accra,Tema,Individual,59,Mobile App,Enterprise Plan,6,1397.49,0.0,8384.94,5980.29,2404.65,4,True,Paid
+REC-00111,2025-04-24,Manufacturing,Western,Tarkwa,SME,23,Phone,Basic Plan,8,2214.46,0.0,17715.68,10691.62,7024.06,3,False,Paid
+REC-00112,2025-11-29,Agriculture,Eastern,Koforidua,Government,24,Phone,Support Package,6,1983.67,0.0,11902.02,5524.59,6377.43,1,False,Paid
+REC-00113,2025-03-18,Healthcare,Eastern,Nkawkaw,SME,31,Walk-in,Basic Plan,9,2352.06,0.15,17993.26,11610.61,6382.65,1,False,Pending
+REC-00114,2025-08-23,Retail,Northern,Tamale,SME,57,Walk-in,Consulting Service,2,299.37,0.1,538.87,361.47,177.4,1,True,Paid
+REC-00115,2025-08-02,Technology,Ashanti,Kumasi,Individual,54,Phone,Consulting Service,3,1669.32,0.0,5007.96,3223.57,1784.39,1,False,Paid
+REC-00116,2025-01-09,Healthcare,Eastern,Nkawkaw,SME,65,Website,Enterprise Plan,6,1976.59,0.05,11266.56,6075.12,5191.44,5,False,Paid
+REC-00117,2025-12-23,Agriculture,Northern,Tamale,Enterprise,47,Mobile App,Basic Plan,8,1588.55,0.0,12708.4,6015.49,6692.91,2,False,Paid
+REC-00118,2025-07-23,Education,Eastern,Nkawkaw,Enterprise,50,Website,Training Package,9,1196.66,0.0,10769.94,7848.25,2921.69,3,False,Paid
+REC-00119,2025-07-24,Finance,Eastern,Nkawkaw,Government,45,Walk-in,Support Package,12,1113.35,0.1,12024.18,6919.24,5104.94,3,False,Pending
+REC-00120,2025-11-05,Technology,Greater Accra,Tema,Enterprise,45,Phone,Support Package,3,1375.05,0.05,3918.89,1912.27,2006.62,4,False,Pending
+REC-00121,2025-01-22,Manufacturing,Eastern,Nkawkaw,Individual,46,Website,Training Package,12,2178.34,0.05,24833.08,16824.29,8008.79,4,False,Refunded
+REC-00122,2025-03-23,Agriculture,Northern,Tamale,SME,61,Website,Premium Plan,1,378.38,0.15,321.62,225.42,96.2,3,False,Pending
+REC-00123,2025-11-06,Healthcare,Central,Cape Coast,Enterprise,20,Phone,Enterprise Plan,3,1705.68,0.05,4861.19,2856.65,2004.54,3,False,Paid
+REC-00124,2025-04-06,Hospitality,Greater Accra,Tema,SME,65,Referral,Enterprise Plan,8,1306.42,0.15,8883.66,4384.72,4498.94,4,False,Paid
+REC-00125,2025-08-20,Technology,Ashanti,Obuasi,Individual,22,Referral,Support Package,3,2249.23,0.1,6072.92,4973.64,1099.28,3,False,Paid
+REC-00126,2025-12-25,Healthcare,Northern,Tamale,SME,63,Mobile App,Consulting Service,11,455.88,0.05,4763.95,3040.54,1723.41,1,False,Refunded
+REC-00127,2025-08-28,Manufacturing,Central,Kasoa,Government,41,Phone,Support Package,9,346.18,0.0,3115.62,1477.82,1637.8,1,False,Paid
+REC-00128,2025-08-19,Finance,Northern,Tamale,Government,22,Referral,Basic Plan,8,1708.27,0.05,12982.85,6458.76,6524.09,1,True,Paid
+REC-00129,2025-03-24,Hospitality,Eastern,Koforidua,Enterprise,28,Mobile App,Training Package,6,2338.48,0.0,14030.88,8110.25,5920.63,5,False,Paid
+REC-00130,2025-11-11,Finance,Northern,Tamale,Enterprise,37,Referral,Basic Plan,9,256.24,0.0,2306.16,1542.75,763.41,1,False,Paid
+REC-00131,2025-05-16,Retail,Northern,Yendi,Enterprise,54,Walk-in,Consulting Service,11,546.75,0.15,5112.11,3088.42,2023.69,2,False,Paid
+REC-00132,2025-12-19,Education,Western,Tarkwa,SME,22,Walk-in,Training Package,1,416.25,0.1,374.62,235.7,138.92,3,False,Pending
+REC-00133,2025-09-21,Hospitality,Ashanti,Obuasi,SME,41,Mobile App,Basic Plan,9,287.81,0.0,2590.29,1612.7,977.59,1,False,Pending
+REC-00134,2025-05-08,Education,Central,Cape Coast,Government,44,Referral,Consulting Service,3,2038.36,0.15,5197.82,3725.89,1471.93,4,False,Pending
+REC-00135,2025-07-21,Technology,Greater Accra,Accra,Individual,23,Walk-in,Consulting Service,9,1156.65,0.0,10409.85,5513.09,4896.76,5,False,Paid
+REC-00136,2025-02-25,Manufacturing,Central,Kasoa,Individual,18,Phone,Basic Plan,7,356.49,0.05,2370.66,1704.93,665.73,5,True,Paid
+REC-00137,2025-05-28,Hospitality,Eastern,Koforidua,SME,53,Website,Consulting Service,2,981.21,0.1,1766.18,1294.31,471.87,3,False,Refunded
+REC-00138,2025-04-12,Retail,Eastern,Koforidua,Enterprise,27,Phone,Support Package,10,1285.08,0.15,10923.18,5078.12,5845.06,4,False,Refunded
+REC-00139,2025-06-17,Hospitality,Central,Kasoa,Government,26,Referral,Enterprise Plan,10,813.36,0.1,7320.24,5977.18,1343.06,4,False,Paid
+REC-00140,2025-02-26,Hospitality,Eastern,Koforidua,Individual,61,Referral,Consulting Service,7,1469.66,0.0,10287.62,6901.52,3386.1,2,True,Refunded
+REC-00141,2025-12-15,Agriculture,Western,Tarkwa,Government,27,Mobile App,Consulting Service,4,103.14,0.0,412.56,214.77,197.79,2,False,Refunded
+REC-00142,2025-02-01,Agriculture,Central,Kasoa,Enterprise,48,Mobile App,Consulting Service,12,366.75,0.0,4401.0,2893.78,1507.22,5,False,Refunded
+REC-00143,2025-12-15,Education,Eastern,Koforidua,Enterprise,61,Referral,Enterprise Plan,11,2014.04,0.05,21046.72,14221.87,6824.85,2,False,Paid
+REC-00144,2025-12-20,Hospitality,Northern,Yendi,Individual,31,Referral,Training Package,12,1235.28,0.1,13341.02,7725.21,5615.81,5,False,Pending
+REC-00145,2025-05-29,Agriculture,Eastern,Nkawkaw,Government,27,Mobile App,Premium Plan,1,736.89,0.0,736.89,426.04,310.85,5,False,Refunded
+REC-00146,2025-03-12,Retail,Northern,Tamale,SME,35,Website,Basic Plan,2,1548.8,0.15,2632.96,1417.94,1215.02,4,False,Pending
+REC-00147,2025-03-12,Agriculture,Greater Accra,Tema,SME,61,Walk-in,Enterprise Plan,1,2412.18,0.0,2412.18,1448.65,963.53,3,False,Paid
+REC-00148,2025-04-29,Finance,Northern,Yendi,SME,54,Website,Consulting Service,9,1853.25,0.0,16679.25,13141.5,3537.75,4,False,Paid
+REC-00149,2025-06-02,Agriculture,Greater Accra,Accra,Government,18,Walk-in,Premium Plan,10,1516.89,0.05,14410.45,8001.95,6408.5,1,False,Paid
+REC-00150,2025-11-28,Hospitality,Northern,Tamale,SME,47,Referral,Training Package,5,1803.53,0.0,9017.65,6515.69,2501.96,4,False,Refunded
+REC-00151,2025-07-25,Education,Eastern,Koforidua,Enterprise,23,Phone,Premium Plan,11,261.08,0.0,2871.88,1799.69,1072.19,4,False,Paid
+REC-00152,2025-10-21,Retail,Eastern,Koforidua,Government,55,Walk-in,Premium Plan,1,672.34,0.05,638.72,451.14,187.58,4,True,Paid
+REC-00153,2025-11-24,Finance,Northern,Yendi,SME,25,Phone,Training Package,5,934.67,0.0,4673.35,2481.91,2191.44,5,False,Pending
+REC-00154,2025-08-30,Healthcare,Northern,Yendi,Enterprise,53,Website,Support Package,9,2009.94,0.0,18089.46,13239.46,4850.0,1,False,Refunded
+REC-00155,2025-10-21,Agriculture,Central,Cape Coast,SME,30,Referral,Consulting Service,9,395.88,0.05,3384.77,2593.27,791.5,1,True,Pending
+REC-00156,2025-03-09,Agriculture,Greater Accra,Tema,Individual,47,Phone,Enterprise Plan,9,1053.18,0.15,8056.83,3797.69,4259.14,1,False,Refunded
+REC-00157,2025-08-05,Healthcare,Greater Accra,Tema,Individual,20,Walk-in,Consulting Service,6,1758.45,0.15,8968.1,7334.34,1633.76,2,False,Pending
+REC-00158,2025-08-18,Technology,Eastern,Koforidua,SME,42,Referral,Consulting Service,7,954.72,0.15,5680.58,2835.78,2844.8,5,False,Paid
+REC-00159,2025-06-02,Manufacturing,Greater Accra,Accra,SME,19,Phone,Enterprise Plan,8,1691.91,0.15,11504.99,6982.69,4522.3,2,False,Paid
+REC-00160,2025-01-17,Healthcare,Northern,Tamale,Individual,25,Phone,Support Package,11,1062.62,0.0,11688.82,6300.82,5388.0,1,False,Paid
+REC-00161,2025-04-30,Hospitality,Western,Takoradi,Enterprise,46,Referral,Support Package,9,562.74,0.0,5064.66,2541.7,2522.96,3,False,Paid
+REC-00162,2025-09-24,Finance,Ashanti,Obuasi,Government,60,Website,Enterprise Plan,4,1048.56,0.05,3984.53,1882.91,2101.62,4,True,Paid
+REC-00163,2025-07-29,Agriculture,Northern,Tamale,SME,44,Walk-in,Training Package,3,767.22,0.0,2301.66,1678.22,623.44,2,False,Paid
+REC-00164,2025-08-02,Education,Central,Kasoa,Individual,44,Phone,Enterprise Plan,9,1336.73,0.1,10827.51,5845.31,4982.2,1,True,Paid
+REC-00165,2025-07-13,Education,Greater Accra,Accra,Government,35,Mobile App,Enterprise Plan,11,1522.3,0.0,16745.3,12948.13,3797.17,3,False,Paid
+REC-00166,2025-03-02,Education,Ashanti,Obuasi,SME,65,Referral,Enterprise Plan,12,2498.94,0.1,26988.55,21276.24,5712.31,3,False,Pending
+REC-00167,2025-07-03,Agriculture,Central,Cape Coast,Government,59,Walk-in,Premium Plan,5,672.37,0.15,2857.57,2219.3,638.27,3,False,Pending
+REC-00168,2025-04-24,Manufacturing,Greater Accra,Tema,SME,54,Mobile App,Enterprise Plan,12,386.16,0.05,4402.22,2882.24,1519.98,2,False,Refunded
+REC-00169,2025-10-09,Agriculture,Ashanti,Obuasi,Government,49,Mobile App,Training Package,11,2360.07,0.05,24662.73,13446.39,11216.34,3,False,Paid
+REC-00170,2025-09-08,Retail,Northern,Tamale,Individual,52,Website,Basic Plan,3,2294.33,0.15,5850.54,4776.5,1074.04,4,False,Paid
+REC-00171,2025-03-19,Agriculture,Greater Accra,Tema,Individual,63,Website,Support Package,1,566.33,0.1,509.7,299.75,209.95,5,False,Paid
+REC-00172,2025-05-21,Manufacturing,Greater Accra,Accra,Individual,51,Website,Support Package,9,2444.26,0.0,21998.34,13986.98,8011.36,2,False,Paid
+REC-00173,2025-05-10,Manufacturing,Central,Kasoa,SME,51,Mobile App,Enterprise Plan,6,686.63,0.1,3707.8,1776.92,1930.88,1,False,Paid
+REC-00174,2025-07-13,Healthcare,Western,Tarkwa,Government,42,Walk-in,Support Package,9,1203.11,0.0,10827.99,7688.44,3139.55,1,True,Paid
+REC-00175,2025-12-21,Hospitality,Ashanti,Kumasi,SME,31,Walk-in,Basic Plan,10,1201.86,0.0,12018.6,9518.0,2500.6,2,True,Paid
+REC-00176,2025-02-09,Manufacturing,Northern,Yendi,Government,43,Mobile App,Training Package,5,427.06,0.0,2135.3,1408.61,726.69,1,True,Paid
+REC-00177,2025-08-12,Manufacturing,Greater Accra,Tema,Individual,24,Walk-in,Consulting Service,4,2100.72,0.05,7982.74,5379.67,2603.07,4,False,Paid
+REC-00178,2025-08-10,Hospitality,Central,Cape Coast,Individual,42,Website,Enterprise Plan,3,1707.24,0.1,4609.55,2220.45,2389.1,2,False,Paid
+REC-00179,2025-06-12,Agriculture,Northern,Yendi,Enterprise,42,Website,Premium Plan,6,288.71,0.0,1732.26,1383.89,348.37,1,False,Pending
+REC-00180,2025-10-12,Healthcare,Western,Tarkwa,Government,53,Website,Enterprise Plan,9,1034.91,0.0,9314.19,4500.23,4813.96,4,False,Paid
+REC-00181,2025-05-05,Hospitality,Northern,Yendi,Enterprise,53,Phone,Premium Plan,10,1314.73,0.1,11832.57,6066.74,5765.83,1,False,Pending
+REC-00182,2025-06-03,Education,Eastern,Nkawkaw,SME,44,Phone,Basic Plan,8,1962.1,0.05,14911.96,8099.12,6812.84,2,False,Paid
+REC-00183,2025-11-14,Manufacturing,Western,Takoradi,Enterprise,39,Walk-in,Support Package,7,2015.09,0.05,13400.35,8212.84,5187.51,2,False,Paid
+REC-00184,2025-06-13,Education,Ashanti,Obuasi,Government,43,Walk-in,Consulting Service,5,1843.81,0.1,8297.15,6704.7,1592.45,3,False,Refunded
+REC-00185,2025-10-07,Agriculture,Ashanti,Kumasi,Government,55,Walk-in,Training Package,3,1712.24,0.15,4366.21,2008.28,2357.93,1,False,Pending
+REC-00186,2025-06-05,Manufacturing,Ashanti,Kumasi,Government,58,Referral,Consulting Service,4,650.39,0.0,2601.56,1859.17,742.39,5,False,Refunded
+REC-00187,2025-08-03,Healthcare,Central,Cape Coast,SME,62,Walk-in,Premium Plan,9,115.99,0.05,991.71,703.72,287.99,5,False,Refunded
+REC-00188,2025-11-28,Manufacturing,Northern,Tamale,Individual,61,Website,Enterprise Plan,7,2417.86,0.05,16078.77,12980.64,3098.13,2,True,Refunded
+REC-00189,2025-12-19,Finance,Central,Kasoa,Individual,55,Phone,Basic Plan,10,572.05,0.05,5434.47,3231.99,2202.48,3,False,Paid
+REC-00190,2025-03-14,Agriculture,Greater Accra,Tema,Government,64,Website,Consulting Service,6,796.93,0.1,4303.42,3185.3,1118.12,4,False,Paid
+REC-00191,2025-12-30,Finance,Eastern,Koforidua,SME,20,Referral,Premium Plan,2,80.9,0.05,153.71,106.02,47.69,3,True,Pending
+REC-00192,2025-07-27,Education,Western,Tarkwa,Government,32,Phone,Basic Plan,11,481.52,0.1,4767.05,2842.9,1924.15,2,False,Paid
+REC-00193,2025-10-23,Technology,Northern,Tamale,Government,22,Website,Enterprise Plan,2,2003.77,0.15,3406.41,1768.52,1637.89,4,True,Paid
+REC-00194,2025-11-09,Agriculture,Central,Cape Coast,Enterprise,42,Referral,Support Package,7,1477.84,0.05,9827.64,5702.34,4125.3,1,False,Paid
+REC-00195,2025-06-06,Manufacturing,Greater Accra,Accra,Government,33,Phone,Premium Plan,2,478.04,0.0,956.08,610.94,345.14,4,True,Paid
+REC-00196,2025-09-08,Retail,Central,Kasoa,Individual,28,Phone,Premium Plan,5,372.23,0.05,1768.09,1346.46,421.63,2,False,Refunded
+REC-00197,2025-09-11,Agriculture,Central,Kasoa,SME,59,Website,Support Package,7,1719.62,0.1,10833.61,7721.68,3111.93,1,False,Paid
+REC-00198,2025-04-26,Agriculture,Greater Accra,Accra,Individual,35,Walk-in,Support Package,9,739.46,0.1,5989.63,3948.91,2040.72,3,True,Paid
+REC-00199,2025-10-07,Education,Northern,Yendi,Individual,46,Phone,Enterprise Plan,4,2474.69,0.0,9898.76,7150.03,2748.73,3,False,Pending
+REC-00200,2025-04-18,Manufacturing,Greater Accra,Accra,SME,33,Mobile App,Premium Plan,12,1480.11,0.05,16873.25,12968.58,3904.67,1,True,Paid
+REC-00201,2025-11-02,Hospitality,Central,Cape Coast,SME,35,Phone,Basic Plan,9,441.73,0.05,3776.79,2103.87,1672.92,3,False,Paid
+REC-00202,2025-12-31,Hospitality,Ashanti,Obuasi,Government,27,Phone,Basic Plan,6,2075.49,0.1,11207.65,7073.14,4134.51,1,False,Refunded
+REC-00203,2025-12-22,Retail,Northern,Tamale,Government,35,Walk-in,Basic Plan,6,1150.37,0.1,6212.0,3547.65,2664.35,5,False,Paid
+REC-00204,2025-09-11,Finance,Western,Tarkwa,Enterprise,31,Website,Basic Plan,5,824.09,0.05,3914.43,2250.68,1663.75,1,False,Paid
+REC-00205,2025-08-14,Finance,Greater Accra,Tema,SME,28,Walk-in,Basic Plan,8,26.67,0.1,192.02,100.78,91.24,3,False,Paid
+REC-00206,2025-11-29,Education,Eastern,Nkawkaw,Individual,60,Website,Basic Plan,3,153.17,0.05,436.53,313.7,122.83,2,False,Paid
+REC-00207,2025-04-26,Technology,Ashanti,Kumasi,Government,55,Mobile App,Consulting Service,9,1707.96,0.0,15371.64,6963.09,8408.55,1,False,Pending
+REC-00208,2025-02-22,Finance,Greater Accra,Accra,Individual,64,Referral,Support Package,2,800.54,0.05,1521.03,761.64,759.39,1,True,Paid
+REC-00209,2025-04-20,Agriculture,Western,Takoradi,Individual,40,Website,Premium Plan,11,1876.97,0.1,18582.0,12597.63,5984.37,1,True,Pending
+REC-00210,2025-06-11,Hospitality,Eastern,Koforidua,Enterprise,45,Mobile App,Support Package,3,638.27,0.0,1914.81,1037.49,877.32,5,True,Paid
+REC-00211,2025-06-01,Healthcare,Northern,Tamale,Government,43,Referral,Basic Plan,11,160.06,0.0,1760.66,1114.69,645.97,5,False,Paid
+REC-00212,2025-07-18,Agriculture,Eastern,Koforidua,Individual,26,Referral,Basic Plan,10,1066.64,0.15,9066.44,6370.88,2695.56,1,False,Paid
+REC-00213,2025-07-23,Manufacturing,Greater Accra,Tema,Individual,21,Referral,Support Package,9,734.06,0.15,5615.56,4120.87,1494.69,5,False,Paid
+REC-00214,2025-02-10,Manufacturing,Greater Accra,Accra,Enterprise,37,Phone,Training Package,9,2304.29,0.0,20738.61,13448.25,7290.36,2,False,Paid
+REC-00215,2025-03-01,Finance,Greater Accra,Accra,Individual,45,Mobile App,Training Package,8,1540.43,0.0,12323.44,6955.81,5367.63,1,False,Pending
+REC-00216,2025-09-22,Hospitality,Eastern,Koforidua,Individual,51,Walk-in,Consulting Service,12,666.64,0.05,7599.7,3776.78,3822.92,3,True,Paid
+REC-00217,2025-10-23,Retail,Eastern,Nkawkaw,SME,63,Walk-in,Premium Plan,11,215.75,0.1,2135.93,1364.84,771.09,3,False,Refunded
+REC-00218,2025-03-01,Retail,Northern,Tamale,Individual,64,Phone,Enterprise Plan,4,1858.43,0.0,7433.72,3466.3,3967.42,4,False,Paid
+REC-00219,2025-12-02,Technology,Greater Accra,Tema,Individual,53,Referral,Enterprise Plan,7,580.68,0.0,4064.76,2455.18,1609.58,1,True,Paid
+REC-00220,2025-09-22,Hospitality,Ashanti,Obuasi,Enterprise,32,Website,Support Package,1,2386.35,0.0,2386.35,1848.2,538.15,4,False,Paid
+REC-00221,2025-10-16,Agriculture,Ashanti,Kumasi,SME,36,Mobile App,Basic Plan,5,1855.45,0.0,9277.25,5767.23,3510.02,4,False,Paid
+REC-00222,2025-11-22,Manufacturing,Central,Kasoa,Individual,40,Mobile App,Support Package,12,2196.07,0.05,25035.2,11279.38,13755.82,2,False,Pending
+REC-00223,2025-12-31,Manufacturing,Greater Accra,Tema,Government,27,Website,Support Package,5,255.24,0.0,1276.2,997.98,278.22,1,True,Paid
+REC-00224,2025-02-08,Finance,Northern,Tamale,Enterprise,43,Walk-in,Enterprise Plan,10,1430.36,0.1,12873.24,8948.24,3925.0,4,False,Paid
+REC-00225,2025-04-30,Healthcare,Western,Takoradi,Individual,35,Mobile App,Consulting Service,2,2360.3,0.0,4720.6,3486.53,1234.07,4,False,Pending
+REC-00226,2025-07-03,Healthcare,Greater Accra,Accra,SME,52,Walk-in,Training Package,4,1143.49,0.1,4116.56,2256.09,1860.47,5,False,Paid
+REC-00227,2025-02-16,Retail,Eastern,Nkawkaw,Enterprise,27,Mobile App,Basic Plan,12,639.34,0.05,7288.48,4348.38,2940.1,4,False,Refunded
+REC-00228,2025-05-08,Retail,Northern,Tamale,SME,53,Mobile App,Consulting Service,2,1168.56,0.0,2337.12,1156.73,1180.39,3,False,Refunded
+REC-00229,2025-02-08,Agriculture,Central,Cape Coast,Individual,34,Walk-in,Basic Plan,1,2492.97,0.0,2492.97,1954.3,538.67,1,False,Paid
+REC-00230,2025-08-10,Manufacturing,Ashanti,Kumasi,Enterprise,54,Mobile App,Premium Plan,12,1002.62,0.0,12031.44,7117.92,4913.52,3,False,Pending
+REC-00231,2025-11-11,Agriculture,Ashanti,Kumasi,Individual,20,Walk-in,Consulting Service,10,1552.02,0.05,14744.19,9356.51,5387.68,2,False,Paid
+REC-00232,2025-05-08,Manufacturing,Northern,Yendi,Government,51,Referral,Consulting Service,11,2485.37,0.15,23238.21,17291.39,5946.82,3,True,Refunded
+REC-00233,2025-05-19,Hospitality,Eastern,Koforidua,Government,42,Referral,Enterprise Plan,3,89.51,0.15,228.25,121.21,107.04,5,False,Paid
+REC-00234,2025-12-03,Education,Greater Accra,Tema,Enterprise,33,Mobile App,Premium Plan,4,684.65,0.0,2738.6,2006.57,732.03,2,True,Paid
+REC-00235,2025-07-03,Finance,Northern,Tamale,Government,62,Referral,Enterprise Plan,10,94.81,0.05,900.69,721.09,179.6,2,False,Paid
+REC-00236,2025-04-30,Technology,Greater Accra,Accra,SME,21,Walk-in,Training Package,10,566.55,0.15,4815.68,3018.74,1796.94,2,False,Paid
+REC-00237,2025-10-28,Technology,Greater Accra,Accra,Enterprise,27,Phone,Support Package,12,2295.13,0.0,27541.56,21019.66,6521.9,1,False,Paid
+REC-00238,2025-03-22,Finance,Eastern,Nkawkaw,SME,26,Referral,Premium Plan,12,2373.02,0.1,25628.62,17688.79,7939.83,4,False,Paid
+REC-00239,2025-01-01,Retail,Ashanti,Kumasi,Enterprise,29,Referral,Premium Plan,12,2373.03,0.1,25628.72,19600.33,6028.39,5,False,Pending
+REC-00240,2025-02-09,Healthcare,Ashanti,Obuasi,Government,39,Website,Enterprise Plan,4,883.36,0.05,3356.77,1719.06,1637.71,2,False,Paid
+REC-00241,2025-02-25,Manufacturing,Eastern,Koforidua,Government,34,Phone,Consulting Service,12,28.17,0.1,304.24,186.24,118.0,3,True,Pending
+REC-00242,2025-10-23,Healthcare,Greater Accra,Accra,Enterprise,48,Website,Enterprise Plan,11,1901.65,0.0,20918.15,10672.08,10246.07,3,False,Paid
+REC-00243,2025-07-12,Healthcare,Eastern,Nkawkaw,Government,28,Website,Consulting Service,3,1836.66,0.15,4683.48,3739.66,943.82,2,True,Pending
+REC-00244,2025-02-21,Hospitality,Ashanti,Obuasi,Enterprise,21,Mobile App,Basic Plan,6,533.74,0.0,3202.44,1926.05,1276.39,1,False,Refunded
+REC-00245,2025-03-20,Agriculture,Central,Cape Coast,Individual,49,Website,Premium Plan,1,918.05,0.1,826.25,398.6,427.65,2,False,Paid
+REC-00246,2025-06-07,Manufacturing,Western,Takoradi,Enterprise,25,Phone,Enterprise Plan,7,1190.59,0.05,7917.42,3829.82,4087.6,2,False,Paid
+REC-00247,2025-08-27,Finance,Eastern,Koforidua,Individual,46,Walk-in,Support Package,5,584.95,0.05,2778.51,1830.4,948.11,4,True,Paid
+REC-00248,2025-07-18,Agriculture,Central,Cape Coast,Government,21,Walk-in,Basic Plan,9,1061.11,0.15,8117.49,5716.46,2401.03,4,False,Refunded
+REC-00249,2025-10-20,Agriculture,Central,Cape Coast,SME,51,Mobile App,Premium Plan,11,2457.32,0.0,27030.52,13366.71,13663.81,2,False,Pending
+REC-00250,2025-08-11,Hospitality,Greater Accra,Tema,Individual,61,Website,Consulting Service,4,2493.24,0.0,9972.96,7565.69,2407.27,5,False,Refunded
+REC-00251,2025-09-24,Manufacturing,Eastern,Koforidua,Government,35,Mobile App,Premium Plan,8,2294.98,0.0,18359.84,13605.08,4754.76,5,True,Refunded
+REC-00252,2025-10-16,Manufacturing,Greater Accra,Tema,Government,24,Phone,Support Package,2,1969.72,0.15,3348.52,2597.28,751.24,5,False,Paid
+REC-00253,2025-07-26,Technology,Ashanti,Kumasi,Individual,35,Phone,Enterprise Plan,3,1555.16,0.1,4198.93,1949.77,2249.16,3,False,Paid
+REC-00254,2025-05-24,Education,Eastern,Koforidua,Enterprise,37,Phone,Enterprise Plan,8,2149.13,0.0,17193.04,13923.33,3269.71,3,False,Refunded
+REC-00255,2025-04-07,Technology,Northern,Tamale,SME,23,Website,Enterprise Plan,8,548.19,0.1,3946.97,2858.2,1088.77,5,False,Paid
+REC-00256,2025-01-15,Education,Central,Cape Coast,Government,54,Website,Enterprise Plan,3,502.09,0.0,1506.27,1144.29,361.98,2,False,Paid
+REC-00257,2025-07-23,Agriculture,Western,Tarkwa,SME,50,Phone,Support Package,11,2309.61,0.0,25405.71,13706.81,11698.9,5,False,Paid
+REC-00258,2025-12-19,Education,Ashanti,Kumasi,SME,34,Mobile App,Enterprise Plan,2,730.55,0.1,1314.99,615.9,699.09,4,True,Paid
+REC-00259,2025-08-31,Education,Northern,Yendi,Enterprise,18,Walk-in,Consulting Service,3,1627.24,0.15,4149.46,3096.82,1052.64,4,False,Pending
+REC-00260,2025-08-27,Healthcare,Eastern,Koforidua,Enterprise,31,Referral,Training Package,5,1701.06,0.15,7229.5,4315.62,2913.88,5,True,Paid
+REC-00261,2025-02-25,Hospitality,Eastern,Nkawkaw,Enterprise,61,Mobile App,Premium Plan,8,183.0,0.05,1390.8,955.51,435.29,5,False,Paid
+REC-00262,2025-12-05,Hospitality,Central,Kasoa,Government,43,Phone,Consulting Service,6,1709.87,0.0,10259.22,7104.49,3154.73,1,True,Refunded
+REC-00263,2025-04-24,Technology,Ashanti,Obuasi,SME,39,Referral,Premium Plan,11,1348.22,0.1,13347.38,10483.23,2864.15,3,False,Pending
+REC-00264,2025-05-13,Technology,Ashanti,Kumasi,SME,65,Walk-in,Premium Plan,12,2025.65,0.0,24307.8,19455.03,4852.77,3,False,Paid
+REC-00265,2025-10-27,Healthcare,Eastern,Nkawkaw,SME,34,Referral,Basic Plan,5,1172.81,0.0,5864.05,3659.74,2204.31,4,True,Paid
+REC-00266,2025-03-19,Agriculture,Western,Takoradi,Enterprise,21,Mobile App,Basic Plan,3,2481.06,0.05,7071.02,4252.52,2818.5,4,False,Paid
+REC-00267,2025-01-30,Finance,Eastern,Koforidua,Government,58,Website,Premium Plan,1,1143.83,0.0,1143.83,836.87,306.96,5,False,Pending
+REC-00268,2025-09-02,Technology,Western,Takoradi,Enterprise,45,Referral,Premium Plan,7,36.56,0.15,217.53,113.94,103.59,1,False,Paid
+REC-00269,2025-06-26,Hospitality,Ashanti,Kumasi,Individual,62,Website,Enterprise Plan,5,344.1,0.1,1548.45,985.18,563.27,3,False,Refunded
+REC-00270,2025-06-22,Agriculture,Central,Kasoa,SME,51,Mobile App,Consulting Service,7,2222.74,0.0,15559.18,8974.71,6584.47,1,False,Paid
+REC-00271,2025-04-19,Technology,Northern,Tamale,Government,26,Walk-in,Support Package,12,79.24,0.15,808.25,414.25,394.0,5,False,Refunded
+REC-00272,2025-02-25,Manufacturing,Greater Accra,Tema,Government,60,Website,Support Package,11,2094.4,0.0,23038.4,16246.85,6791.55,3,False,Paid
+REC-00273,2025-12-18,Hospitality,Ashanti,Kumasi,Government,62,Website,Support Package,11,48.03,0.1,475.5,330.38,145.12,5,False,Paid
+REC-00274,2025-09-12,Education,Greater Accra,Tema,Government,24,Walk-in,Premium Plan,4,1532.28,0.05,5822.66,4411.56,1411.1,1,True,Pending
+REC-00275,2025-09-04,Healthcare,Ashanti,Obuasi,SME,62,Website,Support Package,6,605.4,0.0,3632.4,2537.25,1095.15,1,False,Paid
+REC-00276,2025-08-22,Finance,Northern,Tamale,Enterprise,32,Walk-in,Training Package,5,678.71,0.0,3393.55,1652.42,1741.13,3,False,Paid
+REC-00277,2025-01-05,Agriculture,Greater Accra,Tema,Individual,20,Walk-in,Enterprise Plan,3,1666.8,0.0,5000.4,2858.25,2142.15,2,False,Pending
+REC-00278,2025-05-20,Finance,Western,Takoradi,SME,47,Website,Premium Plan,7,1732.51,0.1,10914.81,8142.04,2772.77,1,False,Refunded
+REC-00279,2025-12-14,Retail,Western,Takoradi,Government,54,Phone,Basic Plan,8,473.62,0.1,3410.06,2517.62,892.44,4,False,Paid
+REC-00280,2025-12-02,Education,Greater Accra,Tema,Individual,34,Phone,Training Package,6,55.59,0.15,283.51,208.09,75.42,2,False,Paid
+REC-00281,2025-11-25,Retail,Northern,Tamale,SME,61,Referral,Consulting Service,7,392.92,0.15,2337.87,1823.69,514.18,4,False,Paid
+REC-00282,2025-05-04,Manufacturing,Western,Tarkwa,SME,38,Website,Consulting Service,6,2426.11,0.0,14556.66,9280.8,5275.86,4,True,Pending
+REC-00283,2025-08-17,Retail,Greater Accra,Accra,Government,49,Phone,Basic Plan,6,318.8,0.1,1721.52,1249.37,472.15,5,True,Paid
+REC-00284,2025-11-13,Agriculture,Greater Accra,Tema,Enterprise,56,Website,Premium Plan,11,778.88,0.15,7282.53,4792.36,2490.17,4,False,Refunded
+REC-00285,2025-08-31,Education,Central,Cape Coast,Enterprise,56,Walk-in,Training Package,12,1651.49,0.1,17836.09,8778.72,9057.37,3,True,Refunded
+REC-00286,2025-02-24,Manufacturing,Eastern,Koforidua,Enterprise,62,Referral,Premium Plan,1,2244.77,0.1,2020.29,1014.12,1006.17,2,False,Pending
+REC-00287,2025-04-08,Healthcare,Ashanti,Obuasi,Government,47,Referral,Support Package,12,861.39,0.1,9303.01,4346.41,4956.6,2,False,Paid
+REC-00288,2025-01-25,Finance,Central,Cape Coast,SME,65,Website,Consulting Service,9,2339.89,0.15,17900.16,11253.56,6646.6,5,True,Paid
+REC-00289,2025-08-03,Technology,Central,Kasoa,Government,42,Mobile App,Premium Plan,10,2291.88,0.0,22918.8,12633.54,10285.26,4,True,Refunded
+REC-00290,2025-10-08,Education,Eastern,Koforidua,Enterprise,62,Walk-in,Training Package,6,1786.89,0.15,9113.14,6233.9,2879.24,2,False,Refunded
+REC-00291,2025-11-23,Manufacturing,Central,Kasoa,Government,62,Website,Support Package,6,1783.12,0.05,10163.78,6688.21,3475.57,1,False,Pending
+REC-00292,2025-12-10,Hospitality,Ashanti,Kumasi,Individual,21,Walk-in,Premium Plan,1,519.76,0.0,519.76,423.04,96.72,5,False,Paid
+REC-00293,2025-11-12,Manufacturing,Western,Takoradi,Enterprise,24,Website,Consulting Service,11,1855.24,0.0,20407.64,14789.27,5618.37,4,False,Paid
+REC-00294,2025-01-07,Agriculture,Central,Cape Coast,Enterprise,21,Referral,Support Package,12,647.07,0.15,6600.11,5091.82,1508.29,5,False,Paid
+REC-00295,2025-04-01,Healthcare,Eastern,Nkawkaw,Individual,46,Phone,Enterprise Plan,11,209.31,0.0,2302.41,1662.29,640.12,5,False,Paid
+REC-00296,2025-05-11,Technology,Ashanti,Kumasi,Enterprise,55,Phone,Support Package,1,843.14,0.0,843.14,391.87,451.27,5,False,Paid
+REC-00297,2025-09-27,Finance,Northern,Yendi,Government,38,Website,Enterprise Plan,4,2393.54,0.15,8138.04,3867.4,4270.64,2,False,Paid
+REC-00298,2025-05-31,Retail,Eastern,Koforidua,Enterprise,41,Phone,Premium Plan,4,2377.01,0.15,8081.83,5223.16,2858.67,5,True,Paid
+REC-00299,2025-06-14,Hospitality,Greater Accra,Accra,Enterprise,61,Referral,Support Package,7,2291.93,0.0,16043.51,9510.18,6533.33,4,False,Paid
+REC-00300,2025-04-09,Retail,Eastern,Koforidua,SME,59,Mobile App,Training Package,6,1296.89,0.0,7781.34,3983.55,3797.79,4,False,Paid
+REC-00301,2025-08-11,Finance,Central,Cape Coast,Government,62,Walk-in,Basic Plan,11,2046.47,0.0,22511.17,16350.98,6160.19,1,False,Paid
+REC-00302,2025-10-13,Manufacturing,Ashanti,Obuasi,Government,34,Phone,Consulting Service,2,1448.03,0.0,2896.06,2279.39,616.67,3,False,Pending
+REC-00303,2025-10-01,Retail,Northern,Tamale,Enterprise,25,Referral,Basic Plan,1,1612.52,0.15,1370.64,648.86,721.78,3,False,Refunded
+REC-00304,2025-08-13,Education,Greater Accra,Accra,Government,36,Referral,Enterprise Plan,7,1002.91,0.0,7020.37,4390.37,2630.0,2,False,Paid
+REC-00305,2025-10-12,Manufacturing,Greater Accra,Accra,Enterprise,53,Mobile App,Training Package,3,330.01,0.0,990.03,655.31,334.72,3,False,Pending
+REC-00306,2025-03-14,Education,Northern,Tamale,SME,50,Referral,Basic Plan,3,480.38,0.15,1224.97,929.58,295.39,5,False,Refunded
+REC-00307,2025-12-10,Agriculture,Greater Accra,Tema,Enterprise,36,Mobile App,Training Package,2,645.45,0.0,1290.9,927.47,363.43,2,False,Paid
+REC-00308,2025-04-10,Hospitality,Central,Cape Coast,Enterprise,22,Walk-in,Consulting Service,6,1227.51,0.05,6996.81,4744.16,2252.65,2,False,Paid
+REC-00309,2025-12-31,Finance,Ashanti,Obuasi,Government,32,Phone,Consulting Service,12,1611.08,0.05,18366.31,13973.84,4392.47,3,False,Pending
+REC-00310,2025-03-31,Finance,Central,Cape Coast,Enterprise,24,Website,Training Package,11,1526.4,0.05,15950.88,12245.87,3705.01,1,False,Refunded
+REC-00311,2025-10-25,Retail,Northern,Yendi,Government,19,Mobile App,Enterprise Plan,10,1027.71,0.15,8735.53,4618.66,4116.87,4,False,Refunded
+REC-00312,2025-03-10,Retail,Northern,Tamale,SME,36,Referral,Premium Plan,8,1265.28,0.0,10122.24,6041.06,4081.18,4,False,Paid
+REC-00313,2025-12-04,Retail,Central,Cape Coast,Government,54,Mobile App,Basic Plan,3,1846.4,0.1,4985.28,3975.74,1009.54,3,False,Paid
+REC-00314,2025-04-16,Agriculture,Greater Accra,Accra,Individual,60,Walk-in,Basic Plan,9,2271.62,0.05,19422.35,11529.0,7893.35,5,False,Paid
+REC-00315,2025-10-19,Healthcare,Central,Kasoa,Government,52,Mobile App,Support Package,3,957.23,0.1,2584.52,1512.36,1072.16,4,False,Paid
+REC-00316,2025-11-06,Education,Western,Takoradi,Enterprise,48,Mobile App,Premium Plan,1,1267.05,0.0,1267.05,776.4,490.65,2,False,Paid
+REC-00317,2025-03-02,Agriculture,Central,Kasoa,Government,63,Mobile App,Support Package,11,595.11,0.05,6218.9,4455.81,1763.09,2,False,Paid
+REC-00318,2025-03-07,Retail,Ashanti,Kumasi,Individual,20,Mobile App,Enterprise Plan,10,1491.06,0.0,14910.6,10182.9,4727.7,2,True,Pending
+REC-00319,2025-11-23,Education,Central,Kasoa,Government,54,Phone,Premium Plan,1,2199.31,0.05,2089.34,1672.48,416.86,2,False,Refunded
+REC-00320,2025-04-04,Technology,Ashanti,Obuasi,Individual,55,Mobile App,Consulting Service,10,1657.63,0.05,15747.49,8063.61,7683.88,4,False,Paid
+REC-00321,2025-09-25,Finance,Greater Accra,Tema,Individual,30,Referral,Support Package,9,1718.81,0.0,15469.29,10426.91,5042.38,1,False,Pending
+REC-00322,2025-11-05,Technology,Northern,Tamale,Government,26,Mobile App,Consulting Service,9,2073.12,0.1,16792.27,10800.06,5992.21,4,False,Refunded
+REC-00323,2025-10-22,Education,Northern,Tamale,Enterprise,62,Referral,Support Package,2,1078.09,0.05,2048.37,1283.39,764.98,4,False,Paid
+REC-00324,2025-01-04,Education,Greater Accra,Tema,Government,63,Walk-in,Basic Plan,10,1318.29,0.15,11205.47,5072.29,6133.18,2,False,Refunded
+REC-00325,2025-10-02,Manufacturing,Eastern,Koforidua,Government,34,Referral,Support Package,7,1422.56,0.15,8464.23,4671.89,3792.34,4,False,Paid
+REC-00326,2025-09-05,Manufacturing,Central,Cape Coast,Individual,53,Mobile App,Consulting Service,5,2471.56,0.15,10504.13,6065.21,4438.92,2,False,Paid
+REC-00327,2025-06-23,Retail,Central,Cape Coast,SME,43,Phone,Support Package,9,1544.71,0.0,13902.39,7082.89,6819.5,4,False,Paid
+REC-00328,2025-07-09,Manufacturing,Eastern,Nkawkaw,Individual,32,Mobile App,Training Package,2,1532.35,0.1,2758.23,2191.01,567.22,4,False,Paid
+REC-00329,2025-09-23,Education,Ashanti,Kumasi,Individual,60,Walk-in,Premium Plan,5,507.0,0.15,2154.75,1376.68,778.07,1,False,Paid
+REC-00330,2025-06-30,Retail,Eastern,Koforidua,Individual,43,Referral,Enterprise Plan,11,1002.98,0.15,9377.86,4915.08,4462.78,5,True,Paid
+REC-00331,2025-04-26,Retail,Eastern,Nkawkaw,SME,35,Phone,Support Package,10,2408.57,0.1,21677.13,17211.51,4465.62,1,True,Paid
+REC-00332,2025-06-24,Hospitality,Central,Kasoa,Government,36,Referral,Consulting Service,2,2012.28,0.05,3823.33,2959.88,863.45,2,False,Pending
+REC-00333,2025-10-28,Education,Northern,Tamale,Enterprise,47,Phone,Enterprise Plan,1,1217.88,0.05,1156.99,549.56,607.43,5,True,Paid
+REC-00334,2025-05-08,Finance,Northern,Yendi,Enterprise,34,Walk-in,Premium Plan,5,255.2,0.05,1212.2,579.59,632.61,5,False,Paid
+REC-00335,2025-04-08,Hospitality,Northern,Tamale,SME,61,Mobile App,Premium Plan,8,1849.35,0.0,14794.8,10683.45,4111.35,5,False,Paid
+REC-00336,2025-02-10,Retail,Greater Accra,Tema,Enterprise,25,Referral,Enterprise Plan,11,2390.55,0.1,23666.45,16024.93,7641.52,4,True,Paid
+REC-00337,2025-09-19,Manufacturing,Western,Tarkwa,Individual,29,Referral,Enterprise Plan,5,1009.75,0.15,4291.44,2134.78,2156.66,4,False,Pending
+REC-00338,2025-09-23,Education,Greater Accra,Tema,Individual,62,Walk-in,Enterprise Plan,8,806.24,0.0,6449.92,2930.67,3519.25,5,False,Paid
+REC-00339,2025-05-02,Finance,Central,Kasoa,Government,34,Mobile App,Consulting Service,5,1191.58,0.15,5064.21,2921.77,2142.44,3,False,Pending
+REC-00340,2025-04-03,Healthcare,Eastern,Nkawkaw,SME,46,Referral,Consulting Service,10,349.57,0.15,2971.34,2091.3,880.04,4,False,Paid
+REC-00341,2025-08-31,Technology,Northern,Yendi,Enterprise,27,Walk-in,Support Package,1,462.1,0.1,415.89,207.84,208.05,5,False,Pending
+REC-00342,2025-03-25,Healthcare,Greater Accra,Tema,Enterprise,62,Walk-in,Enterprise Plan,1,558.28,0.05,530.37,332.18,198.19,3,True,Refunded
+REC-00343,2025-01-11,Finance,Eastern,Nkawkaw,Enterprise,40,Walk-in,Training Package,7,325.06,0.15,1934.11,1012.73,921.38,5,False,Pending
+REC-00344,2025-11-11,Technology,Greater Accra,Tema,Government,42,Website,Basic Plan,5,1172.79,0.0,5863.95,4522.6,1341.35,2,False,Paid
+REC-00345,2025-12-01,Hospitality,Eastern,Nkawkaw,Enterprise,38,Referral,Support Package,5,1783.32,0.15,7579.11,5218.36,2360.75,4,False,Paid
+REC-00346,2025-03-06,Healthcare,Ashanti,Kumasi,SME,19,Phone,Basic Plan,12,605.7,0.05,6904.98,5509.91,1395.07,1,False,Pending
+REC-00347,2025-01-14,Finance,Central,Cape Coast,Government,21,Walk-in,Premium Plan,7,1321.86,0.0,9253.02,4519.67,4733.35,2,False,Pending
+REC-00348,2025-03-09,Technology,Northern,Yendi,Government,26,Phone,Support Package,9,2100.33,0.0,18902.97,8752.21,10150.76,3,True,Pending
+REC-00349,2025-10-04,Manufacturing,Ashanti,Obuasi,Enterprise,62,Phone,Support Package,3,1487.31,0.1,4015.74,2744.71,1271.03,2,False,Pending
+REC-00350,2025-07-31,Finance,Eastern,Nkawkaw,Enterprise,41,Phone,Support Package,5,410.4,0.0,2052.0,923.47,1128.53,1,False,Pending
+REC-00351,2025-08-09,Education,Eastern,Nkawkaw,Government,18,Phone,Premium Plan,5,1502.58,0.0,7512.9,4904.71,2608.19,2,False,Pending
+REC-00352,2025-02-10,Hospitality,Ashanti,Obuasi,Enterprise,34,Phone,Premium Plan,7,1572.67,0.15,9357.39,6857.84,2499.55,1,False,Paid
+REC-00353,2025-11-23,Agriculture,Eastern,Koforidua,Enterprise,25,Website,Premium Plan,8,1553.88,0.05,11809.49,8374.99,3434.5,1,True,Paid
+REC-00354,2025-05-25,Education,Ashanti,Kumasi,SME,24,Website,Consulting Service,5,334.47,0.1,1505.12,1082.23,422.89,2,False,Pending
+REC-00355,2025-07-10,Finance,Eastern,Koforidua,Enterprise,49,Phone,Basic Plan,8,1749.91,0.0,13999.28,8010.28,5989.0,5,False,Paid
+REC-00356,2025-07-15,Agriculture,Ashanti,Kumasi,Individual,34,Mobile App,Consulting Service,1,326.85,0.0,326.85,193.62,133.23,1,True,Paid
+REC-00357,2025-12-15,Retail,Western,Takoradi,Enterprise,42,Phone,Training Package,5,2342.13,0.0,11710.65,7995.92,3714.73,3,False,Paid
+REC-00358,2025-04-22,Finance,Greater Accra,Tema,Individual,60,Phone,Premium Plan,2,609.02,0.1,1096.24,624.93,471.31,1,False,Refunded
+REC-00359,2025-12-19,Agriculture,Northern,Tamale,Enterprise,48,Website,Basic Plan,10,408.61,0.0,4086.1,2214.78,1871.32,3,False,Refunded
+REC-00360,2025-09-07,Technology,Greater Accra,Tema,SME,26,Website,Training Package,4,808.93,0.15,2750.36,2040.13,710.23,4,False,Paid
+REC-00361,2025-09-06,Agriculture,Eastern,Koforidua,SME,20,Referral,Enterprise Plan,12,1107.81,0.05,12629.03,8219.12,4409.91,3,False,Paid
+REC-00362,2025-03-24,Hospitality,Central,Kasoa,Government,53,Website,Training Package,2,1339.57,0.1,2411.23,1348.84,1062.39,5,False,Paid
+REC-00363,2025-07-06,Manufacturing,Greater Accra,Accra,Government,57,Referral,Premium Plan,10,616.0,0.0,6160.0,4272.37,1887.63,5,False,Paid
+REC-00364,2025-06-14,Finance,Western,Takoradi,Individual,59,Mobile App,Basic Plan,2,263.23,0.0,526.46,245.43,281.03,4,False,Paid
+REC-00365,2025-11-25,Hospitality,Greater Accra,Accra,Enterprise,54,Mobile App,Support Package,7,1653.36,0.15,9837.49,6698.04,3139.45,1,False,Paid
+REC-00366,2025-02-10,Manufacturing,Northern,Yendi,Individual,49,Referral,Enterprise Plan,8,2007.52,0.0,16060.16,9371.79,6688.37,5,False,Paid
+REC-00367,2025-04-21,Education,Eastern,Koforidua,SME,22,Referral,Training Package,9,265.37,0.0,2388.33,1544.57,843.76,2,True,Refunded
+REC-00368,2025-02-24,Manufacturing,Western,Takoradi,SME,65,Mobile App,Support Package,11,1452.0,0.1,14374.8,10205.3,4169.5,4,True,Paid
+REC-00369,2025-10-01,Technology,Northern,Yendi,Government,28,Phone,Training Package,10,1121.46,0.05,10653.87,8351.78,2302.09,3,True,Paid
+REC-00370,2025-04-20,Agriculture,Central,Kasoa,Government,52,Website,Training Package,7,1920.13,0.05,12768.86,7446.84,5322.02,1,False,Refunded
+REC-00371,2025-03-11,Technology,Greater Accra,Accra,Enterprise,51,Referral,Support Package,5,41.26,0.0,206.3,109.23,97.07,5,True,Refunded
+REC-00372,2025-01-20,Education,Ashanti,Kumasi,Enterprise,24,Walk-in,Basic Plan,8,905.25,0.0,7242.0,3968.95,3273.05,5,False,Refunded
+REC-00373,2025-02-09,Healthcare,Ashanti,Obuasi,Individual,64,Referral,Consulting Service,12,828.61,0.1,8948.99,4599.55,4349.44,1,False,Paid
+REC-00374,2025-08-02,Retail,Eastern,Nkawkaw,Individual,45,Walk-in,Support Package,2,2177.72,0.0,4355.44,3164.84,1190.6,1,False,Refunded
+REC-00375,2025-06-17,Manufacturing,Central,Kasoa,Individual,27,Mobile App,Consulting Service,9,1751.98,0.0,15767.82,7390.26,8377.56,3,False,Paid
+REC-00376,2025-02-12,Hospitality,Ashanti,Kumasi,Government,39,Referral,Consulting Service,8,1439.32,0.0,11514.56,7516.89,3997.67,2,False,Pending
+REC-00377,2025-09-07,Education,Central,Cape Coast,Individual,30,Walk-in,Consulting Service,7,1639.31,0.0,11475.17,7546.44,3928.73,3,True,Paid
+REC-00378,2025-07-31,Retail,Greater Accra,Tema,SME,60,Walk-in,Support Package,7,929.04,0.0,6503.28,3698.24,2805.04,4,True,Paid
+REC-00379,2025-04-30,Healthcare,Western,Takoradi,Individual,20,Mobile App,Support Package,4,1721.26,0.0,6885.04,5028.57,1856.47,2,False,Paid
+REC-00380,2025-02-26,Education,Eastern,Koforidua,Enterprise,62,Referral,Consulting Service,5,1138.9,0.0,5694.5,3261.78,2432.72,5,False,Paid
+REC-00381,2025-12-06,Education,Western,Tarkwa,Individual,55,Phone,Training Package,9,132.62,0.0,1193.58,563.66,629.92,1,False,Pending
+REC-00382,2025-12-06,Manufacturing,Northern,Tamale,Government,35,Referral,Training Package,11,916.54,0.0,10081.94,4608.04,5473.9,1,False,Pending
+REC-00383,2025-02-15,Retail,Central,Cape Coast,SME,52,Referral,Enterprise Plan,3,517.22,0.1,1396.49,918.13,478.36,3,False,Pending
+REC-00384,2025-01-10,Education,Northern,Yendi,Individual,28,Walk-in,Consulting Service,6,1718.67,0.05,9796.42,6674.65,3121.77,1,True,Paid
+REC-00385,2025-06-24,Education,Ashanti,Obuasi,SME,27,Referral,Premium Plan,7,1650.91,0.0,11556.37,8321.27,3235.1,4,False,Refunded
+REC-00386,2025-10-05,Education,Eastern,Koforidua,Enterprise,46,Referral,Premium Plan,3,536.72,0.0,1610.16,1070.73,539.43,4,False,Refunded
+REC-00387,2025-02-04,Finance,Ashanti,Kumasi,Enterprise,38,Phone,Consulting Service,9,1344.08,0.0,12096.72,6267.67,5829.05,3,False,Paid
+REC-00388,2025-02-24,Education,Ashanti,Kumasi,SME,30,Website,Enterprise Plan,3,482.25,0.15,1229.74,834.1,395.64,1,False,Paid
+REC-00389,2025-08-29,Agriculture,Central,Kasoa,SME,56,Mobile App,Premium Plan,12,1632.68,0.0,19592.16,14993.64,4598.52,2,False,Pending
+REC-00390,2025-07-31,Healthcare,Greater Accra,Accra,Government,35,Referral,Consulting Service,4,1862.36,0.0,7449.44,5440.9,2008.54,3,False,Paid
+REC-00391,2025-01-22,Manufacturing,Western,Takoradi,Individual,43,Phone,Consulting Service,10,1844.95,0.1,16604.55,11896.73,4707.82,1,False,Refunded
+REC-00392,2025-01-21,Agriculture,Central,Kasoa,Enterprise,43,Walk-in,Consulting Service,9,983.81,0.0,8854.29,4606.4,4247.89,2,False,Paid
+REC-00393,2025-12-20,Agriculture,Central,Cape Coast,Individual,21,Mobile App,Support Package,9,2261.6,0.1,18318.96,13868.56,4450.4,5,False,Pending
+REC-00394,2025-08-19,Education,Western,Tarkwa,Individual,38,Walk-in,Enterprise Plan,1,467.72,0.15,397.56,310.79,86.77,2,False,Paid
+REC-00395,2025-08-19,Finance,Greater Accra,Tema,Government,63,Website,Premium Plan,11,923.28,0.15,8632.67,6143.81,2488.86,3,True,Paid
+REC-00396,2025-04-02,Agriculture,Ashanti,Obuasi,SME,27,Website,Premium Plan,12,151.99,0.05,1732.69,978.14,754.55,2,False,Refunded
+REC-00397,2025-08-23,Agriculture,Eastern,Koforidua,SME,18,Referral,Training Package,8,2142.14,0.15,14566.55,10906.82,3659.73,4,False,Pending
+REC-00398,2025-11-04,Education,Western,Takoradi,SME,23,Mobile App,Basic Plan,10,41.27,0.15,350.8,193.96,156.84,3,False,Paid
+REC-00399,2025-10-23,Manufacturing,Greater Accra,Accra,SME,60,Walk-in,Support Package,10,763.64,0.0,7636.4,3574.92,4061.48,5,True,Refunded
+REC-00400,2025-10-24,Technology,Ashanti,Obuasi,Government,47,Website,Consulting Service,6,2330.41,0.0,13982.46,10268.01,3714.45,5,False,Paid
+REC-00401,2025-03-04,Education,Western,Takoradi,Individual,26,Website,Support Package,12,2152.03,0.05,24533.14,15824.11,8709.03,5,False,Pending
+REC-00402,2025-11-06,Hospitality,Northern,Yendi,SME,62,Referral,Support Package,12,735.79,0.15,7505.06,5731.5,1773.56,4,True,Pending
+REC-00403,2025-11-09,Retail,Western,Tarkwa,Individual,29,Mobile App,Support Package,4,1778.75,0.0,7115.0,3205.91,3909.09,4,False,Paid
+REC-00404,2025-10-14,Hospitality,Eastern,Koforidua,Enterprise,40,Walk-in,Support Package,11,550.54,0.0,6055.94,4271.29,1784.65,5,False,Paid
+REC-00405,2025-06-20,Retail,Greater Accra,Accra,SME,61,Walk-in,Enterprise Plan,6,1005.22,0.15,5126.62,3475.43,1651.19,4,False,Paid
+REC-00406,2025-09-04,Agriculture,Northern,Yendi,Individual,26,Referral,Enterprise Plan,3,1577.32,0.15,4022.17,3143.3,878.87,5,False,Refunded
+REC-00407,2025-04-17,Finance,Central,Kasoa,Individual,19,Walk-in,Consulting Service,10,1721.6,0.05,16355.2,7760.52,8594.68,5,False,Refunded
+REC-00408,2025-04-06,Technology,Central,Cape Coast,Enterprise,42,Phone,Basic Plan,10,314.19,0.05,2984.8,2122.04,862.76,4,False,Paid
+REC-00409,2025-04-21,Retail,Western,Takoradi,Individual,37,Phone,Support Package,9,773.24,0.0,6959.16,4095.19,2863.97,1,False,Refunded
+REC-00410,2025-06-24,Technology,Ashanti,Kumasi,Individual,30,Referral,Training Package,8,1837.79,0.15,12496.97,7058.7,5438.27,2,False,Paid
+REC-00411,2025-09-25,Healthcare,Western,Tarkwa,Government,42,Website,Basic Plan,2,35.17,0.0,70.34,49.53,20.81,5,False,Paid
+REC-00412,2025-11-24,Technology,Central,Kasoa,Individual,37,Walk-in,Premium Plan,4,819.18,0.0,3276.72,1821.95,1454.77,2,False,Paid
+REC-00413,2025-10-14,Technology,Greater Accra,Tema,SME,57,Walk-in,Support Package,9,278.38,0.15,2129.61,1234.36,895.25,2,False,Paid
+REC-00414,2025-06-23,Retail,Eastern,Koforidua,Government,57,Website,Basic Plan,9,1123.03,0.0,10107.27,4656.7,5450.57,4,False,Paid
+REC-00415,2025-10-31,Hospitality,Northern,Yendi,SME,56,Referral,Basic Plan,11,2094.53,0.1,20735.85,14059.67,6676.18,4,True,Paid
+REC-00416,2025-08-28,Education,Greater Accra,Accra,Enterprise,62,Walk-in,Consulting Service,2,1152.57,0.1,2074.63,1294.78,779.85,2,False,Paid
+REC-00417,2025-01-16,Finance,Western,Tarkwa,Enterprise,49,Referral,Support Package,2,1201.45,0.05,2282.76,1431.52,851.24,2,True,Paid
+REC-00418,2025-02-24,Agriculture,Western,Tarkwa,Government,63,Mobile App,Support Package,6,1401.47,0.0,8408.82,6249.43,2159.39,2,True,Paid
+REC-00419,2025-02-03,Manufacturing,Western,Tarkwa,SME,42,Mobile App,Training Package,6,540.39,0.15,2755.99,1679.84,1076.15,1,True,Pending
+REC-00420,2025-11-02,Finance,Greater Accra,Tema,Government,55,Website,Support Package,8,830.31,0.0,6642.48,5009.42,1633.06,1,True,Pending
+REC-00421,2025-11-27,Retail,Eastern,Koforidua,SME,49,Phone,Support Package,11,177.17,0.0,1948.87,1466.14,482.73,3,False,Refunded
+REC-00422,2025-04-11,Hospitality,Central,Kasoa,Enterprise,46,Website,Support Package,4,1711.75,0.05,6504.65,3648.47,2856.18,1,True,Refunded
+REC-00423,2025-05-31,Retail,Western,Tarkwa,Individual,26,Walk-in,Basic Plan,1,938.83,0.15,798.01,644.89,153.12,2,False,Refunded
+REC-00424,2025-06-12,Education,Western,Takoradi,Government,58,Mobile App,Premium Plan,12,972.4,0.1,10501.92,6416.89,4085.03,5,False,Paid
+REC-00425,2025-05-28,Retail,Western,Takoradi,Government,27,Phone,Premium Plan,11,335.73,0.0,3693.03,1759.9,1933.13,1,False,Pending
+REC-00426,2025-11-06,Agriculture,Western,Tarkwa,Enterprise,62,Mobile App,Premium Plan,7,1567.54,0.1,9875.5,6305.34,3570.16,4,True,Paid
+REC-00427,2025-05-02,Technology,Central,Cape Coast,Individual,49,Referral,Consulting Service,12,1266.78,0.1,13681.22,10846.87,2834.35,3,False,Refunded
+REC-00428,2025-02-10,Hospitality,Western,Tarkwa,Individual,62,Referral,Support Package,3,1832.21,0.15,4672.14,3802.77,869.37,1,False,Pending
+REC-00429,2025-12-06,Hospitality,Northern,Tamale,Enterprise,65,Referral,Basic Plan,11,218.25,0.15,2040.64,1520.88,519.76,4,False,Refunded
+REC-00430,2025-06-19,Retail,Western,Tarkwa,Enterprise,54,Website,Training Package,7,898.46,0.05,5974.76,3327.98,2646.78,4,True,Paid
+REC-00431,2025-12-03,Agriculture,Central,Cape Coast,SME,21,Referral,Basic Plan,5,2027.02,0.15,8614.84,3963.69,4651.15,3,False,Paid
+REC-00432,2025-05-21,Finance,Central,Kasoa,Enterprise,35,Mobile App,Enterprise Plan,5,60.15,0.0,300.75,202.53,98.22,2,False,Paid
+REC-00433,2025-06-25,Finance,Central,Kasoa,Government,20,Phone,Premium Plan,2,2419.18,0.15,4112.61,3271.82,840.79,4,False,Paid
+REC-00434,2025-06-26,Agriculture,Central,Kasoa,Government,64,Walk-in,Consulting Service,1,1614.6,0.0,1614.6,757.95,856.65,5,False,Pending
+REC-00435,2025-07-19,Retail,Northern,Yendi,Government,63,Phone,Training Package,8,675.0,0.15,4590.0,3543.49,1046.51,3,True,Paid
+REC-00436,2025-11-23,Hospitality,Greater Accra,Tema,Enterprise,52,Walk-in,Basic Plan,6,2391.55,0.1,12914.37,8728.56,4185.81,3,True,Pending
+REC-00437,2025-05-04,Finance,Western,Tarkwa,Individual,61,Website,Basic Plan,12,1687.93,0.0,20255.16,13011.56,7243.6,1,False,Paid
+REC-00438,2025-12-17,Retail,Central,Cape Coast,Individual,24,Website,Support Package,8,895.0,0.05,6802.0,3694.86,3107.14,2,True,Paid
+REC-00439,2025-02-14,Finance,Northern,Tamale,SME,25,Walk-in,Enterprise Plan,10,346.52,0.15,2945.42,2200.77,744.65,4,False,Pending
+REC-00440,2025-12-21,Healthcare,Eastern,Nkawkaw,Individual,45,Phone,Consulting Service,11,1930.45,0.05,20173.2,10998.72,9174.48,3,False,Paid
+REC-00441,2025-08-14,Finance,Eastern,Nkawkaw,Individual,29,Mobile App,Support Package,2,1242.01,0.0,2484.02,1678.73,805.29,4,False,Refunded
+REC-00442,2025-08-15,Hospitality,Northern,Yendi,Individual,24,Phone,Premium Plan,12,666.02,0.0,7992.24,3812.14,4180.1,1,False,Pending
+REC-00443,2025-12-25,Agriculture,Eastern,Nkawkaw,Government,27,Phone,Training Package,6,2263.93,0.15,11546.04,5211.54,6334.5,1,True,Paid
+REC-00444,2025-12-19,Technology,Greater Accra,Tema,Enterprise,42,Phone,Basic Plan,8,324.98,0.15,2209.86,1758.97,450.89,1,False,Refunded
+REC-00445,2025-08-24,Manufacturing,Eastern,Koforidua,Enterprise,23,Phone,Basic Plan,5,1628.29,0.0,8141.45,5333.92,2807.53,3,False,Paid
+REC-00446,2025-04-08,Education,Northern,Yendi,Government,46,Website,Support Package,3,113.35,0.0,340.05,243.58,96.47,3,False,Refunded
+REC-00447,2025-01-19,Education,Western,Tarkwa,SME,19,Referral,Premium Plan,6,163.73,0.0,982.38,589.47,392.91,1,False,Paid
+REC-00448,2025-01-10,Finance,Western,Takoradi,SME,59,Website,Enterprise Plan,8,2270.27,0.15,15437.84,7208.65,8229.19,1,False,Refunded
+REC-00449,2025-02-02,Education,Ashanti,Kumasi,SME,55,Phone,Enterprise Plan,2,307.59,0.15,522.9,389.92,132.98,4,False,Paid
+REC-00450,2025-10-07,Finance,Northern,Yendi,Individual,54,Website,Enterprise Plan,3,820.93,0.0,2462.79,1804.64,658.15,2,False,Paid
+REC-00451,2025-10-11,Healthcare,Northern,Yendi,SME,41,Website,Consulting Service,3,1110.69,0.15,2832.26,1317.17,1515.09,1,False,Paid
+REC-00452,2025-12-28,Agriculture,Ashanti,Kumasi,SME,23,Mobile App,Training Package,11,1494.48,0.05,15617.32,9432.9,6184.42,3,True,Pending
+REC-00453,2025-03-31,Agriculture,Western,Takoradi,Enterprise,33,Walk-in,Consulting Service,10,1736.89,0.15,14763.57,7626.86,7136.71,1,True,Paid
+REC-00454,2025-09-29,Agriculture,Ashanti,Kumasi,Enterprise,25,Website,Premium Plan,2,1556.83,0.15,2646.61,1687.98,958.63,1,False,Pending
+REC-00455,2025-03-23,Hospitality,Western,Takoradi,Government,29,Walk-in,Enterprise Plan,11,2308.62,0.0,25394.82,17486.84,7907.98,5,False,Paid
+REC-00456,2025-01-27,Healthcare,Greater Accra,Accra,SME,65,Phone,Support Package,9,460.32,0.0,4142.88,2607.83,1535.05,5,False,Pending
+REC-00457,2025-12-13,Healthcare,Ashanti,Kumasi,Government,65,Mobile App,Consulting Service,6,594.41,0.0,3566.46,2035.27,1531.19,2,False,Pending
+REC-00458,2025-01-28,Manufacturing,Central,Kasoa,SME,49,Phone,Training Package,7,383.73,0.15,2283.19,1411.8,871.39,2,False,Paid
+REC-00459,2025-03-07,Healthcare,Ashanti,Obuasi,Government,39,Phone,Premium Plan,1,1738.22,0.0,1738.22,962.67,775.55,3,False,Paid
+REC-00460,2025-11-23,Education,Central,Cape Coast,Government,28,Referral,Consulting Service,10,2266.31,0.15,19263.63,15583.32,3680.31,2,True,Pending
+REC-00461,2025-01-08,Manufacturing,Western,Takoradi,SME,35,Referral,Basic Plan,12,1084.57,0.0,13014.84,7050.11,5964.73,4,False,Paid
+REC-00462,2025-09-16,Healthcare,Western,Tarkwa,Government,64,Mobile App,Basic Plan,1,1078.6,0.1,970.74,608.97,361.77,5,False,Pending
+REC-00463,2025-07-03,Hospitality,Ashanti,Kumasi,Government,26,Referral,Training Package,5,616.68,0.0,3083.4,1405.7,1677.7,5,False,Pending
+REC-00464,2025-12-27,Retail,Western,Takoradi,Government,26,Walk-in,Support Package,7,482.74,0.05,3210.22,2189.11,1021.11,1,False,Pending
+REC-00465,2025-11-10,Healthcare,Eastern,Nkawkaw,Individual,62,Referral,Training Package,9,1448.69,0.0,13038.21,9667.13,3371.08,3,False,Paid
+REC-00466,2025-08-27,Healthcare,Western,Takoradi,SME,41,Walk-in,Premium Plan,10,126.16,0.05,1198.52,617.06,581.46,5,False,Pending
+REC-00467,2025-12-26,Hospitality,Northern,Yendi,Enterprise,55,Website,Basic Plan,4,1889.1,0.0,7556.4,4296.35,3260.05,3,False,Pending
+REC-00468,2025-09-27,Hospitality,Western,Tarkwa,Enterprise,50,Website,Premium Plan,2,1188.66,0.15,2020.72,1416.47,604.25,4,False,Paid
+REC-00469,2025-05-28,Finance,Western,Tarkwa,SME,29,Mobile App,Support Package,2,295.68,0.05,561.79,276.09,285.7,1,False,Pending
+REC-00470,2025-03-09,Retail,Northern,Yendi,SME,52,Website,Basic Plan,8,883.08,0.1,6358.18,4596.66,1761.52,2,True,Paid
+REC-00471,2025-06-25,Agriculture,Western,Tarkwa,Enterprise,55,Referral,Premium Plan,11,1623.98,0.05,16970.59,10689.35,6281.24,3,False,Paid
+REC-00472,2025-07-10,Hospitality,Ashanti,Obuasi,SME,48,Referral,Premium Plan,5,1930.13,0.0,9650.65,4872.47,4778.18,5,False,Paid
+REC-00473,2025-12-21,Retail,Ashanti,Obuasi,SME,63,Phone,Enterprise Plan,11,1991.28,0.0,21904.08,11784.94,10119.14,3,False,Paid
+REC-00474,2025-01-18,Agriculture,Central,Cape Coast,Enterprise,63,Website,Basic Plan,11,809.44,0.05,8458.65,4269.41,4189.24,4,False,Paid
+REC-00475,2025-03-21,Technology,Western,Tarkwa,Government,38,Walk-in,Support Package,1,2426.12,0.15,2062.2,1672.39,389.81,2,True,Pending
+REC-00476,2025-02-27,Healthcare,Eastern,Nkawkaw,Individual,62,Phone,Support Package,12,1210.48,0.0,14525.76,7285.93,7239.83,2,False,Paid
+REC-00477,2025-01-29,Hospitality,Greater Accra,Accra,Individual,38,Website,Support Package,10,1612.25,0.15,13704.12,8836.15,4867.97,4,False,Refunded
+REC-00478,2025-09-09,Technology,Western,Tarkwa,SME,30,Phone,Enterprise Plan,6,1517.85,0.15,7741.03,6185.54,1555.49,4,False,Paid
+REC-00479,2025-06-29,Agriculture,Eastern,Nkawkaw,Government,40,Walk-in,Premium Plan,5,2444.37,0.15,10388.57,5011.57,5377.0,4,False,Paid
+REC-00480,2025-02-14,Technology,Central,Cape Coast,Government,56,Website,Basic Plan,3,539.26,0.1,1456.0,1187.66,268.34,4,False,Pending
+REC-00481,2025-08-25,Manufacturing,Ashanti,Obuasi,Government,53,Website,Enterprise Plan,12,1430.59,0.0,17167.08,8990.83,8176.25,5,False,Pending
+REC-00482,2025-08-26,Hospitality,Central,Kasoa,Individual,65,Walk-in,Consulting Service,4,91.43,0.0,365.72,185.42,180.3,2,False,Paid
+REC-00483,2025-05-22,Technology,Greater Accra,Tema,Government,25,Walk-in,Training Package,8,2485.97,0.0,19887.76,13356.42,6531.34,4,False,Paid
+REC-00484,2025-10-22,Finance,Central,Kasoa,Government,64,Mobile App,Enterprise Plan,1,2117.07,0.0,2117.07,1408.3,708.77,2,False,Paid
+REC-00485,2025-11-22,Healthcare,Eastern,Koforidua,SME,44,Website,Support Package,6,145.57,0.05,829.75,535.98,293.77,2,True,Paid
+REC-00486,2025-06-04,Technology,Eastern,Koforidua,Individual,61,Mobile App,Support Package,5,1721.47,0.05,8176.98,3969.58,4207.4,3,False,Pending
+REC-00487,2025-03-25,Education,Western,Takoradi,Government,39,Phone,Basic Plan,2,564.24,0.15,959.21,510.12,449.09,1,False,Paid
+REC-00488,2025-06-09,Technology,Western,Takoradi,Enterprise,40,Website,Training Package,12,922.36,0.1,9961.49,7761.98,2199.51,1,False,Paid
+REC-00489,2025-12-19,Healthcare,Northern,Yendi,Individual,27,Website,Basic Plan,4,785.89,0.0,3143.56,1566.06,1577.5,4,False,Paid
+REC-00490,2025-01-17,Hospitality,Ashanti,Kumasi,Individual,24,Walk-in,Training Package,11,1295.86,0.0,14254.46,8888.52,5365.94,1,False,Paid
+REC-00491,2025-10-28,Finance,Central,Kasoa,Enterprise,31,Walk-in,Premium Plan,4,482.34,0.05,1832.89,844.64,988.25,5,True,Paid
+REC-00492,2025-02-04,Education,Central,Kasoa,SME,54,Referral,Basic Plan,2,2053.48,0.0,4106.96,2651.74,1455.22,1,False,Refunded
+REC-00493,2025-07-07,Healthcare,Northern,Tamale,Enterprise,48,Phone,Consulting Service,12,1483.72,0.1,16024.18,11204.18,4820.0,2,True,Paid
+REC-00494,2025-06-10,Technology,Western,Tarkwa,Individual,25,Website,Enterprise Plan,2,1178.11,0.15,2002.79,1001.97,1000.82,4,False,Pending
+REC-00495,2025-11-04,Manufacturing,Eastern,Nkawkaw,Government,47,Mobile App,Basic Plan,12,797.22,0.1,8609.98,4594.05,4015.93,4,False,Paid
+REC-00496,2025-09-09,Healthcare,Greater Accra,Accra,SME,61,Phone,Consulting Service,11,285.3,0.1,2824.47,1817.22,1007.25,5,False,Paid
+REC-00497,2025-04-12,Manufacturing,Greater Accra,Tema,Enterprise,41,Referral,Support Package,6,520.65,0.1,2811.51,1392.88,1418.63,3,False,Paid
+REC-00498,2025-11-05,Agriculture,Western,Takoradi,Individual,60,Walk-in,Consulting Service,7,2469.12,0.15,14691.26,8127.05,6564.21,4,False,Paid
+REC-00499,2025-01-28,Manufacturing,Greater Accra,Tema,SME,24,Walk-in,Support Package,2,1257.88,0.0,2515.76,2036.93,478.83,5,False,Paid
+REC-00500,2025-09-10,Hospitality,Northern,Yendi,Individual,51,Website,Consulting Service,8,524.78,0.1,3778.42,2385.67,1392.75,1,False,Pending
