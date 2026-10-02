@@ -76,7 +76,7 @@ git push origin your-branch-name --force
 
 ### Stuck?
 ```bash
-git rebase --abort   # Go back to before rebase
+git rebase --abort   
 # Ask for help!
 ```
 
