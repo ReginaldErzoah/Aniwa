@@ -74,11 +74,7 @@ git rebase --continue
 git push origin your-branch-name --force
 ```
 
-### Stuck?
-```bash
-git rebase --abort   
-# Ask for help!
-```
+
 
 ---
 
